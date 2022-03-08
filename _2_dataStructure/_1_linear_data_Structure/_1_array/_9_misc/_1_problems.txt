@@ -1,0 +1,4 @@
+Medium --
+https://www.geeksforgeeks.org/find-subarray-with-given-sum/
+https://www.geeksforgeeks.org/find-subarray-with-given-sum-in-array-of-integers/
+https://www.geeksforgeeks.org/find-subarray-with-given-sum-with-negatives-allowed-in-constant-space/
