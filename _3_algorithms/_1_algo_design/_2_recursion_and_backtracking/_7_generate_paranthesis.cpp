@@ -1,8 +1,8 @@
+
+// generate paranthesis of n group ()
 #include <iostream>
 #include <vector>
 using namespace std;
-
-// generate paranthesis of n group ()
 
 vector<string> valid;
 

@@ -1,4 +1,3 @@
-// https://www.youtube.com/watch?v=9_ftWKch6vI&list=PLauivoElc3ghxyYSr_sVnDUc_ynPk6iXE&index=4
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 1e5 + 10;

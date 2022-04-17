@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/network-delay-time/
+
 // https://www.youtube.com/watch?v=F3PNsWE6_hM&list=PLauivoElc3ghxyYSr_sVnDUc_ynPk6iXE&index=16
 
 #include <bits/stdc++.h>
@@ -6,10 +8,7 @@ using namespace std;
 const int N = 1e5 + 10;
 const int INF = 1e9 + 10;
 
-// weighted graph
-vector<pair<int, int>> g[N]; // pair<node, weight>
-
-void dijkstra(int source)
+int dijkstra(int source, int n, vector<pair<int, int>> g[N])
 {
     vector<int> vis(N, 0);
     vector<int> dist(N, INF);
@@ -40,6 +39,26 @@ void dijkstra(int source)
             }
         }
     }
+
+    int ans = 0;
+    for (int i = 1; i <= n; ++i)
+    {
+        if (dist[i] == INF)
+            return -1;
+        ans = max(ans, dist[i]);
+    }
+    return ans;
+}
+
+int networkDelayTime(vector<vector<int>> &times, int n, int k)
+{
+    vector<pair<int, int>> g[N];
+    for (auto vec : times)
+    {
+        g[vec[0]].push_back({vec[1], vec[2]});
+    }
+
+    return dijkstra(k, n, g);
 }
 
 int main()

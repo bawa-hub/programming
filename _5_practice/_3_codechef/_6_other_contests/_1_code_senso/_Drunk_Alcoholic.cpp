@@ -1,3 +1,4 @@
+// https://www.codechef.com/CSNS21C/problems/DRUNKALK
 #include <bits/stdc++.h>
 using namespace std;
 

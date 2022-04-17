@@ -1,9 +1,5 @@
-# google interview process
+cp in cpp -- https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-
+dsa in java -- https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ
 
-https://www.educative.io/blog/google-coding-interview#process
-https://www.youtube.com/watch?v=ko-KkSmp-Lk
-https://www.youtube.com/playlist?list=PLllx_3tLoo4c_aR8RKOOnizL5LiUH02YF
-
-# Amazon interview preparation tips
-
-https://www.youtube.com/watch?v=9BnzXXyGDXI
+Problems Sets --
+https://www.geeksforgeeks.org/must-do-coding-questions-for-product-based-companies/
