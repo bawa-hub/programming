@@ -12,5 +12,9 @@ int main()
     char a;
     cout << "Enter a character: ";
     cin >> a;
-    cout << a << "with ascii value of " << (int)a;
+    cout << a << "with ascii value of " << (int)a << endl;
+
+    // change char to int
+    char b = '5';
+    cout << b << "with ascii value of " << b - '0' << endl;
 }
