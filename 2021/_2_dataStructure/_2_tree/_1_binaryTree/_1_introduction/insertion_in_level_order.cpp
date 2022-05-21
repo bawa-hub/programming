@@ -66,6 +66,7 @@ Node *InsertNode(Node *root, int data)
             return root;
         }
     }
+    return root;
 }
 
 /* Inorder traversal of a binary tree */
