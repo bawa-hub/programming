@@ -23,7 +23,7 @@ void printLevelOrder(Node *root)
     // Enqueue Root and initialize height
     q.push(root);
 
-    while (q.empty() == false)
+    while (!q.empty())
     {
         // Print front of queue and remove it from queue
         Node *node = q.front();
