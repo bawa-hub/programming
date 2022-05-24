@@ -2,9 +2,25 @@
 
 https://docs.google.com/document/d/1Qmh_suVjBv0F3LFC5CfO06knn2zW92nfTyVlQLrUnFs/edit
 
-# Array
+# Array and Matrix
+
+https://www.geeksforgeeks.org/array-data-structure/
+https://www.geeksforgeeks.org/matrix/
 
 https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
+
+# Strings
+
+https://www.geeksforgeeks.org/string-data-structure/
+
+# Stack and Queue
+
+https://www.geeksforgeeks.org/stack-data-structure/
+https://www.geeksforgeeks.org/queue-data-structure/
+
+# Graph
+
+https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
 
 # Binary Tree
 
