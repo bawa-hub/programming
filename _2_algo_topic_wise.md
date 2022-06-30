@@ -29,6 +29,8 @@ https://www.youtube.com/playlist?list=PLqM7alHXFySGbXhWx7sBJEwY2DnhDjmxm
 
 # Searching and Sorting
 
+https://www.youtube.com/playlist?list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2
+
 # Greedy Algorithm
 
 https://www.youtube.com/playlist?list=PLQXZIFwMtjozzDH4ZRtpIl0piBjsRF5Bf
