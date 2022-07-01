@@ -8,9 +8,7 @@ bool vis[N];
 // four actions for understanding of dfs
 void dfs(int vertex)
 {
-    /**
-     *1. Take action on vertex after entering the vertex
-     * **/
+    // 1. Take action on vertex after entering the vertex
     if (vis[vertex])
         return;
     cout << vertex << endl;
@@ -18,20 +16,11 @@ void dfs(int vertex)
     for (int child : g[vertex])
     {
 
-        /**
-         *2. Take action on child before entering the child node
-         * **/
-        // cout << "parent " << vertex << ", child " << child << endl;
-        // if (vis[child])
-        //     continue;
+        //   2. Take action on child before entering the child node
         dfs(child);
-        /**
-         *3. Take action on child after exiting the child node
-         * **/
+        // 3. Take action on child after exiting the child node
     }
-    /**
-     *4. Take action on vertex after exiting the vertex
-     * **/
+    //    4. Take action on vertex after exiting the vertex
 }
 
 // Time complexity - O(V+E)

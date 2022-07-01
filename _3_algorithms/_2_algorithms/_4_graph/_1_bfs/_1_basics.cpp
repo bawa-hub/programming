@@ -35,10 +35,10 @@ void bfs(int source)
 
 int main()
 {
-    int n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m;
 
-    for (int i = 0; i < n - 1; ++i)
+    for (int i = 0; i < m; ++i)
     {
         int x, y;
         cin >> x >> y;
@@ -55,7 +55,7 @@ int main()
 }
 
 // inputs
-// 13
+// 13 13
 // 1 2
 // 1 3
 // 1 13
@@ -68,3 +68,4 @@ int main()
 // 4 9
 // 4 10
 // 10 11
+// 9 11
