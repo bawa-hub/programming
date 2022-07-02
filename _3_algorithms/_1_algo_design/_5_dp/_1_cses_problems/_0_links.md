@@ -1,0 +1,3 @@
+# editorials --
+
+https://codeforces.com/blog/entry/70018
