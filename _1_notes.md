@@ -14,7 +14,6 @@ https://docs.google.com/spreadsheets/d/1031mU_dk2E0ZGcaKZohfz2AlwcnkOeDR1f3PsOyn
 # A Complete Guide for SDE Preparation
 
 https://www.youtube.com/watch?v=udt-kvHNt_o
-
 https://www.geeksforgeeks.org/sde-sheet-a-complete-guide-for-sde-preparation/?ref=ghb
 
 # cp in cpp --

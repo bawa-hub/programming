@@ -17,11 +17,11 @@ https://www.geeksforgeeks.org/recursion-practice-problems-solutions/
 
 # Dynamic Programming
 
-https://www.youtube.com/watch?v=qtZtCty073g
-https://www.youtube.com/playlist?list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy
-https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go
-https://www.youtube.com/playlist?list=PL-Jc9J83PIiEZvXCn-c5UIBvfT8dA-8EG
-https://www.youtube.com/playlist?list=PLqM7alHXFySGbXhWx7sBJEwY2DnhDjmxm
+saket dp tips - https://www.youtube.com/watch?v=qtZtCty073g
+pepcoding level 1 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy
+aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go
+pepcoding level 2 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiEZvXCn-c5UIBvfT8dA-8EG
+gfg - https://www.youtube.com/playlist?list=PLqM7alHXFySGbXhWx7sBJEwY2DnhDjmxm
 https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
 Cormen book
 CP3 book
