@@ -1,4 +1,4 @@
-# Array, Matrix and Strings
+# Arrays and Strings
 
 https://www.geeksforgeeks.org/array-data-structure/
 https://www.geeksforgeeks.org/matrix/
@@ -8,11 +8,13 @@ https://www.geeksforgeeks.org/string-data-structure/
 
 # Graph
 
+striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw
 https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw
 https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
 
 # Binary Tree and Binary Search Tree
 
+striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk
 https://www.youtube.com/playlist?list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk
 https://www.youtube.com/playlist?list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_
 https://leetcode.com/discuss/study-guide/1212004/binary-trees-study-guide
