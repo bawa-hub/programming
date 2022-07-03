@@ -6,10 +6,10 @@ cp sheet -- https://takeuforward.org/interview-experience/strivers-cp-sheet/?utm
 # Recursion/Backtracking
 
 striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9
-https://www.youtube.com/playlist?list=PL-Jc9J83PIiFxaBahjslhBD1LiJAV7nKs
-https://www.youtube.com/playlist?list=PL9gnSGHSqcnp39cTyB1dTZ2pJ04Xmdrod
-https://www.youtube.com/playlist?list=PL-Jc9J83PIiHO9SQ6lxGuDsZNt2mkHEn0
-https://www.youtube.com/playlist?list=PL-Jc9J83PIiFxaBahjslhBD1LiJAV7nKs
+pepcoding level 1 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiFxaBahjslhBD1LiJAV7nKs
+kunal - https://www.youtube.com/playlist?list=PL9gnSGHSqcnp39cTyB1dTZ2pJ04Xmdrod
+pepcoding level 2 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiHO9SQ6lxGuDsZNt2mkHEn0
+
 https://www.codingninjas.com/codestudio/problem-lists/siddharth-singh-coding-sheet-problems?page=1
 https://leetcode.com/tag/recursion/
 https://www.hackerrank.com/domains/algorithms?filters%5Bsubdomains%5D%5B%5D=recursion
@@ -25,6 +25,7 @@ aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHw
 pepcoding level 2 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiEZvXCn-c5UIBvfT8dA-8EG
 gfg - https://www.youtube.com/playlist?list=PLqM7alHXFySGbXhWx7sBJEwY2DnhDjmxm
 https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
+https://leetcode.com/discuss/general-discussion/712010/the-art-of-dynamic-programming-an-intuitive-approach-from-apprentice-to-master/709225
 Cormen book
 CP3 book
 
