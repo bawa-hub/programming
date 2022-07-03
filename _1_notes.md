@@ -3,6 +3,10 @@
 https://www.youtube.com/playlist?list=PLGFjgYQtw1UiuJxHSeoiY0jcSGERPaxeD
 https://docs.google.com/document/d/1Qmh_suVjBv0F3LFC5CfO06knn2zW92nfTyVlQLrUnFs/edit
 
+# cses solutions
+
+https://github.com/mrsac7/CSES-Solutions
+
 # Leetcode solutions -
 
 https://www.youtube.com/playlist?list=PL1w8k37X_6L86f3PUUVFoGYXvZiZHde1S
