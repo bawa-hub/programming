@@ -1,10 +1,14 @@
 # important links of leetcode --
 
+https://leetcode.com/discuss/study-guide/494279/Comprehensive-Data-Structure-and-Algorithm-Study-Guide
 https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode
-
-# C++ --
-
-https://www.youtube.com/user/BoQianTheProgrammer/featured
+https://leetcode.com/discuss/interview-question/2069641/The-Only-Lists-You-Need-For-Your-Interview-Preparation
+https://leetcode.com/discuss/study-guide/786126/Python-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems
+https://leetcode.com/discuss/study-guide/1098600/TOPICS-WHICH-YOU-CAN'T-SKIP-INTERVIEW-PREPARATION-or-STUDY-PLAN-USING-LEETCODE
+https://leetcode.com/discuss/study-guide/448285/List-of-questions-sorted-by-common-patterns.
+https://leetcode.com/discuss/study-guide/657507/Sliding-Window-for-Beginners-Problems-or-Template-or-Sample-Solutions
+https://leetcode.com/discuss/study-guide/1177039/%22Practice-More-Learn-More%22-greater-Study-Guide-and-Interview-Preparation-Using-LEETCODE
+https://leetcode.com/discuss/study-guide/2122306/Python-Cheat-Sheet-for-Leetcode
 
 # DSA playlists --
 
@@ -16,6 +20,7 @@ luv cp -- https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMm
 https://www.youtube.com/playlist?list=PLGFjgYQtw1UiuJxHSeoiY0jcSGERPaxeD
 luv babbar 450 -- https://docs.google.com/spreadsheets/d/1031mU_dk2E0ZGcaKZohfz2AlwcnkOeDR1f3PsOynDlg/edit#gid=136755630
 problem sets -- https://www.geeksforgeeks.org/must-do-coding-questions-for-product-based-companies/
+striver cp list -- https://docs.google.com/document/d/1iXRs_bcjimqm-mFiIXWIolljSAS_1Xg8OZ2TzMBLhcg/edit
 
 # Solutions -
 

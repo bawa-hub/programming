@@ -16,6 +16,8 @@ https://www.hackerrank.com/domains/algorithms?filters%5Bsubdomains%5D%5B%5D=recu
 https://www.geeksforgeeks.org/backtracking-algorithms/?ref=shm
 https://www.geeksforgeeks.org/recursion-practice-problems-solutions/
 
+https://leetcode.com/discuss/study-guide/1733447/Become-Master-In-Recursion
+
 # Dynamic Programming
 
 saket dp tips - https://www.youtube.com/watch?v=qtZtCty073g
@@ -36,9 +38,19 @@ https://leetcode.com/tag/dynamic-programming/
 https://www.hackerrank.com/topics/dynamic-programming
 https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/tutorial/
 
+https://leetcode.com/discuss/study-guide/662866/DP-for-Beginners-Problems-or-Patterns-or-Sample-Solutions
+https://leetcode.com/discuss/study-guide/1000929/Solved-all-dynamic-programming-(dp)-problems-in-7-months.
+https://leetcode.com/discuss/study-guide/1050391/Must-do-Dynamic-programming-Problems-Category-wise
+https://leetcode.com/discuss/study-guide/475924/My-experience-and-notes-for-learning-DP
+https://leetcode.com/discuss/study-guide/651719/How-to-solve-DP-String-Template-and-4-Steps-to-be-followed.
+https://leetcode.com/discuss/study-guide/1437879/Dynamic-Programming-Patterns
+
 # Searching and Sorting
 
 https://www.youtube.com/playlist?list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2
+
+https://leetcode.com/discuss/study-guide/691825/Binary-Search-for-Beginners-Problems-or-Patterns-or-Sample-solutions
+https://leetcode.com/discuss/study-guide/1322500/5-variations-of-Binary-search-(A-Self-Note)
 
 # Greedy Algorithm
 
@@ -47,6 +59,12 @@ https://www.youtube.com/playlist?list=PLgUwDviBIf0pmWCl2nepwGDO05a0-7EfJ
 https://www.youtube.com/watch?v=xmJZSYSvgfE
 https://www.geeksforgeeks.org/greedy-algorithms/
 https://www.codingninjas.com/codestudio/problem-lists/siddharth-singh-coding-sheet-problems?page=1
+
+https://leetcode.com/discuss/study-guide/669996/Greedy-for-Beginners-Problems-or-Sample-solutions
+
+# Two Pointers
+
+https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days.
 
 # Divide and Conquer
 
