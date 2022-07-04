@@ -17,6 +17,7 @@ https://www.geeksforgeeks.org/backtracking-algorithms/?ref=shm
 https://www.geeksforgeeks.org/recursion-practice-problems-solutions/
 
 https://leetcode.com/discuss/study-guide/1733447/Become-Master-In-Recursion
+https://leetcode.com/discuss/study-guide/1405817/Backtracking-algorithm-%2B-problems-to-practice
 
 # Dynamic Programming
 
@@ -68,10 +69,19 @@ https://leetcode.com/discuss/study-guide/669996/Greedy-for-Beginners-Problems-or
 # Two Pointers
 
 https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days.
+https://leetcode.com/discuss/study-guide/1905453/Master-in-Two-Pointer
+https://leetcode.com/discuss/study-guide/1469943/Everyday-2-pointers-challenge-list
+
+# Sliding Window
+
+https://leetcode.com/discuss/study-guide/1773891/Sliding-Window-Technique-and-Question-Bank
 
 # Divide and Conquer
 
 # Bit Manipulation
+
+https://leetcode.com/discuss/study-guide/1150415/Start-Bit-Manipulation-Here
+https://leetcode.com/discuss/study-guide/1487055/COMPLETED-GUIDE-ON-BITWISE-OPERATORS%3A)
 
 # String Algorithms
 

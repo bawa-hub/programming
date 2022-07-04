@@ -11,11 +11,18 @@ https://leetcode.com/discuss/study-guide/657507/Sliding-Window-for-Beginners-Pro
 https://leetcode.com/discuss/study-guide/1177039/%22Practice-More-Learn-More%22-greater-Study-Guide-and-Interview-Preparation-Using-LEETCODE
 https://leetcode.com/discuss/study-guide/2122306/Python-Cheat-Sheet-for-Leetcode
 https://leetcode.com/discuss/study-guide/1612475/Compilation-or-Leetcode-ListsandResources-or-Study-Guide-or-Topic-wise-or-Difficulty-wise
+https://leetcode.com/discuss/study-guide/1809778/Series-Questions-on-Leetcode-or-Practice-Follow-Up-Questions-or-Beginners-to-Advanced
+https://leetcode.com/discuss/study-guide/1757720/Interview-preparation-Guide-or-DSA-or-LLD-or-System-Design-or-Behavioral-or-FAANG
 
 # DSA playlists --
 
 striver -- https://www.youtube.com/c/takeUforward/playlists
 luv cp -- https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-
+
+# Solutions -
+
+leetcode -- https://www.youtube.com/playlist?list=PL1w8k37X_6L86f3PUUVFoGYXvZiZHde1S
+cses -- https://github.com/mrsac7/CSES-Solutions
 
 # Resources
 
@@ -23,11 +30,6 @@ https://www.youtube.com/playlist?list=PLGFjgYQtw1UiuJxHSeoiY0jcSGERPaxeD
 luv babbar 450 -- https://docs.google.com/spreadsheets/d/1031mU_dk2E0ZGcaKZohfz2AlwcnkOeDR1f3PsOynDlg/edit#gid=136755630
 problem sets -- https://www.geeksforgeeks.org/must-do-coding-questions-for-product-based-companies/
 striver cp list -- https://docs.google.com/document/d/1iXRs_bcjimqm-mFiIXWIolljSAS_1Xg8OZ2TzMBLhcg/edit
-
-# Solutions -
-
-leetcode -- https://www.youtube.com/playlist?list=PL1w8k37X_6L86f3PUUVFoGYXvZiZHde1S
-cses -- https://github.com/mrsac7/CSES-Solutions
 
 # A Complete Guide for SDE Preparation
 

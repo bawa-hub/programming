@@ -49,3 +49,5 @@ https://www.geeksforgeeks.org/queue-data-structure/
 # Heap
 
 # Priority Queue
+
+https://leetcode.com/discuss/study-guide/1360400/Priority-queue-%2B-problems-to-practice

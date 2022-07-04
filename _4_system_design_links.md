@@ -6,3 +6,8 @@ https://leetcode.com/discuss/study-guide/901324/My-System-Design-Interview-Check
 # CN
 
 https://leetcode.com/discuss/study-guide/1568859/One-Stop-CN-guide-or-Useful-and-Short-topics-for-interviews-or-Computer-Networks
+https://github.com/notescs/notes/tree/main/Computer-Networks-for-Interviews
+
+# Database
+
+https://leetcode.com/discuss/study-guide/1600718/Database-SQL-Primer-(Part-1)-Overview-or-Query-Execution-Order-or-References
