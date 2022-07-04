@@ -15,6 +15,8 @@ https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
 
 https://leetcode.com/discuss/study-guide/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
 https://leetcode.com/discuss/general-discussion/969327/Graph-Algorithms-One-Place-or-Dijkstra-or-Bellman-Ford-or-Floyd-Warshall-or-Prims-or-Kruskals-or-DSU
+https://leetcode.com/discuss/study-guide/1059477/A-guide-to-Dijkstra's-Algorithm
+https://leetcode.com/discuss/study-guide/1326900/Graph-algorithms-%2B-problems-to-practice
 
 # Binary Tree and Binary Search Tree
 
@@ -31,6 +33,7 @@ https://onedrive.live.com/?authkey=%21AFCiD8BGmQXwCxc&cid=842AECBB531CCEA4&id=84
 
 https://leetcode.com/discuss/study-guide/937307/Iterative-or-Recursive-or-DFS-and-BFS-Tree-Traversal-or-In-Pre-Post-and-LevelOrder-or-Views
 https://leetcode.com/discuss/study-guide/1337373/Tree-question-pattern-oror2021-placement
+https://leetcode.com/discuss/study-guide/1820334/Become-Master-in-Tree
 
 # Linked List
 

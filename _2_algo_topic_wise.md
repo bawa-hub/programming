@@ -44,6 +44,7 @@ https://leetcode.com/discuss/study-guide/1050391/Must-do-Dynamic-programming-Pro
 https://leetcode.com/discuss/study-guide/475924/My-experience-and-notes-for-learning-DP
 https://leetcode.com/discuss/study-guide/651719/How-to-solve-DP-String-Template-and-4-Steps-to-be-followed.
 https://leetcode.com/discuss/study-guide/1437879/Dynamic-Programming-Patterns
+https://leetcode.com/discuss/study-guide/1490172/Dynamic-programming-is-simple
 
 # Searching and Sorting
 
@@ -51,6 +52,8 @@ https://www.youtube.com/playlist?list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2
 
 https://leetcode.com/discuss/study-guide/691825/Binary-Search-for-Beginners-Problems-or-Patterns-or-Sample-solutions
 https://leetcode.com/discuss/study-guide/1322500/5-variations-of-Binary-search-(A-Self-Note)
+https://leetcode.com/discuss/study-guide/1233854/A-GUIDE-TO-THE-BINARY-SEARCH-ALGORITHM!!!
+https://leetcode.com/discuss/study-guide/2023248/Master-In-Binary-Search-oror-For-beginners-to-become-a-pro-oror-with-youtube-videos
 
 # Greedy Algorithm
 

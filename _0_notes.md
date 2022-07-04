@@ -1,5 +1,6 @@
 # important links of leetcode --
 
+https://leetcode.com/discuss/study-guide/1367727/Links-to-Some-Great-post-in-Study-Guide
 https://leetcode.com/discuss/study-guide/494279/Comprehensive-Data-Structure-and-Algorithm-Study-Guide
 https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode
 https://leetcode.com/discuss/interview-question/2069641/The-Only-Lists-You-Need-For-Your-Interview-Preparation
@@ -9,6 +10,7 @@ https://leetcode.com/discuss/study-guide/448285/List-of-questions-sorted-by-comm
 https://leetcode.com/discuss/study-guide/657507/Sliding-Window-for-Beginners-Problems-or-Template-or-Sample-Solutions
 https://leetcode.com/discuss/study-guide/1177039/%22Practice-More-Learn-More%22-greater-Study-Guide-and-Interview-Preparation-Using-LEETCODE
 https://leetcode.com/discuss/study-guide/2122306/Python-Cheat-Sheet-for-Leetcode
+https://leetcode.com/discuss/study-guide/1612475/Compilation-or-Leetcode-ListsandResources-or-Study-Guide-or-Topic-wise-or-Difficulty-wise
 
 # DSA playlists --
 
