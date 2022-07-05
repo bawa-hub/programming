@@ -6,6 +6,7 @@ https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
 
 https://www.geeksforgeeks.org/string-data-structure/
 https://leetcode.com/discuss/study-guide/2001789/Collections-of-Important-String-questions-Pattern
+https://leetcode.com/discuss/study-guide/1160275/Strings-and-ASCII-(some-tips)
 
 # Graph
 
