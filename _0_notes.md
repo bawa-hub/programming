@@ -13,6 +13,8 @@ https://leetcode.com/discuss/study-guide/2122306/Python-Cheat-Sheet-for-Leetcode
 https://leetcode.com/discuss/study-guide/1612475/Compilation-or-Leetcode-ListsandResources-or-Study-Guide-or-Topic-wise-or-Difficulty-wise
 https://leetcode.com/discuss/study-guide/1809778/Series-Questions-on-Leetcode-or-Practice-Follow-Up-Questions-or-Beginners-to-Advanced
 https://leetcode.com/discuss/study-guide/1757720/Interview-preparation-Guide-or-DSA-or-LLD-or-System-Design-or-Behavioral-or-FAANG
+https://leetcode.com/discuss/study-guide/1854405/9-Fibonacci-Algorithms-or-The-most-complete-solutions-or-All-In-One-or-Easy-To-Understand
+https://leetcode.com/discuss/study-guide/1939806/Rule-of-thumb-for-avoiding-TLE
 
 # DSA playlists --
 
