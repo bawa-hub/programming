@@ -1,8 +1,3 @@
-# Algorithms --
-
-https://www.personal.kent.edu/~rmuhamma/Algorithms/algorithm.html
-cp sheet -- https://takeuforward.org/interview-experience/strivers-cp-sheet/?utm_source=youtube&utm_medium=striver&utm_campaign=yt_video
-
 # Recursion/Backtracking
 
 striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9

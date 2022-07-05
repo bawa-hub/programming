@@ -1,1 +1,0 @@
-// Q. https://www.codechef.com/FEB21C/problems/TEAMNAME

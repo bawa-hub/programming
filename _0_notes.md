@@ -21,6 +21,11 @@ https://leetcode.com/discuss/study-guide/1939806/Rule-of-thumb-for-avoiding-TLE
 striver -- https://www.youtube.com/c/takeUforward/playlists
 luv cp -- https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-
 
+# Algorithms --
+
+https://www.personal.kent.edu/~rmuhamma/Algorithms/algorithm.html
+cp sheet -- https://takeuforward.org/interview-experience/strivers-cp-sheet/?utm_source=youtube&utm_medium=striver&utm_campaign=yt_video
+
 # Solutions -
 
 leetcode -- https://www.youtube.com/playlist?list=PL1w8k37X_6L86f3PUUVFoGYXvZiZHde1S
