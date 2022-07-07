@@ -2,7 +2,7 @@
 
 https://www.geeksforgeeks.org/array-data-structure/
 https://www.geeksforgeeks.org/matrix/
-https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
+top-50-array-coding-problems-for-interviews/
 
 https://www.geeksforgeeks.org/string-data-structure/
 https://leetcode.com/discuss/study-guide/2001789/Collections-of-Important-String-questions-Pattern

@@ -1,3 +1,10 @@
+# practice sde sheet --
+
+striver sde sheet -- https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
+luv babbar 450 -- https://docs.google.com/spreadsheets/d/1031mU_dk2E0ZGcaKZohfz2AlwcnkOeDR1f3PsOynDlg/edit#gid=136755630
+problem sets -- https://www.geeksforgeeks.org/must-do-coding-questions-for-product-based-companies/
+striver cp list -- https://docs.google.com/document/d/1iXRs_bcjimqm-mFiIXWIolljSAS_1Xg8OZ2TzMBLhcg/edit
+
 # important links of leetcode --
 
 https://leetcode.com/discuss/study-guide/1367727/Links-to-Some-Great-post-in-Study-Guide
@@ -34,12 +41,8 @@ cses -- https://github.com/mrsac7/CSES-Solutions
 # Resources
 
 https://www.youtube.com/playlist?list=PLGFjgYQtw1UiuJxHSeoiY0jcSGERPaxeD
-luv babbar 450 -- https://docs.google.com/spreadsheets/d/1031mU_dk2E0ZGcaKZohfz2AlwcnkOeDR1f3PsOynDlg/edit#gid=136755630
-problem sets -- https://www.geeksforgeeks.org/must-do-coding-questions-for-product-based-companies/
-striver cp list -- https://docs.google.com/document/d/1iXRs_bcjimqm-mFiIXWIolljSAS_1Xg8OZ2TzMBLhcg/edit
 
 # A Complete Guide for SDE Preparation
 
-striver sde sheet -- https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
 https://www.youtube.com/watch?v=udt-kvHNt_o
 https://www.geeksforgeeks.org/sde-sheet-a-complete-guide-for-sde-preparation/?ref=ghb
