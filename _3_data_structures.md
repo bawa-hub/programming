@@ -1,17 +1,6 @@
-# Arrays and Strings
-
-https://www.geeksforgeeks.org/array-data-structure/
-https://www.geeksforgeeks.org/matrix/
-top-50-array-coding-problems-for-interviews/
-
-https://www.geeksforgeeks.org/string-data-structure/
-https://leetcode.com/discuss/study-guide/2001789/Collections-of-Important-String-questions-Pattern
-https://leetcode.com/discuss/study-guide/1160275/Strings-and-ASCII-(some-tips)
-
 # Graph
 
 striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw
-https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw
 https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
 
 https://leetcode.com/discuss/study-guide/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
@@ -22,8 +11,7 @@ https://leetcode.com/discuss/study-guide/1326900/Graph-algorithms-%2B-problems-t
 # Binary Tree and Binary Search Tree
 
 striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk
-https://www.youtube.com/playlist?list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk
-https://www.youtube.com/playlist?list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_
+pepcoding generic tree - https://www.youtube.com/playlist?list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_
 https://leetcode.com/discuss/study-guide/1212004/binary-trees-study-guide
 https://leetcode.com/problemset/all/?topicSlugs=binary-tree&page=1
 
@@ -36,6 +24,16 @@ https://leetcode.com/discuss/study-guide/937307/Iterative-or-Recursive-or-DFS-an
 https://leetcode.com/discuss/study-guide/1337373/Tree-question-pattern-oror2021-placement
 https://leetcode.com/discuss/study-guide/1820334/Become-Master-in-Tree
 
+# Arrays and Strings
+
+https://www.geeksforgeeks.org/array-data-structure/
+https://www.geeksforgeeks.org/matrix/
+top-50-array-coding-problems-for-interviews/
+
+https://www.geeksforgeeks.org/string-data-structure/
+https://leetcode.com/discuss/study-guide/2001789/Collections-of-Important-String-questions-Pattern
+https://leetcode.com/discuss/study-guide/1160275/Strings-and-ASCII-(some-tips)
+
 # Linked List
 
 https://leetcode.com/discuss/study-guide/1800120/Become-Master-In-Linked-List
@@ -45,10 +43,10 @@ https://leetcode.com/discuss/study-guide/1800120/Become-Master-In-Linked-List
 https://www.geeksforgeeks.org/stack-data-structure/
 https://www.geeksforgeeks.org/queue-data-structure/
 
-# Hashing
-
-# Heap
-
 # Priority Queue
 
 https://leetcode.com/discuss/study-guide/1360400/Priority-queue-%2B-problems-to-practice
+
+# Hashing
+
+# Heap
