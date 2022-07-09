@@ -1,4 +1,3 @@
-// https://www.youtube.com/watch?v=9_ftWKch6vI&list=PLauivoElc3ghxyYSr_sVnDUc_ynPk6iXE&index=4
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -30,8 +29,8 @@ bool dfs(int vertex, int par)
          * **/
     }
     /**
-         *4. Take action on vertex after exiting the vertex
-         * **/
+     *4. Take action on vertex after exiting the vertex
+     * **/
 }
 
 int main()
