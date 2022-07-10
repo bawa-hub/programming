@@ -3,9 +3,9 @@
  * Best - O(1)
  * Average - O(log n)
  * Worst - O(log n)
- * 
+ *
  * Space Cmplexity = O(1)
-*/
+ */
 
 #include <iostream>
 using namespace std;
@@ -15,7 +15,7 @@ int binarySearch(int array[], int x, int low, int high)
 {
     if (high >= low)
     {
-        int mid = low + (high - low) / 2;
+        int mid = low + (high - low) / 2; // this calculation is used to overcome int overflow
 
         // If found at mid, then return it
         if (array[mid] == x)

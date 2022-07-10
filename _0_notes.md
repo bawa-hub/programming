@@ -28,6 +28,7 @@ https://leetcode.com/discuss/study-guide/1939806/Rule-of-thumb-for-avoiding-TLE
 striver -- https://www.youtube.com/c/takeUforward/playlists
 luv cp -- https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-
 aditya verma -- https://www.youtube.com/c/AdityaVermaTheProgrammingLord/playlists
+aditya verma notes -- https://github.com/skjha1/Aditya-verma-youtube-playlist-code
 
 # Algorithms --
 
