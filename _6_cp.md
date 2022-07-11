@@ -1,5 +1,10 @@
-#roadmap --
+# roadmap --
+
 https://docs.google.com/document/d/1-7Co93b504uyXyMjjE8bnLJP3d3QXvp_m1UjvbvdR2Y/editv
+
+# resources --
+
+https://codeforces.com/blog/entry/23054?
 
 # practice problems --
 
