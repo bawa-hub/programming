@@ -89,4 +89,8 @@ https://graphics.stanford.edu/~seander/bithacks.html
 
 # String Algorithms
 
+https://www.hackerearth.com/practice/algorithms/string-algorithm/basics-of-string-manipulation/tutorial/
+
 # Mathematical Algorithms
+
+https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/tutorial/
