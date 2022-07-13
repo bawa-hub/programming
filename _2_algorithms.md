@@ -21,13 +21,14 @@ https://www.geeksforgeeks.org/recursion-practice-problems-solutions/
 
 # Dynamic Programming
 
-saket dp tips - https://www.youtube.com/watch?v=qtZtCty073g
 striver dp - https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY
+https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
+
+saket dp tips - https://www.youtube.com/watch?v=qtZtCty073g
 pepcoding level 1 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy
 aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go
 pepcoding level 2 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiEZvXCn-c5UIBvfT8dA-8EG
 gfg - https://www.youtube.com/playlist?list=PLqM7alHXFySGbXhWx7sBJEwY2DnhDjmxm
-https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
 https://leetcode.com/discuss/general-discussion/712010/the-art-of-dynamic-programming-an-intuitive-approach-from-apprentice-to-master/709225
 Cormen book
 CP3 book
@@ -47,7 +48,7 @@ https://leetcode.com/discuss/study-guide/651719/How-to-solve-DP-String-Template-
 https://leetcode.com/discuss/study-guide/1437879/Dynamic-Programming-Patterns
 https://leetcode.com/discuss/study-guide/1490172/Dynamic-programming-is-simple
 
-# Searching and Sorting
+# Binary Search
 
 aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2
 
@@ -65,6 +66,8 @@ https://www.geeksforgeeks.org/greedy-algorithms/
 https://www.codingninjas.com/codestudio/problem-lists/siddharth-singh-coding-sheet-problems?page=1
 
 https://leetcode.com/discuss/study-guide/669996/Greedy-for-Beginners-Problems-or-Sample-solutions
+
+# Sorting
 
 # Two Pointers
 
