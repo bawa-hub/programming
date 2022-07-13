@@ -8,6 +8,7 @@ http://cp-algorithms.com/
 https://codeforces.com/blog/entry/23054?
 https://blog.shahjalalshohag.com/topic-list/
 https://github.com/ShahjalalShohag/code-library
+https://www.codechef.com/cptutorials?itm_medium=navmenu&itm_campaign=cptutorials
 
 # practice problems --
 

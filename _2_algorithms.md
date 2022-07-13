@@ -59,7 +59,6 @@ https://leetcode.com/discuss/study-guide/2023248/Master-In-Binary-Search-oror-Fo
 
 # Greedy Algorithm
 
-https://www.youtube.com/playlist?list=PLQXZIFwMtjozzDH4ZRtpIl0piBjsRF5Bf
 https://www.youtube.com/playlist?list=PLgUwDviBIf0pmWCl2nepwGDO05a0-7EfJ
 https://www.youtube.com/watch?v=xmJZSYSvgfE
 https://www.geeksforgeeks.org/greedy-algorithms/
