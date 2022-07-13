@@ -5,6 +5,7 @@ https://docs.google.com/document/d/1-7Co93b504uyXyMjjE8bnLJP3d3QXvp_m1UjvbvdR2Y/
 # resources --
 
 https://codeforces.com/blog/entry/23054?
+https://github.com/lnishan/awesome-competitive-programming#tutorial-websites
 
 # algorithms
 
