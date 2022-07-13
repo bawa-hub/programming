@@ -47,6 +47,10 @@ https://leetcode.com/discuss/study-guide/475924/My-experience-and-notes-for-lear
 https://leetcode.com/discuss/study-guide/651719/How-to-solve-DP-String-Template-and-4-Steps-to-be-followed.
 https://leetcode.com/discuss/study-guide/1437879/Dynamic-Programming-Patterns
 https://leetcode.com/discuss/study-guide/1490172/Dynamic-programming-is-simple
+https://www.codechef.com/wiki/tutorial-dynamic-programming#Practice_Problems
+https://www.quora.com/How-does-one-become-better-at-dynamic-programming-problems-for-competitive-programming
+https://codeforces.com/blog/entry/67679
+https://www.topcoder.com/thrive/articles/Dynamic%20Programming:%20From%20Novice%20to%20Advanced
 
 # Binary Search
 
