@@ -19,3 +19,4 @@ https://takeuforward.org/interview-experience/strivers-cp-sheet/
 # codeforces
 
 https://codeforces.com/blog/entry/59481
+https://codeforces.com/blog/entry/99660
