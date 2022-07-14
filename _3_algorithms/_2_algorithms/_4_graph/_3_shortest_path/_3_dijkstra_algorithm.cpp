@@ -1,5 +1,3 @@
-// https://www.youtube.com/watch?v=F3PNsWE6_hM&list=PLauivoElc3ghxyYSr_sVnDUc_ynPk6iXE&index=16
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -14,6 +12,7 @@ void dijkstra(int source)
     vector<int> vis(N, 0);
     vector<int> dist(N, INF);
 
+    // using set for priority queue
     set<pair<int, int>> st; // pair<distance, node>
 
     st.insert({0, source});
