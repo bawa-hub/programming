@@ -1,3 +1,7 @@
+# interview guide
+
+https://www.geeksforgeeks.org/amazon-sde-sheet-a-guide-for-amazon-sde-interview-preparation/
+
 # practice sde sheet --
 
 striver sde sheet -- https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
