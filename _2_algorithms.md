@@ -49,6 +49,7 @@ https://www.codechef.com/wiki/tutorial-dynamic-programming#Practice_Problems
 https://www.quora.com/How-does-one-become-better-at-dynamic-programming-problems-for-competitive-programming
 https://codeforces.com/blog/entry/67679
 https://www.topcoder.com/thrive/articles/Dynamic%20Programming:%20From%20Novice%20to%20Advanced
+https://leetcode.com/discuss/study-guide/662866/dp-for-beginners-problems-patterns-sample-solutions
 
 # Binary Search
 
@@ -58,11 +59,16 @@ https://leetcode.com/discuss/study-guide/691825/Binary-Search-for-Beginners-Prob
 https://leetcode.com/discuss/study-guide/1322500/5-variations-of-Binary-search-(A-Self-Note)
 https://leetcode.com/discuss/study-guide/1233854/A-GUIDE-TO-THE-BINARY-SEARCH-ALGORITHM!!!
 https://leetcode.com/discuss/study-guide/2023248/Master-In-Binary-Search-oror-For-beginners-to-become-a-pro-oror-with-youtube-videos
+https://leetcode.com/discuss/study-guide/691825/binary-search-for-beginners-problems-patterns-sample-solutions
 
 # Greedy Algorithm
 
 https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/tutorial/
 https://www.youtube.com/playlist?list=PLgUwDviBIf0pmWCl2nepwGDO05a0-7EfJ
+https://www.youtube.com/watch?v=xmJZSYSvgfE&t=1s
+https://www.youtube.com/watch?v=lZJGbS12mWo&list=PLQXZIFwMtjozzDH4ZRtpIl0piBjsRF5Bf&index=6
+https://www.youtube.com/watch?v=iU5uB9pg7gM
+https://www.codingninjas.com/codestudio/problem-lists/siddharth-singh-coding-sheet-problems?page=1
 https://www.geeksforgeeks.org/greedy-algorithms/
 
 https://leetcode.com/discuss/study-guide/669996/Greedy-for-Beginners-Problems-or-Sample-solutions
@@ -78,6 +84,7 @@ https://leetcode.com/discuss/study-guide/1469943/Everyday-2-pointers-challenge-l
 # Sliding Window
 
 https://leetcode.com/discuss/study-guide/1773891/Sliding-Window-Technique-and-Question-Bank
+https://leetcode.com/discuss/study-guide/657507/sliding-window-for-beginners-problems-template-sample-solutions
 
 # Divide and Conquer
 
