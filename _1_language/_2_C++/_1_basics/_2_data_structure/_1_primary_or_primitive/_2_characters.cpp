@@ -17,4 +17,9 @@ int main()
     // change char to int
     char b = '5';
     cout << b << "with ascii value of " << b - '0' << endl;
+
+    // int to char
+    int i = 2;
+    char ch = '0' + i;
+    cout << "ch: " << ch;
 }

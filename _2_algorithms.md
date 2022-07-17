@@ -23,6 +23,7 @@ https://www.geeksforgeeks.org/recursion-practice-problems-solutions/
 
 striver dp - https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY
 https://takeuforward.org/dynamic-programming/striver-dp-series-dynamic-programming-problems/
+luv - https://www.youtube.com/playlist?list=PLauivoElc3gimdmLcIIpafEkzGs4tCQmi
 
 https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
 saket dp tips - https://www.youtube.com/watch?v=qtZtCty073g
@@ -60,10 +61,9 @@ https://leetcode.com/discuss/study-guide/2023248/Master-In-Binary-Search-oror-Fo
 
 # Greedy Algorithm
 
+https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/tutorial/
 https://www.youtube.com/playlist?list=PLgUwDviBIf0pmWCl2nepwGDO05a0-7EfJ
-https://www.youtube.com/watch?v=xmJZSYSvgfE
 https://www.geeksforgeeks.org/greedy-algorithms/
-https://www.codingninjas.com/codestudio/problem-lists/siddharth-singh-coding-sheet-problems?page=1
 
 https://leetcode.com/discuss/study-guide/669996/Greedy-for-Beginners-Problems-or-Sample-solutions
 
