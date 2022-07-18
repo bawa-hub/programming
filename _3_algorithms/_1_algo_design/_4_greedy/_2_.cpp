@@ -1,1 +1,0 @@
-// Q. https://leetcode.com/problems/trapping-rain-water/
