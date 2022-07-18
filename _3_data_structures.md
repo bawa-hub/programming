@@ -25,11 +25,15 @@ https://leetcode.com/discuss/study-guide/937307/Iterative-or-Recursive-or-DFS-an
 https://leetcode.com/discuss/study-guide/1337373/Tree-question-pattern-oror2021-placement
 https://leetcode.com/discuss/study-guide/1820334/Become-Master-in-Tree
 
-# Arrays and Strings
+# Arrays
 
+https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
+https://www.codingninjas.com/codestudio/problem-lists/love-babbar-dsa-sheet-problems?practice_topic[]=Arrays
 https://www.geeksforgeeks.org/array-data-structure/
 https://www.geeksforgeeks.org/matrix/
 top-50-array-coding-problems-for-interviews/
+
+# Strings
 
 https://www.geeksforgeeks.org/string-data-structure/
 https://leetcode.com/discuss/study-guide/2001789/Collections-of-Important-String-questions-Pattern
@@ -41,6 +45,7 @@ https://leetcode.com/discuss/study-guide/1800120/Become-Master-In-Linked-List
 
 # Stack and Queue
 
+https://www.youtube.com/playlist?list=PLgUwDviBIf0oSO572kQ7KCSvCUh1AdILj
 https://www.geeksforgeeks.org/stack-data-structure/
 https://www.geeksforgeeks.org/queue-data-structure/
 
@@ -52,4 +57,5 @@ https://leetcode.com/discuss/study-guide/1360400/Priority-queue-%2B-problems-to-
 
 # Heap
 
+https://www.youtube.com/playlist?list=PL_z_8CaSLPWdtY9W22VjnPxG30CXNZpI9
 https://leetcode.com/discuss/general-discussion/1127238/master-heap-understanding-4-patterns-where-heap-data-structure-is-used

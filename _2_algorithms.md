@@ -53,7 +53,11 @@ https://leetcode.com/discuss/study-guide/662866/dp-for-beginners-problems-patter
 
 # Binary Search
 
+striver -- https://www.youtube.com/playlist?list=PLgUwDviBIf0qYbL4TBaEWgb-ljVdhkM7R
+luv -- https://www.youtube.com/playlist?list=PLauivoElc3gjE_s-7owHO0RVb_jj7Rx85
 aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2
+luv babbar lecture 12-15 -- https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA
+luv babbar 450 problems sheet
 
 https://leetcode.com/discuss/study-guide/691825/Binary-Search-for-Beginners-Problems-or-Patterns-or-Sample-solutions
 https://leetcode.com/discuss/study-guide/1322500/5-variations-of-Binary-search-(A-Self-Note)

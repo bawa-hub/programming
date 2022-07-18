@@ -6,4 +6,5 @@ https://leetcode.com/discuss/study-guide/1068545/HASH-TABLE-and-MAP-POWERFUL-GUI
 
 # STL --
 
+https://www.youtube.com/playlist?list=PLauivoElc3gh3RCiQA82MDI-gJfXQQVnn
 https://www.topcoder.com/thrive/articles/Power%20up%20C++%20with%20the%20Standard%20Template%20Library%20Part%20One
