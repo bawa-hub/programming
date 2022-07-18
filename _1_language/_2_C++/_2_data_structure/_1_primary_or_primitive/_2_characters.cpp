@@ -22,4 +22,10 @@ int main()
     int i = 2;
     char ch = '0' + i;
     cout << "ch: " << ch;
+
+    // toLower or toUpper
+    char c1 = 'a';
+    cout << toupper(c1);
+    char c2 = 'A';
+    cout << tolower(c2);
 }
