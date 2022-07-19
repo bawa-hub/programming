@@ -2,6 +2,8 @@ https://drive.google.com/file/d/16wtG6ZsThlu_YkloeyX8pp2OEjVebure/view
 
 https://leetcode.com/discuss/general-discussion/1082786/System-Design%3A-Designing-a-distributed-Job-Scheduler-or-Many-interesting-concepts-to-learn
 https://leetcode.com/discuss/study-guide/901324/My-System-Design-Interview-Checklist-A-Gateway-to-FAANGs
+https://leetcode.com/discuss/study-guide/1098600/TOPICS-WHICH-YOU-CAN'T-SKIP-INTERVIEW-PREPARATION-or-STUDY-PLAN-USING-LEETCODE
+https://leetcode.com/discuss/study-guide/1757720/Interview-preparation-Guide-or-DSA-or-LLD-or-System-Design-or-Behavioral-or-FAANG
 
 # CN
 
