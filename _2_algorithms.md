@@ -50,6 +50,7 @@ https://www.quora.com/How-does-one-become-better-at-dynamic-programming-problems
 https://codeforces.com/blog/entry/67679
 https://www.topcoder.com/thrive/articles/Dynamic%20Programming:%20From%20Novice%20to%20Advanced
 https://leetcode.com/discuss/study-guide/662866/dp-for-beginners-problems-patterns-sample-solutions
+https://leetcode.com/discuss/interview-question/1986802/Dynamic-Programming
 
 # Binary Search
 
