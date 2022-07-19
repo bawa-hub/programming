@@ -3,6 +3,7 @@
 striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw
 luv - https://www.youtube.com/playlist?list=PLauivoElc3ghxyYSr_sVnDUc_ynPk6iXE
 https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
+https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/tutorial/
 
 https://leetcode.com/discuss/study-guide/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
 https://leetcode.com/discuss/general-discussion/969327/Graph-Algorithms-One-Place-or-Dijkstra-or-Bellman-Ford-or-Floyd-Warshall-or-Prims-or-Kruskals-or-DSU
