@@ -19,40 +19,7 @@ https://leetcode.com/tag/recursion/
 https://www.hackerrank.com/domains/algorithms?filters%5Bsubdomains%5D%5B%5D=recursion
 https://www.geeksforgeeks.org/backtracking-algorithms/?ref=shm
 https://www.geeksforgeeks.org/recursion-practice-problems-solutions/
-
-# Graph
-
-striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw
-luv - https://www.youtube.com/playlist?list=PLauivoElc3ghxyYSr_sVnDUc_ynPk6iXE
-https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
-https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/tutorial/
-
-https://leetcode.com/discuss/study-guide/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
-https://leetcode.com/discuss/general-discussion/969327/Graph-Algorithms-One-Place-or-Dijkstra-or-Bellman-Ford-or-Floyd-Warshall-or-Prims-or-Kruskals-or-DSU
-https://leetcode.com/discuss/study-guide/1059477/A-guide-to-Dijkstra's-Algorithm
-https://leetcode.com/discuss/study-guide/1326900/Graph-algorithms-%2B-problems-to-practice
-
-# Binary Tree and Binary Search Tree
-
-striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk
-pepcoding generic tree - https://www.youtube.com/playlist?list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_
-https://leetcode.com/discuss/study-guide/1212004/binary-trees-study-guide
-https://leetcode.com/problemset/all/?topicSlugs=binary-tree&page=1
-
-https://www.youtube.com/playlist?list=PLqM7alHXFySHCXD7r1J0ky9Zg_GBB1dbk
-https://www.geeksforgeeks.org/binary-tree-data-structure/
-https://onedrive.live.com/?authkey=%21AFZ%5F76MINT2egyw&cid=842AECBB531CCEA4&id=842AECBB531CCEA4%218965&parId=842AECBB531CCEA4%218964&o=OneUp
-https://onedrive.live.com/?authkey=%21AFCiD8BGmQXwCxc&cid=842AECBB531CCEA4&id=842AECBB531CCEA4%218966&parId=842AECBB531CCEA4%218964&o=OneUp
-
-https://leetcode.com/discuss/study-guide/937307/Iterative-or-Recursive-or-DFS-and-BFS-Tree-Traversal-or-In-Pre-Post-and-LevelOrder-or-Views
-https://leetcode.com/discuss/study-guide/1337373/Tree-question-pattern-oror2021-placement
-https://leetcode.com/discuss/study-guide/1820334/Become-Master-in-Tree
-
-# Heap
-
-https://www.youtube.com/playlist?list=PL_z_8CaSLPWdtY9W22VjnPxG30CXNZpI9
-https://leetcode.com/discuss/general-discussion/1127238/master-heap-understanding-4-patterns-where-heap-data-structure-is-used
-https://leetcode.com/discuss/study-guide/1360400/Priority-queue-%2B-problems-to-practice
+https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
 
 # Binary Search
 
@@ -61,6 +28,7 @@ luv -- https://www.youtube.com/playlist?list=PLauivoElc3gjE_s-7owHO0RVb_jj7Rx85
 aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2
 luv babbar lecture 12-15 -- https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA
 luv babbar 450 problems sheet
+https://www.geeksforgeeks.org/searching-algorithms/?ref=shm
 
 https://leetcode.com/discuss/study-guide/786126/Python-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems
 https://leetcode.com/discuss/study-guide/691825/Binary-Search-for-Beginners-Problems-or-Patterns-or-Sample-solutions
@@ -80,21 +48,6 @@ https://www.codingninjas.com/codestudio/problem-lists/siddharth-singh-coding-she
 https://www.geeksforgeeks.org/greedy-algorithms/
 
 https://leetcode.com/discuss/study-guide/669996/Greedy-for-Beginners-Problems-or-Sample-solutions
-
-# Arrays
-
-https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
-https://www.codingninjas.com/codestudio/problem-lists/love-babbar-dsa-sheet-problems?practice_topic[]=Arrays
-https://www.geeksforgeeks.org/array-data-structure/
-https://www.geeksforgeeks.org/matrix/
-top-50-array-coding-problems-for-interviews/
-
-# Strings
-
-https://www.geeksforgeeks.org/string-data-structure/
-https://www.hackerearth.com/practice/algorithms/string-algorithm/basics-of-string-manipulation/tutorial/
-https://leetcode.com/discuss/study-guide/2001789/Collections-of-Important-String-questions-Pattern
-https://leetcode.com/discuss/study-guide/1160275/Strings-and-ASCII-(some-tips)
 
 # Dynamic Programming
 
@@ -129,16 +82,6 @@ https://www.topcoder.com/thrive/articles/Dynamic%20Programming:%20From%20Novice%
 https://leetcode.com/discuss/study-guide/662866/dp-for-beginners-problems-patterns-sample-solutions
 https://leetcode.com/discuss/interview-question/1986802/Dynamic-Programming
 
-# Linked List
-
-https://leetcode.com/discuss/study-guide/1800120/Become-Master-In-Linked-List
-
-# Stack and Queue
-
-https://www.youtube.com/playlist?list=PLgUwDviBIf0oSO572kQ7KCSvCUh1AdILj
-https://www.geeksforgeeks.org/stack-data-structure/
-https://www.geeksforgeeks.org/queue-data-structure/
-
 # Two Pointers
 
 https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days.
@@ -163,56 +106,3 @@ https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/tu
 # Sorting
 
 # Divide and Conquer
-
-# Hashing
-
-# **\*\*\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\*\*\***\***\*\*\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\*\*\***\*\*\*\***
-
-# practice problems
-
-https://leetcode.com/discuss/career/452354/compilation-of-questions-covering-each-interview-question-pattern
-https://leetcode.com/discuss/interview-question/2069641/The-Only-Lists-You-Need-For-Your-Interview-Preparation
-
-https://leetcode.com/discuss/career/448285/List-of-questions-sorted-by-common-patterns
-https://seanprashad.com/leetcode-patterns/
-https://github.com/seanprashad/leetcode-patterns#solutions
-
-# important links --
-
-https://leetcode.com/discuss/study-guide/1367727/Links-to-Some-Great-post-in-Study-Guide
-https://leetcode.com/discuss/study-guide/1612475/Compilation-or-Leetcode-ListsandResources-or-Study-Guide-or-Topic-wise-or-Difficulty-wise
-
-https://leetcode.com/discuss/study-guide/494279/Comprehensive-Data-Structure-and-Algorithm-Study-Guide
-https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode
-
-https://leetcode.com/discuss/study-guide/657507/Sliding-Window-for-Beginners-Problems-or-Template-or-Sample-Solutions
-https://leetcode.com/discuss/study-guide/1809778/Series-Questions-on-Leetcode-or-Practice-Follow-Up-Questions-or-Beginners-to-Advanced
-
-https://leetcode.com/discuss/study-guide/1854405/9-Fibonacci-Algorithms-or-The-most-complete-solutions-or-All-In-One-or-Easy-To-Understand
-https://www.personal.kent.edu/~rmuhamma/Algorithms/algorithm.html
-
-# practice sde sheet --
-
-striver sde sheet -- https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
-luv babbar 450 -- https://docs.google.com/spreadsheets/d/1031mU_dk2E0ZGcaKZohfz2AlwcnkOeDR1f3PsOynDlg/edit#gid=136755630
-problem sets -- https://www.geeksforgeeks.org/must-do-coding-questions-for-product-based-companies/
-striver cp list -- https://docs.google.com/document/d/1iXRs_bcjimqm-mFiIXWIolljSAS_1Xg8OZ2TzMBLhcg/edit
-cp sheet -- https://takeuforward.org/interview-experience/strivers-cp-sheet/?utm_source=youtube&utm_medium=striver&utm_campaign=yt_video
-
-# DSA playlists --
-
-striver -- https://www.youtube.com/c/takeUforward/playlists
-luv cp -- https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-
-aditya verma -- https://www.youtube.com/c/AdityaVermaTheProgrammingLord/playlists
-aditya verma notes -- https://github.com/skjha1/Aditya-verma-youtube-playlist-code
-
-# Solutions -
-
-leetcode -- https://www.youtube.com/playlist?list=PL1w8k37X_6L86f3PUUVFoGYXvZiZHde1S
-cses -- https://github.com/mrsac7/CSES-Solutions
-
-# A Complete Guide for SDE Preparation
-
-https://www.geeksforgeeks.org/amazon-sde-sheet-a-guide-for-amazon-sde-interview-preparation/
-https://www.youtube.com/watch?v=udt-kvHNt_o
-https://www.geeksforgeeks.org/sde-sheet-a-complete-guide-for-sde-preparation/?ref=ghb
