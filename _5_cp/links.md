@@ -5,11 +5,13 @@ https://docs.google.com/document/d/1-7Co93b504uyXyMjjE8bnLJP3d3QXvp_m1UjvbvdR2Y/
 
 # resources --
 
+https://www.geeksforgeeks.org/competitive-programming-a-complete-guide/?ref=lbp
 http://cp-algorithms.com/
 https://codeforces.com/blog/entry/23054?
 https://blog.shahjalalshohag.com/topic-list/
 https://github.com/ShahjalalShohag/code-library
 https://www.codechef.com/cptutorials?itm_medium=navmenu&itm_campaign=cptutorials
+https://codeforces.com/blog/entry/81716
 
 # practice problems --
 

@@ -39,13 +39,18 @@ https://www.codingninjas.com/codestudio/problem-lists/love-babbar-dsa-sheet-prob
 https://www.geeksforgeeks.org/array-data-structure/
 https://www.geeksforgeeks.org/matrix/
 top-50-array-coding-problems-for-interviews/
+luv babbar 450
 
 # Strings
 
 https://www.geeksforgeeks.org/string-data-structure/
 https://www.hackerearth.com/practice/algorithms/string-algorithm/basics-of-string-manipulation/tutorial/
+
+https://leetcode.com/discuss/study-guide/1333049/collections-of-string-questions-pattern-for-upcoming-placement-2021
+https://leetcode.com/discuss/general-discussion/1134565/approaching-almost-any-string-question
 https://leetcode.com/discuss/study-guide/2001789/Collections-of-Important-String-questions-Pattern
 https://leetcode.com/discuss/study-guide/1160275/Strings-and-ASCII-(some-tips)
+https://medium.com/algorithms-and-leetcode/solve-string-problems-on-leetcode-ce868728efa4
 
 # Linked List
 
