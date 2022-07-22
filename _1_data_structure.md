@@ -39,6 +39,7 @@ https://www.codingninjas.com/codestudio/problem-lists/love-babbar-dsa-sheet-prob
 https://www.geeksforgeeks.org/array-data-structure/
 https://www.geeksforgeeks.org/matrix/
 top-50-array-coding-problems-for-interviews/
+https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/
 
 # Strings
 
