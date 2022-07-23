@@ -40,6 +40,7 @@ https://www.geeksforgeeks.org/array-data-structure/
 https://www.geeksforgeeks.org/matrix/
 top-50-array-coding-problems-for-interviews/
 https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/
+https://www.geeksforgeeks.org/array-subarray-subsequence-and-subset/
 
 # Strings
 
