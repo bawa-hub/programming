@@ -7,6 +7,8 @@ https://leetcode.com/discuss/career/448285/List-of-questions-sorted-by-common-pa
 https://seanprashad.com/leetcode-patterns/
 https://github.com/seanprashad/leetcode-patterns#solutions
 
+https://igotanoffer.com/blogs/tech/coding-interview-prep
+
 # important links --
 
 https://leetcode.com/discuss/study-guide/1367727/Links-to-Some-Great-post-in-Study-Guide

@@ -80,6 +80,7 @@ https://codeforces.com/blog/entry/67679
 https://www.topcoder.com/thrive/articles/Dynamic%20Programming:%20From%20Novice%20to%20Advanced
 https://leetcode.com/discuss/study-guide/662866/dp-for-beginners-problems-patterns-sample-solutions
 https://leetcode.com/discuss/interview-question/1986802/Dynamic-Programming
+https://docs.google.com/spreadsheets/d/1pEzcVLdj7T4fv5mrNhsOvffBnsUH07GZk7c2jD-adE0/edit#gid=0
 
 # Two Pointers
 
