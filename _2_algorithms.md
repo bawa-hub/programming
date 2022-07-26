@@ -20,6 +20,9 @@ https://www.hackerrank.com/domains/algorithms?filters%5Bsubdomains%5D%5B%5D=recu
 https://www.geeksforgeeks.org/backtracking-algorithms/?ref=shm
 https://www.geeksforgeeks.org/recursion-practice-problems-solutions/
 https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
+https://www.geeksforgeeks.org/recursion-practice-problems-solutions/
+https://www.techiedelight.com/recursion-practice-problems-with-solutions/
+https://www.hackerearth.com/practice/basic-programming/recursion/recursion-and-backtracking/practice-problems/
 
 # Binary Search
 
