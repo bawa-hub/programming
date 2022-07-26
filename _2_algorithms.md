@@ -50,17 +50,10 @@ https://leetcode.com/discuss/study-guide/669996/Greedy-for-Beginners-Problems-or
 
 # Dynamic Programming
 
-striver dp - https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY
 https://takeuforward.org/dynamic-programming/striver-dp-series-dynamic-programming-problems/
-luv - https://www.youtube.com/playlist?list=PLauivoElc3gimdmLcIIpafEkzGs4tCQmi
-
 https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
-saket dp tips - https://www.youtube.com/watch?v=qtZtCty073g
-pepcoding level 1 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy
-aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go
-pepcoding level 2 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiEZvXCn-c5UIBvfT8dA-8EG
-gfg - https://www.youtube.com/playlist?list=PLqM7alHXFySGbXhWx7sBJEwY2DnhDjmxm
 https://leetcode.com/discuss/general-discussion/712010/the-art-of-dynamic-programming-an-intuitive-approach-from-apprentice-to-master/709225
+
 https://www.geeksforgeeks.org/dynamic-programming/
 https://cses.fi/problemset/
 https://atcoder.jp/contests/dp
@@ -81,6 +74,13 @@ https://www.topcoder.com/thrive/articles/Dynamic%20Programming:%20From%20Novice%
 https://leetcode.com/discuss/study-guide/662866/dp-for-beginners-problems-patterns-sample-solutions
 https://leetcode.com/discuss/interview-question/1986802/Dynamic-Programming
 https://docs.google.com/spreadsheets/d/1pEzcVLdj7T4fv5mrNhsOvffBnsUH07GZk7c2jD-adE0/edit#gid=0
+
+saket dp tips - https://www.youtube.com/watch?v=qtZtCty073g
+pepcoding level 1 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy
+aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go
+pepcoding level 2 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiEZvXCn-c5UIBvfT8dA-8EG
+gfg - https://www.youtube.com/playlist?list=PLqM7alHXFySGbXhWx7sBJEwY2DnhDjmxm
+luv - https://www.youtube.com/playlist?list=PLauivoElc3gimdmLcIIpafEkzGs4tCQmi
 
 # Two Pointers
 
