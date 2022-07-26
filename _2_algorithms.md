@@ -41,11 +41,8 @@ https://leetcode.com/discuss/study-guide/2023248/Master-In-Binary-Search-oror-Fo
 https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/tutorial/
 https://www.youtube.com/playlist?list=PLgUwDviBIf0pmWCl2nepwGDO05a0-7EfJ
 https://www.youtube.com/watch?v=xmJZSYSvgfE&t=1s
-https://www.youtube.com/watch?v=lZJGbS12mWo&list=PLQXZIFwMtjozzDH4ZRtpIl0piBjsRF5Bf&index=6
-https://www.youtube.com/watch?v=iU5uB9pg7gM
 https://www.codingninjas.com/codestudio/problem-lists/siddharth-singh-coding-sheet-problems?page=1
 https://www.geeksforgeeks.org/greedy-algorithms/
-
 https://leetcode.com/discuss/study-guide/669996/Greedy-for-Beginners-Problems-or-Sample-solutions
 
 # Dynamic Programming
