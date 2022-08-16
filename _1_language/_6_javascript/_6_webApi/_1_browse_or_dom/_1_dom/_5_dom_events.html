@@ -1,11 +1,24 @@
+<!-- https://www.w3schools.com/js/js_htmldom_events.asp -->
+
+<!-- Reacting to Events -->
+<h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+<h1 onclick="changeText(this)">Click on another text!</h1>
+
+
 <!-- HTML Event Attributes -->
+<!-- To assign events to HTML elements you can use event attributes. -->
 <button id="myBtn" onclick="alert()">Try it</button>
 
-<!-- Assign Events Using the HTML DOM -->
 <script>
+    //    Assign Events Using the HTML DOM
     document.getElementById("myBtn").onclick = displayDate;
+
     const displayDate = () => {
         console.log(Date.now())
+    }
+
+    function changeText(id) {
+        id.innerHTML = "Ooops!";
     }
 </script>
 
