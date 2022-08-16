@@ -4,7 +4,8 @@
 // Each of them provides platform-specific functionality.
 // The JavaScript specification calls that a host environment.
 // A host environment provides own objects and functions additional to the language core.
-// Web browsers give a means to control web pages. Node.js provides server-side features, and so on
+// Web browsers give a means to control web pages.
+// Node.js provides server-side features, and so on
 
 // window ->dom, window->bom, window->language
 
@@ -12,7 +13,9 @@
 window.alert("height", window.innerHeight);
 
 // Document Object Model, or DOM for short, represents all page content as objects that can be modified.
-// The document object is the main “entry point” to the page. We can change or create anything on the page using it.
+// The document object is the main “entry point” to the page.
+// We can change or create anything on the page using it.
+
 // change the background color to red
 document.body.style.background = "red";
 // change it back after 1 second

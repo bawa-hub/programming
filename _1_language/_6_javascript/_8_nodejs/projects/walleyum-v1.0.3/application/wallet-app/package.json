@@ -1,0 +1,12 @@
+{
+  "name": "wallet-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:api": "cd server && nodemon app.js",
+    "dev:client": "cd client && npm run dev"
+  },
+  "dependencies": {
+    "next-absolute-url": "^1.2.2"
+  }
+}

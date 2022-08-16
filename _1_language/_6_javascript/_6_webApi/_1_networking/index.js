@@ -1,4 +1,4 @@
-const getData1 = async () => {
+const getData = async () => {
   let response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
   console.log("response", response);
   if (response.ok) {
@@ -12,7 +12,7 @@ const getData1 = async () => {
   }
 };
 
-const getData = () => {
+const getData1 = () => {
   axios
     .get("https://jsonplaceholder.typicode.com/todos/1")
     .then((res) => console.log(typeof res.data.id));

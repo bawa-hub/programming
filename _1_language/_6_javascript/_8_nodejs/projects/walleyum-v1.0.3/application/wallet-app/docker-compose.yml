@@ -1,0 +1,81 @@
+version: "3.8"
+
+x-common-variables: &common-variables
+  MYSQL_DATABASE: wallets
+  MYSQL_USER: MYSQL_USER
+  MYSQL_PASSWORD: MYSQL_PASSWORD
+  MYSQL_ROOT_PASSWORD: wallet123456
+  SECRET: walleyum
+  COOKIESECURE: 0
+  SAMESITE: lax
+  MAIL_HOST: smtp.host.com
+  MAIL_PORT: 465
+  MAIL_USER: admin@host.com
+  MAIL_PASS: "12345678"
+  MAIL_SECURE: "true"
+
+services:
+  mysql_db:
+    platform: linux/x86_64
+    image: mysql
+    restart: always
+    cap_add:
+      - SYS_NICE
+    volumes:
+      - "./setup.sql:/docker-entrypoint-initdb.d/setup.sql"
+    ports:
+      - "9906:3306"
+    environment:
+      <<: *common-variables
+      MYSQL_HOST: localhost
+
+  nginx:
+    depends_on:
+      - api
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "3000:80"
+
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: "./server"
+    depends_on:
+      - mysql_db
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+    environment:
+      <<: *common-variables
+      MYSQL_HOST_IP: mysql_db
+
+  client:
+    stdin_open: true
+    depends_on:
+      - api
+    environment:
+      NEXT_PUBLIC_API_BASE: api
+    build:
+      dockerfile: Dockerfile
+      context: ./client
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+
+  adminer:
+    image: adminer:latest
+    restart: unless-stopped
+    ports:
+      - 8000:8080
+    depends_on:
+      - mysql_db
+    environment:
+      ADMINER_DEFAULT_SERVER: mysql_db
+networks:
+  default:
+    external:
+      name: connect-proxy
