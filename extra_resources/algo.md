@@ -7,9 +7,6 @@ https://leetcode.com/discuss/study-guide/1939806/Rule-of-thumb-for-avoiding-TLE
 
 striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9
 aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWeT1ffjiImo0sYTcnLzo-wY
-https://leetcode.com/discuss/study-guide/1733447/Become-Master-In-Recursion
-https://leetcode.com/discuss/study-guide/1405817/Backtracking-algorithm-%2B-problems-to-practice
-
 pepcoding level 1 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiFxaBahjslhBD1LiJAV7nKs
 kunal - https://www.youtube.com/playlist?list=PL9gnSGHSqcnp39cTyB1dTZ2pJ04Xmdrod
 pepcoding level 2 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiHO9SQ6lxGuDsZNt2mkHEn0

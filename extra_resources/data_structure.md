@@ -37,17 +37,11 @@ https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-prob
 https://www.codingninjas.com/codestudio/problem-lists/love-babbar-dsa-sheet-problems?practice_topic[]=Arrays
 https://www.geeksforgeeks.org/array-data-structure/
 https://www.geeksforgeeks.org/matrix/
-https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
-luv babbar 450
-https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/
-https://www.geeksforgeeks.org/array-subarray-subsequence-and-subset/
 
 # Strings
 
 https://www.geeksforgeeks.org/string-data-structure/
 https://www.hackerearth.com/practice/algorithms/string-algorithm/basics-of-string-manipulation/tutorial/
-
-https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 https://leetcode.com/discuss/study-guide/1333049/collections-of-string-questions-pattern-for-upcoming-placement-2021
 https://leetcode.com/discuss/general-discussion/1134565/approaching-almost-any-string-question
 https://leetcode.com/discuss/study-guide/2001789/Collections-of-Important-String-questions-Pattern
