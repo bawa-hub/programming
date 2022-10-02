@@ -47,10 +47,6 @@ https://leetcode.com/discuss/study-guide/669996/Greedy-for-Beginners-Problems-or
 
 # Dynamic Programming
 
-https://takeuforward.org/dynamic-programming/striver-dp-series-dynamic-programming-problems/
-https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
-https://leetcode.com/discuss/general-discussion/712010/the-art-of-dynamic-programming-an-intuitive-approach-from-apprentice-to-master/709225
-
 https://www.geeksforgeeks.org/dynamic-programming/
 https://cses.fi/problemset/
 https://atcoder.jp/contests/dp

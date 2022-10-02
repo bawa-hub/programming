@@ -13,3 +13,15 @@ https://www.techinterviewhandbook.org/algorithms/array/
 https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/
 https://www.geeksforgeeks.org/array-subarray-subsequence-and-subset/
 https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems
+
+# Linked List
+
+https://leetcode.com/discuss/study-guide/1800120/Become-Master-In-Linked-List
+https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
+
+# Stack and Queue
+
+https://www.youtube.com/playlist?list=PLgUwDviBIf0oSO572kQ7KCSvCUh1AdILj
+https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
+https://www.geeksforgeeks.org/stack-data-structure/
+https://www.geeksforgeeks.org/queue-data-structure/

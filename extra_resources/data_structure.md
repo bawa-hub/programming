@@ -31,14 +31,12 @@ https://www.youtube.com/playlist?list=PL_z_8CaSLPWdtY9W22VjnPxG30CXNZpI9
 https://leetcode.com/discuss/general-discussion/1127238/master-heap-understanding-4-patterns-where-heap-data-structure-is-used
 https://leetcode.com/discuss/study-guide/1360400/Priority-queue-%2B-problems-to-practice
 
-# Arrays
+# Arrays and Strings
 
 https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
 https://www.codingninjas.com/codestudio/problem-lists/love-babbar-dsa-sheet-problems?practice_topic[]=Arrays
 https://www.geeksforgeeks.org/array-data-structure/
 https://www.geeksforgeeks.org/matrix/
-
-# Strings
 
 https://www.geeksforgeeks.org/string-data-structure/
 https://www.hackerearth.com/practice/algorithms/string-algorithm/basics-of-string-manipulation/tutorial/
@@ -47,15 +45,5 @@ https://leetcode.com/discuss/general-discussion/1134565/approaching-almost-any-s
 https://leetcode.com/discuss/study-guide/2001789/Collections-of-Important-String-questions-Pattern
 https://leetcode.com/discuss/study-guide/1160275/Strings-and-ASCII-(some-tips)
 https://medium.com/algorithms-and-leetcode/solve-string-problems-on-leetcode-ce868728efa4
-
-# Linked List
-
-https://leetcode.com/discuss/study-guide/1800120/Become-Master-In-Linked-List
-
-# Stack and Queue
-
-https://www.youtube.com/playlist?list=PLgUwDviBIf0oSO572kQ7KCSvCUh1AdILj
-https://www.geeksforgeeks.org/stack-data-structure/
-https://www.geeksforgeeks.org/queue-data-structure/
 
 # Hashing
