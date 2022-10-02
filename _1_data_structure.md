@@ -1,6 +1,7 @@
 # Graph
 
 https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/
+https://www.geeksforgeeks.org/top-50-graph-coding-problems-for-interviews/?ref=rp
 https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/tutorial/
 https://leetcode.com/discuss/study-guide/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
 

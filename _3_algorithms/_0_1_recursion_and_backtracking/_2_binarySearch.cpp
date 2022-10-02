@@ -22,6 +22,19 @@ int binarySearch(int array[], int x, int low, int high)
     return -1;
 }
 
+int binarySearchRecursive(int a[], int l, int r, int num)
+{
+    int mid = ((r - l) / 2) + l;
+    if (a[mid] == num)
+        return mid;
+    if (a[mid] > num)
+        return binarySearch(a, l, mid - 1, num);
+    if (a[mid] < num)
+        return binarySearch(a, l + 1, r, num);
+
+    return -1;
+}
+
 int main(void)
 {
     int array[] = {3, 4, 5, 6, 7, 8, 999, 133};
