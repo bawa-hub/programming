@@ -11,6 +11,8 @@ https://igotanoffer.com/blogs/tech/coding-interview-prep
 
 # important links --
 
+https://zero1code.info/
+
 https://leetcode.com/discuss/study-guide/1367727/Links-to-Some-Great-post-in-Study-Guide
 https://leetcode.com/discuss/study-guide/1612475/Compilation-or-Leetcode-ListsandResources-or-Study-Guide-or-Topic-wise-or-Difficulty-wise
 

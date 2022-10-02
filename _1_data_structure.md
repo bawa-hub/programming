@@ -5,6 +5,13 @@ https://www.geeksforgeeks.org/top-50-graph-coding-problems-for-interviews/?ref=r
 https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/tutorial/
 https://leetcode.com/discuss/study-guide/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
 
+# Binary Tree
+
+https://www.youtube.com/playlist?list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk
+https://leetcode.com/discuss/study-guide/1212004/binary-trees-study-guide
+https://takeuforward.org/data-structure/strivers-tree-series-tree-data-structure/
+https://leetcode.com/problemset/all/?topicSlugs=binary-tree&page=1
+
 # Arrays and Strings
 
 https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
