@@ -14,11 +14,14 @@ https://leetcode.com/problemset/all/?topicSlugs=binary-tree&page=1
 
 # Arrays and Strings
 
+https://www.geeksforgeeks.org/array-data-structure/
+https://www.geeksforgeeks.org/matrix/
+https://www.geeksforgeeks.org/string-data-structure/?ref=lbp
+https://www.geeksforgeeks.org/array-subarray-subsequence-and-subset/
 https://www.geeksforgeeks.org/top-50-array-coding-problems-for-interviews/
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 https://www.techinterviewhandbook.org/algorithms/array/
 https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/
-https://www.geeksforgeeks.org/array-subarray-subsequence-and-subset/
 https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems
 
 # Linked List

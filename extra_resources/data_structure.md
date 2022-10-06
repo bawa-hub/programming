@@ -31,10 +31,6 @@ https://leetcode.com/discuss/study-guide/1360400/Priority-queue-%2B-problems-to-
 
 https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
 https://www.codingninjas.com/codestudio/problem-lists/love-babbar-dsa-sheet-problems?practice_topic[]=Arrays
-https://www.geeksforgeeks.org/array-data-structure/
-https://www.geeksforgeeks.org/matrix/
-
-https://www.geeksforgeeks.org/string-data-structure/
 https://www.hackerearth.com/practice/algorithms/string-algorithm/basics-of-string-manipulation/tutorial/
 https://leetcode.com/discuss/study-guide/1333049/collections-of-string-questions-pattern-for-upcoming-placement-2021
 https://leetcode.com/discuss/general-discussion/1134565/approaching-almost-any-string-question
