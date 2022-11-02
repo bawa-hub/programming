@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <queue>
 #include <stack>
 
@@ -9,6 +10,8 @@ struct Node
     int data;
     struct Node *left, *right;
 };
+
+/********************************** CRUD ********************************************/
 
 // create node
 Node *createNode(int data)
@@ -59,6 +62,33 @@ Node *insertNode(Node *root, int data)
         }
     }
     return root;
+}
+
+/******************************************************************************************/
+
+/********************************** Traversals ********************************************/
+
+// bfs or level order
+void printLevelOrder(Node *root)
+{
+    if (root == NULL)
+        return;
+
+    queue<Node *> q;
+    q.push(root);
+
+    while (!q.empty())
+    {
+        Node *node = q.front();
+        cout << node->data << " ";
+        q.pop();
+
+        if (node->left != NULL)
+            q.push(node->left);
+
+        if (node->right != NULL)
+            q.push(node->right);
+    }
 }
 
 // dfs
@@ -150,35 +180,65 @@ void printPreorderIterative(Node *root)
     }
 }
 
-// bfs or level order
-void printLevelOrder(Node *root)
+// Zig Zag Traversal of Binary Tree
+vector<vector<int>> zigzagLevelOrder(Node *root)
 {
-    // Base Case
+    vector<vector<int>> result;
     if (root == NULL)
-        return;
-
-    // Create an empty queue for level order traversal
-    queue<Node *> q;
-
-    // Enqueue Root and initialize height
-    q.push(root);
-
-    while (!q.empty())
     {
-        // Print front of queue and remove it from queue
-        Node *node = q.front();
-        cout << node->data << " ";
-        q.pop();
-
-        /* Enqueue left child */
-        if (node->left != NULL)
-            q.push(node->left);
-
-        /*Enqueue right child */
-        if (node->right != NULL)
-            q.push(node->right);
+        return result;
     }
+
+    queue<Node *> nodesQueue;
+    nodesQueue.push(root);
+    bool leftToRight = true;
+
+    while (!nodesQueue.empty())
+    {
+        int size = nodesQueue.size();
+        vector<int> row(size);
+        for (int i = 0; i < size; i++)
+        {
+            Node *node = nodesQueue.front();
+            nodesQueue.pop();
+
+            // find position to fill node's value
+            int index = (leftToRight) ? i : (size - 1 - i);
+
+            row[index] = node->data;
+            if (node->left)
+            {
+                nodesQueue.push(node->left);
+            }
+            if (node->right)
+            {
+                nodesQueue.push(node->right);
+            }
+        }
+        // after this level
+        leftToRight = !leftToRight;
+        result.push_back(row);
+    }
+    return result;
 }
+
+// Boundary Traversal of Binary Tree
+// Vertical Order Traversal of Binary Tree
+
+/******************************************************************************************/
+
+/********************************** Operations ********************************************/
+
+// Height of the binary tree
+// Depth of the binary tree
+// Check if the Binary tree is height-balanced or not
+// Diameter of Binary Tree
+// Maximum width of a Binary Tree
+// Maximum path sum
+// Root to Node Path in Binary Tree
+// LCA in Binary Tree
+
+/******************************************************************************************/
 
 int main()
 {
@@ -188,23 +248,35 @@ int main()
     root->left->left = createNode(4);
     root->left->right = createNode(5);
 
-    cout << "\nPreorder traversal of binary tree is \n";
-    printPreorder(root);
+    // cout << "\nPreorder traversal of binary tree is \n";
+    // printPreorder(root);
 
-    cout << "\nPreorder Iterative traversal of binary tree is \n";
-    printPreorderIterative(root);
+    // cout << "\nPreorder Iterative traversal of binary tree is \n";
+    // printPreorderIterative(root);
 
-    cout << "\nInorder traversal of binary tree is \n";
-    printInorder(root);
+    // cout << "\nInorder traversal of binary tree is \n";
+    // printInorder(root);
 
-    cout << "\nInorder Iterative traversal of binary tree is \n";
-    printInOrderIterative(root);
+    // cout << "\nInorder Iterative traversal of binary tree is \n";
+    // printInOrderIterative(root);
 
-    cout << "\nPostorder traversal of binary tree is \n";
-    printPostorder(root);
+    // cout << "\nPostorder traversal of binary tree is \n";
+    // printPostorder(root);
 
-    cout << "\nLevel Order traversal of binary tree is \n";
-    printLevelOrder(root);
+    // cout << "\nLevel Order traversal of binary tree is \n";
+    // printLevelOrder(root);
+
+    // cout << "\nZig Zag Traversal of Binary Tree \n";
+    // vector<vector<int>> ans;
+    // ans = zigzagLevelOrder(root);
+    // for (int i = 0; i < ans.size(); i++)
+    // {
+    //     for (int j = 0; j < ans[i].size(); j++)
+    //     {
+    //         cout << ans[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
 
     return 0;
 }
