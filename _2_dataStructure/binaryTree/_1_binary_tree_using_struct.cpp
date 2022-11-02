@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <queue>
+#include <stack>
+
 using namespace std;
 
 struct Node
@@ -89,6 +92,28 @@ void printInorder(struct Node *node)
     printInorder(node->right);
 }
 
+void printInOrderIterative(struct Node *root)
+{
+    stack<Node *> s;
+    Node *curr = root;
+
+    while (curr != NULL || s.empty() == false)
+    {
+        while (curr != NULL)
+        {
+            s.push(curr);
+            curr = curr->left;
+        }
+
+        curr = s.top();
+        s.pop();
+
+        cout << curr->data << " ";
+
+        curr = curr->right;
+    }
+}
+
 void printPreorder(struct Node *node)
 {
     if (node == NULL)
@@ -102,6 +127,27 @@ void printPreorder(struct Node *node)
 
     /* now recur on right subtree */
     printPreorder(node->right);
+}
+
+void printPreorderIterative(Node *root)
+{
+    if (root == NULL)
+        return;
+
+    stack<Node *> nodeStack;
+    nodeStack.push(root);
+
+    while (nodeStack.empty() == false)
+    {
+        struct Node *node = nodeStack.top();
+        printf("%d ", node->data);
+        nodeStack.pop();
+
+        if (node->right)
+            nodeStack.push(node->right);
+        if (node->left)
+            nodeStack.push(node->left);
+    }
 }
 
 // bfs or level order
@@ -145,13 +191,19 @@ int main()
     cout << "\nPreorder traversal of binary tree is \n";
     printPreorder(root);
 
+    cout << "\nPreorder Iterative traversal of binary tree is \n";
+    printPreorderIterative(root);
+
     cout << "\nInorder traversal of binary tree is \n";
     printInorder(root);
+
+    cout << "\nInorder Iterative traversal of binary tree is \n";
+    printInOrderIterative(root);
 
     cout << "\nPostorder traversal of binary tree is \n";
     printPostorder(root);
 
-    cout << "Level Order traversal of binary tree is \n";
+    cout << "\nLevel Order traversal of binary tree is \n";
     printLevelOrder(root);
 
     return 0;

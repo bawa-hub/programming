@@ -57,6 +57,7 @@ void inorder(Node *root)
         inorder(root->right);
     }
 }
+
 void postorder(Node *root)
 {
     if (root != nullptr)
