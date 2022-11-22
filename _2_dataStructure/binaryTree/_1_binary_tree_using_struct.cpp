@@ -64,8 +64,6 @@ Node *insertNode(Node *root, int data)
     return root;
 }
 
-/******************************************************************************************/
-
 /********************************** Traversals ********************************************/
 
 // bfs or level order
@@ -105,6 +103,34 @@ void printPostorder(struct Node *node)
 
     // now deal with the node
     cout << node->data << " ";
+}
+
+vector<int> printPostorderIterativeUsingTwoStack(struct Node *curr)
+{
+
+    vector<int> postOrder;
+    if (curr == NULL)
+        return postOrder;
+
+    stack<Node *> s1;
+    stack<Node *> s2;
+    s1.push(curr);
+    while (!s1.empty())
+    {
+        curr = s1.top();
+        s1.pop();
+        s2.push(curr);
+        if (curr->left != NULL)
+            s1.push(curr->left);
+        if (curr->right != NULL)
+            s1.push(curr->right);
+    }
+    while (!s2.empty())
+    {
+        postOrder.push_back(s2.top()->data);
+        s2.pop();
+    }
+    return postOrder;
 }
 
 void printInorder(struct Node *node)
@@ -225,20 +251,32 @@ vector<vector<int>> zigzagLevelOrder(Node *root)
 // Boundary Traversal of Binary Tree
 // Vertical Order Traversal of Binary Tree
 
-/******************************************************************************************/
-
 /********************************** Operations ********************************************/
 
-// Height of the binary tree
-// Depth of the binary tree
+// Height/Maximum Depth of the binary tree
+int maxDepth(Node *root)
+{
+    if (root == NULL)
+        return 0;
+
+    int lh = maxDepth(root->left);
+    int rh = maxDepth(root->right);
+
+    return 1 + max(lh, rh);
+}
+
+// Height and Depth of a node in binary tree
+// https://www.geeksforgeeks.org/height-and-depth-of-a-node-in-a-binary-tree/
+
 // Check if the Binary tree is height-balanced or not
+
 // Diameter of Binary Tree
 // Maximum width of a Binary Tree
 // Maximum path sum
 // Root to Node Path in Binary Tree
 // LCA in Binary Tree
 
-/******************************************************************************************/
+/********************************** Main ********************************************/
 
 int main()
 {
@@ -262,6 +300,14 @@ int main()
 
     // cout << "\nPostorder traversal of binary tree is \n";
     // printPostorder(root);
+
+    // cout << "\nPostorder Iterative traversal of binary tree is \n";
+    // vector<int> postOrder;
+    // postOrder = printPostorderIterativeUsingTwoStack(root);
+    // for (int i = 0; i < postOrder.size(); i++)
+    // {
+    //     cout << postOrder[i] << " ";
+    // }
 
     // cout << "\nLevel Order traversal of binary tree is \n";
     // printLevelOrder(root);

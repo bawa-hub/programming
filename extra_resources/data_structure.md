@@ -11,7 +11,6 @@ https://leetcode.com/discuss/general-discussion/1122034/important-graph-algorith
 
 # Binary Tree and Binary Search Tree
 
-https://www.youtube.com/playlist?list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk
 pepcoding generic tree - https://www.youtube.com/playlist?list=PL-Jc9J83PIiEmjuIVDrwR9h5i9TT2CEU_
 https://www.youtube.com/playlist?list=PLqM7alHXFySHCXD7r1J0ky9Zg_GBB1dbk
 https://www.geeksforgeeks.org/binary-tree-data-structure/
