@@ -1,5 +1,4 @@
-// https://takeuforward.org/data-structure/n-queen-problem-return-all-distinct-solutions-to-the-n-queens-puzzle/
-#include <bits/stdc++.h>
+// https://leetcode.com/problems/n-queens/#include <bits/stdc++.h>
 
 using namespace std;
 class Solution
