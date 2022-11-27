@@ -4,8 +4,10 @@ using namespace std;
 
 int f(int idx, int s, int sum, int arr[], int n)
 {
+    // this base condition iff array contains only positive nubmer
     if (s > sum)
         return 0;
+
     if (idx == n)
     {
         if (s == sum)

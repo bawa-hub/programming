@@ -2,6 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// brute force
 int power(int x, int n)
 {
     if (n == 0)
