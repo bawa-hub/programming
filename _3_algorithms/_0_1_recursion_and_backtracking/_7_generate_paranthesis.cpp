@@ -1,45 +1,83 @@
-
+// https://leetcode.com/problems/generate-parentheses/
 // generate paranthesis of n group ()
-#include <iostream>
-#include <vector>
-using namespace std;
 
-vector<string> valid;
+// #include <iostream>
+// #include <vector>
+// using namespace std;
 
-void generate(string &s, int open, int close)
+// vector<string> valid;
+
+// void generate(string &s, int open, int close)
+// {
+//     if (open == 0 && close == 0)
+//     {
+//         valid.push_back(s);
+//         return;
+//     }
+
+//     if (open > 0)
+//     {
+//         s.push_back('(');
+//         generate(s, open - 1, close);
+//         s.pop_back(); // backtracking step
+//     }
+
+//     if (close > 0)
+//     {
+//         if (open < close)
+//         {
+//             s.push_back(')');
+//             generate(s, open, close - 1);
+//             s.pop_back();
+//         }
+//     }
+// }
+
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     string s;
+//     generate(s, n, n);
+//     for (auto ele : valid)
+//     {
+//         cout << ele << endl;
+//     }
+// }
+
+class Solution
 {
-    if (open == 0 && close == 0)
+public:
+    void generate(vector<string> &strings, string &s, int open, int close)
     {
-        valid.push_back(s);
-        return;
-    }
-
-    if (open > 0)
-    {
-        s.push_back('(');
-        generate(s, open - 1, close);
-        s.pop_back(); // backtracking step
-    }
-
-    if (close > 0)
-    {
-        if (open < close)
+        if (open == 0 && close == 0)
         {
-            s.push_back(')');
-            generate(s, open, close - 1);
-            s.pop_back();
+            strings.push_back(s);
+            return;
+        }
+
+        if (open > 0)
+        {
+            s.push_back('(');
+            generate(strings, s, open - 1, close);
+            s.pop_back(); // backtracking step
+        }
+
+        if (close > 0)
+        {
+            if (open < close)
+            {
+                s.push_back(')');
+                generate(strings, s, open, close - 1);
+                s.pop_back();
+            }
         }
     }
-}
-
-int main()
-{
-    int n;
-    cin >> n;
-    string s;
-    generate(s, n, n);
-    for (auto ele : valid)
+    vector<string> generateParenthesis(int n)
     {
-        cout << ele << endl;
+        vector<string> strings;
+        string s;
+        generate(strings, s, n, n);
+        return strings;
     }
-}
+};
