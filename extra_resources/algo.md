@@ -67,23 +67,6 @@ pepcoding level 2 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiEZvXCn-c5U
 gfg - https://www.youtube.com/playlist?list=PLqM7alHXFySGbXhWx7sBJEwY2DnhDjmxm
 luv - https://www.youtube.com/playlist?list=PLauivoElc3gimdmLcIIpafEkzGs4tCQmi
 
-# Two Pointers
-
-https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days.
-https://leetcode.com/discuss/study-guide/1905453/Master-in-Two-Pointer
-https://leetcode.com/discuss/study-guide/1469943/Everyday-2-pointers-challenge-list
-
-# Sliding Window
-
-https://leetcode.com/discuss/study-guide/1773891/Sliding-Window-Technique-and-Question-Bank
-https://leetcode.com/discuss/study-guide/657507/sliding-window-for-beginners-problems-template-sample-solutions
-
-# Bit Manipulation
-
-https://leetcode.com/discuss/study-guide/1150415/Start-Bit-Manipulation-Here
-https://leetcode.com/discuss/study-guide/1487055/COMPLETED-GUIDE-ON-BITWISE-OPERATORS%3A)
-https://graphics.stanford.edu/~seander/bithacks.html
-
 # Mathematical Algorithms
 
 https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/tutorial/

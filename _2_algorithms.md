@@ -35,3 +35,19 @@ https://leetcode.com/discuss/study-guide/669996/Greedy-for-Beginners-Problems-or
 # Binary Search --
 
 https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems
+
+# Two Pointers
+
+https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days.
+https://leetcode.com/discuss/study-guide/1905453/Master-in-Two-Pointer
+https://leetcode.com/discuss/study-guide/1469943/Everyday-2-pointers-challenge-list
+
+# Sliding Window
+
+https://leetcode.com/discuss/study-guide/1773891/Sliding-Window-Technique-and-Question-Bank
+
+# Bit Manipulation
+
+https://leetcode.com/discuss/study-guide/1150415/Start-Bit-Manipulation-Here
+https://leetcode.com/discuss/study-guide/1487055/COMPLETED-GUIDE-ON-BITWISE-OPERATORS%3A)
+https://graphics.stanford.edu/~seander/bithacks.html
