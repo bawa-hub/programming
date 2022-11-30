@@ -1,3 +1,6 @@
+/***
+ * if a graph has odd length cycle then it is not bipartite else bipartite
+ * */
 #include <bits/stdc++.h>
 using namespace std;
 

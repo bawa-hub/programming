@@ -1,16 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Solution
 {
+
 public:
     bool checkForCycle(int s, int V, vector<int> adj[], vector<int> &visited)
     {
+        vector<int> parent(V, -1);
+
         // Create a queue for BFS
         queue<pair<int, int>> q;
+
         visited[s] = true;
         q.push({s, -1});
+
         while (!q.empty())
         {
+
             int node = q.front().first;
             int par = q.front().second;
             q.pop();
@@ -28,10 +35,12 @@ public:
         }
         return false;
     }
+
+public:
     bool isCycle(int V, vector<int> adj[])
     {
-        vector<int> vis(V - 1, 0);
-        for (int i = 1; i <= V; i++)
+        vector<int> vis(V, 0);
+        for (int i = 0; i < V; i++)
         {
             if (!vis[i])
             {
@@ -39,30 +48,34 @@ public:
                     return true;
             }
         }
+
+        return false;
     }
 };
 
-void addEdge(vector<int> adj[], int u, int v)
-{
-    adj[u].push_back(v);
-    adj[v].push_back(u);
-}
+// { Driver Code Starts.
 int main()
 {
-    vector<int> adj[5];
-
-    addEdge(adj, 0, 1);
-    addEdge(adj, 0, 2);
-    addEdge(adj, 2, 3);
-    addEdge(adj, 1, 3);
-    addEdge(adj, 2, 4);
-
-    Solution obj;
-    int num = obj.isCycle(5, adj);
-    if (num == 1)
-        cout << "Yes" << endl;
-    else
-        cout << "No" << endl;
-
+    int tc;
+    cin >> tc;
+    while (tc--)
+    {
+        int V, E;
+        cin >> V >> E;
+        vector<int> adj[V];
+        for (int i = 0; i < E; i++)
+        {
+            int u, v;
+            cin >> u >> v;
+            adj[u].push_back(v);
+            adj[v].push_back(u);
+        }
+        Solution obj;
+        bool ans = obj.isCycle(V, adj);
+        if (ans)
+            cout << "1\n";
+        else
+            cout << "0\n";
+    }
     return 0;
-}
+} // } Driver Code Ends

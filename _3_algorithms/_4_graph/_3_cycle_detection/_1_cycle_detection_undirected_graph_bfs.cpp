@@ -1,3 +1,6 @@
+/***
+ * if node is visited and it is not parent then there is a cycle
+ * */
 #include <bits/stdc++.h>
 using namespace std;
 class Solution
