@@ -8,33 +8,18 @@ struct node
     struct node *left, *right;
 };
 
-vector<int> postOrderTrav(node *curr)
+void inOrderTrav(node *curr, vector<int> &inOrder)
 {
-
-    vector<int> postOrder;
     if (curr == NULL)
-        return postOrder;
+        return;
 
-    stack<node *> s1;
-    stack<node *> s2;
-    s1.push(curr);
-    while (!s1.empty())
-    {
-        curr = s1.top();
-        s1.pop();
-        s2.push(curr);
-        if (curr->left != NULL)
-            s1.push(curr->left);
-        if (curr->right != NULL)
-            s1.push(curr->right);
-    }
-    while (!s2.empty())
-    {
-        postOrder.push_back(s2.top()->data);
-        s2.pop();
-    }
-    return postOrder;
+    inOrderTrav(curr->left, inOrder);
+    inOrder.push_back(curr->data);
+    inOrderTrav(curr->right, inOrder);
 }
+
+// Time Complexity: O(N)
+// Space Complexity: O(N)
 
 struct node *newNode(int data)
 {
@@ -60,13 +45,13 @@ int main()
     root->right->right->left = newNode(9);
     root->right->right->right = newNode(10);
 
-    vector<int> postOrder;
-    postOrder = postOrderTrav(root);
+    vector<int> inOrder;
+    inOrderTrav(root, inOrder);
 
-    cout << "The postOrder Traversal is : ";
-    for (int i = 0; i < postOrder.size(); i++)
+    cout << "The inOrder Traversal is : ";
+    for (int i = 0; i < inOrder.size(); i++)
     {
-        cout << postOrder[i] << " ";
+        cout << inOrder[i] << " ";
     }
     return 0;
 }

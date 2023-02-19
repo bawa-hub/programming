@@ -8,15 +8,20 @@ struct node
     struct node *left, *right;
 };
 
-void postOrderTrav(node *curr, vector<int> &postOrder)
+void preOrderTrav(node *curr, vector<int> &preOrder)
 {
     if (curr == NULL)
         return;
 
-    postOrderTrav(curr->left, postOrder);
-    postOrderTrav(curr->right, postOrder);
-    postOrder.push_back(curr->data);
+    preOrder.push_back(curr->data);
+    preOrderTrav(curr->left, preOrder);
+    preOrderTrav(curr->right, preOrder);
 }
+
+// Time Complexity: O(N).
+// Reason: We are traversing N nodes and every node is visited exactly once.
+// Space Complexity: O(N)
+// Reason: Space is needed for the recursion stack. In the worst case (skewed tree), space complexity can be O(N).
 
 struct node *newNode(int data)
 {
@@ -42,13 +47,13 @@ int main()
     root->right->right->left = newNode(9);
     root->right->right->right = newNode(10);
 
-    vector<int> postOrder;
-    postOrderTrav(root, postOrder);
+    vector<int> preOrder;
+    preOrderTrav(root, preOrder);
 
-    cout << "The postOrder Traversal is : ";
-    for (int i = 0; i < postOrder.size(); i++)
+    cout << "The preOrder Traversal is : ";
+    for (int i = 0; i < preOrder.size(); i++)
     {
-        cout << postOrder[i] << " ";
+        cout << preOrder[i] << " ";
     }
     return 0;
 }

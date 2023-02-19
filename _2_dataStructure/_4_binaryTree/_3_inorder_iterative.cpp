@@ -34,6 +34,11 @@ vector<int> inOrderTrav(node *curr)
     return inOrder;
 }
 
+// Time Complexity: O(N).
+// Reason: We are traversing N nodes and every node is visited exactly once.
+// Space Complexity: O(N)
+// Reason: In the worst case (a tree with just left children), the space complexity will be O(N).
+
 struct node *newNode(int data)
 {
     struct node *node = (struct node *)malloc(sizeof(struct node));

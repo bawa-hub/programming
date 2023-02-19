@@ -32,6 +32,11 @@ vector<int> preOrderTrav(node *curr)
     return preOrder;
 }
 
+// Time Complexity: O(N).
+// Reason: We are traversing N nodes and every node is visited exactly once.
+// Space Complexity: O(N)
+// Reason: In the worst case, (a tree with every node having a single right child and left-subtree, follow the video attached below to see the illustration), the space complexity can be considered as O(N).
+
 struct node *newNode(int data)
 {
     struct node *node = (struct node *)malloc(sizeof(struct node));
