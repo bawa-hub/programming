@@ -1,20 +1,21 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
+#include <map>
+#include <string>
 
-vector<int> separateDigits(vector<int> &nums)
-{
-    vector<int> v;
-    for (int i = 0; i < s.length(); i++)
-    {
-        v.push_back(arr[i]);
-    }
-    return v;
-}
+using namespace std;
 
 int main()
 {
-    string s;
-    cin >> s;
-    char arr[s.length() + 1];
-    strcpy(arr, s.c_str());
+    map<char, int> m;
+    m['a'] = 1;
+    m['b'] = 2;
+
+    cout << m.size();
+
+    int count = 0;
+    for (auto &x : m)
+    {
+        count += x.second;
+    }
+    cout << count;
 }
