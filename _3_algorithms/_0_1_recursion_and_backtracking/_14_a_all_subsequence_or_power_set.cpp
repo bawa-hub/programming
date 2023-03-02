@@ -1,4 +1,4 @@
-// print all the subsequence of the given array
+// print all the subsequence or power set of the given array
 #include <bits/stdc++.h>
 using namespace std;
 
