@@ -1,13 +1,14 @@
 // https://leetcode.com/problems/number-of-provinces/
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 class Solution
 {
 private:
     // dfs traversal function
-    void dfs(int node, vector<int> adjLs[], int vis[])
+    void dfs(int node, vector<int> adjLs[], vector<int> vis)
     {
         // mark the more as visited
         vis[node] = 1;
@@ -38,7 +39,7 @@ public:
                 }
             }
         }
-        int vis[V] = {0};
+        vector<int> vis(V, 0);
         int cnt = 0;
         for (int i = 0; i < V; i++)
         {

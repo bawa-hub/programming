@@ -6,15 +6,26 @@ int main()
     int n, m;
     cin >> n >> m;
 
+    // for undirected graph
+    // time complexity: O(2E)
     vector<int> adj[n + 1];
     for (int i = 0; i < m; i++)
     {
         int u, v;
         cin >> u >> v;
-
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
+
+    // for directed graph
+    // time complexity: O(E)
+    // for (int i = 0; i < m; i++)
+    // {
+    //     int u, v;
+    //     // u —> v
+    //     cin >> u >> v;
+    //     adj[u].push_back(v);
+    // }
 
     // if weighted graph
     // vector<pair<int,int>> adj[n + 1];
@@ -26,6 +37,8 @@ int main()
     //     adj[u].push_back({v,wt});
     //     adj[v].push_back({u,wt});
     // }
+
+    // Space complexity = O(E)
 
     return 0;
 }
