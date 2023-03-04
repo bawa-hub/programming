@@ -1,70 +1,45 @@
 // https://leetcode.com/problems/number-of-provinces/
-
-#include <iostream>
-#include <vector>
-using namespace std;
-
 class Solution
 {
-private:
-    // dfs traversal function
-    void dfs(int node, vector<int> adjLs[], vector<int> vis)
+public:
+    void dfs(int node, vector<int> adj[], vector<int> &vis)
     {
-        // mark the more as visited
         vis[node] = 1;
-        for (auto it : adjLs[node])
+        for (auto it : adj[node])
         {
             if (!vis[it])
             {
-                dfs(it, adjLs, vis);
+                dfs(it, adj, vis);
             }
         }
     }
-
-public:
-    int numProvinces(vector<vector<int>> adj, int V)
+    int findCircleNum(vector<vector<int>> &isConnected)
     {
-        vector<int> adjLs[V];
+        int n = isConnected.size();
 
-        // to change adjacency matrix to list
-        for (int i = 0; i < V; i++)
+        vector<int> adj[n];
+        for (int i = 0; i < n; i++)
         {
-            for (int j = 0; j < V; j++)
+            for (int j = 0; j < n; j++)
             {
-                // self nodes are not considered
-                if (adj[i][j] == 1 && i != j)
+                if (isConnected[i][j] == 1 && i != j)
                 {
-                    adjLs[i].push_back(j);
-                    adjLs[j].push_back(i);
+                    adj[i].push_back(j);
+                    adj[j].push_back(i);
                 }
             }
         }
-        vector<int> vis(V, 0);
-        int cnt = 0;
-        for (int i = 0; i < V; i++)
+
+        int count = 0;
+        vector<int> vis(n, 0);
+        for (int i = 0; i < n; i++)
         {
-            // if the node is not visited
             if (!vis[i])
             {
-                // counter to count the number of provinces
-                cnt++;
-                dfs(i, adjLs, vis);
+                count++;
+                dfs(i, adj, vis);
             }
         }
-        return cnt;
+        return count;
     }
 };
-
-int main()
-{
-
-    vector<vector<int>> adj{
-        {1, 0, 1},
-        {0, 1, 0},
-        {1, 0, 1}};
-
-    Solution ob;
-    cout << ob.numProvinces(adj, 3) << endl;
-
-    return 0;
-}
