@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/house-robber-ii/
+// https://www.codingninjas.com/codestudio/problems/house-robber_839733
 
 // same as maximum sum of non adjacent element with slight change
 

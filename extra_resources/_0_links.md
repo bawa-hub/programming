@@ -1,5 +1,6 @@
 # practice problems
 
+https://practice.geeksforgeeks.org/problems/geeks-training/1
 https://leetcode.com/discuss/career/452354/compilation-of-questions-covering-each-interview-question-pattern
 https://leetcode.com/discuss/interview-question/2069641/The-Only-Lists-You-Need-For-Your-Interview-Preparation
 
