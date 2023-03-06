@@ -4,6 +4,17 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+
+// approach 1
+int sortArr(vector<int> &arr)
+{
+    sort(arr.begin(), arr.end());
+    return arr[arr.size() - 1];
+}
+// Time Complexity: O(N*log(N))
+// Space Complexity: O(n)
+
+// approach 2
 int findLargestElement(int arr[], int n)
 {
 
@@ -17,6 +28,9 @@ int findLargestElement(int arr[], int n)
     }
     return max;
 }
+// Time Complexity: O(N)
+// Space Complexity: O(1)
+
 int main()
 {
     int arr1[] = {2, 5, 1, 3, 0};

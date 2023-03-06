@@ -20,3 +20,6 @@ int main()
     int val = search(arr, n, num);
     printf("%d", val);
 }
+
+// Time Complexity: O(n), where n is the length of the array.
+// Space Complexity: O(1)
