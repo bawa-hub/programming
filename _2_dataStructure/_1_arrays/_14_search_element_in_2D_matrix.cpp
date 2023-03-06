@@ -1,5 +1,9 @@
 // https://leetcode.com/problems/search-a-2d-matrix/
 
+// naive approach (by linear search)
+// Time complexity: O(m*n)
+// Space complexity: O(1)
+
 // binary search approach
 class Solution
 {
@@ -30,6 +34,5 @@ public:
         return false;
     }
 };
-
 // Time complexity: O(log(m*n))
 // Space complexity: O(1)
