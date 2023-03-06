@@ -4,32 +4,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// int longestSubArrWithSumK_BF(int arr[], int n, int k)
-// {
-//     int maxLength = 0;
-//     for (int i = 0; i < n; i++)
-//     {
-//         int sum = 0;
-//         for (int j = i; j < n; j++)
-//         {
-//             sum += arr[j];
-//             if (sum == k)
-//                 maxLength = max(maxLength, (j - i + 1));
-//         }
-//     }
-//     return maxLength;
-// }
-
-// int main()
-// {
-
-//     int arr[] = {7, 1, 6, 0};
-//     int n = sizeof(arr) / sizeof(arr[0]), k = 7;
-
-//     cout << "Length of the longest subarray with sum K is " << longestSubArrWithSumK_BF(arr, n, k);
-
-//     return 0;
-// }
+int longestSubArrWithSumK_BF(int arr[], int n, int k)
+{
+    int maxLength = 0;
+    for (int i = 0; i < n; i++)
+    {
+        int sum = 0;
+        for (int j = i; j < n; j++)
+        {
+            sum += arr[j];
+            if (sum == k)
+                maxLength = max(maxLength, (j - i + 1));
+        }
+    }
+    return maxLength;
+}
 
 // Time Complexity: O(n^2) time to generate all possible subarrays.
 // Space Complexity: O(1), we are not using any extra space.
@@ -51,6 +40,8 @@ int longestSubArrWithSumK_Optimal(int arr[], int n, int k)
     }
     return maxLength;
 }
+// TC: O(n)
+// SC: O(1)
 
 int main()
 {
@@ -62,6 +53,3 @@ int main()
 
     return 0;
 }
-
-// TC: O(n)
-// SC: O(1)
