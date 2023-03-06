@@ -39,6 +39,9 @@ void printSpiral(int mat[4][4], int R, int C)
         }
     }
 }
+// Time Complexity: O(R x C)
+// Reason: We are printing every element of the matrix so the time complexity is O(R x C) where R and C are rows and columns of the matrix.
+// Space Complexity: O(1)
 
 int main()
 {
