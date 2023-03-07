@@ -1,10 +1,11 @@
 // https://leetcode.com/problems/house-robber-ii/
 // https://www.codingninjas.com/codestudio/problems/house-robber_839733
+https : // practice.geeksforgeeks.org/problems/stickler-theif-1587115621/1?
 
 // same as maximum sum of non adjacent element with slight change
 
 #include <bits/stdc++.h>
-using namespace std;
+        using namespace std;
 
 long long int solve(vector<int> &arr)
 {
@@ -56,3 +57,8 @@ int main()
     int n = arr.size();
     cout << robStreet(n, arr);
 }
+
+// Time Complexity: O(N )
+// Reason: We are running a simple iterative loop, two times. Therefore total time complexity will be O(N) + O(N) ≈ O(N)
+// Space Complexity: O(1)
+// Reason: We are not using extra space.
