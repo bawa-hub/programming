@@ -38,3 +38,6 @@ int main()
         cout << res[i] << " ";
     }
 }
+
+// Time Complexity: O(N)
+// Space Complexity: O(N)

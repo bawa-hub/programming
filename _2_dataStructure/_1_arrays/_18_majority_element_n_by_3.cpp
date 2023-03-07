@@ -4,74 +4,47 @@
 using namespace std;
 
 // brute force
-// vector<int> majorityElement(int arr[], int n)
-// {
-//     vector<int> ans;
-//     for (int i = 0; i < n; i++)
-//     {
-//         int cnt = 1;
-//         for (int j = i + 1; j < n; j++)
-//         {
-//             if (arr[j] == arr[i])
-//                 cnt++;
-//         }
+vector<int> majorityElement(int arr[], int n)
+{
+    vector<int> ans;
+    for (int i = 0; i < n; i++)
+    {
+        int cnt = 1;
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[j] == arr[i])
+                cnt++;
+        }
 
-//         if (cnt > (n / 3))
-//             ans.push_back(arr[i]);
-//     }
+        if (cnt > (n / 3))
+            ans.push_back(arr[i]);
+    }
 
-//     return ans;
-// }
-
-// int main()
-// {
-//     int arr[] = {1, 2, 2, 3, 2};
-//     vector<int> majority;
-//     majority = majorityElement(arr, 5);
-//     cout << "The majority element is" << endl;
-//     set<int> s(majority.begin(), majority.end());
-//     for (auto it : s)
-//     {
-//         cout << it << " ";
-//     }
-// }
+    return ans;
+}
 
 // Time Complexity: O(n^2)
 // Space Complexity : O(1)
 
 // better solution
-// vector<int> majorityElement(int arr[], int n)
-// {
-//     unordered_map<int, int> mp;
-//     vector<int> ans;
+vector<int> majorityElement(int arr[], int n)
+{
+    unordered_map<int, int> mp;
+    vector<int> ans;
 
-//     for (int i = 0; i < n; i++)
-//     {
-//         mp[arr[i]]++;
-//     }
+    for (int i = 0; i < n; i++)
+    {
+        mp[arr[i]]++;
+    }
 
-//     for (auto x : mp)
-//     {
-//         if (x.second > (n / 3))
-//             ans.push_back(x.first);
-//     }
+    for (auto x : mp)
+    {
+        if (x.second > (n / 3))
+            ans.push_back(x.first);
+    }
 
-//     return ans;
-// }
-
-// int main()
-// {
-//     int arr[] = {1, 2, 2, 3, 2};
-//     vector<int> majority;
-//     majority = majorityElement(arr, 5);
-//     cout << "The majority element is " << ;
-
-//     for (auto it : majority)
-//     {
-//         cout << it << " ";
-//     }
-// }
-
+    return ans;
+}
 // Time Complexity: O(n)
 // Space Complexity : O(n)
 
@@ -117,6 +90,8 @@ vector<int> majorityElement(int nums[], int n)
         ans.push_back(num2);
     return ans;
 }
+// Time Complexity: O(n)
+// Space Complexity : O(1)
 
 int main()
 {
@@ -130,6 +105,3 @@ int main()
         cout << it << " ";
     }
 }
-
-// Time Complexity: O(n)
-// Space Complexity : O(1)
