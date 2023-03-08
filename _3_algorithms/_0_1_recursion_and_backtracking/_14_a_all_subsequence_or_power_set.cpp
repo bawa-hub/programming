@@ -1,3 +1,7 @@
+// https://leetcode.com/problems/subsets/
+
+// subsequences is contiguous/non-contiguous sequences, follows the order
+
 // print all the subsequence or power set of the given array
 #include <bits/stdc++.h>
 using namespace std;

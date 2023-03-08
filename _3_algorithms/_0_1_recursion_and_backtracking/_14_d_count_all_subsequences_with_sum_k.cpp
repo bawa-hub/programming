@@ -1,3 +1,5 @@
+// https://practice.geeksforgeeks.org/problems/perfect-sum-problem5633/1
+
 // count the subsequence with given sum
 #include <bits/stdc++.h>
 using namespace std;
