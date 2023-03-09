@@ -26,3 +26,5 @@ public:
         }
     }
 };
+// Time complexity: O(N) where n is the number of nodes.
+// Space complexity: O(N), auxiliary space.
