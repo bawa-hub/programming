@@ -1,4 +1,30 @@
-// https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1?category[]=Hash&category[]=Hash&company[]=Amazon&company[]=Amazon&page=1&query=category[]Hashcompany[]Amazonpage1company[]Amazoncategory[]Hash&utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=largest-subarray-with-0-sum
+// https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1
+
+// brute force
+// import java.util.*;
+// public class Solution {
+// static int solve(int[] a){
+// 	int  max = 0;
+// 	for(int i = 0; i < a.length; ++i){
+// 		int sum = 0;
+// 		for(int j = i; j < a.length; ++j){
+// 			sum += a[j];
+// 			if(sum == 0){
+// 				max = Math.max(max, j-i+1);
+// 			}
+// 		}
+// 	}
+// 	return max;
+//    }
+
+//     public static void main(String args[])
+//     {
+//         int a[] = {9, -3, 3, -1, 6, -5};
+//         System.out.println(solve(a));
+//     }
+// }
+// Time Complexity: O(N^2) as we have two loops for traversal
+// Space Complexity: O(1) as we aren’t using any extra space
 
 int maxLen(int A[], int n)
 {
@@ -28,3 +54,5 @@ int maxLen(int A[], int n)
 
     return maxi;
 }
+// Time Complexity: O(N), as we are traversing the array only once
+// Space Complexity: O(N), in the worst case we would insert all array elements prefix sum into our hashmap
