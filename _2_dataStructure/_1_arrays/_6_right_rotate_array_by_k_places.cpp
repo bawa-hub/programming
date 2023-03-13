@@ -66,6 +66,7 @@ void Reverse(int arr[], int start, int end)
 // Function to Rotate k elements to right
 void Rotateeletoright(int arr[], int n, int k)
 {
+    k = k % n; // for k > n
     // Reverse first n-k elements
     Reverse(arr, 0, n - k - 1);
     // Reverse last k elements
@@ -76,6 +77,7 @@ void Rotateeletoright(int arr[], int n, int k)
 
 void Rotateeletoleft(int arr[], int n, int k)
 {
+    k = k % n; // for k > n
     // Reverse first k elements
     Reverse(arr, 0, k - 1);
     // Reverse last n-k elements
