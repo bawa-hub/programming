@@ -20,7 +20,6 @@ vector<int> FindUnion(int arr1[], int arr2[], int n, int m)
 }
 // Time Compleixty : O( (m+n)log(m+n) ) . Inserting a key in map takes logN times, where N is no of elements in map. At max map can store m+n elements {when there are no common elements and elements in arr,arr2 are distntict}. So Inserting m+n th element takes log(m+n) time. Upon approximation across insertion of all elements in worst it would take O((m+n)log(m+n) time.
 // Using unordered_map also takes the same time, On average insertion in unordered_map takes O(1) time but sorting the union vector takes O((m+n)log(m+n))  time. Because at max union vector can have m+n elements.
-
 // Space Complexity : O(m+n) {If Space of Union Vector is considered}
 // O(1) {If Space of union Vector is not considered}
 
@@ -40,7 +39,6 @@ vector<int> FindUnion(int arr1[], int arr2[], int n, int m)
 }
 // Time Compleixty : O( (m+n)log(m+n) ) . Inserting a element in set takes logN time, where N is no of elements in set. At max set can store m+n elements {when there are no common elements and elements in arr,arr2 are distntict}. So Inserting m+n th element takes log(m+n) time. Upon approximation across inserting all elements in worst it would take O((m+n)log(m+n) time.
 // Using unordered_set also takes the same time, On average insertion in unordered_set takes O(1) time but sorting the union vector takes O((m+n)log(m+n))  time. Because at max union vector can have m+n elements.
-
 // Space Complexity : O(m+n) {If Space of Union Vector is considered}
 // O(1) {If Space of union Vector is not considered}
 
@@ -78,7 +76,6 @@ vector<int> FindUnion(int arr1[], int arr2[], int n, int m)
     }
     return Union;
 }
-
 // Time Complexity: O(m+n), Because at max i runs for n times and j runs for m times. When there are no common elements in arr1 and arr2 and all elements in arr1, arr2 are distinct.
 // Space Complexity : O(m+n) {If Space of Union Vector is considered}
 // O(1) {If Space of union Vector is not considered}
