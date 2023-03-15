@@ -1,18 +1,5 @@
 // Q. https://practice.geeksforgeeks.org/problems/subset-sums2234/1
 
-// Q. Given a list arr of N integers, print sums of all subsets in it.
-// Input:
-// N = 2
-// arr[] = {2, 3}
-// Output:
-// 0 2 3 5
-
-// Input:
-// N = 3
-// arr = {5, 2, 1}
-// Output:
-// 0 1 2 3 5 6 7 8
-
 #include <bits/stdc++.h>
 using namespace std;
 
