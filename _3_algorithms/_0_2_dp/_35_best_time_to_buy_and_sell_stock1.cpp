@@ -26,3 +26,7 @@ int main()
 
     cout << "The maximum profit by selling the stock is " << maximumProfit(Arr);
 }
+// Time Complexity: O(N)
+// Reason: We are performing a single iteration
+// Space Complexity: O(1)
+// Reason: No extra space is used.
