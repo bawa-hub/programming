@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/maximum-subarray/
+// https://takeuforward.org/data-structure/kadanes-algorithm-maximum-subarray-sum-in-an-array/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -59,28 +60,34 @@ int maxSubArray(vector<int> &nums, vector<int> &subarray)
 // Space Complexity: O(1)
 
 // kadanes alog
-int maxSubArray(vector<int> &nums, vector<int> &subarray)
+long long maxSubarraySum(int arr[], int n)
 {
-    int msf = INT_MIN, meh = 0;
-    int s = 0;
-    for (int i = 0; i < nums.size(); i++)
+    long long maxi = LONG_MIN; // maximum sum
+    long long sum = 0;
+
+    for (int i = 0; i < n; i++)
     {
-        meh += nums[i];
-        if (meh > msf)
+
+        sum += arr[i];
+
+        if (sum > maxi)
         {
-            subarray.clear();
-            msf = meh;
-            subarray.push_back(s);
-            subarray.push_back(i);
+            maxi = sum;
         }
-        if (meh < 0)
+
+        // If sum < 0: discard the sum calculated
+        if (sum < 0)
         {
-            meh = 0;
-            s = i + 1;
+            sum = 0;
         }
     }
 
-    return msf;
+    // To consider the sum of the empty subarray
+    // uncomment the following check:
+
+    // if (maxi < 0) maxi = 0;
+
+    return maxi;
 }
 // Time Complexity: O(N)
 // Space Complexity:O(1)

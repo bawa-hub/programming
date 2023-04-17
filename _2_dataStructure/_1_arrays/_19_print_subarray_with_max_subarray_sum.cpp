@@ -1,53 +1,62 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-// approach 1
-void subArrWithSumKBruteForce(int arr[], int n, int k)
+long long maxSubarraySum(int arr[], int n)
 {
+    long long maxi = LONG_MIN; // maximum sum
+    long long sum = 0;
+
+    int start = 0;
+    int ansStart = -1, ansEnd = -1;
     for (int i = 0; i < n; i++)
     {
-        int sum = 0;
-        for (int j = i; j < n; j++)
+
+        if (sum == 0)
+            start = i; // starting index
+
+        sum += arr[i];
+
+        if (sum > maxi)
         {
-            sum += arr[j];
-            if (sum == k)
-            {
-                for (int p = i; p <= j; p++)
-                    cout << arr[p] << " ";
-                cout << endl;
-            }
+            maxi = sum;
+
+            ansStart = start;
+            ansEnd = i;
+        }
+
+        // If sum < 0: discard the sum calculated
+        if (sum < 0)
+        {
+            sum = 0;
         }
     }
-}
 
-// approach 2
-void subArrWithSumKOptimal(int arr[], int n, int k)
-{
-    int start = 0, end = -1, sum = 0;
-    while (start < n)
+    // printing the subarray:
+    cout << "The subarray is: [";
+    for (int i = ansStart; i <= ansEnd; i++)
     {
-        while ((end + 1 < n) && (sum + arr[end + 1] <= k))
-            sum += arr[++end];
-
-        if (sum == k)
-        {
-            for (int p = start; p <= end; p++)
-                cout << arr[p] << " ";
-            cout << "\n";
-        }
-        sum -= arr[start];
-        start++;
+        cout << arr[i] << " ";
     }
+    cout << "]\n";
+
+    // To consider the sum of the empty subarray
+    // uncomment the following check:
+
+    // if (maxi < 0) maxi = 0;
+
+    return maxi;
 }
 
 int main()
 {
-
-    int arr[] = {1, 9, 3, 7};
-    int n = sizeof(arr) / sizeof(arr[0]), k = 10;
-    cout << "Subarray with given sum is: " << endl;
-    subArrWithSumKOptimal(arr, n, k);
-
+    int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    long long maxSum = maxSubarraySum(arr, n);
+    cout << "The maximum subarray sum is: " << maxSum << endl;
     return 0;
 }
+
+// Time Complexity: O(N), where N = size of the array.
+// Reason: We are using a single loop running N times.
+
+// Space Complexity: O(1) as we are not using any extra space.

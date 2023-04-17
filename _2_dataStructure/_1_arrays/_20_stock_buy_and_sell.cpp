@@ -40,6 +40,8 @@ int maxProfit(vector<int> &arr)
 
     return maxPro;
 }
+// Time complexity: O(n)
+// Space Complexity: O(1)
 
 int main()
 {
@@ -47,5 +49,3 @@ int main()
     int maxPro = maxProfit(arr);
     cout << "Max profit is: " << maxPro << endl;
 }
-// Time complexity: O(n)
-// Space Complexity: O(1)
