@@ -7,10 +7,12 @@
  * Space Cmplexity = O(1)
  */
 
+// https://leetcode.com/problems/binary-search/
+
 #include <iostream>
 using namespace std;
 
-// binary search only applies on sorted array
+// recursively
 int binarySearch(int array[], int x, int low, int high)
 {
     if (high >= low)
@@ -31,6 +33,45 @@ int binarySearch(int array[], int x, int low, int high)
 
     return -1;
 }
+// Time complexity: O(log n)
+// Space complexity: O(logn) for auxiliary space
+
+// iteratively
+int binarySearch(int arr[], int k, int n)
+{
+    int start = 0, end = n;
+    int mid, loc = -1;
+    while (start <= n - 1)
+    {
+        // Making array half everytime
+        mid = (start + end) / 2;
+
+        // checking in which part the element is present
+        if (arr[mid] < k)
+        {
+            start = mid + 1;
+        }
+        else if (arr[mid] > k)
+        {
+            end = mid - 1;
+        }
+        if (arr[mid] == k)
+        {
+            loc = mid;
+            break;
+        }
+    }
+    if (loc == -1)
+    {
+        cout << "Element not found!" << endl;
+    }
+    else
+    {
+        cout << "Element " << k << " Found at " << loc << " index";
+    }
+}
+// Time complexity: O(log n)
+// Space complexity : O(1)
 
 int main(void)
 {

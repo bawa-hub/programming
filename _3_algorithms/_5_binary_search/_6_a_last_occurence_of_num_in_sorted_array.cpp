@@ -1,5 +1,6 @@
-#include <bits/stdc++.h>
+// https://takeuforward.org/data-structure/last-occurrence-in-a-sorted-array/
 
+#include <bits/stdc++.h>
 using namespace std;
 
 // last occurence of number
