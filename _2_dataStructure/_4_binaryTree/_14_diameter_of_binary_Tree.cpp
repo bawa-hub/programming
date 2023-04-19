@@ -1,5 +1,12 @@
 // https://leetcode.com/problems/diameter-of-binary-tree/
 
+/**
+ * Diameter of a binary tree:
+ * longest path b/w two nodes
+ * path doesn't need to pass through root node
+ *
+ */
+
 class Solution
 {
 public:

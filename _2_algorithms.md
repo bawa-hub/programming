@@ -1,6 +1,5 @@
 # Algorithms
 
-motivation -- https://www.youtube.com/watch?v=bWGbOA7Ds4c
 https://www.geeksforgeeks.org/fundamentals-of-algorithms/
 https://cp-algorithms.com/
 https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode

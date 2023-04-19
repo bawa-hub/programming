@@ -7,6 +7,7 @@ using namespace std;
 class Solution
 {
 public:
+    // brute force
     vector<vector<int>> fourSum(vector<int> &nums, int target)
     {
         int n = nums.size();
