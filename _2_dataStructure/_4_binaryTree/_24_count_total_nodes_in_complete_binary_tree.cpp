@@ -74,6 +74,7 @@ int findHeightLeft(node *cur)
     }
     return hght;
 }
+
 int findHeightRight(node *cur)
 {
     int hght = 0;
@@ -84,6 +85,7 @@ int findHeightRight(node *cur)
     }
     return hght;
 }
+
 int countNodes(node *root)
 {
     if (root == NULL)

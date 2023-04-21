@@ -1,3 +1,5 @@
+// https://practice.geeksforgeeks.org/problems/burning-tree/1
+
 #include <bits/stdc++.h>
 
 int findMaxDistance(map<BinaryTreeNode<int> *, BinaryTreeNode<int> *> &mpp, BinaryTreeNode<int> *target)
