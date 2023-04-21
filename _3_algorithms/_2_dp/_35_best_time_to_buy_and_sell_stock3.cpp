@@ -5,85 +5,86 @@
 using namespace std;
 
 // recursive
-// int getAns(vector<int>& Arr, int n, int ind, int buy, int cap, vector<vector<vector<int>>>& dp ){
+int getAns(vector<int> &Arr, int n, int ind, int buy, int cap, vector<vector<vector<int>>> &dp)
+{
 
-//     if(ind==n || cap==0) return 0; //base case
+    if (ind == n || cap == 0)
+        return 0; // base case
 
-//     if(dp[ind][buy][cap]!=-1)
-//         return dp[ind][buy][cap];
+    if (dp[ind][buy][cap] != -1)
+        return dp[ind][buy][cap];
 
-//     int profit;
+    int profit;
 
-//     if(buy==0){// We can buy the stock
-//         profit = max(0+getAns(Arr,n,ind+1,0,cap,dp),
-//                     -Arr[ind] + getAns(Arr,n,ind+1,1,cap,dp));
-//     }
+    if (buy == 0)
+    { // We can buy the stock
+        profit = max(0 + getAns(Arr, n, ind + 1, 0, cap, dp),
+                     -Arr[ind] + getAns(Arr, n, ind + 1, 1, cap, dp));
+    }
 
-//     if(buy==1){// We can sell the stock
-//         profit = max(0+getAns(Arr,n,ind+1,1,cap,dp),
-//                     Arr[ind] + getAns(Arr,n,ind+1,0,cap-1,dp));
-//     }
+    if (buy == 1)
+    { // We can sell the stock
+        profit = max(0 + getAns(Arr, n, ind + 1, 1, cap, dp),
+                     Arr[ind] + getAns(Arr, n, ind + 1, 0, cap - 1, dp));
+    }
 
-//     return dp[ind][buy][cap] = profit;
-// }
+    return dp[ind][buy][cap] = profit;
+}
 
-// int maxProfit(vector<int>& prices, int n)
-// {
-//     // Creating a 3d - dp of size [n][2][3]
-//     vector<vector<vector<int>>> dp(n,
-//                                     vector<vector<int>>
-//                                             (2,vector<int>(3,-1)));
+int maxProfit(vector<int> &prices, int n)
+{
+    // Creating a 3d - dp of size [n][2][3]
+    vector<vector<vector<int>>> dp(n,
+                                   vector<vector<int>>(2, vector<int>(3, -1)));
 
-//     return getAns(prices,n,0,0,2,dp);
+    return getAns(prices, n, 0, 0, 2, dp);
+}
 
-// }
+// Time Complexity: O(N*2*3)
+// Reason: There are N*2*3 states therefore at max ‘N*2*3’ new problems will be solved.
 
-// int main() {
-
-//   vector<int> prices = {3,3,5,0,0,3,1,4};
-//   int n = prices.size();
-
-//   cout<<"The maximum profit that can be generated is "<<maxProfit(prices, n);
-// }
+// Space Complexity: O(N*2*3) + O(N)
+// Reason: We are using a recursion stack space(O(N)) and a 3D array ( O(N*2*3)).
 
 // tabulation
-// int maxProfit(vector<int>& Arr, int n)
-// {
-//     // Creating a 3d - dp of size [n+1][2][3] initialized to 0
-//     vector<vector<vector<int>>> dp(n+1,
-//                                     vector<vector<int>>
-//                                             (2,vector<int>(3,0)));
+int maxProfit(vector<int> &Arr, int n)
+{
+    // Creating a 3d - dp of size [n+1][2][3] initialized to 0
+    vector<vector<vector<int>>> dp(n + 1,
+                                   vector<vector<int>>(2, vector<int>(3, 0)));
 
-//     // As dp array is intialized to 0, we have already covered the base case
+    // As dp array is intialized to 0, we have already covered the base case
 
-//     for(int ind = n-1; ind>=0; ind--){
-//         for(int buy = 0; buy<=1; buy++){
-//             for(int cap=1; cap<=2; cap++){
+    for (int ind = n - 1; ind >= 0; ind--)
+    {
+        for (int buy = 0; buy <= 1; buy++)
+        {
+            for (int cap = 1; cap <= 2; cap++)
+            {
 
-//                 if(buy==0){// We can buy the stock
-//                     dp[ind][buy][cap] = max(0+dp[ind+1][0][cap],
-//                                 -Arr[ind] + dp[ind+1][1][cap]);
-//                  }
+                if (buy == 0)
+                { // We can buy the stock
+                    dp[ind][buy][cap] = max(0 + dp[ind + 1][0][cap],
+                                            -Arr[ind] + dp[ind + 1][1][cap]);
+                }
 
-//                 if(buy==1){// We can sell the stock
-//                     dp[ind][buy][cap] = max(0+dp[ind+1][1][cap],
-//                                 Arr[ind] + dp[ind+1][0][cap-1]);
-//                 }
-//             }
-//         }
-//     }
+                if (buy == 1)
+                { // We can sell the stock
+                    dp[ind][buy][cap] = max(0 + dp[ind + 1][1][cap],
+                                            Arr[ind] + dp[ind + 1][0][cap - 1]);
+                }
+            }
+        }
+    }
 
-//     return dp[0][0][2];
+    return dp[0][0][2];
+}
 
-// }
+// Time Complexity: O(N*2*3)
+// Reason: There are three nested loops that account for O(N*2*3) complexity.
 
-// int main() {
-
-//   vector<int> prices = {3,3,5,0,0,3,1,4};
-//   int n = prices.size();
-
-//   cout<<"The maximum profit that can be generated is "<<maxProfit(prices, n);
-// }
+// Space Complexity: O(N*2*3)
+// Reason: We are using an external array of size ‘N*2*3’. Stack Space is eliminated.
 
 // space optimized
 int maxProfit(vector<int> &Arr, int n)
@@ -118,6 +119,12 @@ int maxProfit(vector<int> &Arr, int n)
 
     return ahead[0][2];
 }
+
+// Time Complexity: O(N*2*3)
+// Reason: There are three nested loops that account for O(N*2*3) complexity
+
+// Space Complexity: O(1)
+// Reason: We are using two external arrays of size ‘2*3’.
 
 int main()
 {

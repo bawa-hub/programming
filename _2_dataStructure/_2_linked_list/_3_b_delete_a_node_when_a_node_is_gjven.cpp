@@ -36,13 +36,17 @@ node *getNode(node *head, int val)
 
     return head;
 }
+
 // delete function as per the question
 void deleteNode(node *t)
 {
-    t->num = t->next->num;
-    t->next = t->next->next;
+    t->num = t->next->num;   // copying the next node value
+    t->next = t->next->next; // deleting the next node
     return;
 }
+// Time complexity: O(1)
+// Space complexity: O(1)
+
 // printing the list function
 void printList(node *head)
 {

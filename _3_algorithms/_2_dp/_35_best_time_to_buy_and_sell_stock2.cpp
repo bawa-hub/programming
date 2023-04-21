@@ -5,91 +5,85 @@
 using namespace std;
 
 // recursive
-// long getAns(long *Arr, int ind, int buy, int n, vector<vector<long>> &dp)
-// {
+long getAns(long *Arr, int ind, int buy, int n, vector<vector<long>> &dp)
+{
 
-//     if (ind == n)
-//         return 0; // base case
+    if (ind == n)
+        return 0; // base case
 
-//     if (dp[ind][buy] != -1)
-//         return dp[ind][buy];
+    if (dp[ind][buy] != -1)
+        return dp[ind][buy];
 
-//     long profit;
+    long profit;
 
-//     if (buy == 0)
-//     { // We can buy the stock
-//         profit = max(0 + getAns(Arr, ind + 1, 0, n, dp), -Arr[ind] + getAns(Arr, ind + 1, 1, n, dp));
-//     }
+    if (buy == 0)
+    { // We can buy the stock
+        profit = max(0 + getAns(Arr, ind + 1, 0, n, dp), -Arr[ind] + getAns(Arr, ind + 1, 1, n, dp));
+    }
 
-//     if (buy == 1)
-//     { // We can sell the stock
-//         profit = max(0 + getAns(Arr, ind + 1, 1, n, dp), Arr[ind] + getAns(Arr, ind + 1, 0, n, dp));
-//     }
+    if (buy == 1)
+    { // We can sell the stock
+        profit = max(0 + getAns(Arr, ind + 1, 1, n, dp), Arr[ind] + getAns(Arr, ind + 1, 0, n, dp));
+    }
 
-//     return dp[ind][buy] = profit;
-// }
+    return dp[ind][buy] = profit;
+}
 
-// long getMaximumProfit(long *Arr, int n)
-// {
-//     // Write your code here
+long getMaximumProfit(long *Arr, int n)
+{
+    // Write your code here
 
-//     vector<vector<long>> dp(n, vector<long>(2, -1));
+    vector<vector<long>> dp(n, vector<long>(2, -1));
 
-//     if (n == 0)
-//         return 0;
-//     long ans = getAns(Arr, 0, 0, n, dp);
-//     return ans;
-// }
+    if (n == 0)
+        return 0;
+    long ans = getAns(Arr, 0, 0, n, dp);
+    return ans;
+}
 
-// int main()
-// {
+// Time Complexity: O(N*2)
+// Reason: There are N*2 states therefore at max ‘N*2’ new problems will be solved and we are running a for loop for ‘N’ times to calculate the total sum
 
-//     int n = 6;
-//     long Arr[n] = {7, 1, 5, 3, 6, 4};
-
-//     cout << "The maximum profit that can be generated is " << getMaximumProfit(Arr, n);
-// }
+// Space Complexity: O(N*2) + O(N)
+// Reason: We are using a recursion stack space(O(N)) and a 2D array ( O(N*2)).
 
 // tabulation
-// long getMaximumProfit(long *Arr, int n)
-// {
-//     // Write your code here
+long getMaximumProfit(long *Arr, int n)
+{
+    // Write your code here
 
-//     vector<vector<long>> dp(n + 1, vector<long>(2, -1));
+    vector<vector<long>> dp(n + 1, vector<long>(2, -1));
 
-//     // base condition
-//     dp[n][0] = dp[n][1] = 0;
+    // base condition
+    dp[n][0] = dp[n][1] = 0;
 
-//     long profit;
+    long profit;
 
-//     for (int ind = n - 1; ind >= 0; ind--)
-//     {
-//         for (int buy = 0; buy <= 1; buy++)
-//         {
-//             if (buy == 0)
-//             { // We can buy the stock
-//                 profit = max(0 + dp[ind + 1][0], -Arr[ind] + dp[ind + 1][1]);
-//             }
+    for (int ind = n - 1; ind >= 0; ind--)
+    {
+        for (int buy = 0; buy <= 1; buy++)
+        {
+            if (buy == 0)
+            { // We can buy the stock
+                profit = max(0 + dp[ind + 1][0], -Arr[ind] + dp[ind + 1][1]);
+            }
 
-//             if (buy == 1)
-//             { // We can sell the stock
-//                 profit = max(0 + dp[ind + 1][1], Arr[ind] + dp[ind + 1][0]);
-//             }
+            if (buy == 1)
+            { // We can sell the stock
+                profit = max(0 + dp[ind + 1][1], Arr[ind] + dp[ind + 1][0]);
+            }
 
-//             dp[ind][buy] = profit;
-//         }
-//     }
-//     return dp[0][0];
-// }
+            dp[ind][buy] = profit;
+        }
+    }
+    return dp[0][0];
+}
 
-// int main()
-// {
+// Time Complexity: O(N*2)
+// Reason: There are two nested loops that account for O(N*2) complexity.
 
-//     int n = 6;
-//     long Arr[n] = {7, 1, 5, 3, 6, 4};
-
-//     cout << "The maximum profit that can be generated is " << getMaximumProfit(Arr, n);
-// }
+// Space Complexity: O(N*2)
+// Reason: We are using an external array of size ‘N*2’. Stack Space is eliminated.
 
 // space optimized
 long getMaximumProfit(long *Arr, int n)
@@ -124,6 +118,12 @@ long getMaximumProfit(long *Arr, int n)
     }
     return cur[0];
 }
+
+// Time Complexity: O(N*2)
+// Reason: There are two nested loops that account for O(N*2) complexity
+
+// Space Complexity: O(1)
+// Reason: We are using an external array of size ‘2’.
 
 int main()
 {

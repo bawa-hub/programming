@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/subsets/
+// https://practice.geeksforgeeks.org/problems/power-set4302/1
 
-// subsequences is contiguous/non-contiguous sequences, follows the order
+// subsequences is contiguous/non-contiguous sequences, that follows the order
 
 // print all the subsequence or power set of the given array
 #include <bits/stdc++.h>
@@ -40,3 +41,23 @@ int main()
 
     return 0;
 }
+
+// print all possible subsequences of the String
+// void solve(int i, string s, string &f) {
+// 	if (i == s.length()) {
+// 		cout << f << " ";
+// 		return;
+// 	}
+// 	//picking
+// 	f = f + s[i];
+// 	solve(i + 1, s,  f);
+// 	//poping out while backtracking
+// 	f.pop_back();
+// 	solve(i + 1, s,  f);
+// }
+// int main() {
+// 	string s = "abc";
+// 	string f = "";
+// 	cout<<"All possible subsequences are: "<<endl;
+// 	solve(0, s, f);
+// }

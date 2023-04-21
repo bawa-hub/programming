@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/reverse-integer/
+
 #include <stdio.h>
 
 int main()
@@ -16,3 +18,17 @@ int main()
 
 // Time Complexity: O(n), where n is the length of the given number
 // Space Complexity: O(1)
+
+// for leetcode
+int reverse(int x)
+{
+    long r = 0;
+    while (x)
+    {
+        r = r * 10 + x % 10;
+        x = x / 10;
+    }
+    if (r > INT_MAX || r < INT_MIN)
+        return 0;
+    return int(r);
+}

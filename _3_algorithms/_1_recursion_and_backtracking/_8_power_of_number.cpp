@@ -1,4 +1,5 @@
 // https://www.geeksforgeeks.org/write-a-c-program-to-calculate-powxn/
+// https://leetcode.com/problems/powx-n/
 #include <bits/stdc++.h>
 using namespace std;
 

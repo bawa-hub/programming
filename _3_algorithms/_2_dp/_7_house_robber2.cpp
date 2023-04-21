@@ -1,11 +1,11 @@
 // https://leetcode.com/problems/house-robber-ii/
 // https://www.codingninjas.com/codestudio/problems/house-robber_839733
-https : // practice.geeksforgeeks.org/problems/stickler-theif-1587115621/1?
+// https://practice.geeksforgeeks.org/problems/stickler-theif-1587115621/1?
 
 // same as maximum sum of non adjacent element with slight change
 
 #include <bits/stdc++.h>
-        using namespace std;
+using namespace std;
 
 long long int solve(vector<int> &arr)
 {
