@@ -1,90 +1,36 @@
 // https://leetcode.com/problems/reverse-words-in-a-string/
 
-#include <bits/stdc++.h>
-using namespace std;
-
-// brute force
-int main()
+class Solution
 {
-    string s = "TUF is great for interview preparation";
-    cout << "Before reversing words: " << endl;
-    cout << s << endl;
-    s += " ";
-    stack<string> st;
-    int i;
-    string str = "";
-    for (i = 0; i < s.length(); i++)
+public:
+    string reverseWords(string s)
     {
-        if (s[i] == ' ')
-        {
-            st.push(str);
-            str = "";
-        }
-        else
-            str += s[i];
-    }
-    string ans = "";
-    while (st.size() != 1)
-    {
-        ans += st.top() + " ";
-        st.pop();
-    }
-    ans += st.top(); // The last word should'nt have a space after it
-    cout << "After reversing words: " << endl;
-    cout << ans;
-    return 0;
-}
-// Time Complexity: O(N), Traversing the entire string
-// Space Complexity: O(N), Stack and ans variable
+        string res = ""; // to store the final result
+        int i = s.length() - 1;
 
-// optimal
-string result(string s)
-{
-    int left = 0;
-    int right = s.length() - 1;
-
-    string temp = "";
-    string ans = "";
-
-    // Iterate the string and keep on adding to form a word
-    // If empty space is encountered then add the current word to the result
-    while (left <= right)
-    {
-        char ch = s[left];
-        if (ch != ' ')
+        while (i >= 0)
         {
-            temp += ch;
-        }
-        else if (ch == ' ')
-        {
-            if (ans != "")
-                ans = temp + " " + ans;
+            if (s[i] == ' ')
+                i--; // ignore the spaces
             else
-                ans = temp;
-            temp = "";
+            {
+                int j = i;
+                string temp = " "; // whenever adding a word start with a space
+                while (j >= 0 && s[j] != ' ')
+                {
+                    temp += s[j--];
+                }
+                reverse(temp.begin(), temp.end());
+                // since we added the word in reverse order so we need to reverse it
+                res += temp;
+                i = j;
+            }
         }
-        left++;
+        res.pop_back();
+        /* last character will be a space since we are adding a space each time we
+           add a word */
+        return res;
     }
-
-    // If not empty string then add to the result(Last word is added)
-    if (temp != "")
-    {
-        if (ans != "")
-            ans = temp + " " + ans;
-        else
-            ans = temp;
-    }
-
-    return ans;
-}
-int main()
-{
-    string st = "TUF is great for interview preparation";
-    cout << "Before reversing words: " << endl;
-    cout << st << endl;
-    cout << "After reversing words: " << endl;
-    cout << result(st);
-    return 0;
-}
-// Time Complexity: O(N), N~length of string
-// Space Complexity: O(1), Constant Space
+};
+// TC:O(N) for traversing the string + O(N) for reversing
+// SC:O(N)

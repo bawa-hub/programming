@@ -1,0 +1,1 @@
+// https://practice.geeksforgeeks.org/problems/number-of-nges-to-the-right/1

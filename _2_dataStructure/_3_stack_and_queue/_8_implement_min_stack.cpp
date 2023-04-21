@@ -54,24 +54,24 @@ public:
         mini = INT_MAX;
     }
 
-    void push(int value)
+    void push(int val)
     {
-        long long val = Long.valuevalue;
+        long long value = val;
         if (st.empty())
         {
-            mini = val;
-            st.push(val);
+            mini = value;
+            st.push(value);
         }
         else
         {
-            if (val < mini)
+            if (value < mini)
             {
-                st.push(2 * val * 1LL - mini);
-                mini = val;
+                st.push(2 * value * 1LL - mini);
+                mini = value;
             }
             else
             {
-                st.push(val);
+                st.push(value);
             }
         }
     }

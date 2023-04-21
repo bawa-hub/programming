@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/implement-stack-using-queues/
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -28,6 +30,12 @@ public:
     {
         return q.front();
     }
+
+    bool empty()
+    {
+        return q.empty();
+    }
+
     int Size()
     {
         return q.size();
