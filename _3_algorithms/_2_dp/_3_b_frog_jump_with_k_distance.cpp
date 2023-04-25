@@ -1,4 +1,5 @@
 // https://atcoder.jp/contests/dp/tasks/dp_b
+// https://practice.geeksforgeeks.org/problems/minimal-cost/1
 
 #include <bits/stdc++.h>
 using namespace std;

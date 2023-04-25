@@ -1,5 +1,8 @@
 // https://leetcode.com/problems/shortest-path-in-binary-matrix/
+// for leetcode see on leetcode
+
 // https://practice.geeksforgeeks.org/problems/shortest-path-in-a-binary-maze-1655453161/1
+// this is gfg solution rather concept is same with minor variation
 
 #include <bits/stdc++.h>
 using namespace std;

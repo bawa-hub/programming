@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/number-of-provinces/
+// https://practice.geeksforgeeks.org/problems/number-of-provinces/1
 class Solution
 {
 public:

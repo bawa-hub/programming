@@ -34,10 +34,12 @@ public:
             int wt = edges[i][2];
             adj[u].push_back({v, wt});
         }
+
         // A visited array is created with initially
         // all the nodes marked as unvisited (0).
         int vis[N] = {
             0};
+
         // Now, we perform topo sort using DFS technique
         // and store the result in the stack st.
         stack<int> st;
@@ -48,9 +50,9 @@ public:
                 topoSort(i, adj, vis, st);
             }
         }
-        // Further, we declare a vector ‘dist’ in which we update the value of the nodes’
-        // distance from the source vertex after relaxation of a particular node.
 
+        // Further, we declare a vector ‘dist’ in which we update the value of the nodes
+        // distance from the source vertex after relaxation of a particular node.
         vector<int> dist(N);
         for (int i = 0; i < N; i++)
         {

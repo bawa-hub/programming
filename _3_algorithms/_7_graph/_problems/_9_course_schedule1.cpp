@@ -6,12 +6,12 @@ using namespace std;
 class Solution
 {
 public:
-    vector<int> findOrder(int V, int m, vector<vector<int>> prerequisites)
+    bool isPossible(int V, vector<pair<int, int>> &prerequisites)
     {
         vector<int> adj[V];
         for (auto it : prerequisites)
         {
-            adj[it[1]].push_back(it[0]);
+            adj[it.first].push_back(it.second);
         }
 
         int indegree[V] = {0};
@@ -49,34 +49,28 @@ public:
         }
 
         if (topo.size() == V)
-            return topo;
-        return {};
+            return true;
+        return false;
     }
 };
 
 int main()
 {
 
+    vector<pair<int, int>> prerequisites;
     int N = 4;
-    int M = 3;
-
-    vector<vector<int>> prerequisites(3);
-    prerequisites[0].push_back(0);
-    prerequisites[0].push_back(1);
-
-    prerequisites[1].push_back(1);
-    prerequisites[1].push_back(2);
-
-    prerequisites[2].push_back(2);
-    prerequisites[2].push_back(3);
+    prerequisites.push_back({1, 0});
+    prerequisites.push_back({2, 1});
+    prerequisites.push_back({3, 2});
 
     Solution obj;
-    vector<int> ans = obj.findOrder(N, M, prerequisites);
+    bool ans = obj.isPossible(N, prerequisites);
 
-    for (auto task : ans)
-    {
-        cout << task << " ";
-    }
+    if (ans)
+        cout << "YES";
+    else
+        cout << "NO";
     cout << endl;
+
     return 0;
 }

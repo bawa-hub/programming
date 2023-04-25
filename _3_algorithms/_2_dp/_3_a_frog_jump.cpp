@@ -1,4 +1,5 @@
 // https://atcoder.jp/contests/dp/tasks/dp_a
+// ?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=geek-jump
 
 #include <bits/stdc++.h>
 using namespace std;

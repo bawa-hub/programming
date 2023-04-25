@@ -1,3 +1,8 @@
+// https://leetcode.com/problems/network-delay-time/
+// https://practice.geeksforgeeks.org/problems/alex-travelling/1
+
+// https://www.youtube.com/watch?v=F3PNsWE6_hM&list=PLauivoElc3ghxyYSr_sVnDUc_ynPk6iXE&index=16
+
 class Solution
 {
 public:

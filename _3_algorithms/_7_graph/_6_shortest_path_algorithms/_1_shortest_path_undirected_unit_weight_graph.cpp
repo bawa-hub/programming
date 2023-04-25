@@ -18,10 +18,10 @@ public:
 
         // A dist array of size N initialised with a large number to
         // indicate that initially all the nodes are untraversed.
-
         int dist[N];
         for (int i = 0; i < N; i++)
             dist[i] = 1e9;
+
         // BFS Implementation.
         dist[src] = 0;
         queue<int> q;
@@ -39,6 +39,7 @@ public:
                 }
             }
         }
+
         // Updated shortest distances are stored in the resultant array ‘ans’.
         // Unreachable nodes are marked as -1.
         vector<int> ans(N, -1);
@@ -64,9 +65,14 @@ int main()
 
     for (int i = 0; i < ans.size(); i++)
     {
-
         cout << ans[i] << " ";
     }
 
     return 0;
 }
+
+// Time Complexity: O(M) { for creating the adjacency list from given list ‘edges’} + O(N + 2M) { for the BFS Algorithm} + O(N) { for adding the final values of the shortest path in the resultant array} ~ O(N+2M).
+// Where N= number of vertices and M= number of edges.
+
+// Space Complexity:  O( N) {for the stack storing the BFS} + O(N) {for the resultant array} + O(N) {for the dist array storing updated shortest paths} + O( N+2M) {for the adjacency list} ~ O(N+M) .
+// Where N= number of vertices and M= number of edges.
