@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/
+// https://leetcode.com/problems/longest-palindromic-subsequence/
 
 #include <bits/stdc++.h>
 
@@ -40,20 +40,13 @@ int longestPalindromeSubsequence(string s)
     reverse(s.begin(), s.end());
     return lcs(s, t);
 }
-
-int minInsertion(string s)
-{
-    int n = s.size();
-    int k = longestPalindromeSubsequence(s);
-    return n - k;
-}
 // Time Complexity: O(N*N)
 // Reason: There are two nested loops
 
 // Space Complexity: O(N*N)
-// Reason: We are using an external array of size (N*N). Stack Space is eliminated.
+// Reason: We are using an external array of size ‘(N*N)’. Stack Space is eliminated.
 
-// space optimization
+// space optimized
 int lcs(string s1, string s2)
 {
 
@@ -85,22 +78,16 @@ int longestPalindromeSubsequence(string s)
     reverse(s.begin(), s.end());
     return lcs(s, t);
 }
-
-int minInsertion(string s)
-{
-    int n = s.size();
-    int k = longestPalindromeSubsequence(s);
-    return n - k;
-}
-// Time Complexity: O(N*M)
+// Time Complexity: O(N*N)
 // Reason: There are two nested loops.
 
-// Space Complexity: O(M)
-// Reason: We are using an external array of size ‘M+1’ to store only two rows.
+// Space Complexity: O(N)
+// Reason: We are using an external array of size ‘N+1’ to store only two rows.
 
 int main()
 {
 
-    string s = "abcaa";
-    cout << "The Minimum insertions required to make string palindrome: " << minInsertion(s);
+    string s = "bbabcbcab";
+
+    cout << "The Length of Longest Palindromic Subsequence is " << longestPalindromeSubsequence(s);
 }
