@@ -4,7 +4,14 @@ https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problem
 https://leetcode.com/discuss/study-guide/1905453/Master-in-Two-Pointer
 https://leetcode.com/discuss/study-guide/1469943/Everyday-2-pointers-challenge-list
 
+https://leetcode.com/discuss/study-guide/1905453/master-in-two-pointer
+https://leetcode.com/articles/two-pointer-technique/
+https://medium.com/@timpark0807/leetcode-is-easy-two-pointers-90b9b0f2eb43
+https://www.geeksforgeeks.org/two-pointers-technique/
+
 # Sliding Window
+
+https://www.youtube.com/playlist?list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj
 
 https://blog.reachsumit.com/posts/2020/10/leetcode-sliding-window/
 https://leetcode.com/discuss/study-guide/1773891/Sliding-Window-Technique-and-Question-Bank
