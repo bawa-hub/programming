@@ -15,3 +15,5 @@ https://leetcode.com/discuss/study-guide/691825/Binary-Search-for-Beginners-Prob
 https://leetcode.com/discuss/study-guide/1322500/5-variations-of-Binary-search-(A-Self-Note)
 https://leetcode.com/discuss/study-guide/1233854/A-GUIDE-TO-THE-BINARY-SEARCH-ALGORITHM!!!
 https://leetcode.com/discuss/study-guide/2023248/Master-In-Binary-Search-oror-For-beginners-to-become-a-pro-oror-with-youtube-videos
+https://leetcode.com/discuss/study-guide/1322500/5-variations-of-Binary-search-(A-Self-Note)s
+https://leetcode.com/discuss/study-guide/2371234/An-opinionated-guide-to-binary-search-(comprehensive-resource-with-a-bulletproof-template)

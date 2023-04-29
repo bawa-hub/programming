@@ -9,6 +9,9 @@ https://leetcode.com/discuss/general-discussion/712010/the-art-of-dynamic-progra
 https://leetcode.com/problems/house-robber/solutions/156523/From-good-to-great.-How-to-approach-most-of-DP-problems
 https://leetcode.com/discuss/general-discussion/662866/DP-for-Beginners-Problems-or-Patterns-or-Sample-Solutions
 
+https://leetcode.com/discuss/interview-question/2705056/Starting-your-DP-journey-Do-this-(Part-1)
+https://leetcode.com/discuss/interview-question/2746513/Starting-your-DP-journey-Do-This-Part-2
+
 https://www.geeksforgeeks.org/dynamic-programming/
 https://cses.fi/problemset/
 https://atcoder.jp/contests/dp
