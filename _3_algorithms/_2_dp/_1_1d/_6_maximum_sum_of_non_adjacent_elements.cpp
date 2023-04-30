@@ -1,4 +1,5 @@
-// https://www.codingninjas.com/codestudio/problems/maximum-sum-of-non-adjacent-elements_843261?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos
+// https://www.codingninjas.com/codestudio/problems/maximum-sum-of-non-adjacent-elements_843261
+// https://practice.geeksforgeeks.org/problems/max-sum-without-adjacents2430/1
 // https://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent/
 
 #include <bits/stdc++.h>
