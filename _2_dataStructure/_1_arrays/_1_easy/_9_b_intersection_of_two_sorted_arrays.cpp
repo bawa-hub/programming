@@ -56,7 +56,8 @@ int main()
     while (i < A.size() && j < B.size())
     {
         if (A[i] < B[j])
-        { // if current element in i is smaller
+        {
+            // if current element in i is smaller
             i++;
         }
         else if (B[j] < A[i])
