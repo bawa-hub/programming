@@ -12,6 +12,6 @@ Variable size sliding window:
 Largest subarray of sum k
 variable size sliding window general format
 longest substring with k unique characters
-longest substring with without repeating characters
+longest substring without repeating characters
 pick toys
 minimum window substring
