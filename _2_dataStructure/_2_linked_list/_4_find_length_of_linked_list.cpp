@@ -1,5 +1,5 @@
 // https://practice.geeksforgeeks.org/problems/count-nodes-of-linked-list/0
-
+// https://www.geeksforgeeks.org/find-length-of-a-linked-list-iterative-and-recursive/
 struct Node
 {
     int data;

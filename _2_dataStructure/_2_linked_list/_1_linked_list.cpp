@@ -1,7 +1,4 @@
-// Linked list operations in C++
-
 #include <stdlib.h>
-
 #include <iostream>
 using namespace std;
 
@@ -12,6 +9,7 @@ struct Node
     struct Node *next;
 };
 
+// insert node at beginning
 void insertAtBeginning(struct Node **head_ref, int new_data)
 {
     // Allocate memory to a node
@@ -25,7 +23,7 @@ void insertAtBeginning(struct Node **head_ref, int new_data)
     (*head_ref) = new_node;
 }
 
-// Insert a node after a node
+// Insert a node after a given node
 void insertAfter(struct Node *prev_node, int new_data)
 {
     if (prev_node == NULL)
