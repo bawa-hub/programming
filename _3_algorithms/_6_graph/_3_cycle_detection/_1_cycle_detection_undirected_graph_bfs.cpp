@@ -1,71 +1,76 @@
-/***
- * if node is visited and it is not parent then there is a cycle
- * */
-#include <bits/stdc++.h>
+
+// https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1#include <bits/stdc++.h>
+
 using namespace std;
+
 class Solution
 {
-public:
-    bool checkForCycle(int s, int V, vector<int> adj[], vector<int> &visited)
+private:
+    bool detect(int src, vector<int> adj[], int vis[])
     {
-        // Create a queue for BFS
+        vis[src] = 1;
+        // store <source node, parent node>
         queue<pair<int, int>> q;
-        visited[s] = true;
-        q.push({s, -1});
+        q.push({src, -1});
+        // traverse until queue is not empty
         while (!q.empty())
         {
             int node = q.front().first;
-            int par = q.front().second;
+            int parent = q.front().second;
             q.pop();
 
-            for (auto it : adj[node])
+            // go to all adjacent nodes
+            for (auto adjacentNode : adj[node])
             {
-                if (!visited[it])
+                // if adjacent node is unvisited
+                if (!vis[adjacentNode])
                 {
-                    visited[it] = true;
-                    q.push({it, node});
+                    vis[adjacentNode] = 1;
+                    q.push({adjacentNode, node});
                 }
-                else if (par != it)
+                // if adjacent node is visited and is not it's own parent node
+                else if (parent != adjacentNode)
+                {
+                    // yes it is a cycle
+                    return true;
+                }
+            }
+        }
+        // there's no cycle
+        return false;
+    }
+
+public:
+    // Function to detect cycle in an undirected graph.
+    bool isCycle(int V, vector<int> adj[])
+    {
+        // initialise them as unvisited
+        int vis[V] = {0};
+        for (int i = 0; i < V; i++)
+        {
+            if (!vis[i])
+            {
+                if (detect(i, adj, vis))
                     return true;
             }
         }
         return false;
     }
-    bool isCycle(int V, vector<int> adj[])
-    {
-        vector<int> vis(V - 1, 0);
-        for (int i = 1; i <= V; i++)
-        {
-            if (!vis[i])
-            {
-                if (checkForCycle(i, V, adj, vis))
-                    return true;
-            }
-        }
-    }
 };
 
-void addEdge(vector<int> adj[], int u, int v)
-{
-    adj[u].push_back(v);
-    adj[v].push_back(u);
-}
 int main()
 {
-    vector<int> adj[5];
 
-    addEdge(adj, 0, 1);
-    addEdge(adj, 0, 2);
-    addEdge(adj, 2, 3);
-    addEdge(adj, 1, 3);
-    addEdge(adj, 2, 4);
-
+    // V = 4, E = 2
+    vector<int> adj[4] = {{}, {2}, {1, 3}, {2}};
     Solution obj;
-    int num = obj.isCycle(5, adj);
-    if (num == 1)
-        cout << "Yes" << endl;
+    bool ans = obj.isCycle(4, adj);
+    if (ans)
+        cout << "1\n";
     else
-        cout << "No" << endl;
-
+        cout << "0\n";
     return 0;
 }
+
+// Time Complexity: O(N + 2E) + O(N), Where N = Nodes, 2E is for total degrees as we traverse all adjacent nodes. In the case of connected components of a graph, it will take another O(N) time.
+// Space Complexity: O(N) + O(N) ~ O(N), Space for queue data structure and visited array.

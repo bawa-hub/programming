@@ -1,82 +1,74 @@
+// https://takeuforward.org/data-structure/detect-cycle-in-a-directed-graph-using-dfs-g-19/
 // https://leetcode.com/problems/course-schedule-ii/solutions/293048/detecting-cycle-in-directed-graph-problem/
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
 class Solution
 {
 private:
-    bool checkCycle(int node, vector<int> adj[], int vis[], int dfsVis[])
+    bool dfsCheck(int node, vector<int> adj[], int vis[], int pathVis[])
     {
         vis[node] = 1;
-        dfsVis[node] = 1;
+        pathVis[node] = 1;
+
+        // traverse for adjacent nodes
         for (auto it : adj[node])
         {
+            // when the node is not visited
             if (!vis[it])
             {
-                if (checkCycle(it, adj, vis, dfsVis))
+                if (dfsCheck(it, adj, vis, pathVis) == true)
                     return true;
             }
-            else if (dfsVis[it])
+            // if the node has been previously visited
+            // but it has to be visited on the same path
+            else if (pathVis[it])
             {
                 return true;
             }
         }
-        dfsVis[node] = 0;
+
+        pathVis[node] = 0;
         return false;
     }
 
 public:
-    bool isCyclic(int N, vector<int> adj[])
+    // Function to detect cycle in a directed graph.
+    bool isCyclic(int V, vector<int> adj[])
     {
-        int vis[N], dfsVis[N];
+        int vis[V] = {0};
+        int pathVis[V] = {0};
 
-        for (int i = 0; i < N; i++)
-        {
-            vis[i] = 0;
-            dfsVis[i] = 0;
-        }
-
-        for (int i = 0; i < N; i++)
+        for (int i = 0; i < V; i++)
         {
             if (!vis[i])
             {
-                // cout << i << endl;
-                if (checkCycle(i, adj, vis, dfsVis))
-                {
-                    // cout << i << endl;
+                if (dfsCheck(i, adj, vis, pathVis) == true)
                     return true;
-                }
             }
         }
         return false;
     }
 };
 
-void addEdge(vector<int> adj[], int u, int v)
-{
-    adj[u].push_back(v);
-}
-
 int main()
 {
 
-    int V = 6;
-
-    vector<int> adj[V];
-    addEdge(adj, 0, 1);
-    addEdge(adj, 1, 2);
-    addEdge(adj, 1, 5);
-    addEdge(adj, 2, 3);
-    addEdge(adj, 3, 4);
-    addEdge(adj, 4, 0);
-    addEdge(adj, 4, 1);
-
+    // V = 11, E = 11;
+    vector<int> adj[11] = {{}, {2}, {3}, {4, 7}, {5}, {6}, {}, {5}, {9}, {10}, {8}};
+    int V = 11;
     Solution obj;
-    if (obj.isCyclic(V, adj))
-        cout << "Cycle Detected"
-             << "\n";
+    bool ans = obj.isCyclic(V, adj);
+
+    if (ans)
+        cout << "True\n";
     else
-        cout << "No Cycle Detected";
+        cout << "False\n";
 
     return 0;
 }
+
+// Time Complexity: O(V+E)+O(V) , where V = no. of nodes and E = no. of edges. There can be at most V components. So, another O(V) time complexity.
+// Space Complexity: O(2N) + O(N) ~ O(2N): O(2N) for two visited arrays and O(N) for recursive stack space.
