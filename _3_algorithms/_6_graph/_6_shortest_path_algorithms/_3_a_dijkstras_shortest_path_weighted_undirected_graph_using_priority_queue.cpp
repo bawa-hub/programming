@@ -11,12 +11,11 @@ public:
     vector<int> dijkstra(int V, vector<vector<int>> adj[], int S)
     {
 
-        // Create a priority queue for storing the nodes as a pair {dist,node}
+        // Create a priority queue (min heap) for storing the nodes as a pair {dist,node}
         // where dist is the distance from source to the node.
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
 
-        // Initialising distTo list with a large number to
-        // indicate the nodes are unvisited initially.
+        // Initialising distTo list with a large number to indicate the nodes are unvisited initially.
         // This list contains distance from source to the nodes.
         vector<int> distTo(V, INT_MAX);
 
