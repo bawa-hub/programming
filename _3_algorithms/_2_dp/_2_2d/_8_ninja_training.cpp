@@ -46,17 +46,6 @@ int ninjaTraining(int n, vector<vector<int>> &points)
 // Space Complexity: O(N) + O(N*4)
 // Reason: We are using a recursion stack space(O(N)) and a 2D array (again O(N*4)). Therefore total space complexity will be O(N) + O(N) ≈ O(N)
 
-int main()
-{
-
-    vector<vector<int>> points = {{10, 40, 70},
-                                  {20, 50, 80},
-                                  {30, 60, 90}};
-
-    int n = points.size();
-    cout << ninjaTraining(n, points);
-}
-
 // tabulation/iterative
 int ninjaTraining(int n, vector<vector<int>> &points)
 {
