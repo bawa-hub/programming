@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -29,6 +30,9 @@ public:
             int node = q.front();
             q.pop();
             topo.push_back(node);
+
+            // node is in your topo sort
+			// so please remove it from the indegree
             for (auto it : adj[node])
             {
                 indegree[it]--;

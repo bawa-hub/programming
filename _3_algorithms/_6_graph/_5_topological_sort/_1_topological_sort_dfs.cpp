@@ -4,7 +4,7 @@ using namespace std;
 
 class Solution
 {
-    void findTopoSort(int node, vector<int> &vis, stack<int> &st, vector<int> adj[])
+    void dfs(int node, vector<int> &vis, stack<int> &st, vector<int> adj[])
     {
         vis[node] = 1;
 
@@ -12,7 +12,7 @@ class Solution
         {
             if (!vis[it])
             {
-                findTopoSort(it, vis, st, adj);
+                dfs(it, vis, st, adj);
             }
         }
         st.push(node);
@@ -27,7 +27,7 @@ public:
         {
             if (vis[i] == 0)
             {
-                findTopoSort(i, vis, st, adj);
+                dfs(i, vis, st, adj);
             }
         }
         vector<int> topo;
