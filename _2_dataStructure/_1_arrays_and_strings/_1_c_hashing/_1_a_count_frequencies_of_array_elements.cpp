@@ -1,6 +1,7 @@
 // https://practice.geeksforgeeks.org/problems/frequency-of-array-elements-1587115620/0
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <unordered_map>
 using namespace std;
 
 void Frequency(int arr[], int n)
