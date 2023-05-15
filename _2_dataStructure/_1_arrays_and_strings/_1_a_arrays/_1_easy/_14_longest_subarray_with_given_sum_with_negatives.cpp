@@ -1,5 +1,6 @@
 // https://practice.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
 // https://takeuforward.org/arrays/longest-subarray-with-sum-k-postives-and-negatives/
+// https://www.geeksforgeeks.org/find-subarray-with-given-sum-in-array-of-integers/
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/codestudio/problems/longest-subarray-with-sum-k_6682399
+// https://www.geeksforgeeks.org/longest-sub-array-sum-k/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -90,7 +91,7 @@ int getLongestSubarray(vector<int> &a, long long k)
 // Time Complexity: O(N) or O(N*logN) depending on which map data structure we are using, where N = size of the array.
 // Space Complexity: O(N) as we are using a map data structure.
 
-// using two pointer
+// using two pointer (sliding window) [only for non negative integers]
 int getLongestSubarray(vector<int> &a, long long k)
 {
     int n = a.size(); // size of the array.
