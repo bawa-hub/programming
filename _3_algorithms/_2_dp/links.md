@@ -1,5 +1,7 @@
 # Dynamic Programming --
 
+aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go
+
 https://leetcode.com/discuss/study-guide/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
 https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY
 https://www.geeksforgeeks.org/dynamic-programming/
@@ -33,9 +35,3 @@ https://leetcode.com/discuss/study-guide/662866/dp-for-beginners-problems-patter
 https://leetcode.com/discuss/interview-question/1986802/Dynamic-Programming
 https://docs.google.com/spreadsheets/d/1pEzcVLdj7T4fv5mrNhsOvffBnsUH07GZk7c2jD-adE0/edit#gid=0
 
-saket dp tips - https://www.youtube.com/watch?v=qtZtCty073g
-pepcoding level 1 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy
-aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go
-pepcoding level 2 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiEZvXCn-c5UIBvfT8dA-8EG
-gfg - https://www.youtube.com/playlist?list=PLqM7alHXFySGbXhWx7sBJEwY2DnhDjmxm
-luv - https://www.youtube.com/playlist?list=PLauivoElc3gimdmLcIIpafEkzGs4tCQmi

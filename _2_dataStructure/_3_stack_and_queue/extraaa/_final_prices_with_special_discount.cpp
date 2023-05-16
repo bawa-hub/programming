@@ -1,0 +1,1 @@
+// https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/solutions/685406/c-stack-next-smaller-element/
