@@ -62,6 +62,7 @@ bool isPossible(int a[], int n, int cows, int minDist)
         return true;
     return false;
 }
+
 int main()
 {
     int n = 5, cows = 3;
