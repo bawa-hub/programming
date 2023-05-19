@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/
 
-// by me
 class Solution {
 public:
     int numberOfSubstrings(string s) {

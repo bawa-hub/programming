@@ -23,7 +23,7 @@
         }
         return res;
     }
-//     Space O(N)
+// Space O(N)
 // Time O(N)
 
 // sliding window
@@ -42,5 +42,5 @@
         }
         return res;
     }
-//     Space O(1)
+// Space O(1)
 // Time O(N)
