@@ -13,6 +13,7 @@ https://www.geeksforgeeks.org/two-pointers-technique/
 
 https://www.youtube.com/playlist?list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj
 
+https://leetcode.com/problems/minimum-window-substring/solutions/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems/
 https://blog.reachsumit.com/posts/2020/10/leetcode-sliding-window/
 https://leetcode.com/discuss/study-guide/1773891/Sliding-Window-Technique-and-Question-Bank
 https://leetcode.com/discuss/general-discussion/1122776/summary-of-sliding-window-patterns-for-subarray-substring

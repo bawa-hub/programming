@@ -1,0 +1,42 @@
+1. Fixed Size Window 
+
+A. Fixed size window with simple calculation:
+Maximum sum subarray of size k - https://practice.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1
+Maximum Average Subarray I - https://leetcode.com/problems/maximum-average-subarray-i/
+Contains Duplicate II - https://leetcode.com/problems/contains-duplicate-ii/
+Find the K-Beauty of a Number - https://leetcode.com/problems/find-the-k-beauty-of-a-number/
+Substrings of Size Three with Distinct Characters - https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/
+Minimum Difference Between Highest and Lowest of K Scores - https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/
+Minimum Recolors to Get K Consecutive Black Blocks - https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/
+Count occurence of anangrams - https://practice.geeksforgeeks.org/problems/count-occurences-of-anagrams5839/1
+
+B. Fixed size window calculation with other data structure:
+first negative number in every window of size k - https://practice.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1
+maximum of all subarrays of size k - https://www.interviewbit.com/problems/sliding-window-maximum/
+Sliding Window Maximum - https://leetcode.com/problems/sliding-window-maximum/
+
+
+2. Variable size window
+
+A. Variable size sliding window with basic calculation:
+Largest subarray of sum k - https://practice.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1
+pick toys/Fruits into baskets - https://leetcode.com/problems/fruit-into-baskets/
+Minimum Size Subarray Sum - https://leetcode.com/problems/minimum-size-subarray-sum/
+Max Consecutive Ones III - https://leetcode.com/problems/max-consecutive-ones-iii/
+
+B. Variable size sliding window calculation with other data structure (map/prefix-sum)
+Longest Substring Without Repeating Characters - https://leetcode.com/problems/longest-substring-without-repeating-characters/
+longest substring with k unique characters - https://practice.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1
+longest substring without repeating characters - https://leetcode.com/problems/longest-substring-without-repeating-characters/
+Longest Repeating Character Replacement - https://leetcode.com/problems/longest-repeating-character-replacement/
+minimum window substring - https://leetcode.com/problems/minimum-window-substring/
+minimum window subsequence - https://practice.geeksforgeeks.org/problems/minimum-window-subsequence/1
+Longest substring with atmost k distinct characters - https://www.lintcode.com/problem/386/
+
+
+3. Counting problems
+Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold - https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/
+Number of Substrings Containing All Three Characters - https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/
+Count Number of Nice Subarrays  - https://leetcode.com/problems/count-number-of-nice-subarrays/
+Binary Subarrays With Sum - https://leetcode.com/problems/binary-subarrays-with-sum/
+Subarrays with K Different Integers - https://leetcode.com/problems/subarrays-with-k-different-integers/
