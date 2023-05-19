@@ -1,3 +1,5 @@
+# leetcode users good solutions
+https://leetcode.com/18je0001/
 # practice problems
 https://github.com/skjha1/Aditya-verma-youtube-playlist-code
 https://leetcode.com/discuss/interview-question/3515002/patterns-to-master-dsa-along-with-most-important-questions-with-links

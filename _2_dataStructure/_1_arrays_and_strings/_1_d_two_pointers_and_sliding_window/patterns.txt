@@ -32,6 +32,7 @@ Longest Repeating Character Replacement - https://leetcode.com/problems/longest-
 minimum window substring - https://leetcode.com/problems/minimum-window-substring/
 minimum window subsequence - https://practice.geeksforgeeks.org/problems/minimum-window-subsequence/1
 Longest substring with atmost k distinct characters - https://www.lintcode.com/problem/386/
+Maximum Points You Can Obtain from Cards - https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
 
 
 3. Counting problems
@@ -40,3 +41,9 @@ Number of Substrings Containing All Three Characters - https://leetcode.com/prob
 Count Number of Nice Subarrays  - https://leetcode.com/problems/count-number-of-nice-subarrays/
 Binary Subarrays With Sum - https://leetcode.com/problems/binary-subarrays-with-sum/
 Subarrays with K Different Integers - https://leetcode.com/problems/subarrays-with-k-different-integers/
+Count Subarrays With Fixed Bounds - https://leetcode.com/problems/count-subarrays-with-fixed-bounds/
+
+
+# More patterns
+https://leetcode.com/problems/minimum-window-substring/solutions/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems/
+https://leetcode.com/problems/subarrays-with-k-different-integers/solutions/235002/one-code-template-to-solve-all-of-these-problems/
