@@ -1,32 +1,16 @@
 # leetcode users good solutions
 https://leetcode.com/18je0001/
+
 # practice problems
 https://github.com/skjha1/Aditya-verma-youtube-playlist-code
-https://leetcode.com/discuss/interview-question/3515002/patterns-to-master-dsa-along-with-most-important-questions-with-links
 https://practice.geeksforgeeks.org/problems/geeks-training/1
-https://leetcode.com/discuss/career/452354/compilation-of-questions-covering-each-interview-question-pattern
-https://leetcode.com/discuss/interview-question/2069641/The-Only-Lists-You-Need-For-Your-Interview-Preparation
-
-https://leetcode.com/discuss/career/448285/List-of-questions-sorted-by-common-patterns
 https://seanprashad.com/leetcode-patterns/
 https://github.com/seanprashad/leetcode-patterns#solutions
-
 https://igotanoffer.com/blogs/tech/coding-interview-prep
 
 # important links --
 
 https://zero1code.info/
-
-https://leetcode.com/discuss/study-guide/1367727/Links-to-Some-Great-post-in-Study-Guide
-https://leetcode.com/discuss/study-guide/1612475/Compilation-or-Leetcode-ListsandResources-or-Study-Guide-or-Topic-wise-or-Difficulty-wise
-
-https://leetcode.com/discuss/study-guide/494279/Comprehensive-Data-Structure-and-Algorithm-Study-Guide
-https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode
-
-https://leetcode.com/discuss/study-guide/657507/Sliding-Window-for-Beginners-Problems-or-Template-or-Sample-Solutions
-https://leetcode.com/discuss/study-guide/1809778/Series-Questions-on-Leetcode-or-Practice-Follow-Up-Questions-or-Beginners-to-Advanced
-
-https://leetcode.com/discuss/study-guide/1854405/9-Fibonacci-Algorithms-or-The-most-complete-solutions-or-All-In-One-or-Easy-To-Understand
 https://www.personal.kent.edu/~rmuhamma/Algorithms/algorithm.html
 
 # practice sde sheet --
