@@ -1,1 +1,1 @@
-// https://practice.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1
+// https://www.lintcode.com/problem/386/
