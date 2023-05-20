@@ -2,6 +2,7 @@
 class Solution
 {
 public:
+    // using iteration
     ListNode *reverseList(ListNode *head)
     {
         ListNode *newHead = NULL;
@@ -14,6 +15,10 @@ public:
         }
         return newHead;
     }
+    // Time Complexity:
+// Since we are iterating only once through the list and achieving reversed list. Thus, the time complexity is O(N) where N is the number of nodes present in the list.
+// Space Complexity:
+// To perform given tasks, no external spaces are used except three-pointers. So, space complexity is O(1).
 
     // using recursion
     ListNode *reverseList(ListNode *&head)

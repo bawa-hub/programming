@@ -23,6 +23,9 @@ public:
 
         return temp;
     }
+    // Time Complexity: O(N) + O(N/2)
+    // Space Complexity: O(1)
+
 
     // using fast pointer
     ListNode *middleNode(ListNode *head)
@@ -32,6 +35,6 @@ public:
             slow = slow->next, fast = fast->next->next;
         return slow;
     }
-    // Time Complexity: O(N)
+    // Time Complexity: O(N/2)
     // Space Complexity: O(1)
 };
