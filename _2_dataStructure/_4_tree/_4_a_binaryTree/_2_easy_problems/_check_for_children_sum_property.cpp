@@ -1,4 +1,4 @@
-// https://www.codingninjas.com/codestudio/problems/childrensumproperty_790723?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website
+// https://practice.geeksforgeeks.org/problems/children-sum-parent/1
 
 #include <bits/stdc++.h>
 
