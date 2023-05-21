@@ -1,0 +1,1 @@
+https://leetcode.com/discuss/interview-question/3543659/how-does-a-vector-works-internally

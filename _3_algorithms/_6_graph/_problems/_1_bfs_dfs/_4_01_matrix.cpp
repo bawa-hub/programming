@@ -22,7 +22,7 @@ public:
             for (int j = 0; j < m; j++)
             {
                 // start BFS if cell contains 1
-                if (grid[i][j] == 1)
+                if (grid[i][j] == 0)
                 {
                     q.push({{i, j}, 0});
                     vis[i][j] = 1;
