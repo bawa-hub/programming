@@ -9,15 +9,13 @@ public:
         while(j<n) {
             mp[nums[j]]++;
 
-            if(j-i<k) {
-                if(mp[nums[j]]>1) return true;
-            }
+            if(mp[nums[j]]>1) return true;
 
             if(j-i==k) {
-                if(mp[nums[j]]>1) return true;
                 mp[nums[i]]--;
                 i++;
             }
+
             j++;
         }
         return false;
