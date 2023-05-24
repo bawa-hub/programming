@@ -7,15 +7,14 @@ https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/tuto
 
 patterns: https://docs.google.com/document/d/1bNslc9kOjZ2EiEYJNcdvxzoGJ3u_LpFHfu3G5AdYa1c/edit
 
+https://leetcode.com/tag/depth-first-search/discuss/2995224/Graph-Study-Notes-(WIP)
 https://leetcode.com/discuss/study-guide/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions
 https://leetcode.com/tag/graph/discuss/2360573/Become-Master-In-Graph
 https://leetcode.com/discuss/general-discussion/969327/Graph-Algorithms-One-Place-or-Dijkstra-or-Bellman-Ford-or-Floyd-Warshall-or-Prims-or-Kruskals-or-DSU
 https://leetcode.com/discuss/study-guide/1059477/A-guide-to-Dijkstra's-Algorithm
 https://leetcode.com/discuss/study-guide/1326900/Graph-algorithms-%2B-problems-to-practice
 https://leetcode.com/discuss/general-discussion/1122034/important-graph-algorithm-notes-for-interview
-https://leetcode.com/tag/depth-first-search/discuss/2995224/Graph-Study-Notes-(WIP)
 https://leetcode.com/tag/graph/discuss/1072418/Disjoint-Set-Union-(DSU)Union-Find-A-Complete-Guide
-https://leetcode.com/tag/graph/discuss/1326900/Graph-algorithms-%2B-problems-to-practice
 
 https://codeforces.com/blog/entry/55219?f0a28=1
 https://www.quora.com/How-can-I-be-good-at-graph-theory-based-programming-problems-in-competitive-programming/answer/Sameer-Gulati-3?ch=10&share=fed73688&srid=oeMh
