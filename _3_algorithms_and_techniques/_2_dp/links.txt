@@ -3,6 +3,8 @@
 aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go
 striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY
 
+patterns: https://docs.google.com/document/d/16ad4qAlNKZGkYpaUutIYuA6l-YLyOm2AIYruNsfetJM/edit
+
 https://leetcode.com/discuss/study-guide/1490172/Dynamic-programming-is-simple
 https://leetcode.com/discuss/general-discussion/712010/the-art-of-dynamic-programming-an-intuitive-approach-from-apprentice-to-master/709225
 https://leetcode.com/discuss/interview-question/2705056/Starting-your-DP-journey-Do-this-(Part-1)

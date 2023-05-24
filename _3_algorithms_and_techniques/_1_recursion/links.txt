@@ -4,6 +4,7 @@ https://leetcode.com/discuss/study-guide/1733447/Become-Master-In-Recursion
 https://leetcode.com/discuss/study-guide/1405817/Backtracking-algorithm-%2B-problems-to-practice
 https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
 
+patterns: https://docs.google.com/document/d/1JcGu-mAaycYwMY_bX2Uya1td6hZwmSznH3_eLUHATpc/edit
 
 striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9
 aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWeT1ffjiImo0sYTcnLzo-wY

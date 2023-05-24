@@ -1,3 +1,5 @@
 # https://www.youtube.com/watch?v=KEs5UyBJ39g&t=1394s
 
 https://leetcode.com/discuss/general-discussion/1068545/HASH-TABLE-and-MAP-POWERFUL-GUIDE-
+
+patterns: https://docs.google.com/document/d/1p2GNE68aLDjCZv-U7h3EKHNlTF5wuHt064LtFJSEb1U/edit#heading=h.vh5hghjrgjt0
