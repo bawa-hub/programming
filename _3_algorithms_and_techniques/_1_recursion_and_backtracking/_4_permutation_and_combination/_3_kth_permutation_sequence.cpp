@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/permutation-sequence/
+// https://www.youtube.com/watch?v=wT7gcXLYoao&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=21
 #include <bits/stdc++.h>
 
 using namespace std;
