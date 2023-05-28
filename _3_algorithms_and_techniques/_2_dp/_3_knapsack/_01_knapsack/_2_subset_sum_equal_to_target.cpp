@@ -1,5 +1,6 @@
 // https://www.codingninjas.com/codestudio/problems/subset-sum-equal-to-k_1550954?leftPanelTab=0
-https : // practice.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1
+// https://practice.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1
+// https://www.geeksforgeeks.org/subset-sum-problem-dp-25/
 
 #include <bits/stdc++.h>
         using namespace std;

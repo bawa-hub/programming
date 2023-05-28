@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/partition-equal-subset-sum/
 // https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1
+// https://www.geeksforgeeks.org/partition-problem-dp-18/
 
 #include <bits/stdc++.h>
 

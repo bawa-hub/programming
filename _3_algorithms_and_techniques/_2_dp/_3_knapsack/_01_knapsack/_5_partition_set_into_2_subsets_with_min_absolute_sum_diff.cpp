@@ -1,5 +1,7 @@
 // https://www.interviewbit.com/problems/minimum-difference-subsets/
 // https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/
+// https://practice.geeksforgeeks.org/problems/minimum-sum-partition3317/1
+// https://www.geeksforgeeks.org/partition-a-set-into-two-subsets-such-that-the-difference-of-subset-sums-is-minimum/
 
 #include <bits/stdc++.h>
 

@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/distinct-subsequences/
+// https://practice.geeksforgeeks.org/problems/number-of-distinct-subsequences0909/1
 // https://www.codingninjas.com/codestudio/problems/subsequence-counting_3755256
 
 #include <bits/stdc++.h>

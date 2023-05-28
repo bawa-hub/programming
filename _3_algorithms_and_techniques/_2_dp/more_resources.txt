@@ -1,8 +1,3 @@
-# Dynamic Programming --
-
-aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go
-striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY
-
 patterns: https://docs.google.com/document/d/16ad4qAlNKZGkYpaUutIYuA6l-YLyOm2AIYruNsfetJM/edit
 
 https://leetcode.com/discuss/study-guide/1490172/Dynamic-programming-is-simple
@@ -10,18 +5,10 @@ https://leetcode.com/discuss/general-discussion/712010/the-art-of-dynamic-progra
 https://leetcode.com/discuss/interview-question/2705056/Starting-your-DP-journey-Do-this-(Part-1)
 https://leetcode.com/discuss/interview-question/2746513/Starting-your-DP-journey-Do-This-Part-2
 https://leetcode.com/discuss/study-guide/651719/How-to-solve-DP-String-Template-and-4-Steps-to-be-followed.
-https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
-https://leetcode.com/discuss/general-discussion/662866/DP-for-Beginners-Problems-or-Patterns-or-Sample-Solutions
-https://leetcode.com/discuss/study-guide/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
 https://leetcode.com/discuss/study-guide/1050391/Must-do-Dynamic-programming-Problems-Category-wise
 https://leetcode.com/discuss/study-guide/475924/My-experience-and-notes-for-learning-DP
-https://leetcode.com/discuss/study-guide/1437879/Dynamic-Programming-Patterns
 https://leetcode.com/discuss/interview-question/1986802/Dynamic-Programming
 https://leetcode.com/problems/house-robber/solutions/156523/From-good-to-great.-How-to-approach-most-of-DP-problems
-
-
-
-
 
 
 https://www.codechef.com/wiki/tutorial-dynamic-programming#Practice_Problems
