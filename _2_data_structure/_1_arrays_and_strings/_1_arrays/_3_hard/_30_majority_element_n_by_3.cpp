@@ -75,6 +75,7 @@ vector<int> majorityElement(int nums[], int n)
             count2--;
         }
     }
+    
     vector<int> ans;
     count1 = count2 = 0;
     for (i = 0; i < sz; i++)
