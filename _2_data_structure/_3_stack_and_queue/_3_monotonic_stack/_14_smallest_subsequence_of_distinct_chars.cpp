@@ -1,2 +1,0 @@
-// https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/
-// https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/solutions/308210/java-c-python-stack-solution-o-n/
