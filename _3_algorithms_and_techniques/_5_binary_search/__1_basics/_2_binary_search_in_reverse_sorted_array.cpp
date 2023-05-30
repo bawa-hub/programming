@@ -1,12 +1,3 @@
-/***
- * Time Complexity --
- * Best - O(1)
- * Average - O(log n)
- * Worst - O(log n)
- *
- * Space Cmplexity = O(1)
- */
-
 #include <iostream>
 using namespace std;
 
