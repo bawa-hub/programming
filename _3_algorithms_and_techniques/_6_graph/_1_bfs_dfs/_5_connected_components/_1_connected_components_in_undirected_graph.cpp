@@ -36,8 +36,9 @@ int main()
     {
         if (vis[i])
             continue;
-        dfs(i);
         ct++;
+        dfs(i);
+        
     }
     cout << ct << endl;
 }
