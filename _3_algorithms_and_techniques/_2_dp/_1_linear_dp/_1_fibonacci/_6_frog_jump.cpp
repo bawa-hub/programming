@@ -52,7 +52,6 @@ int main()
 // space optimized
 int main()
 {
-
     vector<int> height{30, 10, 60, 10, 60, 50};
     int n = height.size();
     int prev = 0;

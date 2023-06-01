@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/jump-game-ii/
 // https://www.geeksforgeeks.org/minimum-number-of-jumps-to-reach-end-of-a-given-array/
-
+// https://leetcode.com/problems/jump-game-ii/solutions/1192401/easy-solutions-w-explanation-optimizations-from-brute-force-to-dp-to-greedy-bfs/
+// recursive
 class Solution {
 public:
     int jump(vector<int>& nums) {
@@ -23,3 +24,4 @@ public:
         return dp[idx] = mini;
     }
 };
+

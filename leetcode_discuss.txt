@@ -10,3 +10,4 @@ https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-link
 https://leetcode.com/discuss/study-guide/657507/Sliding-Window-for-Beginners-Problems-or-Template-or-Sample-Solutions
 https://leetcode.com/discuss/study-guide/1809778/Series-Questions-on-Leetcode-or-Practice-Follow-Up-Questions-or-Beginners-to-Advanced
 https://leetcode.com/discuss/study-guide/1854405/9-Fibonacci-Algorithms-or-The-most-complete-solutions-or-All-In-One-or-Easy-To-Understand
+https://leetcode.com/discuss/study-guide/1965086/How-to-practice-for-2200%2B-rating-in-LC

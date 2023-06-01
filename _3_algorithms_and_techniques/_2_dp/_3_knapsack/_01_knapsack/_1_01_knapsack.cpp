@@ -51,6 +51,8 @@ int knapsack(vector<int> &wt, vector<int> &val, int n, int W)
 
     for (int ind = 1; ind < n; ind++)
     {
+        // opposite of recursion, 
+        // in recursion moving from W to 0, here moving from 0 to W
         for (int cap = 0; cap <= W; cap++)
         {
 
