@@ -1,4 +1,7 @@
 // https://leetcode.com/problems/balanced-binary-tree/
+
+// a binary tree in which the height of the left and right subtree of any node differ by not more than 1. 
+
 class Solution
 {
 
