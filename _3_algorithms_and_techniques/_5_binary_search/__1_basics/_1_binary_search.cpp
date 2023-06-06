@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/binary-search/
 
-#include <iostream>
 using namespace std;
 
 // recursively
@@ -9,17 +8,9 @@ int binarySearch(int array[], int x, int low, int high)
     if (high >= low)
     {
         int mid = low + (high - low) / 2; // this calculation is used to overcome int overflow
-
-        // If found at mid, then return it
-        if (array[mid] == x)
-            return mid;
-
-        // Search the left half
-        if (array[mid] > x)
-            return binarySearch(array, x, low, mid - 1);
-
-        // Search the right half
-        return binarySearch(array, x, mid + 1, high);
+        if (array[mid] == x) return mid;
+        if (array[mid] > x) return binarySearch(array, x, low, mid - 1);
+        else return binarySearch(array, x, mid + 1, high);
     }
 
     return -1;
@@ -27,51 +18,39 @@ int binarySearch(int array[], int x, int low, int high)
 // Time complexity: O(log n)
 // Space complexity: O(logn) for auxiliary space
 
-// iteratively
-int binarySearch(int arr[], int k, int n)
+// iteratively (basic implementation)
+int binarySearch(int arr[], int target, int n)
 {
-    int start = 0, end = n;
-    int mid, loc = -1;
-    while (start <= n - 1)
+    int l = 0, r = n-1, mid;
+    while (l <= r)
     {
-        // Making array half everytime
-        mid = (start + end) / 2;
-
-        // checking in which part the element is present
-        if (arr[mid] < k)
-        {
-            start = mid + 1;
-        }
-        else if (arr[mid] > k)
-        {
-            end = mid - 1;
-        }
-        if (arr[mid] == k)
-        {
-            loc = mid;
-            break;
-        }
+        mid = l+(r-l)/2;
+        if (arr[mid] == target)  return mid;
+        if (arr[mid] < target) l = mid + 1;
+        else r = mid - 1;
     }
-    if (loc == -1)
-    {
-        cout << "Element not found!" << endl;
-    }
-    else
-    {
-        cout << "Element " << k << " Found at " << loc << " index";
-    }
+    return -1;
 }
 // Time complexity: O(log n)
 // Space complexity : O(1)
 
-int main(void)
+// implementation 2 (also called lower bound )
+// for problems like: find first value >= x;
+int binarySearch(int arr[], int target, int n)
 {
-    int array[] = {3, 4, 5, 6, 7, 8, 9};
-    int x = 4;
-    int n = sizeof(array) / sizeof(array[0]);
-    int result = binarySearch(array, x, 0, n - 1);
-    if (result == -1)
-        printf("Not found");
-    else
-        printf("Element is found at index %d", result);
+    int l = 0, r = n-1, mid, ans = -1;
+    while (l <= r)
+    {
+        mid = l+(r-l)/2;
+        // this is condition part
+        if (arr[mid] >= target)  {
+            ans = mid;
+            r = mid - 1; // a/c to question
+        } else {
+            l = mid  + 1;
+        }
+        
+    }
+    return ans;
 }
+

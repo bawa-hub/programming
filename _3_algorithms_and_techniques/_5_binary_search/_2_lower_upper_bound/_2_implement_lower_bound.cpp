@@ -26,18 +26,6 @@ int floorSearch(int arr[], int n, int x)
 // To traverse an array only one loop is needed so the time complexity is O(n).
 // Space Complexity: O(1).
 // No extra space is required, So the space complexity is constant
-int main()
-{
-    int arr[] = {1, 2, 4, 6, 10, 12, 14};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int x = 7;
-    int index = floorSearch(arr, n - 1, x);
-    if (index == -1)
-        cout << "Floor of " << x << " doesn't exist in array ";
-    else
-        cout << "Floor of " << x << " is " << arr[index];
-    return 0;
-}
 
 // optimized
 int floorSearch(int arr[], int low,
@@ -77,4 +65,3 @@ int floorSearch(int arr[], int low,
 // Space Complexity: O(1).
 // As no extra space is required, so the space complexity is constant.
 
-/* Driver program to check above functions */
