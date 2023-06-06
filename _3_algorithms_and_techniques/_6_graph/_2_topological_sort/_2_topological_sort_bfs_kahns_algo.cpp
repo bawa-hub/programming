@@ -24,6 +24,7 @@ public:
                 q.push(i);
             }
         }
+        
         vector<int> topo;
         while (!q.empty())
         {
