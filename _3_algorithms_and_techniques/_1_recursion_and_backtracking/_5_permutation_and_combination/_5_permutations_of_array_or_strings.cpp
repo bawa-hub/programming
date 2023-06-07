@@ -1,4 +1,6 @@
 // https://leetcode.com/problems/permutations/
+// https://takeuforward.org/data-structure/print-all-permutations-of-a-string-array/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -66,7 +68,6 @@ public:
         return ans;
     }
 };
-
 
 int main()
 {

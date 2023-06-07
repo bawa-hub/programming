@@ -1,9 +1,3 @@
-https://leetcode.com/discuss/study-guide/1733447/Become-Master-In-Recursion
-https://leetcode.com/discuss/study-guide/1405817/Backtracking-algorithm-%2B-problems-to-practice
-https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
-https://leetcode.com/problems/subsets/solutions/187733/BackTrack-Template-Make-backtracking-Easy!!!/
-https://leetcode.com/problems/palindrome-partitioning/solutions/182307/Java:-Backtracking-Template-General-Approach/
-
 striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9
 aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWeT1ffjiImo0sYTcnLzo-wY
 pepcoding level 1 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiFxaBahjslhBD1LiJAV7nKs
@@ -11,6 +5,14 @@ kunal - https://www.youtube.com/playlist?list=PL9gnSGHSqcnp39cTyB1dTZ2pJ04Xmdrod
 pepcoding level 2 - https://www.youtube.com/playlist?list=PL-Jc9J83PIiHO9SQ6lxGuDsZNt2mkHEn0
 
 patterns: https://docs.google.com/document/d/1JcGu-mAaycYwMY_bX2Uya1td6hZwmSznH3_eLUHATpc/edit
+
+https://leetcode.com/discuss/study-guide/1733447/Become-Master-In-Recursion
+https://leetcode.com/discuss/study-guide/1405817/Backtracking-algorithm-%2B-problems-to-practice
+https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
+https://leetcode.com/problems/subsets/solutions/187733/BackTrack-Template-Make-backtracking-Easy!!!/
+https://leetcode.com/problems/palindrome-partitioning/solutions/182307/Java:-Backtracking-Template-General-Approach/
+
+
 
 https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/
 https://www.geeksforgeeks.org/backtracking-algorithms/
