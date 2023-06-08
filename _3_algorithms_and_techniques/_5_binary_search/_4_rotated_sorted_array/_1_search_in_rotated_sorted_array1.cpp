@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/search-in-rotated-sorted-array/
 
-#include <bits/stdc++.h>
 using namespace std;
 
 // linear search
@@ -54,12 +53,3 @@ int search(vector<int> &nums, int target)
 // Reason: We are performing a binary search, this turns time complexity to O(log(N)) where N is the size of the array.
 // Space Complexity: O(1)
 // Reason: We do not use any extra data structure, this turns space complexity to O(1).
-
-int main()
-{
-    vector<int> nums = {4, 5, 6, 7, 0, 1, 2, 3};
-    int target = 3;
-    cout << "The index in which the target is present is " << search(nums, target);
-
-    return 0;
-}

@@ -1,7 +1,68 @@
 // https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 // https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x3116/1
-// https://www.geeksforgeeks.org/find-first-and-last-positions-of-an-element-in-a-sorted-array/
 
+// lower_bound and upper_bound
+class Solution
+{
+public:
+    vector<int> searchRange(vector<int> &nums, int target)
+    {
+        int n = nums.size();
+        int lb = lowerBound(nums, n, target);
+        if (lb == n || nums[lb] != target)
+            return {-1, -1};
+        return {lb, upperBound(nums, n, target) - 1};
+    }
+
+    int upperBound(vector<int> arr, int n, int x)
+    {
+        int l = 0, r = n - 1;
+        int ans = n;
+
+        while (l <= r)
+        {
+            int mid = l + (r - l) / 2;
+            if (arr[mid] > x)
+            {
+                ans = mid;
+                r = mid - 1;
+            }
+            else
+            {
+                l = mid + 1;
+            }
+        }
+
+        return ans;
+    }
+
+    int lowerBound(vector<int> arr, int n, int x)
+    {
+        int l = 0, r = n - 1;
+        int ans = n;
+
+        while (l <= r)
+        {
+            int mid = l + (r - l) / 2;
+
+            if (arr[mid] >= x)
+            {
+                ans = mid;
+                r = mid - 1;
+            }
+            else
+            {
+                l = mid + 1;
+            }
+        }
+
+        return ans;
+    }
+};
+// TC: O(2*log(n));
+// SC: O(1)
+
+// simple binary search
 class Solution
 {
 public:
