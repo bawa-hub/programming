@@ -24,7 +24,7 @@ public:
                 q.push(i);
             }
         }
-        
+
         vector<int> topo;
         while (!q.empty())
         {
@@ -33,7 +33,7 @@ public:
             topo.push_back(node);
 
             // node is in your topo sort
-			// so please remove it from the indegree
+            // so please remove it from the indegree
             for (auto it : adj[node])
             {
                 indegree[it]--;

@@ -1,3 +1,6 @@
+// Linear ordering of vertices such that if there is an edge between u & v,
+// u appears before v in that ordering.
+
 #include <bits/stdc++.h>
 
 using namespace std;
