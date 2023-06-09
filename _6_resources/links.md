@@ -1,7 +1,9 @@
 # leetcode users good solutions
+
 https://leetcode.com/18je0001/
 
 # practice problems
+
 https://github.com/skjha1/Aditya-verma-youtube-playlist-code
 https://practice.geeksforgeeks.org/problems/geeks-training/1
 https://seanprashad.com/leetcode-patterns/
@@ -23,6 +25,7 @@ cp sheet -- https://takeuforward.org/interview-experience/strivers-cp-sheet/?utm
 
 # DSA playlists --
 
+tushar roy - https://www.youtube.com/@tusharroy2525/featured
 striver -- https://www.youtube.com/c/takeUforward/playlists
 luv cp -- https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-
 aditya verma -- https://www.youtube.com/c/AdityaVermaTheProgrammingLord/playlists
