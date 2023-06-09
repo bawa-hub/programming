@@ -1,74 +1,95 @@
+// https://practice.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1
+
 #include <bits/stdc++.h>
 using namespace std;
-void dfs(int node, stack<int> &st, vector<int> &vis, vector<int> adj[])
+
+class Solution
 {
-    vis[node] = 1;
-    for (auto it : adj[node])
+private:
+    void dfs(int node, vector<int> &vis, vector<int> adj[],
+             stack<int> &st)
     {
-        if (!vis[it])
+        vis[node] = 1;
+        for (auto it : adj[node])
         {
-            dfs(it, st, vis, adj);
+            if (!vis[it])
+            {
+                dfs(it, vis, adj, st);
+            }
+        }
+
+        st.push(node);
+    }
+
+private:
+    void dfs3(int node, vector<int> &vis, vector<int> adjT[])
+    {
+        vis[node] = 1;
+        for (auto it : adjT[node])
+        {
+            if (!vis[it])
+            {
+                dfs3(it, vis, adjT);
+            }
         }
     }
 
-    st.push(node);
-}
-void revDfs(int node, vector<int> &vis, vector<int> transpose[])
-{
-    cout << node << " ";
-    vis[node] = 1;
-    for (auto it : transpose[node])
+public:
+    // Function to find number of strongly connected components in the graph.
+    int kosaraju(int V, vector<int> adj[])
     {
-        if (!vis[it])
+        vector<int> vis(V, 0);
+        stack<int> st;
+        for (int i = 0; i < V; i++)
         {
-            revDfs(it, vis, transpose);
+            if (!vis[i])
+            {
+                dfs(i, vis, adj, st);
+            }
         }
+
+        vector<int> adjT[V];
+        for (int i = 0; i < V; i++)
+        {
+            vis[i] = 0;
+            for (auto it : adj[i])
+            {
+                // i -> it
+                // it -> i
+                adjT[it].push_back(i);
+            }
+        }
+        int scc = 0;
+        while (!st.empty())
+        {
+            int node = st.top();
+            st.pop();
+            if (!vis[node])
+            {
+                scc++;
+                dfs3(node, vis, adjT);
+            }
+        }
+        return scc;
     }
-}
+};
+
 int main()
 {
-    int n = 6, m = 7;
-    vector<int> adj[n + 1];
-    adj[1].push_back(3);
-    adj[2].push_back(1);
-    adj[3].push_back(2);
-    adj[3].push_back(5);
-    adj[4].push_back(6);
-    adj[5].push_back(4);
-    adj[6].push_back(5);
 
-    stack<int> st;
-    vector<int> vis(n + 1, 0);
-    for (int i = 1; i <= n; i++)
+    int n = 5;
+    int edges[5][2] = {
+        {1, 0}, {0, 2}, {2, 1}, {0, 3}, {3, 4}};
+    vector<int> adj[n];
+    for (int i = 0; i < n; i++)
     {
-        if (!vis[i])
-        {
-            dfs(i, st, vis, adj);
-        }
+        adj[edges[i][0]].push_back(edges[i][1]);
     }
-
-    vector<int> transpose[n + 1];
-
-    for (int i = 1; i <= n; i++)
-    {
-        vis[i] = 0;
-        for (auto it : adj[i])
-        {
-            transpose[it].push_back(i);
-        }
-    }
-
-    while (!st.empty())
-    {
-        int node = st.top();
-        st.pop();
-        if (!vis[node])
-        {
-            cout << "SCC: ";
-            revDfs(node, vis, transpose);
-            cout << endl;
-        }
-    }
-
+    Solution obj;
+    int ans = obj.kosaraju(n, adj);
+    cout << "The number of strongly connected components is: " << ans << endl;
     return 0;
 }
+
+// Time Complexity: O(V+E) + O(V+E) + O(V+E) ~ O(V+E) , where V = no. of vertices, E = no. of edges. The first step is a simple DFS, so the first term is O(V+E). The second step of reversing the graph and the third step, containing DFS again, will take O(V+E) each.
+// Space Complexity: O(V)+O(V)+O(V+E), where V = no. of vertices, E = no. of edges. Two O(V) for the visited array and the stack we have used. O(V+E) space for the reversed adjacent list.
