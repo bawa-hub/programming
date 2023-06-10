@@ -4,7 +4,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// using recursion
+// extra space
 class Solution
 {
 private:
@@ -41,7 +41,7 @@ public:
     }
 };
 
-// using backtracking
+// space optimized
 class Solution
 {
 private:
