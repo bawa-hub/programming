@@ -1,5 +1,6 @@
 https://leetcode.com/problems/minimum-window-substring/solutions/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems/
 
+https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
 https://www.geeksforgeeks.org/string-data-structure/?ref=lbp
 https://www.geeksforgeeks.org/top-50-string-coding-problems-for-interviews/
 https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems
