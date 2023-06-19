@@ -57,4 +57,4 @@ int upperBound(vector<int> arr, int n, int x)
     return ans;
 }
 
-// note: it can also be done without using ans variable
+// note: it can also be done without using ans variable, think about it
