@@ -17,10 +17,9 @@ bool f(int idx, vector<int> &ds, int s, int sum, int arr[], int n)
             return false;
     }
 
+    // pick
     ds.push_back(arr[idx]);
     s += arr[idx];
-
-    // pick
     if (f(idx + 1, ds, s, sum, arr, n) == true)
         return true;
     s -= arr[idx];

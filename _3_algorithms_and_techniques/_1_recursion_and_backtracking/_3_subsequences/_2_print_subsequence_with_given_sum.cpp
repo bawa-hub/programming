@@ -15,10 +15,9 @@ void f(int idx, vector<int> &ds, int s, int sum, int arr[], int n)
         return;
     }
 
+    // pick
     ds.push_back(arr[idx]);
     s += arr[idx];
-
-    // pick
     f(idx + 1, ds, s, sum, arr, n);
     s -= arr[idx];
     ds.pop_back();

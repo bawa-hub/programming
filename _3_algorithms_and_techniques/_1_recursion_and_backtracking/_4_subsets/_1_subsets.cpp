@@ -11,9 +11,12 @@ public:
             return;
         }
 
+        // take
         ds.push_back(nums[i]);
         recursion(i + 1, ds, res, nums, N);
         ds.pop_back();
+
+        // not take
         recursion(i + 1, ds, res, nums, N);
     }
 

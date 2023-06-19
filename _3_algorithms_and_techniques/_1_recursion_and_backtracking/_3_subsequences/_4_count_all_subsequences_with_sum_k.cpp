@@ -18,9 +18,8 @@ int f(int idx, int s, int sum, int arr[], int n)
             return 0;
     }
 
-    s += arr[idx];
-
     // pick
+    s += arr[idx];
     int l = f(idx + 1, s, sum, arr, n);
     s -= arr[idx];
 
