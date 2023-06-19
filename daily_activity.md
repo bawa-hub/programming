@@ -7,3 +7,5 @@
 # dynamic programming - linear dp
 
 # binary search - lower_upper_bound/rotated sorted array
+
+# stack and queue - monotonic stack/queue
