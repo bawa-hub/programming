@@ -1,10 +1,10 @@
 # graph - bfs/dfs
 
-# tree - traversals and basic problems
+# tree - traversals/basic_problems/path_problems
 
-# recursion and backtracking - subsequence and subsets
+# recursion and backtracking - subsequence/subsets/combinations
 
-# dynamic programming - linear dp
+# dynamic programming - linear/subsequence
 
 # binary search - lower_upper_bound/rotated sorted array
 
