@@ -1,6 +1,8 @@
 // https://leetcode.com/problems/find-peak-element/
 // https://leetcode.com/problems/find-peak-element/solutions/1290642/intuition-behind-conditions-complete-explanation-diagram-binary-search/
 
+// peak element - num greater than left and right num is called peak element (like mountain)
+
 #include <iostream>
 
 using namespace std;

@@ -11,7 +11,7 @@ public:
             return;
         }
 
-        // pick up the element
+        // pick
         if (arr[ind] <= target)
         {
             ds.push_back(arr[ind]);
@@ -19,6 +19,7 @@ public:
             ds.pop_back();
         }
 
+        // not pick
         findCombination(ind + 1, target, arr, ans, ds);
     }
     vector<vector<int>> combinationSum(vector<int> &candidates, int target)

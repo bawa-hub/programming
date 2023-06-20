@@ -22,17 +22,17 @@ public:
             return;
         }
 
+        // pick
+        comb.push_back(cur);
+        backtrack(res, cur + 1, n, k - 1, comb);
+        comb.pop_back();
+
         // not pick
         // If cur>n-k, there are not enough numbers left, we have to select the current element
         if (cur <= n - k)
         {
             backtrack(res, cur + 1, n, k, comb);
         }
-
-        // pick
-        comb.push_back(cur);
-        backtrack(res, cur + 1, n, k - 1, comb);
-        comb.pop_back();
     }
 };
 

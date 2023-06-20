@@ -19,6 +19,7 @@ public:
             {
                 break;
             }
+
             sum = sum + i;
             ds.push_back(i);
             solve(ans, ds, sum, i + 1, k, n);

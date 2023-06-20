@@ -6,6 +6,6 @@
 
 # dynamic programming - linear/subsequence
 
-# binary search - lower_upper_bound/rotated sorted array
+# binary search - lower_upper_bound/rotated_sorted_array
 
 # stack and queue - monotonic stack/queue
