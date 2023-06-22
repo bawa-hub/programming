@@ -1,41 +1,37 @@
 // https://practice.geeksforgeeks.org/problems/find-nth-root-of-m5843/1
 
-#include <bits/stdc++.h>
-using namespace std;
-double multiply(double number, int n)
+class Solution
 {
-    double ans = 1.0;
-    for (int i = 1; i <= n; i++)
+public:
+    int func(int mid, int n, int m)
     {
-        ans = ans * number;
-    }
-    return ans;
-}
-
-void getNthRoot(int n, int m)
-{
-    double low = 1;
-    double high = m;
-    double eps = 1e-7;
-
-    while ((high - low) > eps)
-    {
-        double mid = (low + high) / 2.0;
-        if (multiply(mid, n) < m)
+        long long ans = 1;
+        for (int i = 1; i <= n; i++)
         {
-            low = mid;
+            ans = ans * mid;
+            if (ans > m)
+                return 2;
         }
-        else
-        {
-            high = mid;
-        }
+
+        if (ans == m)
+            return 1;
+        return 0;
     }
 
-    cout << n << "th root of " << m << " is " << low << endl;
-}
-int main()
-{
-    int n = 3, m = 27;
-    getNthRoot(n, m);
-    return 0;
-}
+    int NthRoot(int n, int m)
+    {
+        int l = 1, r = m;
+        while (l <= r)
+        {
+            int mid = l + (r - l) / 2;
+            int midN = func(mid, n, m);
+            if (midN == 1)
+                return mid;
+            else if (midN == 0)
+                l = mid + 1;
+            else
+                r = mid - 1;
+        }
+        return -1;
+    }
+};
