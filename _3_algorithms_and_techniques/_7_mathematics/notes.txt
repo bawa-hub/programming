@@ -1,5 +1,6 @@
 # bit manipulation
 https://www.youtube.com/playlist?list=PLN4aKSfpk8TQq8ySZsy266qAWBnR2sN0G
+https://leetcode.com/discuss/interview-question/3695233/all-types-of-patterns-for-bits-manipulations-and-how-to-use-it
 https://leetcode.com/discuss/study-guide/1150415/Start-Bit-Manipulation-Here
 https://leetcode.com/discuss/study-guide/1487055/COMPLETED-GUIDE-ON-BITWISE-OPERATORS%3A
 https://graphics.stanford.edu/~seander/bithacks.html
