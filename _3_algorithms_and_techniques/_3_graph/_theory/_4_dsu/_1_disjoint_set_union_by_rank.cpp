@@ -41,6 +41,7 @@ public:
         }
     }
 };
+
 int main()
 {
     DisjointSet ds(7);

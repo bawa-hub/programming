@@ -42,6 +42,7 @@ int findMaxDistance(map<BinaryTreeNode<int> *, BinaryTreeNode<int> *> &mpp, Bina
     }
     return maxi;
 }
+
 BinaryTreeNode<int> *bfsToMapParents(BinaryTreeNode<int> *root,
                                      map<BinaryTreeNode<int> *, BinaryTreeNode<int> *> &mpp, int start)
 {
@@ -67,6 +68,7 @@ BinaryTreeNode<int> *bfsToMapParents(BinaryTreeNode<int> *root,
     }
     return res;
 }
+
 int timeToBurnTree(BinaryTreeNode<int> *root, int start)
 {
     map<BinaryTreeNode<int> *, BinaryTreeNode<int> *> mpp;

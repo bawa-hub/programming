@@ -1,5 +1,0 @@
-# binary tree:
-level_order_traversal
-
-# graph:
-bfs_dfs

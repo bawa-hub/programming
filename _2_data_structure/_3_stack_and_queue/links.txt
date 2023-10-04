@@ -6,3 +6,4 @@ https://www.geeksforgeeks.org/stack-data-structure/
 https://www.geeksforgeeks.org/queue-data-structure/
 
 https://leetcode.com/discuss/study-guide/2347639/A-comprehensive-guide-and-template-for-monotonic-stack-based-problems
+https://leetcode.com/discuss/study-guide/3773642/mastering-monotonic-stack-unlocking-efficient-problem-solving-pattern-technique-once-forever

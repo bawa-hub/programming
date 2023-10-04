@@ -12,5 +12,5 @@ https://leetcode.com/discuss/study-guide/1809778/Series-Questions-on-Leetcode-or
 https://leetcode.com/discuss/study-guide/1854405/9-Fibonacci-Algorithms-or-The-most-complete-solutions-or-All-In-One-or-Easy-To-Understand
 https://leetcode.com/discuss/study-guide/1965086/How-to-practice-for-2200%2B-rating-in-LC
 https://leetcode.com/discuss/interview-question/2069641/The-Only-Lists-You-Need-For-Your-Interview-Preparation
-
+https://leetcode.com/discuss/study-guide/3767785/topics-which-you-cant-skip-interview-preparation-part-2
 patterns - https://docs.google.com/document/d/1rUyk-1pioNOZvh9gp7lPbDbm0G6cEKP0QlyrlrvVQhY/edit#heading=h.zg6m7yz4v0zg
