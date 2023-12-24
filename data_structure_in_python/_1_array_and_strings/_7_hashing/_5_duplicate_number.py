@@ -1,29 +1,18 @@
-// https://leetcode.com/problems/find-the-duplicate-number/
+#  https://leetcode.com/problems/find-the-duplicate-number/
 
-#include <bits/stdc++.h>
 
-using namespace std;
-int findDuplicate(vector<int> &arr)
-{
-    int n = arr.size();
-    int freq[n + 1] = {
-        0};
-    for (int i = 0; i < n; i++)
-    {
-        if (freq[arr[i]] == 0)
-        {
-            freq[arr[i]] += 1;
-        }
-        else
-        {
-            return arr[i];
-        }
-    }
-    return 0;
-}
-int main()
-{
-    vector<int> arr;
-    arr = {2, 1, 1};
-    cout << "The duplicate element is " << findDuplicate(arr) << endl;
-}
+def find_duplicate(arr):
+    n = len(arr)
+    freq = [0] * (n + 1)
+
+    for num in arr:
+        if freq[num] == 0:
+            freq[num] += 1
+        else:
+            return num
+
+    return 0
+
+# Example usage:
+arr = [2, 1, 1]
+print("The duplicate element is", find_duplicate(arr))

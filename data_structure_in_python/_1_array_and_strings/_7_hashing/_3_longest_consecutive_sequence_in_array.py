@@ -1,76 +1,53 @@
-// https://leetcode.com/problems/longest-consecutive-sequence/description/
+#  https://leetcode.com/problems/longest-consecutive-sequence/description/
 
-#include <bits/stdc++.h>
-using namespace std;
+# brute force
+def longest_consecutive(nums):
+    if not nums:
+        return 0
 
-// brute force
-int longestConsecutive(vector<int> nums)
-{
-    if (nums.size() == 0)
-    {
-        return 0;
-    }
+    nums.sort()
 
-    sort(nums.begin(), nums.end());
+    ans = 1
+    prev = nums[0]
+    cur = 1
 
-    int ans = 1;
-    int prev = nums[0];
-    int cur = 1;
+    for num in nums[1:]:
+        if num == prev + 1:
+            cur += 1
+        elif num != prev:
+            cur = 1
+        prev = num
+        ans = max(ans, cur)
 
-    for (int i = 1; i < nums.size(); i++)
-    {
-        if (nums[i] == prev + 1)
-        {
-            cur++;
-        }
-        else if (nums[i] != prev)
-        {
-            cur = 1;
-        }
-        prev = nums[i];
-        ans = max(ans, cur);
-    }
-    return ans;
-}
-//     Time Complexity: We are first sorting the array which will take O(N * log(N)) time and then we are running a for loop which will take O(N) time. Hence, the overall time complexity will be O(N * log(N)).
-// Space Complexity: The space complexity for the above approach is O(1) because we are not using any auxiliary space
+    return ans
 
-//    optimized
-int longestConsecutive(vector<int> &nums)
-{
-    set<int> hashSet;
-    for (int num : nums)
-    {
-        hashSet.insert(num);
-    }
+#     Time Complexity: We are first sorting the array which will take O(N * log(N)) time and then we are running a for loop which will take O(N) time. Hence, the overall time complexity will be O(N * log(N)).
+#  Space Complexity: The space complexity for the above approach is O(1) because we are not using any auxiliary space
 
-    int longestStreak = 0;
+#     optimized
+def longest_consecutive(nums):
+    hash_set = set(nums)
+    longest_streak = 0
 
-    for (int num : nums)
-    {
-        if (!hashSet.count(num - 1))
-        {
-            int currentNum = num;
-            int currentStreak = 1;
+    for num in nums:
+        if num - 1 not in hash_set:
+            current_num = num
+            current_streak = 1
 
-            while (hashSet.count(currentNum + 1))
-            {
-                currentNum += 1;
-                currentStreak += 1;
-            }
+            while current_num + 1 in hash_set:
+                current_num += 1
+                current_streak += 1
 
-            longestStreak = max(longestStreak, currentStreak);
-        }
-    }
+            longest_streak = max(longest_streak, current_streak)
 
-    return longestStreak;
-}
-// Time Complexity: The time complexity of the above approach is O(N) because we traverse each consecutive subsequence only once. (assuming HashSet takes O(1) to search)
-// Space Complexity: The space complexity of the above approach is O(N) because we are maintaining a HashSet.
+    return longest_streak
 
-int main()
-{
-    vector<int> arr{100, 200, 1, 2, 3, 4};
-    int lon = longestConsecutive(arr);
-    cout << "The longest consecutive sequence is " << lon << endl;
-}
+
+#  Time Complexity: The time complexity of the above approach is O(N) because we traverse each consecutive subsequence only once. (assuming HashSet takes O(1) to search)
+#  Space Complexity: The space complexity of the above approach is O(N) because we are maintaining a HashSet.
+
+
+# Example usage:
+nums = [100, 4, 200, 1, 3, 2]
+result = longest_consecutive(nums)
+print(result)
