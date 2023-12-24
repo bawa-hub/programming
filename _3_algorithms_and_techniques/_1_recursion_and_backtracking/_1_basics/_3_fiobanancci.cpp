@@ -1,4 +1,3 @@
-// C++ code to implement Fibonacci series
 #include <iostream>
 #include <chrono>
 using namespace std;
