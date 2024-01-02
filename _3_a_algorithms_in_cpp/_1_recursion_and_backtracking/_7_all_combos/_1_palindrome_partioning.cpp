@@ -43,6 +43,7 @@ public:
         return true;
     }
 };
+
 int main()
 {
     string s = "aabb";

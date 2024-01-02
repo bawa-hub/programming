@@ -4,7 +4,6 @@
 #include <vector>
 using namespace std;
 
-// solution 2
 class Solution
 {
 public:

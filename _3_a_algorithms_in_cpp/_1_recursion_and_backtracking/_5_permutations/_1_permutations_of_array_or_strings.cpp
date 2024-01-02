@@ -1,6 +1,8 @@
 // https://leetcode.com/problems/permutations/
 // https://takeuforward.org/data-structure/print-all-permutations-of-a-string-array/
 
+// total permutations = n! (n factorial)
+
 #include <bits/stdc++.h>
 using namespace std;
 
