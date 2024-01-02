@@ -6,9 +6,10 @@ int main()
     int n, m;
     cin >> n >> m;
 
+    vector<int> adj[n + 1];
+
     // for undirected graph
     // time complexity: O(2E)
-    vector<int> adj[n + 1];
     for (int i = 0; i < m; i++)
     {
         int u, v;
@@ -19,24 +20,23 @@ int main()
 
     // for directed graph
     // time complexity: O(E)
-    // for (int i = 0; i < m; i++)
-    // {
-    //     int u, v;
-    //     // u —> v
-    //     cin >> u >> v;
-    //     adj[u].push_back(v);
-    // }
+    for (int i = 0; i < m; i++)
+    {
+        int u, v;
+        // u —> v
+        cin >> u >> v;
+        adj[u].push_back(v);
+    }
 
     // if weighted graph
-    // vector<pair<int,int>> adj[n + 1];
-    // for (int i = 0; i < m; i++)
-    // {
-    //     int u, v,wt;
-    //     cin >> u >> v>>wt;
+    for (int i = 0; i < m; i++)
+    {
+        int u, v,wt;
+        cin >> u >> v >>wt;
 
-    //     adj[u].push_back({v,wt});
-    //     adj[v].push_back({u,wt});
-    // }
+        adj[u].push_back({v,wt});
+        adj[v].push_back({u,wt});
+    }
 
     // Space complexity = O(E)
 
