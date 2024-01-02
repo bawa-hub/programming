@@ -1,180 +1,203 @@
-#include <stdlib.h>
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-// Create a node
-struct Node
-{
+class Node {
+    public:
     int data;
-    struct Node *next;
+    Node *next;
+
+    Node(int x) {
+        data = x;
+        next = NULL;
+    }
+
+    Node(int x, Node *next) {
+        data = x;
+        this->next = next;
+    }
 };
 
-// insert node at beginning
-void insertAtBeginning(struct Node **head_ref, int new_data)
-{
-    // Allocate memory to a node
-    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
+Node* convertArr2LL(vector<int> &arr) {
+  Node* head = new Node(arr[0]);
+  Node* curr = head;
+  for (int i = 1; i < arr.size(); i++) {
+    curr->next = new Node(arr[i]);
+    curr = curr->next;
+  }
 
-    // insert the data
-    new_node->data = new_data;
-    new_node->next = (*head_ref);
-
-    // Move head to new node
-    (*head_ref) = new_node;
+  return head;
 }
 
-// Insert a node after a given node
-void insertAfter(struct Node *prev_node, int new_data)
-{
-    if (prev_node == NULL)
-    {
-        cout << "the given previous node cannot be NULL";
-        return;
+void traverse(Node *head) {
+    Node *curr = head;
+    while (curr!= nullptr) {
+        cout << curr->data << " ";
+        curr = curr->next;
     }
-
-    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
-    new_node->data = new_data;
-    new_node->next = prev_node->next;
-    prev_node->next = new_node;
+    cout << endl;
 }
 
-// Insert at the end
-void insertAtEnd(struct Node **head_ref, int new_data)
-{
-    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
-    struct Node *last = *head_ref; /* used in step 5*/
-
-    new_node->data = new_data;
-    new_node->next = NULL;
-
-    if (*head_ref == NULL)
-    {
-        *head_ref = new_node;
-        return;
+int lengthOfLinkedList(Node *head) {
+    Node *curr = head;
+    int count = 0;
+    while (curr!= nullptr) {
+        count++;
+        curr = curr->next;
     }
-
-    while (last->next != NULL)
-        last = last->next;
-
-    last->next = new_node;
-    return;
+    return count;
 }
 
-// Delete a node
-void deleteNode(struct Node **head_ref, int key)
-{
-    struct Node *temp = *head_ref, *prev;
-
-    if (temp != NULL && temp->data == key)
-    {
-        *head_ref = temp->next;
-        free(temp);
-        return;
+int searchNode(Node *head, int val) {
+    Node *curr = head;
+    while (curr!= nullptr) {
+        if (curr->data == val) {
+            return 1;
+        }
+        curr = curr->next;
     }
-    // Find the key to be deleted
-    while (temp != NULL && temp->data != key)
-    {
-        prev = temp;
-        temp = temp->next;
-    }
-
-    // If the key is not present
-    if (temp == NULL)
-        return;
-
-    // Remove the node
-    prev->next = temp->next;
-
-    free(temp);
+    return 0;
 }
 
-// Search a node
-bool searchNode(struct Node **head_ref, int key)
-{
-    struct Node *current = *head_ref;
-
-    while (current != NULL)
-    {
-        if (current->data == key)
-            return true;
-        current = current->next;
-    }
-    return false;
+Node * insertAtStart(Node *head, int val) {
+    Node *newNode = new Node(val, head);
+    return newNode;
 }
 
-// Sort the linked list
-void sortLinkedList(struct Node **head_ref)
-{
-    struct Node *current = *head_ref, *index = NULL;
-    int temp;
-
-    if (head_ref == NULL)
-    {
-        return;
+Node* insertAtLast(Node* head,int val) {
+    Node *newNode = new Node(val);
+    if(head == NULL) return newNode;
+    Node *curr = head;
+    while (curr->next!= nullptr) {
+        curr = curr->next;
     }
-    else
-    {
-        while (current != NULL)
-        {
-            // index points to the node next to current
-            index = current->next;
+    curr->next = newNode;
+    return head;
+}
 
-            while (index != NULL)
-            {
-                if (current->data > index->data)
-                {
-                    temp = current->data;
-                    current->data = index->data;
-                    index->data = temp;
-                }
-                index = index->next;
-            }
-            current = current->next;
+Node* insertAtPosition(Node* head,int val,int pos) {
+    if(head == nullptr) {
+        if(pos == 1) {
+            return new Node(val);
+        } else {
+            return head;
         }
     }
+
+    if(pos==1) return new Node(val, head);
+
+    Node *curr = head;
+    int cnt = 0;
+    while(curr != nullptr) {
+        cnt++;
+        if(cnt == pos-1) {
+            Node *newNode = new Node(val, curr->next);
+            curr->next = newNode;
+            return head;
+        }
+        curr = curr->next;
+    }
+    return head;
 }
 
-// Print the linked list
-void printList(struct Node *node)
-{
-    while (node != NULL)
-    {
-        cout << node->data << " ";
-        node = node->next;
+Node* insertBeforeNode(Node* head,int data,int val) {
+    if(head == nullptr) {
+        return nullptr;
     }
+
+    if(head->data == val) return new Node(data, head);
+
+    Node *curr = head;
+    while(curr->next != nullptr) {
+        if(curr->next->data == val) {
+            Node *newNode = new Node(data, curr->next);
+            curr->next = newNode;
+            return head;
+        }
+        curr = curr->next;
+    }
+    return head;
 }
 
-// Driver program
-int main()
-{
-    struct Node *head = NULL;
-
-    insertAtEnd(&head, 1);
-    insertAtBeginning(&head, 2);
-    insertAtBeginning(&head, 3);
-    insertAtEnd(&head, 4);
-    insertAfter(head->next, 5);
-
-    cout << "Linked list: ";
-    printList(head);
-
-    cout << "\nAfter deleting an element: ";
-    deleteNode(&head, 3);
-    printList(head);
-
-    int item_to_find = 3;
-    if (searchNode(&head, item_to_find))
-    {
-        cout << endl
-             << item_to_find << " is found";
+Node* deleteHeadNode(Node* head) {
+    if (head == nullptr) {
+        return nullptr;
     }
-    else
-    {
-        cout << endl
-             << item_to_find << " is not found";
-    }
+    Node *temp = head;
+    head = head->next;
+    delete temp;
+    return head;
+}
 
-    sortLinkedList(&head);
-    cout << "\nSorted List: ";
-    printList(head);
+Node* deleteLastNode(Node* head) {
+  if(head == nullptr || head->next == nullptr) {
+    return nullptr;
+  }
+  Node *temp = head;
+  while(temp->next->next!= nullptr) {
+    temp = temp->next;
+  }
+  delete temp->next;
+  temp->next = nullptr;
+
+  return head;
+}
+
+Node* deleteKthNode(Node* head, int k) {
+    if (head == nullptr || head->next == nullptr) {
+        return nullptr;
+    }
+   if(k == 1) {
+    Node* temp = head;
+    head = head->next;
+    delete temp;
+    return head;
+   }
+   int cnt = 0;
+   Node* curr = head;
+   Node* prev = nullptr;
+   while(curr!= nullptr) {
+    cnt++;
+    if(cnt == k) {
+      prev->next = prev->next->next;
+      delete curr;
+      return head;
+    }
+    prev = curr;
+    curr = curr->next;
+   }
+   return head;
+}
+
+Node* deleteNodeWithValue(Node* head, int val) {
+    if (head == nullptr) {
+        return nullptr;
+    }
+   if(head->data == val) {
+    Node* curr = head;
+    head = head->next;
+    delete curr;
+    return head;
+   }
+
+   Node* curr = head;
+   Node* prev = nullptr;
+   while(curr!= nullptr) {
+    if(curr->data == val) {
+      prev->next = prev->next->next;
+      delete curr;
+      break;
+    }
+    prev = curr;
+    curr = curr->next;
+   }
+   return head;
+}
+
+int main() {
+    vector<int> arr = {2,5,8,7,6};
+    Node* head = convertArr2LL(arr);
+    traverse(head);
+    head = insertBeforeNode(head, 100,6);
+    traverse(head);
+    return 0;
 }
