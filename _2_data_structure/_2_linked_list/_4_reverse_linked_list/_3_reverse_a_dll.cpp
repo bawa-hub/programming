@@ -2,93 +2,105 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-class node
-{
+
+class Node {
 public:
-    int data;
-    node *next;
-    node *prev;
-    node(int val)
-    {
-        data = val;
-        next = NULL;
-        prev = NULL;
+    int data;   
+    Node* next;     
+    Node* back;     
+
+    Node(int data1, Node* next1, Node* back1) {
+        data = data1;
+        next = next1;
+        back = back1;
+    }
+
+    Node(int data1) {
+        data = data1;
+        next = nullptr;
+        back = nullptr;
     }
 };
 
-// Reversing our double linked list
-void reverse(node *&head)
-{
-    node *temp = NULL;
-    node *curr = head;
+Node* convertArr2DLL(vector<int> arr) {
+    
+    Node* head = new Node(arr[0]);
+    
+    Node* prev = head;            
 
-    /* swap next and prev for all nodes of
-    doubly linked list */
-    while (curr != NULL)
-    {
-        temp = curr->prev;
-        curr->prev = curr->next;
-        curr->next = temp;
-        curr = curr->prev;
+    for (int i = 1; i < arr.size(); i++) {
+        
+        Node* temp = new Node(arr[i], nullptr, prev);
+        prev->next = temp; 
+        prev = temp;       
     }
 
-    // Edge case if our linked list is empty Or list with only one node
-    if (temp != NULL)
-        head = temp->prev;
+    return head;  
 }
-// Time Complexity: O(N) in Printing, reversing as well as insertion because we have to traverse all the nodes of linked list
-// Space Complexity: O(1)  we don’t use any extra space here;
 
-// insertElement at end of our doubly linked list ;
-void insertElement(node *&head, int val)
-{
-    node *n = new node(val);
-    if (head == NULL)
-    {
-        head = n;
-        head->next = NULL;
-        return;
-    }
-    else
-    {
-        node *temp = head;
-        while (temp->next != NULL)
-        {
-            temp = temp->next;
-        }
-        temp->next = n;
-        n->prev = temp;
+void print(Node* head) {
+    while (head != nullptr) {
+        cout << head->data << " ";  
+        head = head->next;         
     }
 }
 
-// printing our double linked list
-void display(node *&head)
-{
-    node *temp = head;
-    while (temp != NULL)
-    {
-        cout << temp->data << " ";
+// brute force stack approach
+Node* reverseDLL(Node* head){
+    if(head==NULL || head->next == NULL){
+        return head;
+    }
+    
+    stack<int> st;
+    
+    Node* temp = head;
+    
+    while(temp!=NULL){
+        st.push(temp->data);
         temp = temp->next;
     }
-    cout << endl;
+    
+    temp = head;
+    
+    while(temp!=NULL){
+        temp->data = st.top();
+        st.pop();
+        temp = temp->next;
+    }
+    
+    return head;
+
 }
-int main()
-{
-    /* Start with the empty list */
-    node *head = NULL;
-    insertElement(head, 1);
-    insertElement(head, 2);
-    insertElement(head, 3);
-    insertElement(head, 4);
 
-    cout << "Original Linked list" << endl;
-    display(head);
+// In-place link exchange method
+Node* reverseDLL(Node* head) {
+    
+    if (head == NULL || head->next == NULL) {
+        return head; 
+    }
 
-    /* Reverse doubly linked list */
-    reverse(head);
+    Node* prev = NULL;  
+    Node* current = head;   
 
-    cout << "Reversed Linked list" << endl;
-    display(head);
+    while (current != NULL) {
+        prev = current->back; 
+        current->back = current->next; 
+        current->next = prev;          
+        current = current->back; 
+    }
+    
+    return prev->back;
+}
 
-    return 0;
+
+int main() {
+    vector<int> arr = {12, 5, 8, 7, 4};
+    Node* head = convertArr2DLL(arr);
+    cout << endl << "Doubly Linked List Initially:  " << endl;
+    print(head);
+    cout << endl << "Doubly Linked List After Reversing " << endl;
+    
+     // Insert a node with value 10 at the end
+    head = reverseDLL(head);
+    print(head);
 }
