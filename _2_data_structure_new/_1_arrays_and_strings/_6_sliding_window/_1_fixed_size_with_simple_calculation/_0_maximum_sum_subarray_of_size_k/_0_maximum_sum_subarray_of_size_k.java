@@ -3,11 +3,7 @@
 import java.util.*;
 
 class Solution {
-    public static void main(String[] args) {
-        this.maximumSumSubarray();
-    }
-
-    public long maximumSumSubarray(int K, ArrayList<Integer> Arr, int N) {
+    public static long maximumSumSubarray(int K, ArrayList<Integer> Arr, int N) {
         int i = 0, j = 0;
 
         long sum = 0, maxi = Long.MIN_VALUE;
