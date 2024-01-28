@@ -18,29 +18,6 @@ int pf[N];
 
 int main()
 {
-
-    // naive method
-    // int n;
-    // cin >> n;
-    // for (int i = 1; i <= n; ++i)
-    // {
-    //     cin >> a[i];
-    // }
-    // int q;
-    // cin >> q;
-    // while (q--)
-    // {
-    //     int l, r;
-    //     cin >> l >> r;
-    //     long long sum = 0;
-    //     for (int i = l; i <= r; ++i)
-    //     {
-    //         sum += a[i];
-    //     }
-    //     cout << sum << endl;
-    // }
-    // O(N)+O(Q*N)=O(N^2)=10^10
-
     // precomputation usin prefix sum
     int n;
     cin >> n;

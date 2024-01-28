@@ -19,35 +19,7 @@ long long pf[N][N];
 
 int main()
 {
-    // naive method
-    // int n;
-    // cin >> n;
-    // for (int i = 1; i <= n; ++i)
-    // {
-    //     for (int j = 1; j <= n; ++j)
-    //     {
-    //         cin >> arr[i][j];
-    //     }
-    // }
-    // int q;
-    // cin >> q;
-    // while (q--)
-    // {
-    //     int a, b, c, d;
-    //     cin >> a >> b >> c >> d;
-    //     long long sum = 0;
-    //     for (int i = a; i <= c; ++i)
-    //     {
-    //         for (int j = b; j <= d; ++j)
-    //         {
-    //             sum += arr[i][j];
-    //         }
-    //     }
-    //     cout << sum << endl;
-    // }
-    // O(N^2)+O(Q*N^2) = 10^5*10^6 = 10^11
-
-    // precomputation prefix sum
+   // precomputation prefix sum
     int n;
     cin >> n;
     for (int i = 1; i <= n; ++i)
