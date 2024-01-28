@@ -17,3 +17,15 @@ patterns - https://docs.google.com/document/d/1rUyk-1pioNOZvh9gp7lPbDbm0G6cEKP0Q
 
 
 https://leetcode.com/problems/minimum-window-substring/solutions/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems/
+
+# Algorithms
+
+https://www.geeksforgeeks.org/fundamentals-of-algorithms/
+https://cp-algorithms.com/
+https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-LeetCode
+
+# Complexity Analysis
+
+https://www.bigocheatsheet.com/
+https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/?ref=rp
+https://leetcode.com/discuss/study-guide/1939806/Rule-of-thumb-for-avoiding-TLE
