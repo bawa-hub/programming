@@ -31,6 +31,11 @@ int lcs(string s1, string s2)
     return lcsUtil(s1, s2, n - 1, m - 1, dp);
 }
 
+// Time Complexity: O(N*M)
+// Reason: There are N*M states therefore at max ‘N*M’ new problems will be solved.
+// Space Complexity: O(N*M) + O(N+M)
+// Reason: We are using an auxiliary recursion stack space(O(N+M)) (see the recursive tree, in the worst case, we will go till N+M calls at a time) and a 2D array ( O(N*M)).
+
 // tabulation
 int lcs(string s1, string s2)
 {
