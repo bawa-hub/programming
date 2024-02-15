@@ -1,3 +1,10 @@
+https://www.youtube.com/playlist?list=PL5DyztRVgtRWVqLox_K8lrWZCclxzHzLD
+https://www.youtube.com/watch?v=V5-7GzOfADQ
+
+
+
+
+
 https://leetcode.com/problems/minimum-window-substring/solutions/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems/
 
 https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
