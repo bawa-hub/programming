@@ -2,7 +2,7 @@ arrays                [ ]
 strings               [ ]
 hash_table            [ ]
 two pointer           [ ]
-sliding window        [ ]
+sliding_window        [ ]
 priority_queue        [ ]
 prefix_sum            [ ]
 
