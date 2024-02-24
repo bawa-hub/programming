@@ -1,4 +1,4 @@
-arrays                [ ]
+arrays                [1]
 strings               [ ]
 hash_table            [ ]
 two pointer           [ ]
