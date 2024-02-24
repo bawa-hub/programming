@@ -28,7 +28,7 @@ int main()
         adj[u].push_back(v);
     }
 
-    // if weighted graph
+    // for undirected weighted graph
     for (int i = 0; i < m; i++)
     {
         int u, v,wt;
@@ -36,6 +36,15 @@ int main()
 
         adj[u].push_back({v,wt});
         adj[v].push_back({u,wt});
+    }
+
+    // for directed weighted graph
+    for (int i = 0; i < m; i++)
+    {
+        int u, v,wt;
+        cin >> u >> v >>wt;
+        // u -> v
+        adj[u].push_back({v,wt});
     }
 
     // Space complexity = O(E)

@@ -14,7 +14,7 @@ https://leetcode.com/discuss/study-guide/1965086/How-to-practice-for-2200%2B-rat
 https://leetcode.com/discuss/interview-question/2069641/The-Only-Lists-You-Need-For-Your-Interview-Preparation
 https://leetcode.com/discuss/study-guide/3767785/topics-which-you-cant-skip-interview-preparation-part-2
 patterns - https://docs.google.com/document/d/1rUyk-1pioNOZvh9gp7lPbDbm0G6cEKP0QlyrlrvVQhY/edit#heading=h.zg6m7yz4v0zg
-
+https://leetcode.com/discuss/interview-question/352460/Google-Online-Assessment-Questions
 
 https://leetcode.com/problems/minimum-window-substring/solutions/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems/
 
