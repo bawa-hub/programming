@@ -68,3 +68,7 @@ int main()
     obj.maxMeetings(start, end, n);
     return 0;
 }
+
+// Time Complexity: O(n) to iterate through every position and insert them in a data structure. O(n log n)  to sort the data structure in ascending order of end time. O(n)  to iterate through the positions and check which meeting can be performed.
+// Overall : O(n) +O(n log n) + O(n) ~O(n log n)
+// Space Complexity: O(n)  since we used an additional data structure for storing the start time, end time, and meeting no.

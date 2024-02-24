@@ -16,4 +16,4 @@ graph                 [ ]
 
 recursion_and_backtracking  [ ]
 dp                          [ ]
-greedy                      [ ]
+greedy                      [1]
