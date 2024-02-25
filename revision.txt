@@ -1,5 +1,5 @@
 arrays                [1]
-strings               [ ]
+strings               [1]
 hash_table            [ ]
 two pointer           [ ]
 sliding_window        [ ]
