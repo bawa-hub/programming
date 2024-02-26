@@ -20,6 +20,10 @@ int solve(int ind, vector<int> &height, vector<int> &dp)
 
     return dp[ind] = min(jumpOne, jumpTwo);
 }
+// Time Complexity: O(N)
+// Reason: The overlapping subproblems will return the answer in constant time O(1). Therefore the total number of new subproblems we solve is ‘n’. Hence total time complexity is O(N).
+// Space Complexity: O(N)
+// Reason: We are using a recursion stack space(O(N)) and an array (again O(N)). Therefore total space complexity will be O(N) + O(N) ≈ O(N)
 
 int main()
 {
@@ -48,6 +52,10 @@ int main()
     }
     cout << dp[n - 1];
 }
+// Time Complexity: O(N)
+// Reason: We are running a simple iterative loop
+// Space Complexity: O(N)
+// Reason: We are using an external array of size ‘n+1’
 
 // space optimized
 int main()
@@ -70,3 +78,7 @@ int main()
     }
     cout << prev;
 }
+// Time Complexity: O(N)
+// Reason: We are running a simple iterative loop
+// Space Complexity: O(1)
+// Reason: We are not using any extra space.
