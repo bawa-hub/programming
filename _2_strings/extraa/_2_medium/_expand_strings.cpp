@@ -55,5 +55,3 @@ int main()
 	string strin = "3(ab)4(cd)";
 	expandString(strin);
 }
-
-// This code is contributed by Surendra_Gangwar
