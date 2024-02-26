@@ -8,7 +8,7 @@ prefix_sum            [0]
 
 linked_list           [0]
 stack_and_queue       [1]
-binary_search         [0]
+binary_search         [1]
 sorting               [0]
 
 binary_tree           [0]
