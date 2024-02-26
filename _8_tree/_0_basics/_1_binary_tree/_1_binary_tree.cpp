@@ -72,43 +72,5 @@ int main()
     root->left->left = createNode(4);
     root->left->right = createNode(5);
 
-    // cout << "\nPreorder traversal of binary tree is \n";
-    // printPreorder(root);
-
-    // cout << "\nPreorder Iterative traversal of binary tree is \n";
-    // printPreorderIterative(root);
-
-    // cout << "\nInorder traversal of binary tree is \n";
-    // printInorder(root);
-
-    // cout << "\nInorder Iterative traversal of binary tree is \n";
-    // printInOrderIterative(root);
-
-    // cout << "\nPostorder traversal of binary tree is \n";
-    // printPostorder(root);
-
-    // cout << "\nPostorder Iterative traversal of binary tree is \n";
-    // vector<int> postOrder;
-    // postOrder = printPostorderIterativeUsingTwoStack(root);
-    // for (int i = 0; i < postOrder.size(); i++)
-    // {
-    //     cout << postOrder[i] << " ";
-    // }
-
-    // cout << "\nLevel Order traversal of binary tree is \n";
-    // printLevelOrder(root);
-
-    // cout << "\nZig Zag Traversal of Binary Tree \n";
-    // vector<vector<int>> ans;
-    // ans = zigzagLevelOrder(root);
-    // for (int i = 0; i < ans.size(); i++)
-    // {
-    //     for (int j = 0; j < ans[i].size(); j++)
-    //     {
-    //         cout << ans[i][j] << " ";
-    //     }
-    //     cout << endl;
-    // }
-
     return 0;
 }

@@ -25,6 +25,7 @@ vector<int> preOrderTrav(node *curr)
         node *topNode = s.top();
         preOrder.push_back(topNode->data);
         s.pop();
+        // since preorder is root left right and stack is LIFO, so first put right as left will be at top
         if (topNode->right != NULL)
             s.push(topNode->right);
         if (topNode->left != NULL)
@@ -36,7 +37,7 @@ vector<int> preOrderTrav(node *curr)
 // Time Complexity: O(N).
 // Reason: We are traversing N nodes and every node is visited exactly once.
 // Space Complexity: O(N)
-// Reason: In the worst case, (a tree with every node having a single right child and left-subtree, follow the video attached below to see the illustration), the space complexity can be considered as O(N).
+// Reason: In the worst case, (a tree with every node having a single right child and left-subtree), the space complexity can be considered as O(N).
 
 
 // recursive
