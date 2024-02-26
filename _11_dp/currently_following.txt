@@ -1,7 +1,0 @@
-striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY
-
-https://leetcode.com/discuss/study-guide/1490172/Dynamic-programming-is-simple
-https://leetcode.com/discuss/study-guide/1437879/Dynamic-Programming-Patterns
-https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
-https://leetcode.com/discuss/general-discussion/662866/DP-for-Beginners-Problems-or-Patterns-or-Sample-Solutions
-https://leetcode.com/discuss/study-guide/1000929/solved-all-dynamic-programming-dp-problems-in-7-months

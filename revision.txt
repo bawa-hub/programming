@@ -1,5 +1,5 @@
 arrays                [0]
-strings               [0+]
+strings               [1]
 hash_table            [0]
 two pointer           [0]
 sliding_window        [0]
@@ -15,5 +15,5 @@ binary_tree           [0]
 graph                 [0]
 
 recursion_and_backtracking  [0]
-dp                          [0]
+dp                          [0+]
 greedy                      [0]
