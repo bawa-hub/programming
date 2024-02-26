@@ -57,3 +57,6 @@ int main()
     cout << prev;
     return 0;
 }
+
+// TC: O(N)
+// SC: O(1)
