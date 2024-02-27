@@ -4,7 +4,7 @@ sorting               [0]
 
 arrays                [0]
 strings               [1]
-mathematics           [0] 
+mathematics           [0+] 
 
 linked_list           [0]
 stack_and_queue       [1]
