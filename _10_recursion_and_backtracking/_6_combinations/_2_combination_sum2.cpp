@@ -30,3 +30,7 @@ public:
         return ans;
     }
 };
+// Time Complexity:O(2^n*k)
+// Reason: Assume if all the elements in the array are unique then the no. of subsequence you will get will be O(2^n). we also add the ds to our ans when we reach the base case that will take “k”//average space for the ds.
+// Space Complexity:O(k*x)
+// Reason: if we have x combinations then space will be x*k where k is the average length of the combination.

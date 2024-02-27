@@ -1,7 +1,11 @@
 // https://leetcode.com/problems/permutations/
 // https://takeuforward.org/data-structure/print-all-permutations-of-a-string-array/
 
-// total permutations = n! (n factorial)
+// https://www.geeksforgeeks.org/permutations-and-combinations/
+// Selecting the data or objects from a certain group is said to be permutation
+// number of ways to pick r things out of n different things in a specific order and replacement is not allowed 
+// total permutations == nPr = n!/(n-r)! (n factorial)
+
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -42,6 +46,8 @@ public:
         return ans;
     }
 };
+// TC: O(n*n!)
+// SC: O(n + n)
 
 // space optimized
 class Solution
@@ -70,6 +76,9 @@ public:
         return ans;
     }
 };
+// TC: O(n*n!)
+// SC: O(n)
+
 
 int main()
 {

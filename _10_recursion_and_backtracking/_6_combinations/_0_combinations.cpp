@@ -2,6 +2,11 @@
 // https://leetcode.com/problems/combinations/solutions/27006/a-template-to-those-combination-problems/
 // https://leetcode.com/problems/combinations/editorial/
 
+
+// https://www.geeksforgeeks.org/permutations-and-combinations/
+// Combination Formula is used to choose ‘r’ components out of a total number of ‘n’ components, and is given by:
+// nCr = n!/r!(n-r)!
+
 // recursive
 class Solution
 {
