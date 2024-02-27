@@ -1,20 +1,18 @@
-hash_table            [0+]
-two pointer           [1]
-sliding_window        [0+]
-priority_queue        [0+]
-prefix_sum            [0]
-
-arrays                [0]
-strings               [1]
+techniques            [1]
 binary_search         [1]
 sorting               [0]
 
+arrays                [0]
+strings               [1]
+mathematics           [0] 
+
 linked_list           [0]
 stack_and_queue       [1]
+
 binary_tree           [1]
 graph                 [1]
 
-backtracking          [0]
+backtracking          [0+]
 dp                    [1]
 greedy                [0]
-mathematics           [0] 
+
