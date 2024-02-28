@@ -42,7 +42,6 @@ vector<vector<int>> threeSum(vector<int> &num)
     // moves for a
     for (int i = 0; i < (int)(num.size()) - 2; i++)
     {
-
         if (i == 0 || (i > 0 && num[i] != num[i - 1]))
         {
 

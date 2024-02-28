@@ -7,9 +7,8 @@ public:
 
         while(i<j) {
             int sum = nums[i]+nums[j];
-            if(sum==target) {
-                return {i+1,j+1};
-            } else if(sum<target) i++;
+            if(sum==target) return {i+1,j+1};
+            else if(sum<target) i++;
             else j--;
         }
 

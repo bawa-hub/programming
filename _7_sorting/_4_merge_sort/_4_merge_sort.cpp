@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/sort-an-array/description/
 
+// this is a typical example of divide and conqure algorithm
+
 #include <bits/stdc++.h>
 using namespace std;
 

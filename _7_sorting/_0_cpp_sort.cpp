@@ -29,6 +29,7 @@ Overall, the comparator function plays a crucial role in guiding the sorting alg
 #include <iostream>
 #include <algorithm>
 #include <vector>
+using namespace std;
 
 // Custom comparison function
 bool customCompare(int a, int b) {
@@ -38,33 +39,33 @@ bool customCompare(int a, int b) {
 }
 
 int main() {
-    std::vector<int> numbers = {5, 2, 8, 1, 9};
+    vector<int> numbers = {5, 2, 8, 1, 9};
 
     // default sort in ascending order
-    // std::sort(numbers.begin(), numbers.end());
+    // sort(numbers.begin(), numbers.end());
 
     // Sorting using custom comparison function
-    std::sort(numbers.begin(), numbers.end(), customCompare);
+    sort(numbers.begin(), numbers.end(), customCompare);
 
     // Display sorted numbers
-    std::cout << "Sorted numbers in ascending order: ";
+    cout << "Sorted numbers in ascending order: ";
     for (int num : numbers) {
-        std::cout << num << " ";
+        cout << num << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
      // Sorting using lambda expression
-    std::sort(numbers.begin(), numbers.end(), [](int a, int b) {
+    sort(numbers.begin(), numbers.end(), [](int a, int b) {
         // Define your custom sorting criteria here
         // For example, let's sort integers in descending order
         return a > b;
     });
 
-    std::cout << "Sorted numbers in descending order: ";
+    cout << "Sorted numbers in descending order: ";
     for (int num : numbers) {
-        std::cout << num << " ";
+        cout << num << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }

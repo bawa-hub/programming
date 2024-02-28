@@ -1,10 +1,10 @@
+arrays                [1]
+strings               [1]
+mathematics           [1]
+
 techniques            [1]
 binary_search         [1]
-sorting               [0]
-
-arrays                [0]
-strings               [1]
-mathematics           [1] 
+sorting               [1]
 
 linked_list           [0]
 stack_and_queue       [1]
@@ -12,7 +12,7 @@ stack_and_queue       [1]
 binary_tree           [1]
 graph                 [1]
 
-backtracking          [0+]
+backtracking          [1]
 dp                    [1]
 greedy                [0]
 
