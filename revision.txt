@@ -4,7 +4,6 @@ techniques_and_maths            [0]
 linked_list                     [0]
 stack_and_queue                 [0]
 tree_and_graph                  [0]
-backtracking                    [0]
-dp                              [0]
+backtracking_and_dp             [0]                              
 greedy                          [0]
 
