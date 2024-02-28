@@ -3,7 +3,7 @@ strings               [1]
 mathematics           [1]
 
 techniques            [1]
-binary_search         [1]
+binary_search         [1+]
 sorting               [1]
 
 linked_list           [0]
