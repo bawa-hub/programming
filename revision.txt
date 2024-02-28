@@ -1,18 +1,10 @@
-arrays                [1]
-strings               [1]
-mathematics           [1]
-
-techniques            [1]
-binary_search         [2]
-sorting               [1]
-
-linked_list           [0]
-stack_and_queue       [1]
-
-binary_tree           [1]
-graph                 [1]
-
-backtracking          [1]
-dp                    [1]
-greedy                [0]
+arrays_and_strings              [0]
+binary_search_and_sorting       [0]
+techniques_and_maths            [0]
+linked_list                     [0]
+stack_and_queue                 [0]
+tree_and_graph                  [0]
+backtracking                    [0]
+dp                              [0]
+greedy                          [0]
 
