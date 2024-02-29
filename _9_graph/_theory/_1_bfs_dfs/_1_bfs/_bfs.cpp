@@ -4,7 +4,6 @@ using namespace std;
 
 class Solution {
   public:
-    // Function to return Breadth First Traversal of given graph.
     vector<int> bfsOfGraph(int V, vector<int> adj[], vector<int> &bfs) { 
 
         // visited array
@@ -18,7 +17,7 @@ class Solution {
         // iterate till the queue is empty 
         while(!q.empty()) {
 
-           // get the topmost element in the queue 
+           // get the topmost element in the queue and remove from queue
             int node = q.front(); 
             q.pop(); 
             bfs.push_back(node); 

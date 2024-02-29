@@ -1,4 +1,6 @@
 // https://practice.geeksforgeeks.org/problems/number-of-distinct-islands/1
+// https://leetcode.com/problems/number-of-distinct-islands/description/
+// https://leetcode.ca/2017-10-24-694-Number-of-Distinct-Islands/
 
 #include <bits/stdc++.h>
 

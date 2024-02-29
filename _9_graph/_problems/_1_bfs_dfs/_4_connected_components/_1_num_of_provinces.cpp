@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/number-of-provinces/
 // https://practice.geeksforgeeks.org/problems/number-of-provinces/1
+
 class Solution
 {
 public:
@@ -14,6 +15,7 @@ public:
             }
         }
     }
+    
     int findCircleNum(vector<vector<int>> &isConnected)
     {
         int n = isConnected.size();
@@ -44,3 +46,6 @@ public:
         return count;
     }
 };
+
+// Time Complexity: O(N) + O(V+2E), Where O(N) is for outer loop and inner loop runs in total a single DFS over entire graph, and we know DFS takes a time of O(V+2E). 
+// Space Complexity: O(N) + O(N),Space for recursion stack space and visited array.
