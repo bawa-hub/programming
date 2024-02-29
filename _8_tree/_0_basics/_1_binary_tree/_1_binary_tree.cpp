@@ -1,8 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <stack>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 struct Node
@@ -62,7 +58,81 @@ Node *insertNode(Node *root, int data)
     return root;
 }
 
-// delete node
+// dfs
+void printPostorder(struct Node *node)
+{
+    if (node == NULL)
+        return;
+
+    // first recur on left subtree
+    printPostorder(node->left);
+
+    // then recur on right subtree
+    printPostorder(node->right);
+
+    // now deal with the node
+    cout << node->data << " ";
+}
+
+void printInorder(struct Node *node)
+{
+    if (node == NULL)
+        return;
+
+    /* first recur on left child */
+    printInorder(node->left);
+
+    /* then print the data of node */
+    cout << node->data << " ";
+
+    /* now recur on right child */
+    printInorder(node->right);
+}
+
+void printPreorder(struct Node *node)
+{
+    if (node == NULL)
+        return;
+
+    /* first print data of node */
+    cout << node->data << " ";
+
+    /* then recur on left subtree */
+    printPreorder(node->left);
+
+    /* now recur on right subtree */
+    printPreorder(node->right);
+}
+
+// bfs or level order
+void printLevelOrder(Node *root)
+{
+    // Base Case
+    if (root == NULL)
+        return;
+
+    // Create an empty queue for level order traversal
+    queue<Node *> q;
+
+    // Enqueue Root and initialize height
+    q.push(root);
+
+    while (!q.empty())
+    {
+        // Print front of queue and remove it from queue
+        Node *node = q.front();
+        cout << node->data << " ";
+        q.pop();
+
+        /* Enqueue left child */
+        if (node->left != NULL)
+            q.push(node->left);
+
+        /*Enqueue right child */
+        if (node->right != NULL)
+            q.push(node->right);
+    }
+}
 
 int main()
 {
@@ -71,6 +141,18 @@ int main()
     root->right = createNode(3);
     root->left->left = createNode(4);
     root->left->right = createNode(5);
+
+    cout << "\nPreorder traversal of binary tree is \n";
+    printPreorder(root);
+
+    cout << "\nInorder traversal of binary tree is \n";
+    printInorder(root);
+
+    cout << "\nPostorder traversal of binary tree is \n";
+    printPostorder(root);
+
+    cout << "Level Order traversal of binary tree is \n";
+    printLevelOrder(root);
 
     return 0;
 }

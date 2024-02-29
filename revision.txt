@@ -1,9 +1,12 @@
 arrays_and_strings              [0]
-binary_search_and_sorting       [0+]
+binary_search_and_sorting       [1]
 techniques_and_maths            [0]
+
 linked_list                     [0]
-stack_and_queue                 [0]
-tree_and_graph                  [0]
-backtracking_and_dp             [0]                              
+stack_and_queue                 [1]
 greedy                          [0]
+
+tree_and_graph                  [0+]
+backtracking_and_dp             [0+]                              
+
 

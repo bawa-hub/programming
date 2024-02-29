@@ -1,5 +1,8 @@
 // https://leetcode.com/problems/next-greater-element-i/
 
+// brute force
+// using nested for loop
+
 class Solution
 {
 public:
@@ -33,3 +36,15 @@ public:
         return ans;
     }
 };
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+
+int main() {
+  Solution obj;
+  vector < int > v {5,7,1,2,6,0};
+  vector < int > res = obj.nextGreaterElements(v);
+  cout << "The next greater elements are" << endl;
+  for (int i = 0; i < res.size(); i++) {
+    cout << res[i] << " ";
+  }
+}
