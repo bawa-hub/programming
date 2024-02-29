@@ -1,6 +1,8 @@
 // Linear ordering of vertices such that if there is an edge between u & v,
 // u appears before v in that ordering.
 
+// it is only applicable to directd acyclic graph (DAG)
+
 #include <bits/stdc++.h>
 
 using namespace std;

@@ -1,4 +1,6 @@
 
+// indegree === no of incoming edges to a node is called indegree of that node
+
 #include <bits/stdc++.h>
 using namespace std;
 
