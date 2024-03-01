@@ -1,4 +1,8 @@
 // https://leetcode.com/problems/add-two-numbers/
+
+// in case of multiple list, dummy node is very useful as it simplifies the code
+// note that temp->next in while loop is changing the dummy->next as initially temp and dummy is indeed same.
+
 class Solution
 {
 public:
