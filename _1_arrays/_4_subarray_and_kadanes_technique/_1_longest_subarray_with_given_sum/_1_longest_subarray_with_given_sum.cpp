@@ -68,17 +68,18 @@ int getLongestSubarray(vector<int> &a, long long k)
             maxLen = max(maxLen, i + 1);
         }
 
-        // calculate the sum of remaining part i.e. x-k:
+        // calculate the sum of remaining part i.e. (prefixSum - k):
         long long rem = sum - k;
 
-        // Calculate the length and update maxLen:
+    
+        // if (prefixSum-k) is present that means we have subarray with sum k.
         if (preSumMap.find(rem) != preSumMap.end())
         {
             int len = i - preSumMap[rem];
             maxLen = max(maxLen, len);
         }
 
-        // Finally, update the map checking the conditions:
+        // Finally, update the map if not already present, because you will not get the longest subarray
         if (preSumMap.find(sum) == preSumMap.end())
         {
             preSumMap[sum] = i;
@@ -90,7 +91,7 @@ int getLongestSubarray(vector<int> &a, long long k)
 // Time Complexity: O(N) or O(N*logN) depending on which map data structure we are using, where N = size of the array.
 // Space Complexity: O(N) as we are using a map data structure.
 
-// using two pointer
+// using two pointer (sliding window)
 int getLongestSubarray(vector<int> &a, long long k)
 {
     int n = a.size(); // size of the array.

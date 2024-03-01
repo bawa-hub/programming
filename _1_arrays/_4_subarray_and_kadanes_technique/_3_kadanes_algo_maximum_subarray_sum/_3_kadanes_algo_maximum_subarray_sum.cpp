@@ -60,9 +60,12 @@ int maxSubArray(vector<int> &nums, vector<int> &subarray)
 // Space Complexity: O(1)
 
 // kadanes alog
+// Kadane's algorithm runs one for loop over the array and at the beginning of each iteration, 
+// if the current sum is negative, it will reset the current sum to zero. 
+// This way, we ensure a one-pass and solve the problem in linear time.
 long long maxSubarraySum(int arr[], int n)
 {
-    long long maxi = LONG_MIN; // maximum sum
+    long long maxi = LONG_MIN; 
     long long sum = 0;
 
     for (int i = 0; i < n; i++)

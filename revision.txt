@@ -1,4 +1,4 @@
-arrays_and_strings              [0]
+arrays_and_strings              [0+]
 binary_search_and_sorting       [1]
 techniques_and_maths            [1]
 

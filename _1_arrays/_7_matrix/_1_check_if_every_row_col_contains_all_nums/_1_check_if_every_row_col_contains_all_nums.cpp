@@ -9,14 +9,11 @@ public:
         {
             for(int j=0;j<n;j++)
             {
-                if(s1.find(matrix[i][j])!=s1.end())
-                    return false;
-                else
-                    s1.insert(matrix[i][j]);
-                if(s2.find(matrix[j][i])!=s2.end())
-                    return false;
-                else
-                    s2.insert(matrix[j][i]);
+                if(s1.find(matrix[i][j])!=s1.end()) return false;    
+                else s1.insert(matrix[i][j]);
+                    
+                if(s2.find(matrix[j][i])!=s2.end()) return false;    
+                else s2.insert(matrix[j][i]); 
             }
             s1.clear();
             s2.clear();
