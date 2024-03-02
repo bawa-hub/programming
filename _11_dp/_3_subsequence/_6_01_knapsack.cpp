@@ -35,6 +35,10 @@ int knapsack(vector<int> &wt, vector<int> &val, int n, int W)
     vector<vector<int>> dp(n, vector<int>(W + 1, -1));
     return knapsackUtil(wt, val, n - 1, W, dp);
 }
+// Time Complexity: O(N*W)
+// Reason: There are N*W states therefore at max ‘N*W’ new problems will be solved.
+// Space Complexity: O(N*W) + O(N)
+// Reason: We are using a recursion stack space(O(N)) and a 2D array ( O(N*W)).
 
 // tabulation
 int knapsack(vector<int> &wt, vector<int> &val, int n, int W)
@@ -68,6 +72,10 @@ int knapsack(vector<int> &wt, vector<int> &val, int n, int W)
 
     return dp[n - 1][W];
 }
+// Time Complexity: O(N*W)
+// Reason: There are two nested loops
+// Space Complexity: O(N*W)
+// Reason: We are using an external array of size ‘N*W’. Stack Space is eliminated.
 
 // space optimized
 int knapsack(vector<int> &wt, vector<int> &val, int n, int W)
@@ -99,6 +107,10 @@ int knapsack(vector<int> &wt, vector<int> &val, int n, int W)
 
     return prev[W];
 }
+// Time Complexity: O(N*W)
+// Reason: There are two nested loops.
+// Space Complexity: O(W)
+// Reason: We are using an external array of size ‘W+1’ to store only one row.
 
 int main()
 {

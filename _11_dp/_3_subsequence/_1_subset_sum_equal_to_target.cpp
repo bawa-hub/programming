@@ -81,7 +81,7 @@ bool subsetSumToK(int n, int k, vector<int> &arr)
     prev[0] = cur[0] = true;
 
 // for index 0, column with target arr[0] is true
-    prev[arr[0]] = true;
+   if(arr[0]<=k) prev[arr[0]] = true;
 
     for (int ind = 1; ind < n; ind++)
     {
