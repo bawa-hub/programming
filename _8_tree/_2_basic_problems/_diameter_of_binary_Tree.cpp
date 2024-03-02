@@ -34,3 +34,5 @@ private:
         return 1 + max(lh, rh);
     }
 };
+// Time Complexity: O(N) 
+// Space Complexity: O(1) Extra Space + O(H) Recursion Stack space (Where “H”  is the height of binary tree )  
