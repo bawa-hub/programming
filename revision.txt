@@ -2,11 +2,11 @@ arrays_and_strings              [1]
 binary_search_and_sorting       [1]
 techniques_and_maths            [1]
 
-linked_list                     [0+]
+linked_list                     [1]
 stack_and_queue                 [1]
 greedy                          [0]
 
 tree_and_graph                  [1]
-backtracking_and_dp             [0]                              
+backtracking_and_dp             [0+]                              
 
 

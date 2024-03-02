@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// using extra ds
+
 class node
 {
 public:
@@ -32,7 +32,7 @@ void insertNode(node *head, int val)
     temp->next = newNode;
     return;
 }
-
+// using array
 bool isPalindrome(node *head)
 {
     vector<int> arr;
@@ -46,54 +46,64 @@ bool isPalindrome(node *head)
             return false;
     return true;
 }
-
-int main()
-{
-    node *head = NULL;
-    insertNode(head, 1);
-    insertNode(head, 2);
-    insertNode(head, 3);
-    insertNode(head, 2);
-    insertNode(head, 1);
-    isPalindrome(head) ? cout << "True" : cout << "False";
-    return 0;
-}
-
-// Time Complexity: O(N)
+// Time Complexity: O(2N)
 // Reason: Iterating through the list to store elements in the array.
 // Space Complexity: O(N)
 // Reason: Using an array to store list elements for further computations.
 
-// optimized
-class node
-{
-public:
-    int num;
-    node *next;
-    node(int val)
-    {
-        num = val;
-        next = NULL;
+// using stack
+
+bool isPalindrome(Node* head) {
+    // Create an empty stack
+    // to store values
+    stack<int> st;
+
+    // Initialize a temporary pointer
+    // to the head of the linked list
+    Node* temp = head;
+
+    // Traverse the linked list and
+    // push values onto the stack
+    while (temp != NULL) {
+        
+        // Push the data from the
+        // current node onto the stack
+        st.push(temp->data); 
+        
+         // Move to the next node
+        temp = temp->next;  
     }
-};
 
-void insertNode(node *head, int val)
-{
-    node *newNode = new node(val);
-    if (head == NULL)
-    {
-        head = newNode;
-        return;
+    // Reset the temporary pointer back
+    // to the head of the linked list
+    temp = head;
+
+    // Compare values by popping from the stack
+    // and checking against linked list nodes
+    while (temp != NULL) {
+        if (temp->data != st.top()) {
+            
+            // If values don't match,
+            // it's not a palindrome
+            return false; 
+        }
+        
+        // Pop the value from the stack
+        st.pop();         
+        
+        // Move to the next node
+        // in the linked list
+        temp = temp->next; 
     }
 
-    node *temp = head;
-    while (temp->next != NULL)
-        temp = temp->next;
-
-    temp->next = newNode;
-    return;
+     // If all values match,
+     // it's a palindrome
+    return true;
 }
+// Time Complexity: O(2 * N) This is because we traverse the linked list twice: once to push the values onto the stack, and once to pop the values and compare with the linked list. Both traversals take O(2*N) ~ O(N) time.
+// Space Complexity: O(N) We use a stack to store the values of the linked list, and in the worst case, the stack will have all N values,  ie. storing the complete linked list. 
 
+// optimized
 node *reverse(node *ptr)
 {
     node *pre = NULL;

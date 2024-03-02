@@ -1,9 +1,7 @@
 // https://leetcode.com/problems/linked-list-cycle/
 
 #include <bits/stdc++.h>
-using namespace std;
 
-// hashing
 class node
 {
 public:
@@ -51,7 +49,8 @@ void createCycle(node *&head, int a, int b)
     p2->next = p1;
 }
 
-// utility function to detect cycle
+
+// using hashing
 bool cycleDetect(node *head)
 {
     unordered_set<node *> hashTable;
@@ -64,61 +63,12 @@ bool cycleDetect(node *head)
     }
     return false;
 }
-
 // Time Complexity: O(N)
 // Reason: Entire list is iterated once.
 // Space Complexity: O(N)
 // Reason: All nodes present in the list are stored in a hash table.
 
-// slow and fast pointer
-class node
-{
-public:
-    int num;
-    node *next;
-    node(int val)
-    {
-        num = val;
-        next = NULL;
-    }
-};
-
-// utility function to insert node in the list
-void insertNode(node *&head, int val)
-{
-    node *newNode = new node(val);
-
-    if (head == NULL)
-    {
-        head = newNode;
-        return;
-    }
-
-    node *temp = head;
-    while (temp->next != NULL)
-        temp = temp->next;
-
-    temp->next = newNode;
-    return;
-}
-
-// utility function to create cycle
-void createCycle(node *&head, int a, int b)
-{
-    int cnta = 0, cntb = 0;
-    node *p1 = head;
-    node *p2 = head;
-    while (cnta != a || cntb != b)
-    {
-        if (cnta != a)
-            p1 = p1->next, ++cnta;
-        if (cntb != b)
-            p2 = p2->next, ++cntb;
-    }
-    p2->next = p1;
-}
-
-// utility function to detect cycle
+// using slow and fast pointer
 bool cycleDetect(node *head)
 {
     if (head == NULL)
@@ -135,6 +85,10 @@ bool cycleDetect(node *head)
     }
     return false;
 }
+// Time Complexity: O(N)
+// Reason: In the worst case, all the nodes of the list are visited.
+// Space Complexity: O(1)
+// Reason: No extra data structure is used.
 
 int main()
 {
@@ -150,8 +104,3 @@ int main()
         cout << "Cycle not detected\n";
     return 0;
 }
-
-// Time Complexity: O(N)
-// Reason: In the worst case, all the nodes of the list are visited.
-// Space Complexity: O(1)
-// Reason: No extra data structure is used.

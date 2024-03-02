@@ -31,6 +31,7 @@ public:
 
 // Function to reverse the
 // linked list using a stack
+// brute force
 Node* reverseLinkedList(Node* head) {
     // Create a temporary pointer
     // to traverse the linked list
@@ -75,6 +76,8 @@ Node* reverseLinkedList(Node* head) {
     // the reversed linked list
     return head;  
 }
+// Time Complexity: O(2N) This is because we traverse the linked list twice: once to push the values onto the stack, and once to pop the values and update the linked list. Both traversals take O(N) time, hence time complexity  O(2N) ~ O(N).
+// Space Complexity: O(N) We use a stack to store the values of the linked list, and in the worst case, the stack will have all N values,  ie. storing the complete linked list. 
 
 // Function to reverse a linked list
 // using the 3-pointer approach
@@ -113,6 +116,8 @@ Node* reverseLinkedList(Node *head)
    // the reversed linked list
    return prev;  
 }
+// Time Complexity: O(N) The code traverses the entire linked list once, where ‘n’ is the number of nodes in the list. This traversal has a linear time complexity, O(n).
+// Space Complexity: O(1) The code uses only a constant amount of additional space, regardless of the linked list’s length. This is achieved by using three pointers (prev, temp and front) to reverse the list without any significant extra memory usage, resulting in constant space complexity, O(1).
 
 // Function to reverse a singly
 // linked list using a recursion
@@ -145,6 +150,8 @@ Node* reverseLinkedList(Node* head) {
     // head of the reversed linked list.
     return newHead;
 }
+// Time Complexity: O(N) This is because we traverse the linked list twice: once to push the values onto the stack, and once to pop the values and update the linked list. Both traversals take O(N) time.
+// Space Complexity : O(1) No additional space is used explicitly for data structures or allocations during the linked list reversal process. However, it’s important to note that there is an implicit use of stack space due to recursion. This recursive stack space stores function calls and associated variables during the recursive traversal and reversal of the linked list. Despite this, no extra memory beyond the program’s existing execution space is allocated, hence maintaining a space complexity of O(1).
 
 // Function to print the linked list
 void printLinkedList(Node* head) {
