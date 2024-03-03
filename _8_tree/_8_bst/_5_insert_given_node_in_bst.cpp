@@ -34,3 +34,5 @@ public:
         return root;
     }
 };
+// Time Complexity: O(log N) because of the logarithmic height of the Binary Search Tree that is traversed during the insertion process.
+// Space Complexity: O(1) as no additional data structures or memory allocation is done

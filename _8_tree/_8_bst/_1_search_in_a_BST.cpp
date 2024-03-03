@@ -12,3 +12,8 @@ public:
         return root;
     }
 };
+
+// Time Complexity: O(logN)
+// Reason: The time required will be proportional to the height of the tree, if the tree is balanced, then the height of the tree is logN.
+// Space Complexity: O(1)
+// Reason: We are not using any extra space.

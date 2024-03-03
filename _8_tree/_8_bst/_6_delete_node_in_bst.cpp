@@ -67,3 +67,5 @@ public:
         return findLastRight(root->right);
     }
 };
+// Time Complexity: O(H) where H is the height of the tree. This is due to the binary search applied while finding the node with value as key. All other operations performed are in constant time. O(H) ~ O(log N) in case of a full binary search tree (optimal time).
+// Space Complexity: O(1) as no additional data structures or memory allocation is done

@@ -9,8 +9,7 @@ int findCeil(BinaryTreeNode<int> *root, int key)
 
         if (root->data == key)
         {
-            ceil = root->data;
-            return ceil;
+            return root->data;;
         }
 
         if (key > root->data)
@@ -25,3 +24,5 @@ int findCeil(BinaryTreeNode<int> *root, int key)
     }
     return ceil;
 }
+// Time Complexity: O(log(N)) {Similar to Binary Search, at a given time we’re searching one half of the tree, so the time taken would be of the order log(N) where N are the total nodes in the BST and log(N) is the height of the tree.}
+// Space Complexity: O(1) {As no extra space is being used, we’re just traversing the BST.}
