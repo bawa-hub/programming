@@ -90,3 +90,6 @@ int main()
     }
     return 0;
 }
+
+// Time Complexity: O(N*logN*logN*logN)
+// Space Complexity: O(N)

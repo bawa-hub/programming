@@ -1,5 +1,6 @@
 // https://www.codingninjas.com/codestudio/problems/boundary-traversal_790725?utm_source=youtube&utm_medium=affiliate&utm_campaign=Striver_Tree_Videos
 // https://practice.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/0
+// https://leetcode.com/problems/boundary-of-binary-tree/description/
 
 #include <bits/stdc++.h>
 
@@ -114,3 +115,8 @@ int main()
     }
     return 0;
 }
+
+// Time Complexity: O(N).
+// Reason: The time complexity will be O(H) + O(H) + O(N) which is ≈ O(N)
+// Space Complexity: O(N)
+// Reason: Space is needed for the recursion stack while adding leaves. In the worst case (skewed tree), space complexity can be O(N).

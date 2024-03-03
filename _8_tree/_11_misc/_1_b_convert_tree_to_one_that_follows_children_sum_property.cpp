@@ -1,5 +1,4 @@
-// https://practice.geeksforgeeks.org/problems/children-sum-parent/1
-
+// https://takeuforward.org/data-structure/check-for-children-sum-property-in-a-binary-tree/
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -75,4 +74,6 @@ int main()
 }
 
 // Time Complexity: O(N)
+// Reason: We are doing a simple tree traversal.
 // Space Complexity: O(N)
+// Reason: In the worst case( skewed tree), space complexity can be O(N).

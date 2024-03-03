@@ -54,16 +54,6 @@ int main()
 // Reason: Space is needed for the recursion stack. As it is a complete tree, the height of that stack will always be logN.
 
 // efficient approach
-void inOrderTrav(node *curr, int &count)
-{
-    if (curr == NULL)
-        return;
-
-    count++;
-    inOrderTrav(curr->left, count);
-    inOrderTrav(curr->right, count);
-}
-
 int findHeightLeft(node *cur)
 {
     int hght = 0;

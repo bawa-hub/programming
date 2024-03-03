@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/maximum-width-of-binary-tree/
 
+
+// max no of nodes b/w two nodes at a level
 #include <bits/stdc++.h>
 
 using namespace std;
