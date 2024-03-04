@@ -14,6 +14,7 @@ public:
 
             if (!st.empty())
                 ans += c;
+            
             if (c == '(')
                 st.push(c);
             else
