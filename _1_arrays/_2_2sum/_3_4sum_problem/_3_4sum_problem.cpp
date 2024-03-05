@@ -3,279 +3,52 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// using 3 pointer and binary search
-class Solution
+// brute force
+vector<vector<int>> fourSum(vector<int>& nums, int target) {
+    int n = nums.size(); //size of the array
+    set<vector<int>> st;
+
+    //checking all possible quadruplets:
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            for (int k = j + 1; k < n; k++) {
+                for (int l = k + 1; l < n; l++) {
+                    // taking bigger data type
+                    // to avoid integer overflow:
+                    long long sum = nums[i] + nums[j];
+                    sum += nums[k];
+                    sum += nums[l];
+
+                    if (sum == target) {
+                        vector<int> temp = {nums[i], nums[j], nums[k], nums[l]};
+                        sort(temp.begin(), temp.end());
+                        st.insert(temp);
+                    }
+                }
+            }
+        }
+    }
+    vector<vector<int>> ans(st.begin(), st.end());
+    return ans;
+}
+// Time Complexity: O(N4), where N = size of the array.
+// Reason: Here, we are mainly using 4 nested loops. But we not considering the time complexity of sorting as we are just sorting 4 elements every time.
+// Space Complexity: O(2 * no. of the quadruplets) as we are using a set data structure and a list to store the quads.
+
+int main()
 {
-public:
-    // brute force
-    vector<vector<int>> fourSum(vector<int> &nums, int target)
-    {
-        int n = nums.size();
-
-        sort(nums.begin(), nums.end());
-
-        set<vector<int>> sv;
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = i + 1; j < n; j++)
-            {
-
-                for (int k = j + 1; k < n; k++)
-                {
-
-                    int x = (long long)target -
-                            (long long)nums[i] -
-                            (long long)nums[j] - (long long)nums[k];
-
-                    if (binary_search(nums.begin() + k + 1, nums.end(), x))
-                    {
-                        vector<int> v;
-                        v.push_back(nums[i]);
-                        v.push_back(nums[j]);
-                        v.push_back(nums[k]);
-                        v.push_back(x);
-                        sort(v.begin(), v.end());
-                        sv.insert(v);
-                    }
-                }
-            }
+    vector<int> nums = {4, 3, 3, 4, 4, 2, 1, 2, 1, 1};
+    int target = 9;
+    vector<vector<int>> ans = fourSum(nums, target);
+    cout << "The quadruplets are: \n";
+    for (auto it : ans) {
+        cout << "[";
+        for (auto ele : it) {
+            cout << ele << " ";
         }
-        vector<vector<int>> res(sv.begin(), sv.end());
-        return res;
+        cout << "] ";
     }
-    // TC: O(nlogn+n^3logn)
-    // SC: O(1)
+    cout << "\n";
+    return 0;
+}
 
-    // optimized approach
-    vector<vector<int>> fourSum(vector<int> &num, int target)
-    {
-        vector<vector<int>> res;
-
-        if (num.empty())
-            return res;
-        int n = num.size();
-        sort(num.begin(), num.end());
-
-        for (int i = 0; i < n; i++)
-        {
-
-            int target_3 = target - num[i];
-
-            for (int j = i + 1; j < n; j++)
-            {
-
-                int target_2 = target_3 - num[j];
-
-                int front = j + 1;
-                int back = n - 1;
-
-                while (front < back)
-                {
-
-                    int two_sum = num[front] + num[back];
-
-                    if (two_sum < target_2)
-                        front++;
-
-                    else if (two_sum > target_2)
-                        back--;
-
-                    else
-                    {
-
-                        vector<int> quadruplet(4, 0);
-                        quadruplet[0] = num[i];
-                        quadruplet[1] = num[j];
-                        quadruplet[2] = num[front];
-                        quadruplet[3] = num[back];
-                        res.push_back(quadruplet);
-
-                        // Processing the duplicates of number 3
-                        while (front < back && num[front] == quadruplet[2])
-                            ++front;
-
-                        // Processing the duplicates of number 4
-                        while (front < back && num[back] == quadruplet[3])
-                            --back;
-                    }
-                }
-
-                // Processing the duplicates of number 2
-                while (j + 1 < n && num[j + 1] == num[j])
-                    ++j;
-            }
-
-            // Processing the duplicates of number 1
-            while (i + 1 < n && num[i + 1] == num[i])
-                ++i;
-        }
-
-        return res;
-    }
-    // TC: O(n^3)
-    // SC: O(1)
-};
-
-
-/*
-
-    Time Complexity : O(N^4), Here Four nested loop creates the time complexity. Where N is the size of the
-    array(nums).
-
-    Space Complexity : O(N), Hash Table(set) space.
-
-    Solved using Array(Four Nested Loop) + Sorting + Hash Table(set). Brute Force Approach.
-
-    Note : this will give TLE.
-
-*/
-
-/***************************************** Approach 1 *****************************************/
-
-class Solution
-{
-public:
-    vector<vector<int>> fourSum(vector<int> &nums, int target)
-    {
-        int n = nums.size();
-        sort(nums.begin(), nums.end());
-        set<vector<int>> set;
-        vector<vector<int>> output;
-        for (int i = 0; i < n - 3; i++)
-        {
-            for (int j = i + 1; j < n - 2; j++)
-            {
-                for (int k = j + 1; k < n - 1; k++)
-                {
-                    for (int l = k + 1; l < n; l++)
-                    {
-                        if ((long long)nums[i] + (long long)nums[j] + (long long)nums[k] +
-                                (long long)nums[l] ==
-                            target)
-                        {
-                            set.insert({nums[i], nums[j], nums[k], nums[l]});
-                        }
-                    }
-                }
-            }
-        }
-        for (auto it : set)
-        {
-            output.push_back(it);
-        }
-        return output;
-    }
-};
-
-/*
-
-    Time Complexity : O(N^3), Here Three nested loop creates the time complexity. Where N is the size of the
-    array(nums).
-
-    Space Complexity : O(N), Hash Table(set) space.
-
-    Solved using Array(Three Nested Loop) + Sorting + Hash Table(set).
-
-*/
-
-/***************************************** Approach 2 *****************************************/
-
-class Solution
-{
-public:
-    vector<vector<int>> fourSum(vector<int> &nums, int target)
-    {
-        int n = nums.size();
-        sort(nums.begin(), nums.end());
-        set<vector<int>> set;
-        vector<vector<int>> output;
-        for (int i = 0; i < n - 3; i++)
-        {
-            for (int j = i + 1; j < n - 2; j++)
-            {
-                long long newTarget = (long long)target - (long long)nums[i] - (long long)nums[j];
-                int low = j + 1, high = n - 1;
-                while (low < high)
-                {
-                    if (nums[low] + nums[high] < newTarget)
-                    {
-                        low++;
-                    }
-                    else if (nums[low] + nums[high] > newTarget)
-                    {
-                        high--;
-                    }
-                    else
-                    {
-                        set.insert({nums[i], nums[j], nums[low], nums[high]});
-                        low++;
-                        high--;
-                    }
-                }
-            }
-        }
-        for (auto it : set)
-        {
-            output.push_back(it);
-        }
-        return output;
-    }
-};
-
-/*
-
-    Time Complexity : O(N^3), Here Three nested loop creates the time complexity. Where N is the size of the
-    array(nums).
-
-    Space Complexity : O(1), Constant space. Extra space is only allocated for the Vector(output), however the
-    output does not count towards the space complexity.
-
-    Solved using Array(Three Nested Loop) + Sorting. Optimized Approach.
-
-*/
-
-/***************************************** Approach 3 *****************************************/
-
-class Solution
-{
-public:
-    vector<vector<int>> fourSum(vector<int> &nums, int target)
-    {
-        int n = nums.size();
-        sort(nums.begin(), nums.end());
-        vector<vector<int>> output;
-        for (int i = 0; i < n - 3; i++)
-        {
-            for (int j = i + 1; j < n - 2; j++)
-            {
-                long long newTarget = (long long)target - (long long)nums[i] - (long long)nums[j];
-                int low = j + 1, high = n - 1;
-                while (low < high)
-                {
-                    if (nums[low] + nums[high] < newTarget)
-                    {
-                        low++;
-                    }
-                    else if (nums[low] + nums[high] > newTarget)
-                    {
-                        high--;
-                    }
-                    else
-                    {
-                        output.push_back({nums[i], nums[j], nums[low], nums[high]});
-                        int tempIndex1 = low, tempIndex2 = high;
-                        while (low < high && nums[low] == nums[tempIndex1])
-                            low++;
-                        while (low < high && nums[high] == nums[tempIndex2])
-                            high--;
-                    }
-                }
-                while (j + 1 < n && nums[j] == nums[j + 1])
-                    j++;
-            }
-            while (i + 1 < n && nums[i] == nums[i + 1])
-                i++;
-        }
-        return output;
-    }
-};

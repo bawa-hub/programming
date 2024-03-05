@@ -4,19 +4,19 @@ using namespace std;
 class Solution
 {
 private:
+    // four actions for understanding of dfs
     void dfs(int node, vector<int> adj[], int vis[], vector<int> &ls)
     {
+        // 1. Take action on vertex after entering the vertex
         vis[node] = 1;
         ls.push_back(node);
-        // traverse all its neighbours
         for (auto it : adj[node])
         {
-            // if the neighbour is not visited
-            if (!vis[it])
-            {
-                dfs(it, adj, vis, ls);
-            }
+           // 2. Take action on child before entering the child node
+            if (!vis[it]) dfs(it, adj, vis, ls);
+            // 3. Take action on child after exiting the child node
         }
+        // 4. Take action on vertex after exiting the vertex
     }
 
 public:
@@ -51,10 +51,21 @@ int main()
 {
     vector<int> adj[5];
 
-    addEdge(adj, 0, 2);
-    addEdge(adj, 2, 4);
-    addEdge(adj, 0, 1);
-    addEdge(adj, 0, 3);
+    int n, m;
+    cin >> n >> m;
+    for (int i = 0; i < m; ++i)
+    {
+        int v1, v2;
+        cin >> v1 >> v2;
+        // g[v1].push_back(v2);
+        // g[v2].push_back(v1);
+        addEdge(adj, v1, v2);
+    }
+
+    // addEdge(adj, 0, 2);
+    // addEdge(adj, 2, 4);
+    // addEdge(adj, 0, 1);
+    // addEdge(adj, 0, 3);
 
     Solution obj;
     vector<int> ans = obj.dfsOfGraph(5, adj);

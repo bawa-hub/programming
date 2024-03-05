@@ -3,95 +3,110 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// brute force
-vector<vector<int>> threeSum(vector<int> &nums)
-{
-    vector<vector<int>> ans;
-    vector<int> temp;
-    int i, j, k;
-    for (i = 0; i < nums.size() - 2; i++)
-    {
-        for (j = i + 1; j < nums.size() - 1; j++)
-        {
-            for (k = j + 1; k < nums.size(); k++)
-            {
-                temp.clear();
-                if (nums[i] + nums[j] + nums[k] == 0)
-                {
-                    temp.push_back(nums[i]);
-                    temp.push_back(nums[j]);
-                    temp.push_back(nums[k]);
+vector<vector<int>> triplet(int n, vector<int> &arr) {
+    set<vector<int>> st;
+
+    // check all possible triplets:
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            for (int k = j + 1; k < n; k++) {
+                if (arr[i] + arr[j] + arr[k] == 0) {
+                    vector<int> temp = {arr[i], arr[j], arr[k]};
+                    sort(temp.begin(), temp.end());
+                    st.insert(temp);
                 }
-                if (temp.size() != 0)
-                    ans.push_back(temp);
             }
         }
     }
 
+    //store the set elements in the answer:
+    vector<vector<int>> ans(st.begin(), st.end());
     return ans;
 }
-// Time Complexity : O(n^3)   // 3 loops
-// Space Complexity : O(3*k)  // k is the no.of triplets
+// Time Complexity: O(N3 * log(no. of unique triplets)), where N = size of the array.
+// Reason: Here, we are mainly using 3 nested loops. And inserting triplets into the set takes O(log(no. of unique triplets)) time complexity. But we are not considering the time complexity of sorting as we are just sorting 3 elements every time.
+// Space Complexity: O(2 * no. of the unique triplets) as we are using a set data structure and a list to store the triplets.
 
-// optimized approach
-vector<vector<int>> threeSum(vector<int> &num)
-{
-    vector<vector<int>> res;
-    sort(num.begin(), num.end());
+// better
+vector<vector<int>> triplet(int n, vector<int> &arr) {
+    set<vector<int>> st;
 
-    // moves for a
-    for (int i = 0; i < (int)(num.size()) - 2; i++)
-    {
-        if (i == 0 || (i > 0 && num[i] != num[i - 1]))
-        {
+    for (int i = 0; i < n; i++) {
+        set<int> hashset;
+        for (int j = i + 1; j < n; j++) {
+            //Calculate the 3rd element:
+            int third = -(arr[i] + arr[j]);
 
-            int lo = i + 1, hi = (int)(num.size()) - 1, sum = 0 - num[i];
+            //Find the element in the set:
+            if (hashset.find(third) != hashset.end()) {
+                vector<int> temp = {arr[i], arr[j], third};
+                sort(temp.begin(), temp.end());
+                st.insert(temp);
+            }
+            hashset.insert(arr[j]);
+        }
+    }
 
-            while (lo < hi)
-            {
-                if (num[lo] + num[hi] == sum)
-                {
+    //store the set in the answer:
+    vector<vector<int>> ans(st.begin(), st.end());
+    return ans;
+}
 
-                    vector<int> temp;
-                    temp.push_back(num[i]);
-                    temp.push_back(num[lo]);
-                    temp.push_back(num[hi]);
-                    res.push_back(temp);
+// Time Complexity: O(N2 * log(no. of unique triplets)), where N = size of the array.
+// Reason: Here, we are mainly using 3 nested loops. And inserting triplets into the set takes O(log(no. of unique triplets)) time complexity. But we are not considering the time complexity of sorting as we are just sorting 3 elements every time.
+// Space Complexity: O(2 * no. of the unique triplets) + O(N) as we are using a set data structure and a list to store the triplets and extra O(N) for storing the array elements in another set.
 
-                    while (lo < hi && num[lo] == num[lo + 1])
-                        lo++;
-                    while (lo < hi && num[hi] == num[hi - 1])
-                        hi--;
 
-                    lo++;
-                    hi--;
-                }
-                else if (num[lo] + num[hi] < sum)
-                    lo++;
-                else
-                    hi--;
+// optimized
+vector<vector<int>> triplet(int n, vector<int> &arr) {
+    vector<vector<int>> ans;
+    sort(arr.begin(), arr.end());
+    for (int i = 0; i < n; i++) {
+        //remove duplicates:
+        if (i != 0 && arr[i] == arr[i - 1]) continue;
+
+        //moving 2 pointers:
+        int j = i + 1;
+        int k = n - 1;
+        while (j < k) {
+            int sum = arr[i] + arr[j] + arr[k];
+            if (sum < 0) {
+                j++;
+            }
+            else if (sum > 0) {
+                k--;
+            }
+            else {
+                vector<int> temp = {arr[i], arr[j], arr[k]};
+                ans.push_back(temp);
+                j++;
+                k--;
+                //skip the duplicates:
+                while (j < k && arr[j] == arr[j - 1]) j++;
+                while (j < k && arr[k] == arr[k + 1]) k--;
             }
         }
     }
-    return res;
+    return ans;
 }
+// Time Complexity: O(NlogN)+O(N2), where N = size of the array.
+// Reason: The pointer i, is running for approximately N times. And both the pointers j and k combined can run for approximately N times including the operation of skipping duplicates. So the total time complexity will be O(N2). 
+// Space Complexity: O(no. of quadruplets), This space is only used to store the answer. We are not using any extra space to solve this problem. So, from that perspective, space complexity can be written as O(1).
 
-// Time Complexity : O(n^2)
-// Space Complexity : O(3*k)  // k is the no.of triplets.
+
 
 int main()
 {
-    vector<int> arr{-1, 0, 1, 2, -1, -4};
-    vector<vector<int>> ans;
-    ans = threeSum(arr);
-    cout << "The triplets are as follows: " << endl;
-    for (int i = 0; i < ans.size(); i++)
-    {
-        for (int j = 0; j < ans[i].size(); j++)
-        {
-            cout << ans[i][j] << " ";
+    vector<int> arr = { -1, 0, 1, 2, -1, -4};
+    int n = arr.size();
+    vector<vector<int>> ans = triplet(n, arr);
+    for (auto it : ans) {
+        cout << "[";
+        for (auto i : it) {
+            cout << i << " ";
         }
-        cout << endl;
+        cout << "] ";
     }
+    cout << "\n";
     return 0;
 }
