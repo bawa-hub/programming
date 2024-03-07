@@ -20,6 +20,7 @@ public:
         // to make deletion from it easier and in less time complexity.
         unordered_set<string> st(wordList.begin(), wordList.end());
         st.erase(startWord);
+        
         while (!q.empty())
         {
             string word = q.front().first;

@@ -12,7 +12,7 @@
 Daily Revision Section Per Topic:
 
 1. arrays 
-rotation, two_sum
+rotation, two_sum, subarray_and_kadanes
 2. strings 
 first 5 problem
 
