@@ -6,6 +6,7 @@ struct Node
     int data;
     struct Node *next;
 };
+
 //insert a new node in an empty list
 struct Node *insertInEmpty(struct Node *last, int new_data)
 {
