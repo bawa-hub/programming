@@ -1,6 +1,6 @@
 1. arrays_and_strings              [0]
 2. techniques                      [0]
-3. linked_list                     [0+]
+3. linked_list                     [0]
 4. stack_and_queue                 [0]
 
 5. binary_search_and_sorting       [0]
