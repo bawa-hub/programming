@@ -17,7 +17,6 @@ int main() {
     while (q--) {
         char c;
         cin >> c;
-        // fetch:
         cout << hash[c] << endl;
     }
     return 0;
