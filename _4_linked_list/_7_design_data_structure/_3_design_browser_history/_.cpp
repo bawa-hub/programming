@@ -1,6 +1,9 @@
 // https://leetcode.com/problems/design-browser-history/
 // https://www.codingninjas.com/studio/problems/browser_2427908
 
+#include <string>
+using namespace std;
+
 class Node {
     public:
     string data;
@@ -43,10 +46,3 @@ public:
         return currentPage->data;
     }
 };
-
-int main() {
-BrowserHistory* obj = new BrowserHistory(homepage);
-obj->visit(url);
-string param_2 = obj->back(steps);
-string param_3 = obj->forward(steps);
-}
