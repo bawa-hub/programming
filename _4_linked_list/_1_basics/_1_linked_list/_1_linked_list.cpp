@@ -1,5 +1,6 @@
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 class Node {
@@ -169,36 +170,40 @@ Node* deleteKthNode(Node* head, int k) {
    return head;
 }
 
-Node* deleteNodeWithValue(Node* head, int val) {
-    if (head == nullptr) {
+Node *deleteNodeWithValue(Node *head, int val)
+{
+    if (head == nullptr)
+    {
         return nullptr;
     }
-   if(head->data == val) {
-    Node* curr = head;
-    head = head->next;
-    delete curr;
-    return head;
-   }
-
-   Node* curr = head;
-   Node* prev = nullptr;
-   while(curr!= nullptr) {
-    if(curr->data == val) {
-      prev->next = prev->next->next;
-      delete curr;
-      break;
+    if (head->data == val)
+    {
+        Node *curr = head;
+        head = head->next;
+        delete curr;
+        return head;
     }
-    prev = curr;
-    curr = curr->next;
-   }
-   return head;
+
+    Node *curr = head;
+    Node *prev = nullptr;
+    while (curr != nullptr)
+    {
+        if (curr->data == val)
+        {
+            prev->next = prev->next->next;
+            delete curr;
+            break;
+        }
+        prev = curr;
+        curr = curr->next;
+    }
+    return head;
 }
 
 int main() {
     vector<int> arr = {2,5,8,7,6};
     Node* head = convertArr2LL(arr);
     traverse(head);
-    head = insertBeforeNode(head, 100,6);
-    traverse(head);
+
     return 0;
 }

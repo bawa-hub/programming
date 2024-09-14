@@ -44,26 +44,28 @@ public class Main {
     }
 
     // optimal
-    public static int findAllSubarraysWithGivenSum2(int arr[], int k) {
+    public static int findAllSubarraysWithGivenSum2(int[] arr, int k) {
         int n = arr.length; // size of the given array.
-        Map mpp = new HashMap();
+        Map<Integer, Integer> mpp = new HashMap<>();
         int preSum = 0, cnt = 0;
 
-        mpp.put(0, 1); // Setting 0 in the map.
+        // Setting 0 in the map to handle cases where the subarray itself has a sum equal to k
+        mpp.put(0, 1); 
+
         for (int i = 0; i < n; i++) {
-            // add current element to prefix Sum:
+            // add current element to prefix sum
             preSum += arr[i];
 
-            // Calculate x-k:
+            // Calculate preSum - k
             int remove = preSum - k;
 
-            // Add the number of subarrays to be removed:
+            // Add the number of subarrays found that match the required sum
             cnt += mpp.getOrDefault(remove, 0);
 
-            // Update the count of prefix sum
-            // in the map.
+            // Update the count of current prefix sum in the map
             mpp.put(preSum, mpp.getOrDefault(preSum, 0) + 1);
         }
+
         return cnt;
     }
 

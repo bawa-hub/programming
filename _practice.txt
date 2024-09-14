@@ -1,13 +1,14 @@
 hashmap
 priority_queue
 two pointer and sliding window
+prefix sum
 
 arrays and strings
 linked_list, stack and queue
 
 binary_search and sorting
-
 recursion and backtracking
-tree
 
-graph, greedy and dynamic_programming
+tree and graph
+
+greedy and dynamic_programming
