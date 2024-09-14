@@ -48,9 +48,10 @@ Node* deleteHead(Node* head) {
 
     Node* prev = head;      
     head = head->next;    
-
     head->back = nullptr;   
     prev->next = nullptr;  
+
+    delete prev;
 
     return head;          
 }
@@ -136,7 +137,6 @@ void deleteGivenNode(Node* temp){
 Node* insertBeforeHead(Node* head, int val){
     Node* newHead = new Node(val , head, nullptr);
     head->back = newHead;
-    
     return newHead;
 }
 
