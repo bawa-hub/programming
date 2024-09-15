@@ -1,14 +1,19 @@
+-- bucket 1 --
 hashmap
 priority_queue
 two pointer and sliding window
 prefix sum
 
+-- bucket 2 --
 arrays and strings
 linked_list, stack and queue
 
+-- bucket 3 --
 binary_search and sorting
 recursion and backtracking
 
+-- bucket 4 --
 tree and graph
 
+-- bucket 5 --
 greedy and dynamic_programming
