@@ -39,25 +39,3 @@ int binarySearch(int arr[], int target, int n)
 }
 // Time complexity: O(log n)
 // Space complexity : O(1)
-
-// implementation 2 (also called lower bound )
-// for problems like: find first value >= x;
-int binarySearch(int arr[], int target, int n)
-{
-    int l = 0, r = n - 1, mid, ans = -1;
-    while (l <= r)
-    {
-        mid = l + (r - l) / 2;
-        // this is condition part
-        if (arr[mid] >= target)
-        {
-            ans = mid;
-            r = mid - 1; // a/c to question
-        }
-        else
-        {
-            l = mid + 1;
-        }
-    }
-    return ans;
-}

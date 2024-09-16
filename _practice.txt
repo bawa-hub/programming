@@ -1,6 +1,5 @@
 -- bucket 1 --
-hashmap
-priority_queue
+hashmap and priority_queue
 two pointer and sliding window
 prefix sum
 
@@ -14,6 +13,5 @@ recursion and backtracking
 
 -- bucket 4 --
 tree and graph
-
--- bucket 5 --
 greedy and dynamic_programming
+
