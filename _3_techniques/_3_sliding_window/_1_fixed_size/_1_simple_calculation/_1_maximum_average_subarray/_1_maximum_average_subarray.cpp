@@ -10,12 +10,7 @@ public:
         while(j<n) {
          sum+=nums[j];
 
-         if(j-i+1==k) {
-             double avg = sum/k;
-             maxi = max(maxi, avg);
-             sum-=nums[i];
-             i++;
-         }
+ 
 
          j++;
         }
