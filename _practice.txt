@@ -8,10 +8,12 @@ arrays and strings
 linked_list, stack and queue
 
 -- bucket 3 --
-binary_search and sorting
-recursion and backtracking
+tree and graph
 
 -- bucket 4 --
-tree and graph
-greedy and dynamic_programming
+binary_search and sorting
+greedy 
+
+-- bucket 5 --
+backtracking and dp
 
