@@ -1,19 +1,17 @@
--- bucket 1 --
-hashmap and priority_queue
-two pointer and sliding window
+java
+array
+hashmap
+priority_queue
+two_pointer and sliding_window
+linked_list
+stack_and_queue
+binary_search
+sorting
+greedy
+tree
+graph
+backtracking
+dp
+strings
 prefix sum
-
--- bucket 2 --
-arrays and strings
-linked_list, stack and queue
-
--- bucket 3 --
-tree and graph
-
--- bucket 4 --
-binary_search and sorting
-greedy 
-
--- bucket 5 --
-backtracking and dp
 
