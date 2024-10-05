@@ -1,13 +1,14 @@
 4 oct - 31 oct:
 -- graph 
 -- tree
+-- two_pointer_and_sliding_window
 
 01 dec - 10 dec:
 linked_list
 greedy
 
 11 dec - 20 dec:
--- stack_and_queue
+stack_and_queue
 binary_search
 sorting
 
