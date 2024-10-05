@@ -1,17 +1,33 @@
-java
-array
-hashmap
-priority_queue
-two_pointer and sliding_window
+4 oct - 31 oct:
+-- graph 
+-- tree
+
+01 dec - 10 dec:
 linked_list
-stack_and_queue
+greedy
+
+11 dec - 20 dec:
+-- stack_and_queue
 binary_search
 sorting
-greedy
-tree
-graph
+
+21 dec - 31 dec:
+hashmap
+two_pointer_and_sliding_window
+
+01 jan - 20 jan:
 backtracking
 dp
+
+21 jan - 31 jan:
+array
+priority_queue
+
+01 feb - 15 feb:
 strings
 prefix sum
+
+16 feb - 28 feb:
+maths
+trie
 

@@ -1,5 +1,6 @@
 
-// https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1#include <bits/stdc++.h>
+// https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1
+#include <bits/stdc++.h>
 
 using namespace std;
 
