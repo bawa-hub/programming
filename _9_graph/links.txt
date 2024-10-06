@@ -6,6 +6,7 @@ https://www.geeksforgeeks.org/top-50-graph-coding-problems-for-interviews/?ref=r
 https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/tutorial/
 
 patterns: https://docs.google.com/document/d/1bNslc9kOjZ2EiEYJNcdvxzoGJ3u_LpFHfu3G5AdYa1c/edit
+https://leetcode.com/discuss/career/5876587/graph-series-part-1-union-find
 
 https://leetcode.com/tag/graph/discuss/2360573/Become-Master-In-Graph
 https://leetcode.com/tag/depth-first-search/discuss/2995224/Graph-Study-Notes-(WIP)

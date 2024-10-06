@@ -1,34 +1,32 @@
+---------------- thread 1 -------------
 4 oct - 31 oct:
--- graph 
--- tree
--- two_pointer_and_sliding_window
+graph_and_tree
 
-01 dec - 10 dec:
+01 nov - 10 nov:
 linked_list
-greedy
-
-11 dec - 20 dec:
 stack_and_queue
-binary_search
-sorting
 
-21 dec - 31 dec:
-hashmap
-two_pointer_and_sliding_window
-
-01 jan - 20 jan:
+11 nov - 31 nov:
 backtracking
 dp
 
-21 jan - 31 jan:
-array
+01 dec - 15 dec:
+strings
+
+---------------- thread 2 -------------
+4 oct - 31 oct: 
+hashmap
+two_pointer_and_sliding_window
 priority_queue
 
-01 feb - 15 feb:
-strings
-prefix sum
+01 nov - 10 nov:
+binary_search_and_sorting
+greedy
 
-16 feb - 28 feb:
-maths
+11 nov - 31 nov:
+array
+prefix_sum
+
+01 dec - 15 dec:
 trie
-
+maths
