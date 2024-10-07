@@ -2,6 +2,10 @@
 
 // Note: this will not work for negative numbers
 
+#include <vector>
+using namespace std;
+
+
 int longestSubarrayWithSumK(vector<int> a, long long k) {
     int i=0,j=0;
     long long sum = 0;
@@ -10,19 +14,13 @@ int longestSubarrayWithSumK(vector<int> a, long long k) {
     while(j < a.size()) {
       sum += a[j];
 
-          if(sum == k) {
-          maxi = max(maxi, j-i+1);
-          }
-      
-
-      if(sum > k) {
           while (sum > k) {
                 sum -= a[i];
                  i++;
             }
-              if(sum == k){
-              maxi = max(maxi, j-i+1);
-            }
+
+      if(sum == k) {
+          maxi = max(maxi, j-i+1);
       }
 
       j++;
