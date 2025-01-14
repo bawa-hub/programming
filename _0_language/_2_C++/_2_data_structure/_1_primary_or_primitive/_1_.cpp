@@ -15,7 +15,7 @@
 // -10^12 < long int < 10^12
 // -10^18 < long long int < 10^18
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main()
