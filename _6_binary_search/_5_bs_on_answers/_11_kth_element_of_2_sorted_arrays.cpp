@@ -33,6 +33,47 @@ int kthelement(int array1[],int array2[],int m,int n,int k) {
 // Space Complexity :
 // We do not use any extra data structure and hence, the time complexity is O(1).
 
+// better approach
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int kthElement(vector<int> &a, vector<int>& b, int m, int n, int k) {
+    int ele = -1;
+    int cnt = 0; //counter
+    //apply the merge step:
+    int i = 0, j = 0;
+    while (i < m && j < n) {
+        if (a[i] < b[j]) {
+            if (cnt == k - 1) ele = a[i];
+            cnt++;
+            i++;
+        }
+        else {
+            if (cnt == k - 1) ele = b[j];
+            cnt++;
+            j++;
+        }
+    }
+
+    //copy the left-out elements:
+    while (i < m) {
+        if (cnt == k - 1) ele = a[i];
+        cnt++;
+        i++;
+    }
+    while (j < n) {
+        if (cnt == k - 1) ele = b[j];
+        cnt++;
+        j++;
+    }
+    return ele;
+}
+// Time Complexity: O(m+n), where m and n are the sizes of the given arrays.
+// Reason: We traverse through both arrays linearly.
+// Space Complexity: O(1), as we are not using any extra space to solve this problem.     
+        
+
 // binary search
 int kthelement(int arr1[], int arr2[], int m, int n, int k) {
     if(m > n) {
