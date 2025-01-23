@@ -1,93 +1,84 @@
 // https://practice.geeksforgeeks.org/problems/aggressive-cows/1
+// https://www.spoj.com/problems/AGGRCOW/
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-// BRUTE FORCE
-bool isCompatible(vector<int> inp, int dist, int cows)
-{
-    int n = inp.size();
-    int k = inp[0];
-    cows--;
-    for (int i = 1; i < n; i++)
-    {
-        if (inp[i] - k >= dist)
-        {
-            cows--;
-            if (!cows)
-            {
-                return true;
-            }
-            k = inp[i];
+bool canWePlace(vector<int> &stalls, int dist, int cows) {
+    int n = stalls.size(); //size of array
+    int cntCows = 1; //no. of cows placed
+    int last = stalls[0]; //position of last placed cow.
+    for (int i = 1; i < n; i++) {
+        if (stalls[i] - last >= dist) {
+            cntCows++; //place next cow.
+            last = stalls[i]; //update the last location.
         }
+        if (cntCows >= cows) return true;
     }
     return false;
 }
-int main()
-{
-    int n = 5, m = 3;
-    vector<int> inp{1, 2, 8, 4, 9};
-    sort(inp.begin(), inp.end());
-    int maxD = inp[n - 1] - inp[0];
-    int ans = INT_MIN;
-    for (int d = 1; d <= maxD; d++)
-    {
-        bool possible = isCompatible(inp, d, m);
-        if (possible)
-        {
-            ans = max(ans, d);
+int aggressiveCows(vector<int> &stalls, int k) {
+    int n = stalls.size(); //size of array
+    //sort the stalls[]:
+    sort(stalls.begin(), stalls.end());
+
+    int limit = stalls[n - 1] - stalls[0];
+    for (int i = 1; i <= limit; i++) {
+        if (canWePlace(stalls, i, k) == false) {
+            return (i - 1);
         }
     }
-    cout << "The largest minimum distance is " << ans << '\n';
+    return limit;
 }
 
-// Time complexity: O(n* m)
-// Space Complexity: O(1)
+// Time Complexity: O(NlogN) + O(N *(max(stalls[])-min(stalls[]))), where N = size of the array, max(stalls[]) = maximum element in stalls[] array, min(stalls[]) = minimum element in stalls[] array.
+// Reason: O(NlogN) for sorting the array. We are using a loop from 1 to max(stalls[])-min(stalls[]) to check all possible distances. Inside the loop, we are calling canWePlace() function for each distance. Now, inside the canWePlace() function, we are using a loop that runs for N times.
+
+// Space Complexity: O(1) as we are not using any extra space to solve this problem.
+
 
 // binary search
-bool isPossible(int a[], int n, int cows, int minDist)
-{
-    int cntCows = 1;
-    int lastPlacedCow = a[0];
-    for (int i = 1; i < n; i++)
-    {
-        if (a[i] - lastPlacedCow >= minDist)
-        {
-            cntCows++;
-            lastPlacedCow = a[i];
+bool canWePlace(vector<int> &stalls, int dist, int cows) {
+    int n = stalls.size(); //size of array
+    int cntCows = 1; //no. of cows placed
+    int last = stalls[0]; //position of last placed cow.
+    for (int i = 1; i < n; i++) {
+        if (stalls[i] - last >= dist) {
+            cntCows++; //place next cow.
+            last = stalls[i]; //update the last location.
         }
+        if (cntCows >= cows) return true;
     }
-    if (cntCows >= cows)
-        return true;
     return false;
+}
+int aggressiveCows(vector<int> &stalls, int k) {
+    int n = stalls.size(); //size of array
+    //sort the stalls[]:
+    sort(stalls.begin(), stalls.end());
+
+    int low = 1, high = stalls[n - 1] - stalls[0];
+    //apply binary search:
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (canWePlace(stalls, mid, k) == true) {
+            low = mid + 1;
+        }
+        else high = mid - 1;
+    }
+    return high;
 }
 
 int main()
 {
-    int n = 5, cows = 3;
-    int a[] = {1, 2, 8, 4, 9};
-    sort(a, a + n);
-
-    int low = 1, high = a[n - 1] - a[0];
-
-    while (low <= high)
-    {
-        int mid = (low + high) >> 1;
-
-        if (isPossible(a, n, cows, mid))
-        {
-            low = mid + 1;
-        }
-        else
-        {
-            high = mid - 1;
-        }
-    }
-    cout << "The largest minimum distance is " << high << endl;
-
+    vector<int> stalls = {0, 3, 4, 7, 10, 9};
+    int k = 4;
+    int ans = aggressiveCows(stalls, k);
+    cout << "The maximum possible minimum distance is: " << ans << "\n";
     return 0;
 }
-//     Time Complexity: O(N*log(M)).
-// Reason: For binary search in a space of M, O(log(M))  and for each search, we iterate over max N stalls to check. O(N).
-// Space Complexity: O(1)
+
+
+// Time Complexity: O(NlogN) + O(N * log(max(stalls[])-min(stalls[]))), where N = size of the array, max(stalls[]) = maximum element in stalls[] array, min(stalls[]) = minimum element in stalls[] array.
+// Reason: O(NlogN) for sorting the array. We are applying binary search on [1, max(stalls[])-min(stalls[])]. Inside the loop, we are calling canWePlace() function for each distance, ‘mid’. Now, inside the canWePlace() function, we are using a loop that runs for N times.
+
+// Space Complexity: O(1) as we are not using any extra space to solve this problem.
