@@ -1,0 +1,5 @@
+# command to run docker
+docker-compose up
+
+# to run docker in background
+docker-compose up -d

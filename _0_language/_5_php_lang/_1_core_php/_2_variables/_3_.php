@@ -1,0 +1,14 @@
+<?php
+
+// only named variables may be assigned by reference.
+
+$foo = 25;
+$bar = &$foo;      // This is a valid assignment.
+$bar = & (24 * 7);  // Invalid; references an unnamed expression.
+
+function test()
+{
+    return 25;
+}
+
+$bar = &test();    // Invalid.

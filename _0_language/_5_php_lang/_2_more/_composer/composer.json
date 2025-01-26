@@ -1,0 +1,14 @@
+{
+    "name": "bawa/composer_demo",
+    "description": "demo",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "imonroe/ana": "1.0.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "bawa\\composer_demo\\": "src/"
+        }
+    }
+}
