@@ -18,10 +18,13 @@ d). memoize it -> look at changing parameter and make dp array (1d if one param 
 
 # Recursive (required to base case) to iterative (base case to required) conversion
 base case to up == bottom up approach
-a). Declare base case
+a). Copy base case
 b). Express all states in for loop 
 note: if 2 states then nested for loop and accordingly.
 c). copy the recurrence and write
+
+Note:
+if in top-down approach, base case hits when -1 then apply shifting of index in bottom-up
 
 # space optimized
 note: when there is a concept of prev and current think space optimization.

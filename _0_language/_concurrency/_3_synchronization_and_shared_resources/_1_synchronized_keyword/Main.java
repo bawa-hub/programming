@@ -49,3 +49,4 @@ public class Main {
 
 // In this example:
     // We use synchronized on the increment() method to prevent two threads from simultaneously modifying the count variable, ensuring that the final count is correct.
+    // We use synchronized to lock the method and allow only one thread at a time.

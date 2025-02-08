@@ -43,7 +43,7 @@ int lcs(string s1, string s2)
     int n = s1.size();
     int m = s2.size();
 
-    vector<vector<int>> dp(n + 1, vector<int>(m + 1, -1));
+    vector<vector<int>> dp(n + 1, vector<int>(m + 1, -1)); // shifting of index
     for (int i = 0; i <= n; i++)
     {
         dp[i][0] = 0;
