@@ -22,6 +22,7 @@ int getAns(int arr[], int n, int ind, int prev_index, vector<vector<int>> &dp)
         take = 1 + getAns(arr, n, ind + 1, ind, dp);
     }
 
+    // coordinate shift for tacking -1 index
     return dp[ind][prev_index + 1] = max(notTake, take);
 }
 

@@ -1,15 +1,11 @@
----------- 10 jan - 25 jan ----------
-binary_search/sorting
----------- 26 jan - 20 feb ----------
-dp/recursion/backtracking
----------- 21 feb - 20 mar ----------
-graph/tree/greedy
----------- 21 mar - 10 apr ----------
-linked_list/stack_queue
----------- 11 jan - 30 apr ----------
+
 array/hashmap/two_pointer_and_sliding_window/priority_queue/prefix_sum
----------- 01 may - 20 may ----------
+linked_list/stack_queue
+graph/tree
+
+binary_search/sorting
+dp/recursion/backtracking/greedy
+
 strings/trie/maths
----------- 21 may - 10 june ---------
 segment_tree
 
