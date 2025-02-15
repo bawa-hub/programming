@@ -5,7 +5,8 @@ graph/tree
 
 binary_search/sorting
 dp/recursion/backtracking/greedy
+strings
 
-strings/trie/maths
+trie/maths
 segment_tree
 
