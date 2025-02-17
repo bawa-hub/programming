@@ -4,8 +4,8 @@ linked_list/stack_queue
 graph/tree
 
 binary_search/sorting
-dp/recursion/backtracking/greedy
-strings
+recursion/backtracking/dp
+greedy/strings
 
 trie/maths
 segment_tree
