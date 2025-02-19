@@ -1,5 +1,6 @@
 
-array/hashmap/two_pointer_and_sliding_window/priority_queue/prefix_sum
+array/hashmap
+two_pointer/sliding_window/priority_queue/prefix_sum
 linked_list/stack_queue
 graph/tree
 
