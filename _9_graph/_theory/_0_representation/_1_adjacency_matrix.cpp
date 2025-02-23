@@ -6,7 +6,7 @@ int main()
     int n, m;
     cin >> n >> m;
     // adjacency matrix for undirected graph
-    // time complexity: O(n) , space complexity: O(n^2
+    // time complexity: O(n) , space complexity: O(n^2)
     int adj[n+1][n+1];
     for(int i = 0; i < m; i++)
     {

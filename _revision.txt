@@ -1,6 +1,7 @@
 
 1. arrays/linked_list/stack_queue/techniques
-2. graph/tree
+2. tree/graph
+
 3. binary_search/sorting
 4. backtracking/dp
 5. greedy/strings/maths
