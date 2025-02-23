@@ -1,13 +1,9 @@
 
-array/hashmap
-two_pointer/sliding_window/priority_queue/prefix_sum
-linked_list/stack_queue
-graph/tree
+1. arrays/linked_list/stack_queue/techniques
+2. graph/tree
+3. binary_search/sorting
+4. backtracking/dp
+5. greedy/strings/maths
 
-binary_search/sorting
-recursion/backtracking/dp
-greedy/strings
 
-trie/maths
-segment_tree
 
