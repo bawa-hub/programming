@@ -13,6 +13,7 @@ https://leetcode.com/discuss/interview-experience/6414650/amazon-sde-1-interview
 https://leetcode.com/discuss/interview-experience/6436797/supermoney-sde3-banglore-january-2025-passed
 
 # google
+https://leetcode.com/discuss/interview-question/6469509/google-latest-interview-experiences-a-curated-organised-collection
 https://leetcode.com/discuss/interview-experience/1879225/Google-L3or-L4-(L3-passed)
 https://leetcode.com/discuss/interview-experience/1895002/Google-L3-or-L4
 https://leetcode.com/discuss/interview-experience/1900084/Google-L4-or-Bangalore-or-Reject

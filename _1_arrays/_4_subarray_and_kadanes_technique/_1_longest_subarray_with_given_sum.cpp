@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/codestudio/problems/longest-subarray-with-sum-k_6682399
+// https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809
 
 #include <bits/stdc++.h>
 using namespace std;
