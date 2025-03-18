@@ -24,3 +24,5 @@
 24. https://leetcode.com/problems/most-profitable-path-in-a-tree
 25. https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum
 26. https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray
+27. https://leetcode.com/problems/length-of-longest-fibonacci-subsequence
+28. https://leetcode.com/problems/shortest-common-supersequence
