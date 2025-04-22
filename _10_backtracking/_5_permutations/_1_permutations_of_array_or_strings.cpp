@@ -4,7 +4,7 @@
 // https://www.geeksforgeeks.org/permutations-and-combinations/
 // Selecting the data or objects from a certain group is said to be permutation
 // number of ways to pick r things out of n different things in a specific order and replacement is not allowed 
-// total permutations == nPr = n!/(n-r)! (n factorial)
+// total permutations == nPr = n!/(n-r)! 
 
 
 #include <bits/stdc++.h>
@@ -21,13 +21,19 @@ private:
             ans.push_back(ds);
             return;
         }
+
         for (int i = 0; i < nums.size(); i++)
         {
             if (!freq[i])
             {
+                // pick
                 ds.push_back(nums[i]);
                 freq[i] = 1;
+
+                // explore
                 recurPermute(ds, nums, ans, freq);
+
+                // backtrack
                 freq[i] = 0;
                 ds.pop_back();
             }
@@ -60,6 +66,7 @@ private:
             ans.push_back(nums);
             return;
         }
+        
         for (int i = index; i < nums.size(); i++)
         {
             swap(nums[index], nums[i]);
