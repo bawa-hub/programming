@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/palindrome-partitioning/
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 

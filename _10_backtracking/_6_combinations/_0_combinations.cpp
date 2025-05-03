@@ -7,6 +7,33 @@
 // Combination Formula is used to choose ‘r’ components out of a total number of ‘n’ components, and is given by:
 // nCr = n!/r!(n-r)!
 
+// chatgpt
+class Solution {
+public:
+    vector<vector<int>> result;
+    
+    void backtrack(int start, int n, int k, vector<int>& comb) {
+        // ✅ Base Case: combination of size k
+        if (comb.size() == k) {
+            result.push_back(comb);
+            return;
+        }
+
+        for (int i = start; i <= n; ++i) {
+            comb.push_back(i);                    // choose
+            backtrack(i + 1, n, k, comb);         // explore
+            comb.pop_back();                      // un-choose (backtrack)
+        }
+    }
+
+    vector<vector<int>> combine(int n, int k) {
+        vector<int> comb;
+        backtrack(1, n, k, comb);
+        return result;
+    }
+};
+
+
 // recursive
 class Solution
 {

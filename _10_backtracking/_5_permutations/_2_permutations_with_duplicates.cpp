@@ -1,39 +1,45 @@
 // https://leetcode.com/problems/permutations-ii/
 
+#include <vector>
+using namespace std;
+
 class Solution
 {
-private:
-    void dfs(vector<int> &nums, vector<bool> &used, vector<int> &list, vector<vector<int>> &res)
+public:
+    void backtrack(vector<int> &nums, vector<bool> &used, vector<int> &path, vector<vector<int>> &result)
     {
-        if (list.size() == nums.size())
+        if (path.size() == nums.size())
         {
-            res.push_back(list);
+            result.push_back(path);
             return;
         }
-        for (int i = 0; i < nums.size(); i++)
+
+        for (int i = 0; i < nums.size(); ++i)
         {
             if (used[i])
                 continue;
-            if (i > 0 && nums[i - 1] == nums[i] && !used[i - 1])
+
+            // 🚨 Skip duplicate numbers at the same level
+            if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1])
                 continue;
+
             used[i] = true;
-            list.push_back(nums[i]);
-            dfs(nums, used, list, res);
+            path.push_back(nums[i]);
+
+            backtrack(nums, used, path, result);
+
+            path.pop_back();
             used[i] = false;
-            list.pop_back();
         }
     }
 
-public:
     vector<vector<int>> permuteUnique(vector<int> &nums)
     {
-        vector<vector<int>> res;
-        if (nums.empty())
-            return res;
+        sort(nums.begin(), nums.end()); // 🔑 sort to detect duplicates
+        vector<vector<int>> result;
+        vector<int> path;
         vector<bool> used(nums.size(), false);
-        vector<int> list;
-        sort(nums.begin(), nums.end());
-        dfs(nums, used, list, res);
-        return res;
+        backtrack(nums, used, path, result);
+        return result;
     }
 };
