@@ -1,1 +1,0 @@
-// https://leetcode.ca/2016-11-10-346-Moving-Average-from-Data-Stream/

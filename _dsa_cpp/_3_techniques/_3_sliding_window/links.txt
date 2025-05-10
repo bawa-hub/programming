@@ -1,0 +1,16 @@
+https://www.youtube.com/playlist?list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj
+https://leetcode.com/problems/minimum-window-substring/solutions/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems/
+https://leetcode.com/tag/sliding-window/discuss/490184/Sliding-Window-Understanding-the-pattern.-Resources
+https://leetcode.com/discuss/study-guide/1773891/Sliding-Window-Technique-and-Question-Bank
+https://leetcode.com/discuss/general-discussion/1122776/summary-of-sliding-window-patterns-for-subarray-substring
+https://leetcode.com/discuss/general-discussion/1061548/topic-1-sliding-window-conquering-approach
+https://leetcode.com/discuss/general-discussion/490184/sliding-window-understanding-the-pattern-resources
+https://leetcode.com/problems/find-all-anagrams-in-a-string/solutions/92007/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem/
+https://blog.reachsumit.com/posts/2020/10/leetcode-sliding-window/
+https://medium.com/@timpark0807/leetcode-is-easy-sliding-window-c44c11cc33e1
+https://www.geeksforgeeks.org/window-sliding-technique/
+https://leetcode.com/problems/minimum-window-substring/solutions/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems/
+https://leetcode.com/problems/subarrays-with-k-different-integers/solutions/235002/one-code-template-to-solve-all-of-these-problems/
+https://leetcode.com/tag/two-pointers/discuss/1122776/Summary-of-Sliding-Window-Patterns-for-Subarray-Substring
+https://leetcode.com/tag/sliding-window/discuss/1139776/Median-of-Online-Data-%2B-Sliding-Window-Max-%2B-Sliding-Window-median
+https://leetcode.com/problems/find-all-anagrams-in-a-string/solutions/92007/Sliding-Window-algorithm-template-to-solve-all-the-Leetcode-substring-search-problem/

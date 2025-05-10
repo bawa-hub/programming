@@ -1,2 +1,8 @@
-https://chatgpt.com/c/14fb2fb7-c225-4864-b52c-89e04f40399c
 https://www.programiz.com/java-programming
+
+# Collectio Framework
+https://www.geeksforgeeks.org/collections-in-java-2/
+
+Multithreading:
+https://www.youtube.com/watch?v=091vJWjl1A4&list=PLA3GkZPtsafYhmrZR_1nmQqfFSnkftOud
+https://www.youtube.com/watch?v=4aYvLz4E1Ts&pp=ygUfY29tcGxldGUgbXVsdGl0aHJlYWRpbmcgaW4gamF2YQ%3D%3D
