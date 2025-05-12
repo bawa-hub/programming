@@ -1,4 +1,5 @@
 https://www.programiz.com/java-programming
+https://www.geeksforgeeks.org/java/
 
 # Collectio Framework
 https://www.geeksforgeeks.org/collections-in-java-2/
