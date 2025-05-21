@@ -1,4 +1,4 @@
-package _1_dsa_cpp._4_linked_list._1_basics._1_linked_list;
+package _2_dsa_java._4_linked_list._1_basics;
 class Node {
     int data;   
     Node next;    
@@ -173,18 +173,18 @@ public class LinkedList {
         int[] arr = {3, 5, 8, 7};
         Node head = convertArr2LL(arr);
 
-        // System.out.println(lengthOfLinkedList(head));
-        // System.out.println(searchNode(head, 8));
+        System.out.println(lengthOfLinkedList(head));
+        System.out.println(searchNode(head, 8));
 
-        // head = deleteHeadNode(head);
-        // head = deleteLastNode(head);
-        // head = deleteKthNode(head, 5);
-        // head = deleteNodeWithValue(head, 3);
+        head = deleteHeadNode(head);
+        head = deleteLastNode(head);
+        head = deleteKthNode(head, 5);
+        head = deleteNodeWithValue(head, 3);
 
-        // head = insertAtStart(head, 1);
-        // head = insertAtLast(head, 9);
-        // head = insertAtPosition(head, 100,3);
-        // head = insertBeforeNode(head, 100, 5);
+        head = insertAtStart(head, 1);
+        head = insertAtLast(head, 9);
+        head = insertAtPosition(head, 100,3);
+        head = insertBeforeNode(head, 100, 5);
 
         traverse(head);
     }

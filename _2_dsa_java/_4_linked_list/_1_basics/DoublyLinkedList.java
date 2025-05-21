@@ -1,4 +1,4 @@
-package _1_dsa_cpp._4_linked_list._1_basics._2_doubly_linked_list;
+package _2_dsa_java._4_linked_list._1_basics;
 public class DoublyLinkedList {
     public static class Node {
         public int data;       
@@ -185,10 +185,10 @@ public class DoublyLinkedList {
         int[] arr = {12, 5, 6, 8, 4};
         Node head = convertArr2DLL(arr);
 
-        // head = deleteHead(head);
-        // head = deleteTail(head);
-        // head = deleteKthElement(head, 2);
-        // deleteGivenNode(head.next);
+        head = deleteHead(head);
+        head = deleteTail(head);
+        head = deleteKthElement(head, 2);
+        deleteGivenNode(head.next);
         
 
         traverse(head);

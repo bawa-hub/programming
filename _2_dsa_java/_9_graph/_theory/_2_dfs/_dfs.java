@@ -40,6 +40,8 @@ public class _dfs {
         Solution obj = new Solution();
         List<Integer> ans = obj.dfsOfGraph(n, adj);
         printAns(ans);
+
+        sc.close();
     }
 }
 
