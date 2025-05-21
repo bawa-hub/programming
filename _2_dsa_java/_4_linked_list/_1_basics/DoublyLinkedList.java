@@ -192,5 +192,10 @@ public class DoublyLinkedList {
         
 
         traverse(head);
+
+        insertBeforeTail(head,0);
+        insertBeforeNode(head, 0);
+        insertAtTail(head, 0);
+        insertBeforeKthElement(head, 0, 0);
     }
 }

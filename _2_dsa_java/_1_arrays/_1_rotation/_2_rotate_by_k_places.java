@@ -5,7 +5,7 @@ public class _2_rotate_by_k_places {
 }
 
 // brute force
-public class RotateArrayBruteRight {
+class RotateArrayBruteRight {
     public static void rotateRight(int[] arr, int k) {
         int n = arr.length;
         if (n == 0) return;
@@ -37,7 +37,7 @@ public class RotateArrayBruteRight {
 }
 
 // optimized revrsal algo
-public class RotateArrayReverseRight {
+ class RotateArrayReverseRight {
     public static void reverse(int[] arr, int start, int end) {
         while (start < end) {
             int tmp = arr[start];
@@ -68,7 +68,7 @@ public class RotateArrayReverseRight {
 
 
 // brute force
-public class RotateArrayBruteLeft {
+ class RotateArrayBruteLeft {
     public static void rotateLeft(int[] arr, int k) {
         int n = arr.length;
         if (n == 0) return;
@@ -100,7 +100,7 @@ public class RotateArrayBruteLeft {
 }
 
 // optimize reversal algo
-public class RotateArrayReverseLeft {
+ class RotateArrayReverseLeft {
     public static void reverse(int[] arr, int start, int end) {
         while (start < end) {
             int tmp = arr[start];
