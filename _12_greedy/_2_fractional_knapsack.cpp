@@ -1,6 +1,8 @@
 // https://practice.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
 
 using namespace std;
 
@@ -51,7 +53,7 @@ public:
 int main()
 {
     int n = 3, weight = 50;
-    Item arr[n] = {{100, 20}, {60, 10}, {120, 30}};
+    Item arr[3] = {{100, 20}, {60, 10}, {120, 30}};
     Solution obj;
     double ans = obj.fractionalKnapsack(weight, arr, n);
     cout << "The maximum value is " << setprecision(2) << fixed << ans;
