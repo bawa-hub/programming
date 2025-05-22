@@ -10,9 +10,8 @@
 2. hashmap/priority_queue/prefix_sum
 3. strings
 4. linked_list/stack_queue
-5. graph/tree
+5. graph/tree/trie
 6. binary_search/sorting/greedy
-7. backtracking/dp
-8. trie/maths
+7. backtracking/dp/maths
 
 
