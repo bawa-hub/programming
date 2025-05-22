@@ -20,6 +20,7 @@ https://leetcode.com/discuss/study-guide/1050391/Must-do-Dynamic-programming-Pro
 https://leetcode.com/discuss/study-guide/475924/My-experience-and-notes-for-learning-DP
 https://leetcode.com/discuss/interview-question/1986802/Dynamic-Programming
 https://leetcode.com/problems/house-robber/solutions/156523/From-good-to-great.-How-to-approach-most-of-DP-problems
+https://leetcode.com/discuss/post/1437879/dynamic-programming-patterns-by-badgujja-lh0i/
 
 
 https://www.codechef.com/wiki/tutorial-dynamic-programming#Practice_Problems

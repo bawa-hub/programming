@@ -16,3 +16,4 @@ https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-
 https://leetcode.com/discuss/study-guide/2371234/An-opinionated-guide-to-binary-search-(comprehensive-resource-with-a-bulletproof-template)
 https://leetcode.com/discuss/study-guide/3444552/binary-search-on-answer-template-generic-template
 https://leetcode.com/discuss/study-guide/691825/Binary-Search-for-Beginners-Problems-or-Patterns-or-Sample-solutions
+https://leetcode.com/discuss/post/3444552/binary-search-on-answer-template-generic-ysn4/

@@ -5,3 +5,14 @@
 21/07 - 03/08: arrays/techniques
 04/08 - 17/08: linked_list/stack_queue
 
+
+1. arrays/two_pointer/sliding_window
+2. hashmap/priority_queue/prefix_sum
+3. strings
+4. linked_list/stack_queue
+5. graph/tree
+6. binary_search/sorting/greedy
+7. backtracking/dp
+8. trie/maths
+
+
