@@ -1,1 +1,0 @@
-// https://leetcode.ca/all/666.html
