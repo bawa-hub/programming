@@ -1,18 +1,4 @@
-# microsoft sde 2
-https://leetcode.com/discuss/interview-question/6403987/microsoft-sde-2-recent-questions-2025-consolidated
-https://leetcode.com/discuss/interview-experience/6414819/microsoft-sde-1-l60-hyderabad
-
-# meta
-https://leetcode.com/discuss/interview-question/6410823/meta-interview-e5-us
-
-
-# amazon
-https://leetcode.com/discuss/interview-experience/6414650/amazon-sde-1-interview-experience-february-2025-offer-received
-
-# super.money
-https://leetcode.com/discuss/interview-experience/6436797/supermoney-sde3-banglore-january-2025-passed
-
-# google
+https://leetcode.com/discuss/post/6772984/google-l4-hyderabad-dsmle-interviews-exp-kajt/
 https://leetcode.com/discuss/interview-question/6469509/google-latest-interview-experiences-a-curated-organised-collection
 https://leetcode.com/discuss/interview-experience/1879225/Google-L3or-L4-(L3-passed)
 https://leetcode.com/discuss/interview-experience/1895002/Google-L3-or-L4
