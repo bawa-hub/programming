@@ -3,7 +3,9 @@
 // https://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent/
 
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
 // recursive/memoization
