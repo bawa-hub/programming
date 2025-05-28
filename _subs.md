@@ -1,8 +1,12 @@
+Data Structures:
+arrays/strings
+stack_queue/linked_list
+graph/tree
+
+
 Algorithms:
 dp/backtracking
 binary_search/sorting/greedy
+techniques
 
-Data Structures:
-graph/tree
-arrays/stack_queue
 

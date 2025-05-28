@@ -16,8 +16,7 @@ public:
             adj[it[1]].push_back(it[0]);
         }
 
-        // A dist array of size N initialised with a large number to
-        // indicate that initially all the nodes are untraversed.
+        // A dist array of size N initialised with a large number to indicate that initially all the nodes are untraversed.
         int dist[N];
         for (int i = 0; i < N; i++)
             dist[i] = 1e9;
