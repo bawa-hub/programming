@@ -215,3 +215,4 @@ https://leetcode.com/discuss/interview-question/4749105/Google-or-Phone-Screenin
 https://leetcode.com/discuss/interview-question/4970761/Google-or-L3-or-All-rounds
 https://leetcode.com/discuss/interview-question/5131934/google-screening-question
 https://leetcode.com/discuss/interview-question/2006734/Google-or-Onsite-or-L4-or-Rejected/1378407
+https://leetcode.com/discuss/post/6789894/l4-google-question-by-anonymous_user-pork/
