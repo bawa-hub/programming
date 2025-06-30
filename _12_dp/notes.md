@@ -19,7 +19,7 @@ d). memoize it -> look at changing parameter and make dp array (1d if one param 
 # Recursive (required to base case) to iterative (base case to required) conversion
 base case to up == bottom up approach
 a). Copy base case
-b). Express all states in for loop 
+b). Express all states in for loop in opposite fashion as in recursive approach
 note: if 2 states then nested for loop and accordingly.
 c). copy the recurrence and write
 
