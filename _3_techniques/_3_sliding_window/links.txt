@@ -1,3 +1,5 @@
+# template - https://leetcode.com/problems/frequency-of-the-most-frequent-element/solutions/1175088/c-maximum-sliding-window-cheatsheet-template/
+
 https://www.youtube.com/playlist?list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj
 https://leetcode.com/problems/minimum-window-substring/solutions/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems/
 https://leetcode.com/tag/sliding-window/discuss/490184/Sliding-Window-Understanding-the-pattern.-Resources

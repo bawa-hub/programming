@@ -1,28 +1,32 @@
-#include <bits/stdc++.h>
+// https://leetcode.com/problems/binary-tree-preorder-traversal/
+// https://leetcode.com/problems/binary-tree-level-order-traversal/
+// https://leetcode.com/problems/binary-tree-level-order-traversal-ii/
+// https://leetcode.com/problems/n-ary-tree-level-order-traversal/
+// https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+// https://leetcode.com/problems/n-ary-tree-postorder-traversal/description/
+
+#include <iostream>
+#include <queue>
+#include <stack>
 using namespace std;
 
-struct Node
-{
+class Node {
+    public:
     int data;
-    struct Node *left, *right;
+    Node *left, *right;
+
+    Node(int data) {
+        this->data = data;
+        left = right = nullptr;
+    }
 };
 
-// create node
-Node *createNode(int data)
-{
-    Node *temp = new Node; // cpp style of struct
-    // Node *temp = (struct Node *)malloc(sizeof(struct Node));  // dynamically allocate memory
-    if (!temp)
-    {
-        cout << "Memory error\n";
-        return NULL;
-    }
-    temp->data = data;
-    temp->left = temp->right = NULL;
-    return temp;
+Node* createNode(int data) {
+    return new Node(data);
 }
 
-// insert node
+
+/*************************************************  INSERT NODE ***************************************/
 Node *insertNode(Node *root, int data)
 {
     if (root == NULL)
@@ -58,38 +62,151 @@ Node *insertNode(Node *root, int data)
     return root;
 }
 
-// dfs
-void printPostorder(struct Node *node)
+
+
+/*************************************************  DFS ***************************************/
+
+void postorder(Node *node)
 {
     if (node == NULL)
         return;
 
     // first recur on left subtree
-    printPostorder(node->left);
+    postorder(node->left);
 
     // then recur on right subtree
-    printPostorder(node->right);
+    postorder(node->right);
 
     // now deal with the node
     cout << node->data << " ";
 }
+// Time Complexity: O(N).
+// Reason: We are traversing N nodes and every node is visited exactly once.
+// Space Complexity: O(N)
+// Reason: Space is needed for the recursion stack. In the worst case (skewed tree), space complexity can be O(N).
 
-void printInorder(struct Node *node)
+// using single stack
+vector<int> portorder_iterative_ss(Node *cur)
+{
+
+    vector<int> postOrder;
+    if (cur == NULL)
+        return postOrder;
+
+    stack<Node *> st;
+    while (cur != NULL || !st.empty())
+    {
+
+        if (cur != NULL)
+        {
+            st.push(cur);
+            cur = cur->left;
+        }
+        else
+        {
+            Node *temp = st.top()->right;
+            if (temp == NULL)
+            {
+                temp = st.top();
+                st.pop();
+                postOrder.push_back(temp->data);
+                while (!st.empty() && temp == st.top()->right)
+                {
+                    temp = st.top();
+                    st.pop();
+                    postOrder.push_back(temp->data);
+                }
+            }
+            else
+                cur = temp;
+        }
+    }
+    return postOrder;
+}
+
+// Time Complexity: O(N).
+// Space Complexity: O(N)
+
+// using two stack
+vector<int> portorder_iterative_ts(Node *curr)
+{
+
+    vector<int> postOrder;
+    if (curr == NULL)
+        return postOrder;
+
+    stack<Node *> s1;
+    stack<Node *> s2;
+    s1.push(curr);
+    while (!s1.empty())
+    {
+        curr = s1.top();
+        s1.pop();
+        s2.push(curr);
+        if (curr->left != NULL)
+            s1.push(curr->left);
+        if (curr->right != NULL)
+            s1.push(curr->right);
+    }
+    while (!s2.empty())
+    {
+        postOrder.push_back(s2.top()->data);
+        s2.pop();
+    }
+    return postOrder;
+}
+
+// Time Complexity: O(N).
+// Reason: We are traversing N nodes and every node is visited exactly once.
+// Space Complexity: O(N+N)
+
+void inorder(Node *node)
 {
     if (node == NULL)
         return;
 
     /* first recur on left child */
-    printInorder(node->left);
+    inorder(node->left);
 
     /* then print the data of node */
     cout << node->data << " ";
 
     /* now recur on right child */
-    printInorder(node->right);
+    inorder(node->right);
+}
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+
+vector<int> inorder_iterative(Node *curr)
+{
+    vector<int> inOrder;
+    stack<Node *> s;
+    while (true)
+    {
+        if (curr != NULL)
+        {
+            s.push(curr);
+            curr = curr->left;
+        }
+        else
+        {
+            if (s.empty())
+                break;
+            curr = s.top();
+            inOrder.push_back(curr->data);
+            s.pop();
+            curr = curr->right;
+        }
+    }
+    return inOrder;
 }
 
-void printPreorder(struct Node *node)
+// Time Complexity: O(N).
+// Reason: We are traversing N nodes and every node is visited exactly once.
+// Space Complexity: O(N)
+// Reason: In the worst case (a tree with just left children), the space complexity will be O(N).
+
+void preorder(Node *node)
 {
     if (node == NULL)
         return;
@@ -98,13 +215,48 @@ void printPreorder(struct Node *node)
     cout << node->data << " ";
 
     /* then recur on left subtree */
-    printPreorder(node->left);
+    preorder(node->left);
 
     /* now recur on right subtree */
-    printPreorder(node->right);
+    preorder(node->right);
 }
 
-// bfs or level order
+// Time Complexity: O(N).
+// Reason: We are traversing N nodes and every node is visited exactly once.
+// Space Complexity: O(N)
+// Reason: Space is needed for the recursion stack. In the worst case (skewed tree), space complexity can be O(N).
+
+vector<int> preorder_iterative(Node *curr)
+{
+    vector<int> preOrder;
+    if (curr == NULL)
+        return preOrder;
+
+    stack<Node *> s;
+    s.push(curr);
+
+    while (!s.empty())
+    {
+        Node *topNode = s.top();
+        preOrder.push_back(topNode->data);
+        s.pop();
+        // since preorder is root left right and stack is LIFO, so first put right as left will be at top
+        if (topNode->right != NULL)
+            s.push(topNode->right);
+        if (topNode->left != NULL)
+            s.push(topNode->left);
+    }
+    return preOrder;
+}
+
+// Time Complexity: O(N).
+// Reason: We are traversing N nodes and every node is visited exactly once.
+// Space Complexity: O(N)
+// Reason: In the worst case, (a tree with every node having a single right child and left-subtree), the space complexity can be considered as O(N).
+
+
+
+/*************************************************  BFS ***************************************/
 void printLevelOrder(Node *root)
 {
     // Base Case
@@ -133,26 +285,102 @@ void printLevelOrder(Node *root)
             q.push(node->right);
     }
 }
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+
+/*************************************************  ZIGZAG TRAVERSAL ***************************************/
+
+vector<vector<int>> zigzagLevelOrder(Node *root)
+{
+    vector<vector<int>> result;
+    if (root == NULL)
+    {
+        return result;
+    }
+
+    queue<Node *> nodesQueue;
+    nodesQueue.push(root);
+    bool leftToRight = true;
+
+    while (!nodesQueue.empty())
+    {
+        int size = nodesQueue.size();
+        vector<int> row(size);
+        for (int i = 0; i < size; i++)
+        {
+            Node *node = nodesQueue.front();
+            nodesQueue.pop();
+
+            // find position to fill node's value
+            int index = (leftToRight) ? i : (size - 1 - i);
+
+            row[index] = node->data;
+            if (node->left)
+            {
+                nodesQueue.push(node->left);
+            }
+            if (node->right)
+            {
+                nodesQueue.push(node->right);
+            }
+        }
+        // after this level
+        leftToRight = !leftToRight;
+        result.push_back(row);
+    }
+    return result;
+}
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+
+/*************************************************  VERTICAL ORDER TRAVERSAL ***************************************/
+/*************************************************  BOUNDARY ORDER TRAVERSAL ***************************************/
+/*************************************************  TOP VIEW ***************************************/
+/*************************************************   BOTTOM VIEW ***************************************/
+/*************************************************   LEFT VIEW ***************************************/
+/*************************************************   RIGHT VIEW ***************************************/
+
+
+
+
+
+
+
+
+
 
 int main()
 {
-    struct Node *root = createNode(1);
+
+    Node* root = createNode(1);
     root->left = createNode(2);
     root->right = createNode(3);
     root->left->left = createNode(4);
     root->left->right = createNode(5);
 
-    cout << "\nPreorder traversal of binary tree is \n";
-    printPreorder(root);
+    // cout << "\nPreorder traversal of binary tree is \n";
+    // preorder(root);
 
-    cout << "\nInorder traversal of binary tree is \n";
-    printInorder(root);
+    // cout << "\nInorder traversal of binary tree is \n";
+    // inorder(root);
 
-    cout << "\nPostorder traversal of binary tree is \n";
-    printPostorder(root);
+    // cout << "\nPostorder traversal of binary tree is \n";
+    // postorder(root);
 
-    cout << "Level Order traversal of binary tree is \n";
-    printLevelOrder(root);
+    // cout << "\nLevel Order traversal of binary tree is \n";
+    // printLevelOrder(root);
+
+    // vector<vector<int>> ans;
+    // ans = zigzagLevelOrder(root);
+    // cout << "\nZig Zag Traversal of Binary Tree" << endl;
+    // for (int i = 0; i < ans.size(); i++)
+    // {
+    //     for (int j = 0; j < ans[i].size(); j++)
+    //     {
+    //         cout << ans[i][j] << " ";
+    //     }
+    //     cout << endl;
+    // }
 
     return 0;
 }
