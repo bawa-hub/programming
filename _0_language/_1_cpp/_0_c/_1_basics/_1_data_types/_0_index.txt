@@ -1,0 +1,6 @@
+Data types in C --
+
+Basic data types - int, char, float, double, bool
+Derived data types - array, pointer, structure, union
+Enumeration data types - enum
+Void data type - void

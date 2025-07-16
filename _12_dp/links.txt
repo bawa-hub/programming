@@ -1,0 +1,36 @@
+striver - https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY
+
+https://leetcode.com/discuss/study-guide/1490172/Dynamic-programming-is-simple
+https://leetcode.com/discuss/study-guide/1437879/Dynamic-Programming-Patterns
+https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
+https://leetcode.com/discuss/general-discussion/662866/DP-for-Beginners-Problems-or-Patterns-or-Sample-Solutions
+https://leetcode.com/discuss/study-guide/1000929/solved-all-dynamic-programming-dp-problems-in-7-months
+
+
+
+patterns: https://docs.google.com/document/d/16ad4qAlNKZGkYpaUutIYuA6l-YLyOm2AIYruNsfetJM/edit
+
+https://leetcode.com/discuss/study-guide/3705599/the-ultimate-dynamic-programming-patterns-and-roadmap
+https://leetcode.com/discuss/study-guide/1200320/Thief-with-a-knapsack-a-series-of-crimes.
+https://leetcode.com/discuss/general-discussion/712010/the-art-of-dynamic-programming-an-intuitive-approach-from-apprentice-to-master/709225
+https://leetcode.com/discuss/interview-question/2705056/Starting-your-DP-journey-Do-this-(Part-1)
+https://leetcode.com/discuss/interview-question/2746513/Starting-your-DP-journey-Do-This-Part-2
+https://leetcode.com/discuss/study-guide/651719/How-to-solve-DP-String-Template-and-4-Steps-to-be-followed.
+https://leetcode.com/discuss/study-guide/1050391/Must-do-Dynamic-programming-Problems-Category-wise
+https://leetcode.com/discuss/study-guide/475924/My-experience-and-notes-for-learning-DP
+https://leetcode.com/discuss/interview-question/1986802/Dynamic-Programming
+https://leetcode.com/problems/house-robber/solutions/156523/From-good-to-great.-How-to-approach-most-of-DP-problems
+https://leetcode.com/discuss/post/1437879/dynamic-programming-patterns-by-badgujja-lh0i/
+
+
+https://www.codechef.com/wiki/tutorial-dynamic-programming#Practice_Problems
+https://www.quora.com/How-does-one-become-better-at-dynamic-programming-problems-for-competitive-programming
+https://codeforces.com/blog/entry/67679
+https://www.topcoder.com/thrive/articles/Dynamic%20Programming:%20From%20Novice%20to%20Advanced
+https://docs.google.com/spreadsheets/d/1pEzcVLdj7T4fv5mrNhsOvffBnsUH07GZk7c2jD-adE0/edit#gid=0
+https://www.geeksforgeeks.org/dynamic-programming/
+https://cses.fi/problemset/
+https://atcoder.jp/contests/dp
+https://www.hackerrank.com/topics/dynamic-programming
+https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/tutorial/
+

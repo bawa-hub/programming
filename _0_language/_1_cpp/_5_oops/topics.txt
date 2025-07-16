@@ -1,0 +1,12 @@
+class and object
+size of empty class 
+padding and greedy alignment
+static and dynamic allocation
+access modifiers
+getters and setters
+constructor and this
+copy constructor
+shallow and deep copy
+assignment operator
+destructor
+static keyword
