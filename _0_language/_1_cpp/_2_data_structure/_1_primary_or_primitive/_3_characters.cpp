@@ -1,5 +1,6 @@
 // https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
 // ascii characters https://www.ascii-code.com/
+// https://www.programiz.com/cpp-programming/char-type
 
 #include <iostream>
 using namespace std;

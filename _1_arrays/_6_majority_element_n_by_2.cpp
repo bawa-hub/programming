@@ -1,6 +1,7 @@
 
 // https://leetcode.com/problems/majority-element/
 
+// moore voting algorithm
 class Solution
 {
 public:

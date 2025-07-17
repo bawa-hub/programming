@@ -1,13 +1,25 @@
 // https://en.cppreference.com/w/c/language/type
 // https://en.cppreference.com/w/cpp/language/type
 
-// integer
-// character
-// boolean
-// floating point
-// double floating point
-// void
-// wide character
+// integer - int - 2/4 bytes
+// floating point - float - 4 bytes
+// double floating point - double - 8 bytes
+// character - char - 1 byte
+// wide character - wchar_t - 2 bytes
+// boolean - bool - 1 byte
+// empty - void - 0
+
+// There are four type modifiers in C++:
+    // https://www.programiz.com/cpp-programming/type-modifiers
+
+    // short
+    // long
+    // signed
+    // unsigned
+
+
+
+
 
 // ranges roughly
 // -10^9 < int < 10^9
