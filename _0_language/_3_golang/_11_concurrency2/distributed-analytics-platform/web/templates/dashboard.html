@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #4a5568;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .metric:last-child {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            font-weight: 500;
+            color: #2d3748;
+        }
+
+        .metric-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .status.healthy {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+
+        .status.unhealthy {
+            background: #fed7d7;
+            color: #742a2a;
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .chart {
+            height: 300px;
+            background: #f7fafc;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a0aec0;
+            font-size: 1.1rem;
+        }
+
+        .controls {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .button:hover {
+            background: #5a67d8;
+        }
+
+        .button.secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+
+        .button.secondary:hover {
+            background: #cbd5e0;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #4a5568;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Analytics Dashboard</h1>
+            <p>Real-time analytics and monitoring</p>
+        </div>
+
+        <div class="dashboard">
+            <div class="card">
+                <h3>📊 System Status</h3>
+                <div class="metric">
+                    <span class="metric-label">Analytics Engine</span>
+                    <span class="status healthy" id="engine-status">Healthy</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Workers</span>
+                    <span class="metric-value" id="worker-count">10</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Task Queue</span>
+                    <span class="metric-value" id="task-queue">0</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Events Processed</span>
+                    <span class="metric-value" id="events-processed">0</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>⚡ Performance</h3>
+                <div class="metric">
+                    <span class="metric-label">Throughput</span>
+                    <span class="metric-value" id="throughput">0 events/sec</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Latency</span>
+                    <span class="metric-value" id="latency">0ms</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Error Rate</span>
+                    <span class="metric-value" id="error-rate">0%</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Memory Usage</span>
+                    <span class="metric-value" id="memory-usage">0 MB</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>🔧 Circuit Breaker</h3>
+                <div class="metric">
+                    <span class="metric-label">Status</span>
+                    <span class="status healthy" id="cb-status">Closed</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Requests</span>
+                    <span class="metric-value" id="cb-requests">0</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Successes</span>
+                    <span class="metric-value" id="cb-successes">0</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Failures</span>
+                    <span class="metric-value" id="cb-failures">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3>📈 Real-time Metrics</h3>
+            <div class="chart" id="metrics-chart">
+                Real-time metrics chart will appear here
+            </div>
+        </div>
+
+        <div class="controls">
+            <h3>🎮 Test Controls</h3>
+            <div class="input-group">
+                <label for="event-type">Event Type</label>
+                <select id="event-type">
+                    <option value="page_view">Page View</option>
+                    <option value="click">Click</option>
+                    <option value="purchase">Purchase</option>
+                    <option value="signup">Signup</option>
+                    <option value="login">Login</option>
+                    <option value="search">Search</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="event-count">Number of Events</label>
+                <input type="number" id="event-count" value="100" min="1" max="10000">
+            </div>
+            <div class="input-group">
+                <label for="event-rate">Events per Second</label>
+                <input type="number" id="event-rate" value="10" min="1" max="1000">
+            </div>
+            <button class="button" onclick="sendEvents()">Send Events</button>
+            <button class="button secondary" onclick="refreshStats()">Refresh Stats</button>
+            <button class="button secondary" onclick="clearStats()">Clear Stats</button>
+        </div>
+
+        <div class="footer">
+            <p>Built with ❤️ and Go concurrency mastery</p>
+        </div>
+    </div>
+
+    <script>
+        let statsInterval;
+        let eventCount = 0;
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            refreshStats();
+            statsInterval = setInterval(refreshStats, 5000); // Refresh every 5 seconds
+        });
+
+        // Refresh statistics
+        async function refreshStats() {
+            try {
+                const response = await fetch('/api/v1/analytics/stats');
+                const data = await response.json();
+                
+                if (data.analytics) {
+                    updateStats(data.analytics);
+                }
+            } catch (error) {
+                console.error('Failed to fetch stats:', error);
+            }
+        }
+
+        // Update statistics display
+        function updateStats(stats) {
+            document.getElementById('worker-count').textContent = stats.workers || 0;
+            document.getElementById('task-queue').textContent = stats.task_queue || 0;
+            document.getElementById('events-processed').textContent = stats.events || 0;
+            
+            // Update circuit breaker status
+            const cbStatus = document.getElementById('cb-status');
+            const cbStats = stats.circuit_breaker;
+            if (cbStats) {
+                cbStatus.textContent = cbStats.state || 'Unknown';
+                cbStatus.className = 'status ' + (cbStats.state === 'closed' ? 'healthy' : 'unhealthy');
+                document.getElementById('cb-requests').textContent = cbStats.requests || 0;
+                document.getElementById('cb-successes').textContent = cbStats.total_successes || 0;
+                document.getElementById('cb-failures').textContent = cbStats.total_failures || 0;
+            }
+        }
+
+        // Send test events
+        async function sendEvents() {
+            const eventType = document.getElementById('event-type').value;
+            const count = parseInt(document.getElementById('event-count').value);
+            const rate = parseInt(document.getElementById('event-rate').value);
+            
+            try {
+                // Create events
+                const events = [];
+                for (let i = 0; i < count; i++) {
+                    events.push({
+                        type: eventType,
+                        source: 'dashboard',
+                        data: {
+                            page: `/page-${i % 5}`,
+                            user_id: `user-${i % 10}`,
+                            timestamp: new Date().toISOString()
+                        }
+                    });
+                }
+                
+                // Send events
+                const response = await fetch('/api/v1/events/batch', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(events)
+                });
+                
+                if (response.ok) {
+                    eventCount += count;
+                    alert(`Successfully sent ${count} ${eventType} events!`);
+                } else {
+                    throw new Error('Failed to send events');
+                }
+            } catch (error) {
+                console.error('Error sending events:', error);
+                alert('Failed to send events: ' + error.message);
+            }
+        }
+
+        // Clear statistics
+        function clearStats() {
+            eventCount = 0;
+            document.getElementById('events-processed').textContent = '0';
+            document.getElementById('task-queue').textContent = '0';
+        }
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', function() {
+            if (statsInterval) {
+                clearInterval(statsInterval);
+            }
+        });
+    </script>
+</body>
+</html>

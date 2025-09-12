@@ -265,7 +265,7 @@ func main() {
 	// Create context chain
 	chainCtx := context.Background()
 	chainCtx = context.WithValue(chainCtx, "step", "1")
-	chainCtx = context.WithTimeout(chainCtx, 1*time.Second)
+	chainCtx, _ = context.WithTimeout(chainCtx, 1*time.Second)
 	chainCtx = context.WithValue(chainCtx, "step", "2")
 	chainCtx = context.WithValue(chainCtx, "step", "3")
 	
