@@ -36,7 +36,6 @@ const (
 	DELETE
 	CREATE
 	TABLE
-	DATABASE
 	DROP
 	ALTER
 	INDEX
@@ -199,15 +198,6 @@ type CreateTableStatement struct {
 
 func (s *CreateTableStatement) Type() StatementType {
 	return CreateTableStatementType
-}
-
-// CreateDatabaseStatement represents a CREATE DATABASE statement
-type CreateDatabaseStatement struct {
-	Database string
-}
-
-func (s *CreateDatabaseStatement) Type() StatementType {
-	return CreateTableStatementType // Reuse the same type for now
 }
 
 // DropTableStatement represents a DROP TABLE statement
@@ -472,7 +462,13 @@ func (p *Parser) Parse(sql string) (Statement, error) {
 		return nil, fmt.Errorf("tokenization failed: %w", err)
 	}
 	
-	// Debug output removed for cleaner interface
+	// Debug: print tokens for CREATE statements
+	if len(p.tokens) > 0 && p.tokens[0].Type == CREATE {
+		fmt.Printf("Debug: Parsed %d tokens for CREATE statement\n", len(p.tokens))
+		for i, token := range p.tokens {
+			fmt.Printf("  Token %d: Type=%v, Value='%s'\n", i, token.Type, token.Value)
+		}
+	}
 	
 	// Parse the statement
 	return p.parseStatement()
@@ -542,8 +538,6 @@ func (p *Parser) tokenize(sql string) error {
 					token.Type = CREATE
 				case "TABLE":
 					token.Type = TABLE
-				case "DATABASE":
-					token.Type = DATABASE
 				case "DROP":
 					token.Type = DROP
 				case "ALTER":
@@ -559,18 +553,7 @@ func (p *Parser) tokenize(sql string) error {
 				case ",":
 					token.Type = COMMA
 				default:
-					// Check if it's a literal
-					if p.isStringLiteral(part) {
-						token.Type = STRING_LITERAL
-					} else if p.isNumberLiteral(part) {
-						token.Type = NUMBER_LITERAL
-					} else if p.isBooleanLiteral(part) {
-						token.Type = BOOLEAN_LITERAL
-					} else if p.isNullLiteral(part) {
-						token.Type = NULL_LITERAL
-					} else {
-						token.Type = IDENTIFIER
-					}
+					token.Type = IDENTIFIER
 				}
 				p.tokens = append(p.tokens, token)
 			}
@@ -603,8 +586,6 @@ func (p *Parser) tokenize(sql string) error {
 				token.Type = CREATE
 			case "TABLE":
 				token.Type = TABLE
-			case "DATABASE":
-				token.Type = DATABASE
 			case "DROP":
 				token.Type = DROP
 			case "ALTER":
@@ -614,21 +595,173 @@ func (p *Parser) tokenize(sql string) error {
 			case "ON":
 				token.Type = ON
 			default:
-				// Check if it's a literal
-				if p.isStringLiteral(word) {
-					token.Type = STRING_LITERAL
-				} else if p.isNumberLiteral(word) {
-					token.Type = NUMBER_LITERAL
-				} else if p.isBooleanLiteral(word) {
-					token.Type = BOOLEAN_LITERAL
-				} else if p.isNullLiteral(word) {
-					token.Type = NULL_LITERAL
-				} else {
-					token.Type = IDENTIFIER
-				}
+				token.Type = IDENTIFIER
 			}
 			p.tokens = append(p.tokens, token)
 		}
+	}
+	
+	// Add EOF token
+	p.tokens = append(p.tokens, Token{Type: EOF, Value: "", Pos: len(words)})
+	
+	return nil
+}
+		case "INTO":
+			token.Type = INTO
+		case "VALUES":
+			token.Type = VALUES
+		case "UPDATE":
+			token.Type = UPDATE
+		case "SET":
+			token.Type = SET
+		case "DELETE":
+			token.Type = DELETE
+		case "CREATE":
+			token.Type = CREATE
+		case "TABLE":
+			token.Type = TABLE
+		case "DROP":
+			token.Type = DROP
+		case "ALTER":
+			token.Type = ALTER
+		case "INDEX":
+			token.Type = INDEX
+		case "PRIMARY":
+			token.Type = PRIMARY
+		case "KEY":
+			token.Type = KEY
+		case "FOREIGN":
+			token.Type = FOREIGN
+		case "REFERENCES":
+			token.Type = REFERENCES
+		case "UNIQUE":
+			token.Type = UNIQUE
+		case "NOT":
+			token.Type = NOT
+		case "NULL":
+			token.Type = NULL
+		case "DEFAULT":
+			token.Type = DEFAULT
+		case "CHECK":
+			token.Type = CHECK
+		case "CONSTRAINT":
+			token.Type = CONSTRAINT
+		case "AND":
+			token.Type = AND
+		case "OR":
+			token.Type = OR
+		case "IN":
+			token.Type = IN
+		case "LIKE":
+			token.Type = LIKE
+		case "BETWEEN":
+			token.Type = BETWEEN
+		case "IS":
+			token.Type = IS
+		case "ORDER":
+			token.Type = ORDER
+		case "BY":
+			token.Type = BY
+		case "GROUP":
+			token.Type = GROUP
+		case "HAVING":
+			token.Type = HAVING
+		case "LIMIT":
+			token.Type = LIMIT
+		case "OFFSET":
+			token.Type = OFFSET
+		case "JOIN":
+			token.Type = JOIN
+		case "LEFT":
+			token.Type = LEFT
+		case "RIGHT":
+			token.Type = RIGHT
+		case "INNER":
+			token.Type = INNER
+		case "OUTER":
+			token.Type = OUTER
+		case "ON":
+			token.Type = ON
+		case "AS":
+			token.Type = AS
+		case "ASC":
+			token.Type = ASC
+		case "DESC":
+			token.Type = DESC
+		case "COUNT":
+			token.Type = COUNT
+		case "SUM":
+			token.Type = SUM
+		case "AVG":
+			token.Type = AVG
+		case "MIN":
+			token.Type = MIN
+		case "MAX":
+			token.Type = MAX
+		case "DISTINCT":
+			token.Type = DISTINCT
+		case "ALL":
+			token.Type = ALL
+		case "EXISTS":
+			token.Type = EXISTS
+		case "UNION":
+			token.Type = UNION
+		case "INTERSECT":
+			token.Type = INTERSECT
+		case "EXCEPT":
+			token.Type = EXCEPT
+		case "=":
+			token.Type = EQUALS
+		case "!=", "<>":
+			token.Type = NOT_EQUALS
+		case "<":
+			token.Type = LESS_THAN
+		case "<=":
+			token.Type = LESS_THAN_EQUAL
+		case ">":
+			token.Type = GREATER_THAN
+		case ">=":
+			token.Type = GREATER_THAN_EQUAL
+		case "+":
+			token.Type = PLUS
+		case "-":
+			token.Type = MINUS
+		case "*":
+			token.Type = IDENTIFIER // Treat * as identifier for column wildcard
+		case "/":
+			token.Type = DIVIDE
+		case "%":
+			token.Type = MODULO
+		case ",":
+			token.Type = COMMA
+		case ";":
+			token.Type = SEMICOLON
+		case "(":
+			token.Type = LEFT_PAREN
+		case ")":
+			token.Type = RIGHT_PAREN
+		case "[":
+			token.Type = LEFT_BRACKET
+		case "]":
+			token.Type = RIGHT_BRACKET
+		case ".":
+			token.Type = DOT
+		default:
+			// Check if it's a literal
+			if p.isStringLiteral(token.Value) {
+				token.Type = STRING_LITERAL
+			} else if p.isNumberLiteral(token.Value) {
+				token.Type = NUMBER_LITERAL
+			} else if p.isBooleanLiteral(token.Value) {
+				token.Type = BOOLEAN_LITERAL
+			} else if p.isNullLiteral(token.Value) {
+				token.Type = NULL_LITERAL
+			} else {
+				token.Type = IDENTIFIER
+			}
+		}
+		
+		p.tokens = append(p.tokens, *token)
 	}
 	
 	// Add EOF token
@@ -668,25 +801,18 @@ func (p *Parser) parseStatement() (Statement, error) {
 	
 	switch token.Type {
 	case SELECT:
-		p.pos++
 		return p.parseSelectStatement()
 	case INSERT:
-		p.pos++
 		return p.parseInsertStatement()
 	case UPDATE:
-		p.pos++
 		return p.parseUpdateStatement()
 	case DELETE:
-		p.pos++
 		return p.parseDeleteStatement()
 	case CREATE:
-		p.pos++
 		return p.parseCreateStatement()
 	case DROP:
-		p.pos++
 		return p.parseDropStatement()
 	case ALTER:
-		p.pos++
 		return p.parseAlterStatement()
 	default:
 		return nil, fmt.Errorf("unexpected token: %s", token.Value)
@@ -697,7 +823,10 @@ func (p *Parser) parseStatement() (Statement, error) {
 func (p *Parser) parseSelectStatement() (*SelectStatement, error) {
 	stmt := &SelectStatement{}
 	
-	// SELECT already consumed in main parser
+	// Parse SELECT
+	if err := p.expect(SELECT); err != nil {
+		return nil, err
+	}
 	
 	// Parse DISTINCT
 	if p.peek().Type == DISTINCT {
@@ -797,7 +926,10 @@ func (p *Parser) parseSelectStatement() (*SelectStatement, error) {
 func (p *Parser) parseInsertStatement() (*InsertStatement, error) {
 	stmt := &InsertStatement{}
 	
-	// Parse INTO (INSERT already consumed)
+	// Parse INSERT INTO
+	if err := p.expect(INSERT); err != nil {
+		return nil, err
+	}
 	if err := p.expect(INTO); err != nil {
 		return nil, err
 	}
@@ -827,20 +959,12 @@ func (p *Parser) parseInsertStatement() (*InsertStatement, error) {
 		return nil, err
 	}
 	
-	// Parse values in parentheses
-	if err := p.expect(LEFT_PAREN); err != nil {
-		return nil, err
-	}
-	
+	// Parse values
 	values, err := p.parseExpressionList()
 	if err != nil {
 		return nil, err
 	}
 	stmt.Values = values
-	
-	if err := p.expect(RIGHT_PAREN); err != nil {
-		return nil, err
-	}
 	
 	return stmt, nil
 }
@@ -849,7 +973,10 @@ func (p *Parser) parseInsertStatement() (*InsertStatement, error) {
 func (p *Parser) parseUpdateStatement() (*UpdateStatement, error) {
 	stmt := &UpdateStatement{}
 	
-	// UPDATE already consumed
+	// Parse UPDATE
+	if err := p.expect(UPDATE); err != nil {
+		return nil, err
+	}
 	
 	// Parse table name
 	table, err := p.expectIdentifier()
@@ -887,7 +1014,10 @@ func (p *Parser) parseUpdateStatement() (*UpdateStatement, error) {
 func (p *Parser) parseDeleteStatement() (*DeleteStatement, error) {
 	stmt := &DeleteStatement{}
 	
-	// Parse FROM (DELETE already consumed)
+	// Parse DELETE FROM
+	if err := p.expect(DELETE); err != nil {
+		return nil, err
+	}
 	if err := p.expect(FROM); err != nil {
 		return nil, err
 	}
@@ -918,8 +1048,6 @@ func (p *Parser) parseCreateStatement() (Statement, error) {
 		return p.parseCreateTableStatement()
 	} else if p.peek().Type == INDEX {
 		return p.parseCreateIndexStatement()
-	} else if p.peek().Type == DATABASE {
-		return p.parseCreateDatabaseStatement()
 	}
 	
 	return nil, fmt.Errorf("unexpected CREATE statement type")
@@ -929,7 +1057,10 @@ func (p *Parser) parseCreateStatement() (Statement, error) {
 func (p *Parser) parseCreateTableStatement() (*CreateTableStatement, error) {
 	stmt := &CreateTableStatement{}
 	
-	// Parse TABLE (CREATE already consumed)
+	// Parse CREATE TABLE
+	if err := p.expect(CREATE); err != nil {
+		return nil, err
+	}
 	if err := p.expect(TABLE); err != nil {
 		return nil, err
 	}
@@ -959,30 +1090,14 @@ func (p *Parser) parseCreateTableStatement() (*CreateTableStatement, error) {
 	return stmt, nil
 }
 
-// parseCreateDatabaseStatement parses a CREATE DATABASE statement
-func (p *Parser) parseCreateDatabaseStatement() (*CreateDatabaseStatement, error) {
-	stmt := &CreateDatabaseStatement{}
-	
-	// Parse DATABASE (CREATE already consumed)
-	if err := p.expect(DATABASE); err != nil {
-		return nil, err
-	}
-	
-	// Parse database name
-	if p.peek().Type != IDENTIFIER {
-		return nil, fmt.Errorf("expected database name")
-	}
-	stmt.Database = p.peek().Value
-	p.pos++
-	
-	return stmt, nil
-}
-
 // parseCreateIndexStatement parses a CREATE INDEX statement
 func (p *Parser) parseCreateIndexStatement() (*CreateIndexStatement, error) {
 	stmt := &CreateIndexStatement{}
 	
-	// Parse INDEX (CREATE already consumed)
+	// Parse CREATE INDEX
+	if err := p.expect(CREATE); err != nil {
+		return nil, err
+	}
 	if err := p.expect(INDEX); err != nil {
 		return nil, err
 	}
@@ -1227,8 +1342,6 @@ func (p *Parser) parseExpression() (Expression, error) {
 	
 	switch token.Type {
 	case IDENTIFIER:
-		// Check if it's a column reference or a literal
-		// For VALUES clause, identifiers should be treated as literals
 		return p.parseColumnExpression()
 	case STRING_LITERAL:
 		p.consume()
@@ -1237,20 +1350,10 @@ func (p *Parser) parseExpression() (Expression, error) {
 		}, nil
 	case NUMBER_LITERAL:
 		p.consume()
-		// Check if it's an integer or float
-		if strings.Contains(token.Value, ".") {
-			// Float value
-			val, _ := strconv.ParseFloat(token.Value, 64)
-			return &LiteralExpression{
-				Value: types.FloatValue(val),
-			}, nil
-		} else {
-			// Integer value
-			val, _ := strconv.ParseInt(token.Value, 10, 64)
-			return &LiteralExpression{
-				Value: types.IntValue(val),
-			}, nil
-		}
+		val, _ := strconv.ParseFloat(token.Value, 64)
+		return &LiteralExpression{
+			Value: types.FloatValue(val),
+		}, nil
 	case BOOLEAN_LITERAL:
 		p.consume()
 		val := token.Value == "TRUE"
@@ -1404,49 +1507,6 @@ func (p *Parser) parseColumnDefinitionList() ([]ColumnDefinition, error) {
 	return columns, nil
 }
 
-func (p *Parser) parseColumnType() (string, error) {
-	// Get the base type
-	baseType, err := p.expectIdentifier()
-	if err != nil {
-		return "", err
-	}
-	
-	// Check if it has parameters like VARCHAR(100) or DECIMAL(10,2)
-	if p.peek().Type == LEFT_PAREN {
-		p.consume() // consume (
-		
-		// Parse parameters
-		params := make([]string, 0)
-		for {
-			if p.peek().Type == IDENTIFIER || p.peek().Type == NUMBER_LITERAL {
-				params = append(params, p.peek().Value)
-				p.consume()
-			} else {
-				break
-			}
-			
-			if p.peek().Type == COMMA {
-				p.consume()
-			} else {
-				break
-			}
-		}
-		
-		// Expect closing parenthesis
-		if err := p.expect(RIGHT_PAREN); err != nil {
-			return "", err
-		}
-		
-		// Build type string with parameters
-		if len(params) > 0 {
-			paramStr := strings.Join(params, ",")
-			return fmt.Sprintf("%s(%s)", baseType, paramStr), nil
-		}
-	}
-	
-	return baseType, nil
-}
-
 func (p *Parser) parseColumnDefinition() (ColumnDefinition, error) {
 	column := ColumnDefinition{}
 	
@@ -1458,7 +1518,7 @@ func (p *Parser) parseColumnDefinition() (ColumnDefinition, error) {
 	column.Name = name
 	
 	// Parse column type
-	typeStr, err := p.parseColumnType()
+	typeStr, err := p.expectIdentifier()
 	if err != nil {
 		return column, err
 	}

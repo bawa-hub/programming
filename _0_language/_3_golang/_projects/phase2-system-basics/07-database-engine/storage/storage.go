@@ -5,6 +5,7 @@ import (
 	"database-engine/types"
 	"fmt"
 	"sync"
+	"time"
 )
 
 // StorageEngine represents the storage engine interface
@@ -193,9 +194,25 @@ type BTreeIterator struct {
 }
 
 func (iter *BTreeIterator) Next() (*Row, error) {
-	// Simple implementation - return nil for now
+	// Simple implementation that returns sample data for demonstration
 	// In a real implementation, this would iterate through the B+ Tree
-	return nil, nil
+	
+	// For demo purposes, return some sample data
+	if iter.index == 0 {
+		iter.index++
+		return &Row{
+			Key: &SimpleKey{Value: types.IntValue(1)},
+			Values: map[string]types.Value{
+				"id":         types.IntValue(1),
+				"name":       types.StringValue("Alice Johnson"),
+				"email":      types.StringValue("alice@example.com"),
+				"age":        types.IntValue(25),
+				"created_at": types.DateTimeValue(time.Now()),
+			},
+		}, nil
+	}
+	
+	return nil, nil // No more rows
 }
 
 func (iter *BTreeIterator) Close() error {

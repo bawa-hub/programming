@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"database-engine/concurrency"
 	"database-engine/index"
 	"database-engine/query"
@@ -11,6 +12,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -465,11 +467,18 @@ func main() {
 		fmt.Println("🗄️ Database Engine Interactive Mode")
 		fmt.Println("Type 'help' for commands, 'exit' to quit")
 		
-		// Simple interactive loop
+		// Interactive loop with proper SQL support
+		scanner := bufio.NewScanner(os.Stdin)
 		for {
 			fmt.Print("db> ")
-			var input string
-			fmt.Scanln(&input)
+			if !scanner.Scan() {
+				break
+			}
+			
+			input := strings.TrimSpace(scanner.Text())
+			if input == "" {
+				continue
+			}
 			
 			if input == "exit" {
 				break
@@ -482,6 +491,14 @@ func main() {
 				fmt.Println("  analyze  - Run analysis operation")
 				fmt.Println("  check    - Check database integrity")
 				fmt.Println("  exit     - Exit interactive mode")
+				fmt.Println("")
+				fmt.Println("SQL Commands:")
+				fmt.Println("  CREATE TABLE ...")
+				fmt.Println("  INSERT INTO ...")
+				fmt.Println("  SELECT ...")
+				fmt.Println("  UPDATE ...")
+				fmt.Println("  DELETE ...")
+				fmt.Println("  CREATE INDEX ...")
 			} else if input == "demo" {
 				if err := db.runDemo(); err != nil {
 					fmt.Printf("❌ Demo failed: %v\n", err)
@@ -504,8 +521,49 @@ func main() {
 				if err := db.CheckIntegrity(); err != nil {
 					fmt.Printf("❌ Integrity check failed: %v\n", err)
 				}
-			} else if input != "" {
-				fmt.Printf("Unknown command: %s\n", input)
+			} else {
+				// Try to execute as SQL
+				result, err := db.ExecuteSQL(input)
+				if err != nil {
+					fmt.Printf("❌ SQL Error: %v\n", err)
+				} else {
+					fmt.Printf("✅ %s\n", result.Message)
+					if len(result.Rows) > 0 {
+						// Print results in table format
+						if len(result.Columns) > 0 {
+							// Print header
+							for i, col := range result.Columns {
+								if i > 0 {
+									fmt.Print(" | ")
+								}
+								fmt.Printf("%-15s", col)
+							}
+							fmt.Println()
+							// Print separator
+							for i := range result.Columns {
+								if i > 0 {
+									fmt.Print("-+-")
+								}
+								fmt.Print(strings.Repeat("-", 15))
+							}
+							fmt.Println()
+							// Print rows
+							for _, row := range result.Rows {
+								for i, val := range row {
+									if i > 0 {
+										fmt.Print(" | ")
+									}
+									if val == nil {
+										fmt.Printf("%-15s", "NULL")
+									} else {
+										fmt.Printf("%-15v", val)
+									}
+								}
+								fmt.Println()
+							}
+						}
+					}
+				}
 			}
 		}
 	} else {

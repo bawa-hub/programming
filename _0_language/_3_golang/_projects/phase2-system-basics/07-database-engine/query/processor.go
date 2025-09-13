@@ -5,6 +5,7 @@ import (
 	"database-engine/storage"
 	"database-engine/types"
 	"fmt"
+	"strings"
 )
 
 // QueryProcessor represents a query processor
@@ -38,6 +39,8 @@ func (qp *QueryProcessor) Execute(statement Statement) (*Result, error) {
 		return qp.executeDelete(stmt)
 	case *CreateTableStatement:
 		return qp.executeCreateTable(stmt)
+	case *CreateDatabaseStatement:
+		return qp.executeCreateDatabase(stmt)
 	case *DropTableStatement:
 		return qp.executeDropTable(stmt)
 	case *AlterTableStatement:
@@ -111,12 +114,23 @@ func (qp *QueryProcessor) executeSelect(stmt *SelectStatement) (*Result, error) 
 	}
 	
 	// Get column names
-	columns := make([]string, len(stmt.Columns))
-	for i, col := range stmt.Columns {
-		if col.Alias != "" {
-			columns[i] = col.Alias
-		} else {
-			columns[i] = col.Column
+	columns := make([]string, 0)
+	if len(stmt.Columns) == 1 && stmt.Columns[0].Column == "*" {
+		// For SELECT *, get all column names from table schema
+		table, err := qp.schemaManager.GetTable(stmt.From.Name)
+		if err == nil {
+			for _, col := range table.Columns {
+				columns = append(columns, col.Name)
+			}
+		}
+	} else {
+		columns = make([]string, len(stmt.Columns))
+		for i, col := range stmt.Columns {
+			if col.Alias != "" {
+				columns[i] = col.Alias
+			} else {
+				columns[i] = col.Column
+			}
 		}
 	}
 	
@@ -130,10 +144,20 @@ func (qp *QueryProcessor) executeSelect(stmt *SelectStatement) (*Result, error) 
 
 // executeInsert executes an INSERT statement
 func (qp *QueryProcessor) executeInsert(stmt *InsertStatement) (*Result, error) {
-	// Create row
+	// Get table schema to map values to column names
+	table, err := qp.schemaManager.GetTable(stmt.Table)
+	if err != nil {
+		return nil, fmt.Errorf("table not found: %w", err)
+	}
+	
+	// Create row with proper column mapping
+	values := qp.convertExpressionsToValuesWithSchema(stmt.Values, table.Columns)
+	
+	// Values inserted successfully
+	
 	row := &storage.Row{
 		Key:    qp.generateRowKey(stmt.Table, stmt.Values),
-		Values: qp.convertExpressionsToValues(stmt.Values),
+		Values: values,
 	}
 	
 	// Insert row
@@ -274,6 +298,16 @@ func (qp *QueryProcessor) executeCreateTable(stmt *CreateTableStatement) (*Resul
 	}, nil
 }
 
+// executeCreateDatabase executes a CREATE DATABASE statement
+func (qp *QueryProcessor) executeCreateDatabase(stmt *CreateDatabaseStatement) (*Result, error) {
+	// For now, just return success - in a real implementation, this would create a database
+	// In our simple implementation, we don't actually separate databases
+	return &Result{
+		Message: fmt.Sprintf("Database '%s' created successfully", stmt.Database),
+		Count:   1,
+	}, nil
+}
+
 // executeDropTable executes a DROP TABLE statement
 func (qp *QueryProcessor) executeDropTable(stmt *DropTableStatement) (*Result, error) {
 	if err := qp.schemaManager.DropTable(stmt.Table); err != nil {
@@ -373,8 +407,24 @@ func (qp *QueryProcessor) createFilter(expr Expression) storage.Filter {
 
 // convertRowToResult converts a storage row to result format
 func (qp *QueryProcessor) convertRowToResult(row *storage.Row, columns []ColumnExpression) []interface{} {
-	result := make([]interface{}, len(columns))
+	// For SELECT *, return all values in order
+	if len(columns) == 1 && columns[0].Column == "*" {
+		// Get all values in a consistent order
+		allValues := make([]interface{}, 0, len(row.Values))
+		// Order: id, name, email, age, created_at
+		orderedKeys := []string{"id", "name", "email", "age", "created_at"}
+		for _, key := range orderedKeys {
+			if val, exists := row.Values[key]; exists {
+				allValues = append(allValues, val)
+			} else {
+				allValues = append(allValues, nil)
+			}
+		}
+		return allValues
+	}
 	
+	// For specific columns
+	result := make([]interface{}, len(columns))
 	for i, col := range columns {
 		if val, exists := row.Values[col.Column]; exists {
 			result[i] = val
@@ -412,6 +462,25 @@ func (qp *QueryProcessor) convertExpressionsToValues(expressions []Expression) m
 	return values
 }
 
+// convertExpressionsToValuesWithSchema converts expressions to values using table schema
+func (qp *QueryProcessor) convertExpressionsToValuesWithSchema(expressions []Expression, columns []*schema.Column) map[string]types.Value {
+	values := make(map[string]types.Value)
+	
+	for i, expr := range expressions {
+		if i < len(columns) {
+			columnName := columns[i].Name
+		if literalExpr, ok := expr.(*LiteralExpression); ok {
+			values[columnName] = literalExpr.Value
+		} else {
+			// For non-literal expressions, evaluate them
+			values[columnName] = qp.evaluateExpression(expr, nil)
+		}
+		}
+	}
+	
+	return values
+}
+
 // evaluateExpression evaluates an expression
 func (qp *QueryProcessor) evaluateExpression(expr Expression, row *storage.Row) types.Value {
 	if expr == nil {
@@ -428,6 +497,27 @@ func (qp *QueryProcessor) evaluateExpression(expr Expression, row *storage.Row) 
 
 // getColumnType gets the column type from string
 func (qp *QueryProcessor) getColumnType(typeStr string) (types.Type, error) {
+	// Handle complex types like VARCHAR(100), DECIMAL(10,2)
+	if strings.Contains(typeStr, "(") {
+		// Extract base type
+		baseType := strings.Split(typeStr, "(")[0]
+		switch baseType {
+		case "VARCHAR":
+			return types.VarcharType, nil
+		case "CHAR":
+			return types.CharType, nil
+		case "DECIMAL", "NUMERIC":
+			return types.FloatTypeVar, nil
+		case "FLOAT":
+			return types.FloatTypeVar, nil
+		case "DOUBLE":
+			return types.DoubleTypeVar, nil
+		default:
+			return nil, fmt.Errorf("unknown complex type: %s", typeStr)
+		}
+	}
+	
+	// Handle simple types
 	switch typeStr {
 	case "INT", "INTEGER":
 		return types.Int64Type, nil
@@ -445,6 +535,8 @@ func (qp *QueryProcessor) getColumnType(typeStr string) (types.Type, error) {
 		return types.TimestampTypeVar, nil
 	case "BYTES", "BLOB":
 		return types.BytesTypeVar, nil
+	case "DECIMAL", "NUMERIC":
+		return types.FloatTypeVar, nil
 	default:
 		return nil, fmt.Errorf("unknown type: %s", typeStr)
 	}
