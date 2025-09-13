@@ -59,7 +59,7 @@ func Exercise3() {
 	
 	// Start workers
 	for i := 0; i < numWorkers; i++ {
-		go worker(i, jobs, results)
+		go exerciseWorker(i, jobs, results)
 	}
 	
 	// Send jobs
@@ -75,7 +75,7 @@ func Exercise3() {
 	}
 }
 
-func worker(id int, jobs <-chan int, results chan<- int) {
+func exerciseWorker(id int, jobs <-chan int, results chan<- int) {
 	for job := range jobs {
 		fmt.Printf("Worker %d: Processing job %d\n", id, job)
 		time.Sleep(100 * time.Millisecond) // Simulate work

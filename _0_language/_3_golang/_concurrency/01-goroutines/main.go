@@ -7,42 +7,8 @@ import (
 	"time"
 )
 
-func main() {
-	fmt.Println("🚀 Goroutines Deep Dive Examples")
-	fmt.Println("================================")
-
-	// Example 1: Basic Goroutine
-	fmt.Println("\n1. Basic Goroutine:")
-	basicGoroutine()
-
-	// Example 2: Multiple Goroutines
-	fmt.Println("\n2. Multiple Goroutines:")
-	multipleGoroutines()
-
-	// Example 3: Goroutine with WaitGroup
-	fmt.Println("\n3. Goroutine with WaitGroup:")
-	goroutineWithWaitGroup()
-
-	// Example 4: Goroutine Pool
-	fmt.Println("\n4. Goroutine Pool:")
-	goroutinePool()
-
-	// Example 5: Goroutine Communication
-	fmt.Println("\n5. Goroutine Communication:")
-	goroutineCommunication()
-
-	// Example 6: Goroutine Lifecycle
-	fmt.Println("\n6. Goroutine Lifecycle:")
-	goroutineLifecycle()
-
-	// Example 7: Performance Comparison
-	fmt.Println("\n7. Performance Comparison:")
-	performanceComparison()
-
-	// Example 8: Common Pitfalls
-	fmt.Println("\n8. Common Pitfalls:")
-	commonPitfalls()
-}
+// This file contains the basic goroutine examples
+// Use cmd.go to run the examples with command line arguments
 
 // Example 1: Basic Goroutine
 func basicGoroutine() {
