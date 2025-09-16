@@ -46,21 +46,6 @@ This project provides a comprehensive, step-by-step understanding of Go channels
 5. **Practice `05-patterns.go`** - Learn common patterns
 6. **Avoid `06-pitfalls.go`** - Understand what NOT to do
 
-## 🏃‍♂️ Quick Start
-
-```bash
-# Run all examples
-go run .
-
-# Run specific concepts
-go run . basic
-go run . types
-go run . operations
-go run . behavior
-go run . patterns
-go run . pitfalls
-```
-
 ## 📖 Learning Path
 
 Each file builds upon the previous one:
