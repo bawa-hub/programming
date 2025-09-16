@@ -10,17 +10,10 @@ import (
 // ============================================================================
 
 func basicChannelConcepts() {
-	fmt.Println("\n🔗 BASIC CHANNEL CONCEPTS")
-	fmt.Println("========================")
 
 	// 1.1 What is a channel?
 	// A channel is a communication mechanism that allows goroutines to send and receive data
 	// Think of it as a pipe where data flows from one goroutine to another
-	
-	fmt.Println("\n1.1 What is a channel?")
-	fmt.Println("A channel is like a pipe that connects goroutines")
-	fmt.Println("Data flows through the pipe from sender to receiver")
-	fmt.Println("Channels provide safe communication between goroutines")
 
 	// 1.2 Creating a channel
 	// Syntax: make(chan Type)
@@ -41,7 +34,6 @@ func basicChannelConcepts() {
 	var nilCh chan int
 	fmt.Printf("Nil channel: %v\n", nilCh)
 	fmt.Printf("Nil channel is nil: %t\n", nilCh == nil)
-	fmt.Println("⚠️  Sending/receiving on nil channel will block forever!")
 
 	// 1.4 Basic send and receive
 	// Sending: ch <- data
@@ -70,15 +62,11 @@ func basicChannelConcepts() {
 // ============================================================================
 
 func channelSynchronization() {
-	fmt.Println("\n🔄 CHANNEL SYNCHRONIZATION")
-	fmt.Println("==========================")
 
 	// Channels naturally synchronize goroutines
 	// When you send data, the sender blocks until someone receives
 	// When you receive data, the receiver blocks until someone sends
-	
-	fmt.Println("\n2.1 How channels synchronize goroutines")
-	
+		
 	ch := make(chan string)
 	
 	// Goroutine 1: Sender
@@ -112,8 +100,6 @@ func channelSynchronization() {
 // ============================================================================
 
 func channelAsSignal() {
-	fmt.Println("\n📡 CHANNEL AS A SIGNAL")
-	fmt.Println("======================")
 
 	// Channels can be used to signal between goroutines
 	// You don't always need to send data - just the act of sending/receiving can be a signal
@@ -142,16 +128,12 @@ func channelAsSignal() {
 // ============================================================================
 
 func channelDirectionality() {
-	fmt.Println("\n↔️  CHANNEL DIRECTIONALITY")
-	fmt.Println("=========================")
 
 	// Channels can be:
 	// - Bidirectional: chan Type (can send and receive)
 	// - Send-only: chan<- Type (can only send)
 	// - Receive-only: <-chan Type (can only receive)
-	
-	fmt.Println("\n4.1 Channel direction types")
-	
+		
 	// Bidirectional channel
 	ch := make(chan int)
 	fmt.Printf("Bidirectional channel: %T\n", ch)
@@ -163,9 +145,7 @@ func channelDirectionality() {
 	// Receive-only channel (<-chan int)
 	var recvCh <-chan int = ch
 	fmt.Printf("Receive-only channel: %T\n", recvCh)
-	
-	fmt.Println("\n4.2 Using directional channels")
-	
+		
 	// Function that only sends data
 	go func() {
 		sendCh <- 100  // Can only send
@@ -186,8 +166,6 @@ func channelDirectionality() {
 // ============================================================================
 
 func channelLifecycle() {
-	fmt.Println("\n♻️  CHANNEL LIFECYCLE")
-	fmt.Println("===================")
 
 	// Channels have a lifecycle:
 	// 1. Created with make()
@@ -195,7 +173,7 @@ func channelLifecycle() {
 	// 3. Closed with close()
 	// 4. Garbage collected when no longer referenced
 	
-	fmt.Println("\n5.1 Channel lifecycle stages")
+	fmt.Println("\nChannel lifecycle stages")
 	
 	ch := make(chan int)
 	fmt.Println("  Stage 1: Channel created")
@@ -219,23 +197,4 @@ func channelLifecycle() {
 		}
 		fmt.Printf("  Received: %d\n", data)
 	}
-}
-
-// ============================================================================
-// EXPORTED FUNCTIONS FOR MAIN
-// ============================================================================
-
-func runBasicConcepts() {
-	fmt.Println("🚀 GO CHANNELS: COMPLETE FUNDAMENTALS")
-	fmt.Println("=====================================")
-	
-	// Run all basic concept examples
-	basicChannelConcepts()
-	channelSynchronization()
-	channelAsSignal()
-	channelDirectionality()
-	channelLifecycle()
-	
-	fmt.Println("\n✅ Basic concepts completed!")
-	fmt.Println("\nNext: Run 'go run . types' to learn about channel types")
 }
