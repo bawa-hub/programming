@@ -10,25 +10,17 @@ import (
 // ============================================================================
 
 func unbufferedChannels() {
-	fmt.Println("\n📤 UNBUFFERED CHANNELS")
-	fmt.Println("======================")
 
 	// Unbuffered channels have a capacity of 0
 	// They provide synchronous communication
 	// Sender blocks until receiver is ready
 	// Receiver blocks until sender is ready
-	
-	fmt.Println("\n1.1 What are unbuffered channels?")
-	fmt.Println("Capacity: 0")
-	fmt.Println("Behavior: Synchronous (blocking)")
-	fmt.Println("Use case: When you need guaranteed synchronization")
+	// Use case: When you need guaranteed synchronization
 	
 	// Create an unbuffered channel
 	ch := make(chan int)  // No capacity specified = unbuffered
 	fmt.Printf("Unbuffered channel: %v\n", ch)
-	
-	fmt.Println("\n1.2 Unbuffered channel behavior")
-	
+		
 	// This will demonstrate the blocking behavior
 	go func() {
 		fmt.Println("  Sender: About to send data...")
@@ -51,25 +43,17 @@ func unbufferedChannels() {
 // ============================================================================
 
 func bufferedChannels() {
-	fmt.Println("\n📦 BUFFERED CHANNELS")
-	fmt.Println("===================")
 
 	// Buffered channels have a capacity > 0
 	// They provide asynchronous communication
 	// Sender only blocks when buffer is full
 	// Receiver only blocks when buffer is empty
-	
-	fmt.Println("\n2.1 What are buffered channels?")
-	fmt.Println("Capacity: > 0 (specified when creating)")
-	fmt.Println("Behavior: Asynchronous (non-blocking until buffer full/empty)")
-	fmt.Println("Use case: When you want to decouple sender and receiver")
+	// Use case: When you want to decouple sender and receiver
 	
 	// Create a buffered channel with capacity 3
 	ch := make(chan int, 3)  // Capacity of 3
 	fmt.Printf("Buffered channel (capacity 3): %v\n", ch)
-	
-	fmt.Println("\n2.2 Buffered channel behavior")
-	
+		
 	// Send multiple values without blocking (up to capacity)
 	fmt.Println("  Sending 3 values to buffered channel...")
 	ch <- 1  // Doesn't block (buffer has space)
@@ -98,10 +82,6 @@ func bufferedChannels() {
 // ============================================================================
 
 func channelCapacityComparison() {
-	fmt.Println("\n⚖️  CHANNEL CAPACITY COMPARISON")
-	fmt.Println("=============================")
-
-	fmt.Println("\n3.1 Unbuffered vs Buffered")
 	
 	// Unbuffered channel
 	unbuffered := make(chan int)
@@ -115,11 +95,6 @@ func channelCapacityComparison() {
 	fmt.Printf("Buffered channel (cap 1): %d\n", cap(buffered1))
 	fmt.Printf("Buffered channel (cap 5): %d\n", cap(buffered5))
 	fmt.Printf("Buffered channel (cap 10): %d\n", cap(buffered10))
-	
-	fmt.Println("\n3.2 When to use which?")
-	fmt.Println("Unbuffered: When you need tight synchronization")
-	fmt.Println("Buffered: When you want to decouple producer and consumer")
-	fmt.Println("Large buffer: When you have bursty traffic")
 }
 
 // ============================================================================
@@ -127,15 +102,11 @@ func channelCapacityComparison() {
 // ============================================================================
 
 func channelLengthAndCapacity() {
-	fmt.Println("\n📏 CHANNEL LENGTH AND CAPACITY")
-	fmt.Println("=============================")
-
 	// len(ch) - number of elements currently in the channel
 	// cap(ch) - maximum number of elements the channel can hold
 	
 	ch := make(chan int, 5)  // Capacity of 5
-	
-	fmt.Println("\n4.1 Initial state")
+
 	fmt.Printf("Length: %d, Capacity: %d\n", len(ch), cap(ch))
 	
 	// Send some data
@@ -143,21 +114,21 @@ func channelLengthAndCapacity() {
 	ch <- 2
 	ch <- 3
 	
-	fmt.Println("\n4.2 After sending 3 values")
+	fmt.Println("\nAfter sending 3 values")
 	fmt.Printf("Length: %d, Capacity: %d\n", len(ch), cap(ch))
 	
 	// Send more data
 	ch <- 4
 	ch <- 5
 	
-	fmt.Println("\n4.3 After sending 5 values (buffer full)")
+	fmt.Println("\n After sending 5 values (buffer full)")
 	fmt.Printf("Length: %d, Capacity: %d\n", len(ch), cap(ch))
 	
 	// Receive some data
 	<-ch
 	<-ch
 	
-	fmt.Println("\n4.4 After receiving 2 values")
+	fmt.Println("\n After receiving 2 values")
 	fmt.Printf("Length: %d, Capacity: %d\n", len(ch), cap(ch))
 	
 	// Clear the channel
@@ -165,7 +136,7 @@ func channelLengthAndCapacity() {
 		<-ch
 	}
 	
-	fmt.Println("\n4.5 After clearing channel")
+	fmt.Println("\n After clearing channel")
 	fmt.Printf("Length: %d, Capacity: %d\n", len(ch), cap(ch))
 }
 
@@ -174,22 +145,14 @@ func channelLengthAndCapacity() {
 // ============================================================================
 
 func nilChannels() {
-	fmt.Println("\n🚫 NIL CHANNELS")
-	fmt.Println("===============")
-
 	// A nil channel is a channel that hasn't been initialized
 	// Operations on nil channels block forever
+	// Closing nil channel panics
 	
-	fmt.Println("\n5.1 What is a nil channel?")
 	var ch chan int  // This is nil
 	fmt.Printf("Nil channel: %v\n", ch)
 	fmt.Printf("Is nil: %t\n", ch == nil)
-	
-	fmt.Println("\n5.2 Nil channel behavior")
-	fmt.Println("⚠️  Sending to nil channel blocks forever")
-	fmt.Println("⚠️  Receiving from nil channel blocks forever")
-	fmt.Println("⚠️  Closing nil channel panics")
-	
+
 	// This would block forever (commented out to avoid hanging)
 	// ch <- 42  // This would block forever
 	// data := <-ch  // This would block forever
@@ -200,10 +163,7 @@ func nilChannels() {
 // ============================================================================
 
 func channelTypesDemonstration() {
-	fmt.Println("\n🎭 CHANNEL TYPES DEMONSTRATION")
-	fmt.Println("=============================")
-
-	fmt.Println("\n6.1 Different channel types")
+	fmt.Println("\n Different channel types")
 	
 	// Different ways to create channels
 	var ch1 chan int                    // Nil channel
@@ -218,28 +178,8 @@ func channelTypesDemonstration() {
 	fmt.Printf("Buffered (1): %v (cap: %d)\n", ch4, cap(ch4))
 	fmt.Printf("Buffered (10): %v (cap: %d)\n", ch5, cap(ch5))
 	
-	fmt.Println("\n6.2 Type checking")
+	fmt.Println("\n Type checking")
 	fmt.Printf("ch2 is unbuffered: %t\n", cap(ch2) == 0)
 	fmt.Printf("ch4 is buffered: %t\n", cap(ch4) > 0)
 	fmt.Printf("ch5 is buffered: %t\n", cap(ch5) > 0)
-}
-
-// ============================================================================
-// EXPORTED FUNCTIONS FOR MAIN
-// ============================================================================
-
-func runChannelTypes() {
-	fmt.Println("🔗 GO CHANNELS: TYPES AND CAPACITY")
-	fmt.Println("==================================")
-	
-	// Run all channel type examples
-	unbufferedChannels()
-	bufferedChannels()
-	channelCapacityComparison()
-	channelLengthAndCapacity()
-	nilChannels()
-	channelTypesDemonstration()
-	
-	fmt.Println("\n✅ Channel types completed!")
-	fmt.Println("\nNext: Run 'go run . operations' to learn about channel operations")
 }

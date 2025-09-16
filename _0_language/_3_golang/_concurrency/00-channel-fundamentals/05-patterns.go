@@ -10,12 +10,9 @@ import (
 // ============================================================================
 
 func basicSendReceivePattern() {
-	fmt.Println("\n📤📥 BASIC SEND/RECEIVE PATTERN")
-	fmt.Println("=============================")
 
 	// The most fundamental pattern: one goroutine sends, another receives
 	
-	fmt.Println("\n1.1 Simple send/receive")
 	ch := make(chan string)
 	
 	// Sender goroutine
@@ -49,12 +46,8 @@ func basicSendReceivePattern() {
 // ============================================================================
 
 func workerPattern() {
-	fmt.Println("\n👷 WORKER PATTERN")
-	fmt.Println("================")
-
 	// One goroutine sends work, another processes it
 	
-	fmt.Println("\n2.1 Basic worker pattern")
 	workCh := make(chan int, 3)
 	doneCh := make(chan bool)
 	
@@ -87,13 +80,9 @@ func workerPattern() {
 // ============================================================================
 
 func pipelinePattern() {
-	fmt.Println("\n🔗 PIPELINE PATTERN")
-	fmt.Println("==================")
 
 	// Data flows through multiple stages, each processing the data
-	
-	fmt.Println("\n3.1 Basic pipeline pattern")
-	
+		
 	// Stage 1: Generate numbers
 	numbers := make(chan int, 3)
 	go func() {
@@ -130,12 +119,8 @@ func pipelinePattern() {
 // ============================================================================
 
 func fanOutPattern() {
-	fmt.Println("\n🌊 FAN-OUT PATTERN")
-	fmt.Println("=================")
-
 	// One goroutine sends data to multiple workers
 	
-	fmt.Println("\n4.1 Basic fan-out pattern")
 	input := make(chan int, 5)
 	
 	// Send data
@@ -194,12 +179,9 @@ func fanOutPattern() {
 // ============================================================================
 
 func fanInPattern() {
-	fmt.Println("\n🌊 FAN-IN PATTERN")
-	fmt.Println("================")
 
 	// Multiple goroutines send data to one receiver
 	
-	fmt.Println("\n5.1 Basic fan-in pattern")
 	output := make(chan string, 6)
 	
 	// Producer 1
@@ -238,12 +220,9 @@ func fanInPattern() {
 // ============================================================================
 
 func timeoutPattern() {
-	fmt.Println("\n⏰ TIMEOUT PATTERN")
-	fmt.Println("=================")
 
 	// Use select with time.After for timeouts
 	
-	fmt.Println("\n6.1 Basic timeout pattern")
 	ch := make(chan string)
 	
 	// Simulate slow operation
@@ -267,12 +246,9 @@ func timeoutPattern() {
 // ============================================================================
 
 func selectPattern() {
-	fmt.Println("\n🎯 SELECT PATTERN")
-	fmt.Println("================")
 
 	// Use select to handle multiple channels
 	
-	fmt.Println("\n7.1 Basic select pattern")
 	ch1 := make(chan string, 1)
 	ch2 := make(chan string, 1)
 	
@@ -304,12 +280,9 @@ func selectPattern() {
 // ============================================================================
 
 func signalPattern() {
-	fmt.Println("\n📡 SIGNAL PATTERN")
-	fmt.Println("================")
 
 	// Use channels to signal between goroutines
 	
-	fmt.Println("\n8.1 Basic signal pattern")
 	start := make(chan bool)
 	done := make(chan bool)
 	
@@ -336,12 +309,9 @@ func signalPattern() {
 // ============================================================================
 
 func quitPattern() {
-	fmt.Println("\n🚪 QUIT PATTERN")
-	fmt.Println("===============")
 
 	// Use a quit channel to signal goroutines to stop
 	
-	fmt.Println("\n9.1 Basic quit pattern")
 	work := make(chan int, 3)
 	quit := make(chan bool)
 	
@@ -378,12 +348,9 @@ func quitPattern() {
 // ============================================================================
 
 func channelCombinations() {
-	fmt.Println("\n🔗 CHANNEL COMBINATIONS")
-	fmt.Println("======================")
 
 	// Combine multiple patterns for complex behavior
 	
-	fmt.Println("\n10.1 Pipeline with fan-out and fan-in")
 	
 	// Stage 1: Generate data
 	numbers := make(chan int, 5)
@@ -435,26 +402,3 @@ func channelCombinations() {
 	}
 }
 
-// ============================================================================
-// EXPORTED FUNCTIONS FOR MAIN
-// ============================================================================
-
-func runChannelPatterns() {
-	fmt.Println("🎨 GO CHANNELS: PATTERNS")
-	fmt.Println("========================")
-	
-	// Run all channel pattern examples
-	basicSendReceivePattern()
-	workerPattern()
-	pipelinePattern()
-	fanOutPattern()
-	fanInPattern()
-	timeoutPattern()
-	selectPattern()
-	signalPattern()
-	quitPattern()
-	channelCombinations()
-	
-	fmt.Println("\n✅ Channel patterns completed!")
-	fmt.Println("\nNext: Run 'go run . pitfalls' to learn about common pitfalls")
-}

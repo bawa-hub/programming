@@ -10,14 +10,10 @@ import (
 // ============================================================================
 
 func sendingData() {
-	fmt.Println("\n📤 SENDING DATA")
-	fmt.Println("===============")
-
 	// Sending data: ch <- data
 	// This operation blocks until someone receives the data (unbuffered)
 	// or until there's space in the buffer (buffered)
 	
-	fmt.Println("\n1.1 Basic sending")
 	ch := make(chan int)
 	
 	go func() {
@@ -41,13 +37,9 @@ func sendingData() {
 // ============================================================================
 
 func receivingData() {
-	fmt.Println("\n📥 RECEIVING DATA")
-	fmt.Println("================")
-
 	// Receiving data: data := <-ch
 	// This operation blocks until someone sends data
 	
-	fmt.Println("\n2.1 Basic receiving")
 	ch := make(chan string)
 	
 	go func() {
@@ -70,14 +62,10 @@ func receivingData() {
 // ============================================================================
 
 func receivingWithOkCheck() {
-	fmt.Println("\n✅ RECEIVING WITH OK CHECK")
-	fmt.Println("=========================")
-
 	// data, ok := <-ch
 	// ok is true if data was received
 	// ok is false if channel is closed
 	
-	fmt.Println("\n3.1 Using ok to check channel state")
 	ch := make(chan int, 3)
 	
 	// Send some data
@@ -106,14 +94,10 @@ func receivingWithOkCheck() {
 // ============================================================================
 
 func closingChannels() {
-	fmt.Println("\n🔒 CLOSING CHANNELS")
-	fmt.Println("==================")
-
 	// close(ch) - closes the channel
 	// After closing, you cannot send data
 	// You can still receive data that was already sent
 	
-	fmt.Println("\n4.1 Basic channel closing")
 	ch := make(chan int, 3)
 	
 	// Send some data
@@ -140,13 +124,10 @@ func closingChannels() {
 // ============================================================================
 
 func rangeOverChannels() {
-	fmt.Println("\n🔄 RANGE OVER CHANNELS")
-	fmt.Println("=====================")
 
 	// for data := range ch
 	// This automatically receives data until channel is closed
 	
-	fmt.Println("\n5.1 Using range to receive data")
 	ch := make(chan string, 3)
 	
 	// Send data in a goroutine
@@ -170,10 +151,7 @@ func rangeOverChannels() {
 // ============================================================================
 
 func channelOperationsInContexts() {
-	fmt.Println("\n🎭 CHANNEL OPERATIONS IN CONTEXTS")
-	fmt.Println("=================================")
 
-	fmt.Println("\n6.1 Sending in different goroutines")
 	ch := make(chan int, 2)
 	
 	// Multiple senders
@@ -206,12 +184,9 @@ func channelOperationsInContexts() {
 // ============================================================================
 
 func nonBlockingOperations() {
-	fmt.Println("\n⚡ NON-BLOCKING OPERATIONS")
-	fmt.Println("=========================")
 
 	// Using select with default case for non-blocking operations
 	
-	fmt.Println("\n7.1 Non-blocking send")
 	ch := make(chan int, 1)
 	
 	// This send won't block because channel has space
@@ -229,9 +204,7 @@ func nonBlockingOperations() {
 	default:
 		fmt.Println("  Non-blocking send: Would block (buffer full)")
 	}
-	
-	fmt.Println("\n7.2 Non-blocking receive")
-	
+		
 	// This receive won't block because data is available
 	select {
 	case data := <-ch:
@@ -254,11 +227,7 @@ func nonBlockingOperations() {
 // ============================================================================
 
 func channelOperationErrors() {
-	fmt.Println("\n❌ CHANNEL OPERATION ERRORS")
-	fmt.Println("==========================")
 
-	fmt.Println("\n8.1 Common channel operation errors")
-	
 	// Error 1: Sending to closed channel
 	fmt.Println("  Error 1: Sending to closed channel")
 	ch := make(chan int)
@@ -289,46 +258,14 @@ func channelOperationErrors() {
 // 9. CHANNEL OPERATION BEST PRACTICES
 // ============================================================================
 
-func channelOperationBestPractices() {
-	fmt.Println("\n💡 CHANNEL OPERATION BEST PRACTICES")
-	fmt.Println("==================================")
-
-	fmt.Println("\n9.1 Best practices for channel operations")
-	
-	fmt.Println("  ✅ Always check if channel is closed when receiving")
-	fmt.Println("  ✅ Use buffered channels when you want to decouple sender/receiver")
-	fmt.Println("  ✅ Use unbuffered channels when you need tight synchronization")
-	fmt.Println("  ✅ Close channels to signal completion")
-	fmt.Println("  ✅ Use range to receive data until channel is closed")
-	fmt.Println("  ✅ Use select with default for non-blocking operations")
-	
-	fmt.Println("\n9.2 What to avoid")
-	fmt.Println("  ❌ Don't send to closed channels")
-	fmt.Println("  ❌ Don't close channels multiple times")
-	fmt.Println("  ❌ Don't send to nil channels")
-	fmt.Println("  ❌ Don't receive from nil channels")
-	fmt.Println("  ❌ Don't forget to close channels when done")
-}
-
-// ============================================================================
-// EXPORTED FUNCTIONS FOR MAIN
-// ============================================================================
-
-func runChannelOperations() {
-	fmt.Println("🔧 GO CHANNELS: OPERATIONS")
-	fmt.Println("==========================")
-	
-	// Run all channel operation examples
-	sendingData()
-	receivingData()
-	receivingWithOkCheck()
-	closingChannels()
-	rangeOverChannels()
-	channelOperationsInContexts()
-	nonBlockingOperations()
-	channelOperationErrors()
-	channelOperationBestPractices()
-	
-	fmt.Println("\n✅ Channel operations completed!")
-	fmt.Println("\nNext: Run 'go run . behavior' to learn about channel behavior")
-}
+// ✅ Always check if channel is closed when receiving
+// ✅ Use buffered channels when you want to decouple sender/receiver
+// ✅ Use unbuffered channels when you need tight synchronization
+// ✅ Close channels to signal completion
+// ✅ Use range to receive data until channel is closed
+// ✅ Use select with default for non-blocking operations
+// ❌ Don't send to closed channels
+// ❌ Don't close channels multiple times
+// ❌ Don't send to nil channels
+// ❌ Don't receive from nil channels
+// ❌ Don't forget to close channels when done

@@ -10,17 +10,13 @@ import (
 // ============================================================================
 
 func blockingBehavior() {
-	fmt.Println("\n🚫 BLOCKING BEHAVIOR")
-	fmt.Println("===================")
 
 	// Channels block when:
 	// - Sending on unbuffered channel (until someone receives)
 	// - Sending on full buffered channel (until space available)
 	// - Receiving on empty channel (until someone sends)
 	// - Sending/receiving on nil channel (blocks forever)
-	
-	fmt.Println("\n1.1 When channels block")
-	
+		
 	// Unbuffered channel - sender blocks until receiver
 	ch1 := make(chan int)
 	
@@ -40,7 +36,6 @@ func blockingBehavior() {
 	time.Sleep(1 * time.Second)
 	
 	// Buffered channel - sender blocks when buffer is full
-	fmt.Println("\n1.2 Buffered channel blocking")
 	ch2 := make(chan int, 2)  // Capacity of 2
 	
 	// Fill the buffer
@@ -69,19 +64,15 @@ func blockingBehavior() {
 // ============================================================================
 
 func nonBlockingBehavior() {
-	fmt.Println("\n⚡ NON-BLOCKING BEHAVIOR")
-	fmt.Println("======================")
 
 	// Channels don't block when:
 	// - Sending on buffered channel with space
 	// - Receiving from buffered channel with data
 	// - Using select with default case
 	
-	fmt.Println("\n2.1 Non-blocking with buffered channels")
 	ch := make(chan int, 3)
 	
 	// These sends won't block (buffer has space)
-	fmt.Println("  Sending to buffered channel...")
 	ch <- 1  // No blocking
 	ch <- 2  // No blocking
 	ch <- 3  // No blocking
@@ -100,15 +91,12 @@ func nonBlockingBehavior() {
 // ============================================================================
 
 func channelStates() {
-	fmt.Println("\n🔄 CHANNEL STATES")
-	fmt.Println("================")
 
 	// Channels have different states:
 	// - Open: Can send and receive
 	// - Closed: Can only receive (gets zero value)
 	// - Nil: Cannot send or receive (blocks forever)
 	
-	fmt.Println("\n3.1 Open channel state")
 	ch := make(chan int, 2)
 	
 	// Send data
@@ -120,7 +108,6 @@ func channelStates() {
 	fmt.Printf("  Received: %d\n", <-ch)
 	fmt.Printf("  Received: %d\n", <-ch)
 	
-	fmt.Println("\n3.2 Closed channel state")
 	close(ch)
 	fmt.Println("  Channel is closed - can only receive")
 	
@@ -142,10 +129,7 @@ func channelStates() {
 // ============================================================================
 
 func channelSynchronizationPatterns() {
-	fmt.Println("\n🔄 CHANNEL SYNCHRONIZATION PATTERNS")
-	fmt.Println("==================================")
 
-	fmt.Println("\n4.1 Signal pattern")
 	// Use channel to signal completion
 	done := make(chan bool)
 	
@@ -160,7 +144,6 @@ func channelSynchronizationPatterns() {
 	<-done  // Wait for signal
 	fmt.Println("  Main: Worker finished!")
 	
-	fmt.Println("\n4.2 Data transfer pattern")
 	// Use channel to transfer data
 	dataCh := make(chan string, 2)
 	
@@ -181,30 +164,21 @@ func channelSynchronizationPatterns() {
 // ============================================================================
 
 func channelDeadlocks() {
-	fmt.Println("\n💀 CHANNEL DEADLOCKS")
-	fmt.Println("===================")
 
 	// Deadlocks occur when:
 	// - All goroutines are blocked waiting for each other
 	// - Circular dependency in channel operations
 	// - Sending to nil channel
 	// - Receiving from nil channel
-	
-	fmt.Println("\n5.1 Common deadlock scenarios")
-	
+		
 	// Scenario 1: Sending to nil channel
-	fmt.Println("  Scenario 1: Sending to nil channel")
 	// var nilCh chan int
 	// nilCh <- 42  // This would block forever (commented out)
-	fmt.Println("  ⚠️  Sending to nil channel blocks forever!")
 	
 	// Scenario 2: Receiving from nil channel
-	fmt.Println("\n  Scenario 2: Receiving from nil channel")
 	// data := <-nilCh  // This would block forever (commented out)
-	fmt.Println("  ⚠️  Receiving from nil channel blocks forever!")
 	
 	// Scenario 3: Circular dependency
-	fmt.Println("\n  Scenario 3: Circular dependency")
 	// ch1 := make(chan int)
 	// ch2 := make(chan int)
 	
@@ -215,55 +189,16 @@ func channelDeadlocks() {
 }
 
 // ============================================================================
-// 6. CHANNEL PERFORMANCE CHARACTERISTICS
-// ============================================================================
-
-func channelPerformanceCharacteristics() {
-	fmt.Println("\n⚡ CHANNEL PERFORMANCE CHARACTERISTICS")
-	fmt.Println("====================================")
-
-	fmt.Println("\n6.1 Performance characteristics")
-	
-	// Unbuffered channels
-	fmt.Println("  Unbuffered channels:")
-	fmt.Println("    - Synchronous communication")
-	fmt.Println("    - Higher overhead (context switching)")
-	fmt.Println("    - Better for tight synchronization")
-	
-	// Buffered channels
-	fmt.Println("\n  Buffered channels:")
-	fmt.Println("    - Asynchronous communication")
-	fmt.Println("    - Lower overhead (less context switching)")
-	fmt.Println("    - Better for decoupling producer/consumer")
-	
-	// Channel operations
-	fmt.Println("\n  Channel operations:")
-	fmt.Println("    - Send/receive are O(1) operations")
-	fmt.Println("    - Memory overhead is minimal")
-	fmt.Println("    - Garbage collected automatically")
-}
-
-// ============================================================================
 // 7. CHANNEL MEMORY MODEL
 // ============================================================================
 
 func channelMemoryModel() {
-	fmt.Println("\n🧠 CHANNEL MEMORY MODEL")
-	fmt.Println("======================")
-
-	fmt.Println("\n7.1 Memory model guarantees")
 	
 	// Go's memory model guarantees:
 	// - A send on a channel happens before the corresponding receive
 	// - A receive on a channel happens before the corresponding send completes
 	// - Closing a channel happens before a receive of the zero value
 	
-	fmt.Println("  Memory model guarantees:")
-	fmt.Println("    - Send happens before receive")
-	fmt.Println("    - Receive happens before send completes")
-	fmt.Println("    - Close happens before zero value receive")
-	
-	// Example demonstrating happens-before relationship
 	ch := make(chan int)
 	
 	go func() {
@@ -284,11 +219,7 @@ func channelMemoryModel() {
 // ============================================================================
 
 func channelLifecycleManagement() {
-	fmt.Println("\n♻️  CHANNEL LIFECYCLE MANAGEMENT")
-	fmt.Println("==============================")
 
-	fmt.Println("\n8.1 Channel lifecycle stages")
-	
 	// Stage 1: Creation
 	ch := make(chan int, 2)
 	fmt.Println("  Stage 1: Channel created")
@@ -303,33 +234,5 @@ func channelLifecycleManagement() {
 	fmt.Println("  Stage 3: Channel closed")
 	
 	// Stage 4: Cleanup (automatic)
-	fmt.Println("  Stage 4: Channel will be garbage collected")
-	
-	fmt.Println("\n8.2 Best practices for lifecycle management")
-	fmt.Println("  ✅ Close channels when done")
-	fmt.Println("  ✅ Use defer to ensure cleanup")
-	fmt.Println("  ✅ Don't close channels multiple times")
-	fmt.Println("  ✅ Let garbage collector handle cleanup")
-}
-
-// ============================================================================
-// EXPORTED FUNCTIONS FOR MAIN
-// ============================================================================
-
-func runChannelBehavior() {
-	fmt.Println("🎭 GO CHANNELS: BEHAVIOR")
-	fmt.Println("========================")
-	
-	// Run all channel behavior examples
-	blockingBehavior()
-	nonBlockingBehavior()
-	channelStates()
-	channelSynchronizationPatterns()
-	channelDeadlocks()
-	channelPerformanceCharacteristics()
-	channelMemoryModel()
-	channelLifecycleManagement()
-	
-	fmt.Println("\n✅ Channel behavior completed!")
-	fmt.Println("\nNext: Run 'go run . patterns' to learn about channel patterns")
+	// Channel will be garbage collected
 }
