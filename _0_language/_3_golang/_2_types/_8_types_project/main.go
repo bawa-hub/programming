@@ -20,7 +20,7 @@ func main() {
 		module = flag.String("module", "all", "Module to run (primitives, arrays, structs, interfaces, pointers, examples, all)")
 		help   = flag.Bool("help", false, "Show help message")
 	)
-	
+
 	flag.Parse()
 
 	// Show help if requested

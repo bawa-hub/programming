@@ -1015,3 +1015,4 @@ Implement a pipeline that caches results.
 Ready for the next topic? Let's move on to **Fan-Out/Fan-In Pattern** where you'll learn how to distribute work efficiently!
 
 **Run the examples in this directory to see pipelines in action!**
+

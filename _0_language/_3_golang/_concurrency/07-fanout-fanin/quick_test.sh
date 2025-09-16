@@ -61,3 +61,4 @@ fi
 echo "==========================================="
 echo "🎉 All tests passed! Fan-Out/Fan-In topic is ready!"
 echo "🚀 Ready to move to Pub-Sub Pattern!"
+

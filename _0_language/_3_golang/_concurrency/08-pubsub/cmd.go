@@ -48,3 +48,4 @@ func printUsage() {
 	fmt.Println("  go run . advanced")
 	fmt.Println("  go run . all")
 }
+

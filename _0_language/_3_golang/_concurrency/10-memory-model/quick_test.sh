@@ -68,3 +68,4 @@ fi
 echo ""
 echo "🎉 All tests passed! Memory Model & Race Conditions implementation is working correctly."
 echo "Ready to move to the next topic!"
+

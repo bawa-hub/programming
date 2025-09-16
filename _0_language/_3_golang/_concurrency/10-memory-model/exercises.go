@@ -368,3 +368,4 @@ func runExercises() {
 	fmt.Println("\n🎉 All exercises completed!")
 	fmt.Println("Ready to move to advanced patterns!")
 }
+
