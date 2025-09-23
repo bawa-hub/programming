@@ -1,5 +1,10 @@
 // https://leetcode.com/problems/two-sum/
 
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
+
 // brute force
 vector<int> twoSum(vector<int> &nums, int target)
 {
