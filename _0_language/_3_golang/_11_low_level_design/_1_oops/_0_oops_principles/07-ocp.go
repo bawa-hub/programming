@@ -38,3 +38,10 @@ type PaymentService struct {
 func (ps *PaymentService) ProcessPayment(amount float64) error {
 	return ps.processor.ProcessPayment(amount)
 }
+
+func main() {
+	creditCardProcessor := &CreditCardProcessor{CardNumber: "1234-5678-9012-3456"}
+	paymentService := &PaymentService{processor: creditCardProcessor}
+	paymentService.ProcessPayment(100.0)
+	fmt.Println()
+}

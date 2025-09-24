@@ -36,3 +36,11 @@ func (us *UserService) CreateUser(name string) error {
 func (us *UserService) GetUser(id string) (string, error) {
 	return us.db.Get(id)
 }
+
+func main() {
+	mysqlDB := &MySQLDatabase{}
+	userService := &UserService{db: mysqlDB}
+	userService.CreateUser("Charlie")
+	userService.GetUser("1")
+	fmt.Println()
+}

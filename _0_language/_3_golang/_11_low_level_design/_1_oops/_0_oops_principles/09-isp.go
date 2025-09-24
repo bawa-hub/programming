@@ -47,3 +47,14 @@ type Robot struct {
 func (r *Robot) Work() {
 	fmt.Printf("Robot %s is working\n", r.Model)
 }
+
+func main() {
+	human := &Human{Name: "Bob"}
+	robot := &Robot{Model: "T-800"}
+
+	workers := []Worker{human, robot}
+	for _, worker := range workers {
+		worker.Work()
+	}
+	fmt.Println()
+}

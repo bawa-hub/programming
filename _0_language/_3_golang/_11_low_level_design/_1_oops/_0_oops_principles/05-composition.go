@@ -4,9 +4,9 @@ import "fmt"
 
 // Using Composition (HAS-A relationship)
 type Engine struct {
-	Type        string
-	Horsepower  int
-	IsRunning   bool
+	Type       string
+	Horsepower int
+	IsRunning  bool
 }
 
 func (e *Engine) Start() {
@@ -29,4 +29,15 @@ type ModernCar struct {
 func (mc *ModernCar) Start() {
 	mc.Engine.Start()
 	fmt.Printf("%s %s is ready to drive\n", mc.Brand, mc.Model)
+}
+
+func main() {
+	fmt.Println("6. COMPOSITION VS INHERITANCE:")
+	modernCar := &ModernCar{
+		Brand:  "BMW",
+		Model:  "X5",
+		Engine: Engine{Type: "V8", Horsepower: 400},
+	}
+	modernCar.Start()
+	fmt.Println()
 }

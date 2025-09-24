@@ -24,3 +24,11 @@ func (es *EmailService) SendEmail(to, subject, body string) error {
 	fmt.Printf("Sending email to %s: %s\n", to, subject)
 	return nil
 }
+
+func main() {
+	user := &User{ID: 1, Name: "Alice", Email: "alice@example.com"}
+	emailService := &EmailService{}
+	fmt.Printf("User: %s\n", user.GetDisplayName())
+	emailService.SendEmail(user.Email, "Welcome", "Welcome to our service!")
+	fmt.Println()
+}

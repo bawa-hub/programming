@@ -37,3 +37,11 @@ func (p *Penguin) MakeSound() string {
 func MakeBirdFly(b Bird) {
 	fmt.Println(b.Fly())
 }
+
+func main() {
+	birds := []Bird{&Sparrow{}, &Penguin{}}
+	for _, bird := range birds {
+		MakeBirdFly(bird)
+	}
+	fmt.Println()
+}

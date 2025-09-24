@@ -48,3 +48,15 @@ func (c *Circle) GetName() string {
 func PrintShapeInfo(s Shape) {
 	fmt.Printf("%s - Area: %.2f, Perimeter: %.2f\n", s.GetName(), s.Area(), s.Perimeter())
 }
+
+func main() {
+	fmt.Println("4. ABSTRACTION:")
+	shapes := []Shape{
+		&Rectangle{Width: 5, Height: 3},
+		&Circle{Radius: 4},
+	}
+	for _, shape := range shapes {
+		PrintShapeInfo(shape)
+	}
+	fmt.Println()
+}

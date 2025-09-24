@@ -51,3 +51,22 @@ func (m *Motorcycle) Start() {
 func (m *Motorcycle) Wheelie() {
 	fmt.Printf("Doing a wheelie on %s %s\n", m.Brand, m.Model)
 }
+
+func main() {
+		fmt.Println("2. INHERITANCE:")
+	car := &Car{
+		Vehicle: Vehicle{Brand: "Toyota", Model: "Camry", Year: 2023},
+		Doors:   4,
+		Engine:  "V6",
+	}
+	car.Start()
+	car.OpenTrunk()
+
+	motorcycle := &Motorcycle{
+		Vehicle:       Vehicle{Brand: "Honda", Model: "CBR600", Year: 2023},
+		HasWindshield: true,
+	}
+	motorcycle.Start()
+	motorcycle.Wheelie()
+	fmt.Println()
+}

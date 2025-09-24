@@ -46,3 +46,25 @@ func (ba *BankAccount) Withdraw(amount float64) error {
 	ba.balance -= amount
 	return nil
 }
+
+func main() {
+		fmt.Println("1. ENCAPSULATION:")
+	account := NewBankAccount("12345", "John Doe", 1000.0)
+	fmt.Printf("Initial balance: $%.2f\n", account.GetBalance())
+	
+	err := account.Deposit(500.0)
+	if err != nil {
+		fmt.Printf("Error: %v\n", err)
+	} else {
+		fmt.Printf("After deposit: $%.2f\n", account.GetBalance())
+	}
+
+	err = account.Withdraw(200.0)
+	if err != nil {
+		fmt.Printf("Error: %v\n", err)
+	} else {
+		fmt.Printf("After withdrawal: $%.2f\n", account.GetBalance())
+	}
+	fmt.Println()
+
+}
