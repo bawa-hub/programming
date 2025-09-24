@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-	fmt.Println("=== CHAIN OF RESPONSIBILITY PATTERN DEMONSTRATION ===\n")
 
 	// // 1. BASIC CHAIN OF RESPONSIBILITY
 	fmt.Println("1. BASIC CHAIN OF RESPONSIBILITY:")
