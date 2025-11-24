@@ -57,15 +57,8 @@ int main()
     {
         int v1, v2;
         cin >> v1 >> v2;
-        // g[v1].push_back(v2);
-        // g[v2].push_back(v1);
         addEdge(adj, v1, v2);
     }
-
-    // addEdge(adj, 0, 2);
-    // addEdge(adj, 2, 4);
-    // addEdge(adj, 0, 1);
-    // addEdge(adj, 0, 3);
 
     Solution obj;
     vector<int> ans = obj.dfsOfGraph(5, adj);
@@ -76,5 +69,6 @@ int main()
 
 // Output: 0 2 4 1 3
 
-// Time Complexity: For an undirected graph, O(N) + O(2E), For a directed graph, O(N) + O(E), Because for every node we are calling the recursive function once, the time taken is O(N) and 2E is for total degrees as we traverse for all adjacent nodes.
+// Time Complexity: For an undirected graph, O(N) + O(2E), For a directed graph, O(N) + O(E), 
+// Because for every node we are calling the recursive function once, the time taken is O(N) and 2E is for total degrees as we traverse for all adjacent nodes.
 // Space Complexity: O(3N) ~ O(N), Space for dfs stack space, visited array and an adjacency list.
