@@ -72,3 +72,33 @@ int main()
 // Time Complexity: For an undirected graph, O(N) + O(2E), For a directed graph, O(N) + O(E), 
 // Because for every node we are calling the recursive function once, the time taken is O(N) and 2E is for total degrees as we traverse for all adjacent nodes.
 // Space Complexity: O(3N) ~ O(N), Space for dfs stack space, visited array and an adjacency list.
+
+
+// Time complexity explanation
+
+// Step 1: Each Node Is Visited Once → O(V)
+// Step 2: Total Work Done in All Loops → O(2E)
+// for (auto it : adj[node]) -> runs once for each neighbor of each node.
+
+// If you sum across the whole graph:
+// Node 1 loop runs degree(1) times
+// Node 2 loop runs degree(2) times
+// Node 3 loop runs degree(3) times
+// ...
+// Node V loop runs degree(V) times
+
+// If you add all degrees:
+// degree(1) + degree(2) + ... + degree(V) = 2E (for undirected graph)
+
+
+// ✔ Why it's not O(V × E)
+
+// Because DFS does not check all edges for each node.
+// It only checks the edges that belong to that particular node.
+
+// Total time:
+// Visiting nodes = O(V)
+// Checking all adj lists = O(2E)
+// Total = O(V + E)
+
+
