@@ -1,13 +1,12 @@
 # Graph , Tree, Trie
 
-# Backtracking, DP, Greedy
+# Backtracking, DP
 
-# BinarySearch, Sorting, Maths
+# BinarySearch, Sorting, Greedy
 
 # Arrays, Strings, Techiniques
 
-# LinkedList, StackQueue
+# LinkedList, StackQueue, Maths
 
 
 
-https://leetcode.com/problem-list/o9olnhqm/ - binary search

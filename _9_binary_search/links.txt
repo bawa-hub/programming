@@ -17,3 +17,5 @@ https://leetcode.com/discuss/study-guide/2371234/An-opinionated-guide-to-binary-
 https://leetcode.com/discuss/study-guide/3444552/binary-search-on-answer-template-generic-template
 https://leetcode.com/discuss/study-guide/691825/Binary-Search-for-Beginners-Problems-or-Patterns-or-Sample-solutions
 https://leetcode.com/discuss/post/3444552/binary-search-on-answer-template-generic-ysn4/
+
+https://leetcode.com/problem-list/o9olnhqm/ 

@@ -26,6 +26,8 @@
 
 Overall, the comparator function plays a crucial role in guiding the sorting algorithm's behavior and determining the final order of the elements. The sorting algorithm relies on the comparator's logic to make decisions about how to arrange the elements efficiently and correctly. **/
 
+// https://en.cppreference.com/w/cpp/algorithm/sort.html
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
