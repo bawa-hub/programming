@@ -1,7 +1,7 @@
 # how to identify dp problem generically ?
 
 count the total number of ways
-min/max
+min/max from multiple outputs
 trying out all possible ways -> think recursion -> then dp
 
 # memoization
