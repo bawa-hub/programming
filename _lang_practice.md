@@ -8,3 +8,6 @@
     [cmath, alogrithms]
 
 # sort with comparator
+
+# algorithms
+sqrt

@@ -1,12 +1,18 @@
-# Graph , Tree, Trie
+# Data Structure: 
+    Arrays, LinkedList, StackQueue
+    Graph, Tree, Trie
 
-# Backtracking, DP
+# Algorithms: 
+   Backtracking, DP, Greedy
+   BinarySearch, Sorting, Strings    
 
-# BinarySearch, Sorting, Greedy
+# Techniques and Maths
+    Hashing, TwoPointer, SlidingWindow, 
+    PriorityQueue, PrefixSum, Maths
 
-# Arrays, Strings, Techiniques
 
-# LinkedList, StackQueue, Maths
+
+
 
 
 
