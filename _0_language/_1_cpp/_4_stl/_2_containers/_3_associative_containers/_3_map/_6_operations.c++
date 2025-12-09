@@ -1,29 +1,30 @@
 #include <iostream>
 #include <map>
 
+using namespace std;
+
 int main()
 {
     // find()
-    std::map<char, int> mymap;
-    std::map<char, int>::iterator it;
+    map<char, int> mymap;
+    map<char, int>::iterator it;
 
     mymap['a'] = 50;
     mymap['b'] = 100;
     mymap['c'] = 150;
     mymap['d'] = 200;
 
-    it = mymap.find('b');
-    if (it != mymap.end())
-        mymap.erase(it);
+    if (mymap.find('b') != mymap.end())
+        mymap.erase(mymap.find('b'));
 
     // print content:
-    std::cout << "elements in mymap:" << '\n';
-    std::cout << "a => " << mymap.find('a')->second << '\n';
-    std::cout << "c => " << mymap.find('c')->second << '\n';
-    std::cout << "d => " << mymap.find('d')->second << '\n';
+    cout << "elements in mymap:" << '\n';
+    cout << "a => " << mymap.find('a')->second << '\n';
+    cout << "c => " << mymap.find('c')->second << '\n';
+    cout << "d => " << mymap.find('d')->second << '\n';
 
     // count()
-    std::map<char, int> mymap1;
+    map<char, int> mymap1;
     char c;
 
     mymap1['a'] = 101;
@@ -32,16 +33,16 @@ int main()
 
     for (c = 'a'; c < 'h'; c++)
     {
-        std::cout << c;
+        cout << c;
         if (mymap1.count(c) > 0)
-            std::cout << " is an element of mymap.\n";
+            cout << " is an element of mymap.\n";
         else
-            std::cout << " is not an element of mymap.\n";
+            cout << " is not an element of mymap.\n";
     }
 
     // lower_bound(), upper_bound()
-    std::map<char, int> mymap2;
-    std::map<char, int>::iterator itlow, itup;
+    map<char, int> mymap2;
+    map<char, int>::iterator itlow, itup;
 
     mymap2['a'] = 20;
     mymap2['b'] = 40;
@@ -55,24 +56,24 @@ int main()
     mymap2.erase(itlow, itup); // erases [itlow,itup)
 
     // print content:
-    for (std::map<char, int>::iterator it = mymap2.begin(); it != mymap2.end(); ++it)
-        std::cout << it->first << " => " << it->second << '\n';
+    for (map<char, int>::iterator it = mymap2.begin(); it != mymap2.end(); ++it)
+        cout << it->first << " => " << it->second << '\n';
 
     // equal_range()
-    std::map<char, int> mymap3;
+    map<char, int> mymap3;
 
     mymap3['a'] = 10;
     mymap3['b'] = 20;
     mymap3['c'] = 30;
 
-    std::pair<std::map<char, int>::iterator, std::map<char, int>::iterator> ret;
+    pair<map<char, int>::iterator, map<char, int>::iterator> ret;
     ret = mymap3.equal_range('b');
 
-    std::cout << "lower bound points to: ";
-    std::cout << ret.first->first << " => " << ret.first->second << '\n';
+    cout << "lower bound points to: ";
+    cout << ret.first->first << " => " << ret.first->second << '\n';
 
-    std::cout << "upper bound points to: ";
-    std::cout << ret.second->first << " => " << ret.second->second << '\n';
+    cout << "upper bound points to: ";
+    cout << ret.second->first << " => " << ret.second->second << '\n';
 
     return 0;
 }

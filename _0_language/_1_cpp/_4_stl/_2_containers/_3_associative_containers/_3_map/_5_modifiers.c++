@@ -1,47 +1,49 @@
 #include <iostream>
 #include <map>
 
+using namespace std;
+
 int main()
 {
-    std::map<char, int> mymap;
+    map<char, int> mymap;
 
     // insert()
 
     // first insert function version (single parameter):
-    mymap.insert(std::pair<char, int>('a', 100));
-    mymap.insert(std::pair<char, int>('z', 200));
+    mymap.insert(pair<char, int>('a', 100));
+    mymap.insert(pair<char, int>('z', 200));
 
-    std::pair<std::map<char, int>::iterator, bool> ret;
-    ret = mymap.insert(std::pair<char, int>('z', 500));
+    pair<map<char, int>::iterator, bool> ret;
+    ret = mymap.insert(pair<char, int>('z', 500));
     if (ret.second == false)
     {
-        std::cout << "element 'z' already existed";
-        std::cout << " with a value of " << ret.first->second << '\n';
+        cout << "element 'z' already existed";
+        cout << " with a value of " << ret.first->second << '\n';
     }
 
     // second insert function version (with hint position):
-    std::map<char, int>::iterator it = mymap.begin();
-    mymap.insert(it, std::pair<char, int>('b', 300)); // max efficiency inserting
-    mymap.insert(it, std::pair<char, int>('c', 400)); // no max efficiency inserting
+    map<char, int>::iterator it = mymap.begin();
+    mymap.insert(it, pair<char, int>('b', 300)); // max efficiency inserting
+    mymap.insert(it, pair<char, int>('c', 400)); // no max efficiency inserting
 
     // third insert function version (range insertion):
-    std::map<char, int> anothermap;
+    map<char, int> anothermap;
     anothermap.insert(mymap.begin(), mymap.find('c'));
 
     // showing contents:
-    std::cout << "mymap contains:\n";
+    cout << "mymap contains:\n";
     for (it = mymap.begin(); it != mymap.end(); ++it)
-        std::cout << it->first << " => " << it->second << '\n';
+        cout << it->first << " => " << it->second << '\n';
 
-    std::cout << "anothermap contains:\n";
+    cout << "anothermap contains:\n";
     for (it = anothermap.begin(); it != anothermap.end(); ++it)
-        std::cout << it->first << " => " << it->second << '\n';
+        cout << it->first << " => " << it->second << '\n';
 
-    std::cout << "\n";
+    cout << "\n";
 
     // erase()
-    std::map<char, int> mymap1;
-    std::map<char, int>::iterator it1;
+    map<char, int> mymap1;
+    map<char, int>::iterator it1;
 
     // insert some values:
     mymap1['a'] = 10;
@@ -61,10 +63,10 @@ int main()
 
     // show content:
     for (it1 = mymap1.begin(); it1 != mymap1.end(); ++it1)
-        std::cout << it1->first << " => " << it1->second << '\n';
+        cout << it1->first << " => " << it1->second << '\n';
 
     //swap()
-    std::map<char, int> foo, bar;
+    map<char, int> foo, bar;
 
     foo['x'] = 100;
     foo['y'] = 200;
@@ -75,57 +77,57 @@ int main()
 
     foo.swap(bar);
 
-    std::cout << "foo contains:\n";
-    for (std::map<char, int>::iterator it = foo.begin(); it != foo.end(); ++it)
-        std::cout << it->first << " => " << it->second << '\n';
+    cout << "foo contains:\n";
+    for (map<char, int>::iterator it = foo.begin(); it != foo.end(); ++it)
+        cout << it->first << " => " << it->second << '\n';
 
-    std::cout << "bar contains:\n";
-    for (std::map<char, int>::iterator it = bar.begin(); it != bar.end(); ++it)
-        std::cout << it->first << " => " << it->second << '\n';
+    cout << "bar contains:\n";
+    for (map<char, int>::iterator it = bar.begin(); it != bar.end(); ++it)
+        cout << it->first << " => " << it->second << '\n';
 
     // clear()
-    std::map<char, int> mymap2;
+    map<char, int> mymap2;
 
     mymap2['x'] = 100;
     mymap2['y'] = 200;
     mymap2['z'] = 300;
 
-    std::cout << "mymap contains:\n";
-    for (std::map<char, int>::iterator it = mymap2.begin(); it != mymap2.end(); ++it)
-        std::cout << it->first << " => " << it->second << '\n';
+    cout << "mymap contains:\n";
+    for (map<char, int>::iterator it = mymap2.begin(); it != mymap2.end(); ++it)
+        cout << it->first << " => " << it->second << '\n';
 
     mymap2.clear();
     mymap2['a'] = 1101;
     mymap2['b'] = 2202;
 
-    std::cout << "mymap contains:\n";
-    for (std::map<char, int>::iterator it = mymap2.begin(); it != mymap2.end(); ++it)
-        std::cout << it->first << " => " << it->second << '\n';
+    cout << "mymap contains:\n";
+    for (map<char, int>::iterator it = mymap2.begin(); it != mymap2.end(); ++it)
+        cout << it->first << " => " << it->second << '\n';
 
     // emplace()
-    std::map<char, int> mymap3;
+    map<char, int> mymap3;
 
     mymap3.emplace('x', 100);
     mymap3.emplace('y', 200);
     mymap3.emplace('z', 100);
 
-    std::cout << "mymap contains:";
+    cout << "mymap contains:";
     for (auto &x : mymap3)
-        std::cout << " [" << x.first << ':' << x.second << ']';
-    std::cout << '\n';
+        cout << " [" << x.first << ':' << x.second << ']';
+    cout << '\n';
 
     // emplace_hint()
-    std::map<char, int> mymap4;
+    map<char, int> mymap4;
     auto it2 = mymap4.end();
 
     it2 = mymap4.emplace_hint(it2, 'b', 10);
     mymap4.emplace_hint(it2, 'a', 12);
     mymap4.emplace_hint(mymap4.end(), 'c', 14);
 
-    std::cout << "mymap contains:";
+    cout << "mymap contains:";
     for (auto &x : mymap4)
-        std::cout << " [" << x.first << ':' << x.second << ']';
-    std::cout << '\n';
+        cout << " [" << x.first << ':' << x.second << ']';
+    cout << '\n';
 
     return 0;
 }
