@@ -27,8 +27,8 @@ int f(int day, int last, vector<vector<int>> &points, vector<vector<int>> &dp)
     {
         if (i != last)
         {
-            int activity = points[day][i] + f(day - 1, i, points, dp);
-            maxi = max(maxi, activity);
+            int point = points[day][i] + f(day - 1, i, points, dp);
+            maxi = max(maxi, point);
         }
     }
 
@@ -66,8 +66,8 @@ int ninjaTraining(int n, vector<vector<int>> &points)
             {
                 if (task != last)
                 {
-                    int activity = points[day][task] + dp[day - 1][task];
-                    dp[day][last] = max(dp[day][last], activity);
+                    int point = points[day][task] + dp[day - 1][task];
+                    dp[day][last] = max(dp[day][last], point);
                 }
             }
         }
