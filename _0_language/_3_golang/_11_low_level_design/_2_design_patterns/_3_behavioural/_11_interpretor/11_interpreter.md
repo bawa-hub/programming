@@ -4,7 +4,8 @@
 The Interpreter Pattern defines a representation for a grammar along with an interpreter that uses the representation to interpret sentences in the language. It's particularly useful for implementing domain-specific languages (DSLs) and for parsing and evaluating expressions.
 
 ## Core Concept
-The Interpreter Pattern provides a way to evaluate language grammar or expressions by representing each grammar rule as a class. It uses a combination of the Composite Pattern and the Visitor Pattern to build a tree structure that represents the grammar and then interprets it.
+The Interpreter Pattern provides a way to evaluate language grammar or expressions by representing each grammar rule as a class. 
+It uses a combination of the Composite Pattern and the Visitor Pattern to build a tree structure that represents the grammar and then interprets it.
 
 ## Key Components
 
