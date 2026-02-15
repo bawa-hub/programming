@@ -16,8 +16,8 @@ func main() {
     start := time.Now()
 
 	// change the waiter (goroutine) and customer (task) to see the performance magic
-    waiter := 10000
-    cus := 100000
+    waiter := 5
+    cus := 5
     
     ch_cus := make(chan int, cus)
     results := make(chan string, cus)

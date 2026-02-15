@@ -198,3 +198,7 @@ func channelLifecycle() {
 		fmt.Printf("  Received: %d\n", data)
 	}
 }
+
+func main() {
+	basicChannelConcepts()
+}

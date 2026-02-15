@@ -1,5 +1,6 @@
 🔥 Phase 1: Core Golang (Master the Language)
 These are non-negotiables. Even senior devs must be rock solid here.
+
 📌 1. Go Fundamentals
 
     Go installation, workspace (GOPATH vs Go Modules)
@@ -39,6 +40,7 @@ These are non-negotiables. Even senior devs must be rock solid here.
     errors.Is, errors.As, errors.Join
 
 ⚙️ Phase 2: Intermediate Golang (Deep Dive Concepts)
+
 📌 6. Concurrency
 
     Goroutines
@@ -66,6 +68,7 @@ These are non-negotiables. Even senior devs must be rock solid here.
     Safe concurrent patterns
 
 🧠 Phase 3: Advanced Golang Topics
+
 📌 9. Advanced Interfaces & Reflection
 
     reflect package (use cases, performance concerns)
@@ -98,6 +101,7 @@ These are non-negotiables. Even senior devs must be rock solid here.
     Performance profiling (pprof, trace)
 
 🌐 Phase 4: Production Engineering with Go
+
 📌 13. Building Web Services (HTTP & gRPC)
 
     net/http, routers (chi, gorilla/mux)
@@ -129,20 +133,18 @@ These are non-negotiables. Even senior devs must be rock solid here.
     Circuit breakers (resilience), retries
 
 📦 Phase 5: System Design + Real-World Projects in Go
+
 🔧 Real-World Projects to Build:
 
     URL Shortener with Redis backend (covers REST, persistence, caching)
-
     Concurrent Web Crawler (channels, goroutines, error groups)
-
     Distributed Worker System (message queues + goroutines)
-
     In-memory Key-Value Store (Redis clone with basic TTL)
-
     Rate Limiter Library (leaky bucket or token bucket)
     gRPC Microservice System (auth, data, logging, gateway)
 
 🧠 Phase 6: Interview Prep for Senior Golang Roles
+
 📌 Golang-Specific Interview Topics:
 
     Interface tricks and usage
@@ -156,11 +158,8 @@ These are non-negotiables. Even senior devs must be rock solid here.
 📌 System Design Rounds (in Go)
 
     Build a high-QPS URL shortener
-
     Design a real-time chat system in Go
-
     Build a distributed cache service
-
     Design a log aggregation system
 
 📚 Resources (for Self-Study + Practice) Official
@@ -182,12 +181,18 @@ Tools
     staticcheck (linting)
     ginkgo + gomock (testing)
 
+
+
+
+
+
+
+
+
 # Phase 1: Fundamentals of Go
 
-Goal: Understand syntax, basic types, control flow, functions, and basic Go programming patterns.
 
 Topics:
-
 Go setup and environment
 Install Go, configure $GOPATH, $GOROOT
 Go workspace, modules (go mod init, go mod tidy)
@@ -392,25 +397,15 @@ Topics:
 Concurrency challenges
 
 Mutex, RWMutex, atomic operations
-
 Thread-safe data structures
-
 Deadlock detection and prevention
-
 Performance
-
 Profiling (pprof, trace)
-
 Optimizing Go routines and memory usage
-
 Benchmarking strategies
-
 Go internals
-
 Compiler basics
-
 Goroutine scheduler
-
 Garbage collection internals
 
 Design patterns
