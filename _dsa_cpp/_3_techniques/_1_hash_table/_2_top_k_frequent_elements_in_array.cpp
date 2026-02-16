@@ -61,28 +61,28 @@ public:
 
 // optimal O(n) bucket sort
 
-vector<int> topKFrequent(vector<int>& nums, int k) {
-    unordered_map<int, int> freq;
-    for (int num : nums) {
-        freq[num]++;
-    }
+// vector<int> topKFrequent(vector<int>& nums, int k) {
+//     unordered_map<int, int> freq;
+//     for (int num : nums) {
+//         freq[num]++;
+//     }
 
-    // bucket[i] contains numbers that appear exactly i times
-    vector<vector<int>> bucket(nums.size() + 1);
-    for (auto& p : freq) {
-        bucket[p.second].push_back(p.first);
-    }
+//     // bucket[i] contains numbers that appear exactly i times
+//     vector<vector<int>> bucket(nums.size() + 1);
+//     for (auto& p : freq) {
+//         bucket[p.second].push_back(p.first);
+//     }
 
-    vector<int> res;
-    for (int i = nums.size(); i >= 0 && res.size() < k; i--) {
-        for (int num : bucket[i]) {
-            res.push_back(num);
-            if (res.size() == k) break;
-        }
-    }
+//     vector<int> res;
+//     for (int i = nums.size(); i >= 0 && res.size() < k; i--) {
+//         for (int num : bucket[i]) {
+//             res.push_back(num);
+//             if (res.size() == k) break;
+//         }
+//     }
 
-    return res;
-}
+//     return res;
+// }
 
 // int main() {
 //     vector<int> nums = {1, 1, 1, 2, 2, 3};

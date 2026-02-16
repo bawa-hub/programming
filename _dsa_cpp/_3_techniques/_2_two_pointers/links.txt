@@ -1,0 +1,6 @@
+https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days.
+https://leetcode.com/discuss/study-guide/1905453/Master-in-Two-Pointer
+https://leetcode.com/articles/two-pointer-technique/
+
+https://medium.com/@timpark0807/leetcode-is-easy-two-pointers-90b9b0f2eb43
+https://www.geeksforgeeks.org/two-pointers-technique/

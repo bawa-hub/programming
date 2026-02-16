@@ -1,0 +1,9 @@
+
+aditya verma - https://www.youtube.com/playlist?list=PL_z_8CaSLPWdeOezg68SKkeLN4-T_jNHd
+https://www.youtube.com/playlist?list=PLgUwDviBIf0oSO572kQ7KCSvCUh1AdILj
+https://github.com/skjha1/Aditya-verma-youtube-playlist-code/blob/main/Stack/02%20Nearest%20greater%20to%20left(NGL).cpp
+https://www.geeksforgeeks.org/stack-data-structure/
+https://www.geeksforgeeks.org/queue-data-structure/
+
+https://leetcode.com/discuss/study-guide/2347639/A-comprehensive-guide-and-template-for-monotonic-stack-based-problems
+https://leetcode.com/discuss/study-guide/3773642/mastering-monotonic-stack-unlocking-efficient-problem-solving-pattern-technique-once-forever
