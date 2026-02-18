@@ -3,9 +3,12 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
 	"runtime"
 	"sync/atomic"
 	"time"
+	ex "gselect/exercises"
+	pat "gselect/patterns"
 )
 
 // Example 1: Basic Select Statement
@@ -462,4 +465,239 @@ func showSelectInfo() {
 	fmt.Printf("Number of goroutines: %d\n", runtime.NumGoroutine())
 	fmt.Printf("Number of CPUs: %d\n", runtime.NumCPU())
 	fmt.Printf("GOMAXPROCS: %d\n", runtime.GOMAXPROCS(0))
+}
+
+func runBasicExamples() {
+	fmt.Println("🚀 Select Statement Mastery Examples")
+	fmt.Println("====================================")
+
+	// Example 1: Basic Select Statement
+	basicSelect()
+
+	// Example 2: Non-blocking Operations
+	nonBlockingOperations()
+
+	// Example 3: Default Cases
+	defaultCases()
+
+	// Example 4: Timeout Patterns
+	timeoutPatterns()
+
+	// Example 5: Priority Handling
+	priorityHandling()
+
+	// Example 6: Channel Multiplexing
+	channelMultiplexing()
+
+	// Example 7: Select with Loops
+	selectWithLoops()
+
+	// Example 8: Select with Ticker
+	selectWithTicker()
+
+	// Example 9: Select with Context
+	selectWithContext()
+
+	// Example 10: Select Performance
+	selectPerformance()
+
+	// Example 11: Select with Error Handling
+	selectWithErrorHandling()
+
+	// Example 12: Common Pitfalls
+	commonPitfalls()
+}
+
+// Run all exercises
+func RunAllExercises() {
+	fmt.Println("🧪 Running All Select Exercises")
+	fmt.Println("===============================")
+	
+	ex.Exercise1()
+	ex.Exercise2()
+	ex.Exercise3()
+	ex.Exercise4()
+	ex.Exercise5()
+	ex.Exercise6()
+	ex.Exercise7()
+	ex.Exercise8()
+	ex.Exercise9()
+	ex.Exercise10()
+	
+	fmt.Println("\n✅ All exercises completed!")
+}
+
+func main() {
+	if len(os.Args) < 2 {
+		showUsage()
+		return
+	}
+
+	command := os.Args[1]
+
+	switch command {
+	case "basic":
+		runBasicExamples()
+	case "exercises":
+		RunAllExercises()
+	case "advanced":
+		RunAdvancedPatterns()
+	case "all":
+		runBasicExamples()
+		fmt.Println("\n" + "==================================================")
+		RunAllExercises()
+		fmt.Println("\n" + "==================================================")
+		RunAdvancedPatterns()
+	default:
+		fmt.Printf("Unknown command: %s\n", command)
+		showUsage()
+	}
+}
+
+func showUsage() {
+	fmt.Println("🚀 Select Statement Mastery - Usage")
+	fmt.Println("===================================")
+	fmt.Println()
+	fmt.Println("Commands:")
+	fmt.Println("  basic     - Run basic select examples")
+	fmt.Println("  exercises - Run all exercises")
+	fmt.Println("  advanced  - Run advanced patterns")
+	fmt.Println("  all       - Run everything")
+	fmt.Println()
+	fmt.Println("Examples:")
+	fmt.Println("  go run . basic")
+	fmt.Println("  go run . exercises")
+	fmt.Println("  go run . advanced")
+	fmt.Println("  go run . all")
+}
+
+// Demo function to run all advanced patterns
+func RunAdvancedPatterns() {
+	fmt.Println("🚀 Advanced Select Patterns")
+	fmt.Println("===========================")
+	
+	// Pattern 1: Event Loop
+	fmt.Println("\n1. Select-based Event Loop:")
+	eventLoop := pat.NewEventLoop()
+	eventLoop.RegisterHandler("test", func(e pat.Event) {
+		fmt.Printf("Event received: %s - %v\n", e.Type, e.Data)
+	})
+	eventLoop.Start()
+	
+	eventLoop.EmitEvent(pat.Event{Type: "test", Data: "Hello World"})
+	eventLoop.SendCommand(pat.Command{Type: "quit"})
+	time.Sleep(100 * time.Millisecond)
+	
+	// Pattern 2: Rate Limiter
+	fmt.Println("\n2. Select-based Rate Limiter:")
+	rateLimiter := pat.NewSelectRateLimiter(100*time.Millisecond, 3)
+	
+	for i := 0; i < 10; i++ {
+		if rateLimiter.Allow() {
+			fmt.Printf("Request %d: Allowed\n", i)
+		} else {
+			fmt.Printf("Request %d: Rate limited\n", i)
+		}
+	}
+	
+	requests, allowed := rateLimiter.Stats()
+	fmt.Printf("Stats: %d requests, %d allowed\n", requests, allowed)
+	rateLimiter.Stop()
+	
+	// Pattern 3: Load Balancer
+	fmt.Println("\n3. Select-based Load Balancer:")
+	loadBalancer := pat.NewSelectLoadBalancer(3)
+	
+	for i := 0; i < 10; i++ {
+		loadBalancer.Submit(pat.Job{ID: i, Data: fmt.Sprintf("Data %d", i)})
+	}
+	
+	time.Sleep(1 * time.Second)
+	loadBalancer.Stop()
+	
+	// Pattern 4: Circuit Breaker
+	fmt.Println("\n4. Select-based Circuit Breaker:")
+	circuitBreaker := pat.NewSelectCircuitBreaker(3, 1*time.Second)
+	
+	for i := 0; i < 5; i++ {
+		err := circuitBreaker.Call(func() error {
+			if i < 3 {
+				return fmt.Errorf("simulated error")
+			}
+			return nil
+		})
+		if err != nil {
+			fmt.Printf("Call %d failed: %v\n", i, err)
+		} else {
+			fmt.Printf("Call %d succeeded\n", i)
+		}
+	}
+	circuitBreaker.Close()
+	
+	// Pattern 5: Message Router
+	fmt.Println("\n5. Select-based Message Router:")
+	router := pat.NewSelectMessageRouter()
+	router.Start()
+	
+	sub1 := router.Subscribe("topic1")
+	sub2 := router.Subscribe("topic1")
+	
+	go func() {
+		for msg := range sub1 {
+			fmt.Printf("Subscriber 1: %v\n", msg)
+		}
+	}()
+	
+	go func() {
+		for msg := range sub2 {
+			fmt.Printf("Subscriber 2: %v\n", msg)
+		}
+	}()
+	
+	router.Publish("topic1", "Message 1")
+	router.Publish("topic1", "Message 2")
+	
+	time.Sleep(100 * time.Millisecond)
+	router.Stop()
+	
+	// Pattern 6: Priority Pool
+	fmt.Println("\n6. Select-based Priority Pool:")
+	priorityPool := pat.NewSelectPriorityPool(2)
+	
+	for i := 0; i < 5; i++ {
+		priorities := []string{"high", "normal", "low"}
+		priority := priorities[i%3]
+		priorityPool.Submit(pat.Job{ID: i, Data: fmt.Sprintf("Data %d", i)}, priority)
+	}
+	
+	time.Sleep(1 * time.Second)
+	priorityPool.Stop()
+	
+	// Pattern 7: Context Manager
+	fmt.Println("\n7. Select-based Context Manager:")
+	contextManager := pat.NewSelectContextManager()
+	
+	ctx := contextManager.CreateContext("test")
+	if ctx != nil {
+		fmt.Println("Context created successfully")
+	}
+	
+	// Test context cancellation
+	select {
+	case <-ctx.Done():
+		fmt.Println("Context cancelled")
+	case <-time.After(100 * time.Millisecond):
+		fmt.Println("Context still active")
+	}
+	
+	contextManager.CancelContext("test")
+	
+	select {
+	case <-ctx.Done():
+		fmt.Println("Context cancelled after explicit cancel")
+	case <-time.After(100 * time.Millisecond):
+		fmt.Println("Context still active")
+	}
+	
+	fmt.Println("\n✅ All advanced patterns completed!")
 }

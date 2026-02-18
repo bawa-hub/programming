@@ -2,10 +2,13 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"runtime"
 	"sync"
 	"sync/atomic"
 	"time"
+	ex "gsync/exercies"
+	pat "gsync/patterns"
 )
 
 // Example 1: Basic Mutex
@@ -121,7 +124,7 @@ func onceExample() {
 	fmt.Println("=============================")
 	
 	var once sync.Once
-	var instance *Singleton
+	var instance *ex.Singleton
 	var wg sync.WaitGroup
 	
 	// Multiple goroutines trying to create singleton
@@ -130,7 +133,7 @@ func onceExample() {
 		go func(id int) {
 			defer wg.Done()
 			once.Do(func() {
-				instance = &Singleton{ID: id, Created: time.Now()}
+				instance = &ex.Singleton{ID: id, Created: time.Now()}
 				fmt.Printf("Goroutine %d created singleton\n", id)
 			})
 			fmt.Printf("Goroutine %d got instance: %+v\n", id, instance)
@@ -139,11 +142,6 @@ func onceExample() {
 	
 	wg.Wait()
 	fmt.Printf("Final instance: %+v\n", instance)
-}
-
-type Singleton struct {
-	ID      int
-	Created time.Time
 }
 
 // Example 5: Cond (Condition Variables)
@@ -270,7 +268,7 @@ func objectPool() {
 	
 	var pool = sync.Pool{
 		New: func() interface{} {
-			return &Buffer{ID: time.Now().UnixNano()}
+			return &ex.Buffer{ID: time.Now().UnixNano()}
 		},
 	}
 	
@@ -283,7 +281,7 @@ func objectPool() {
 			defer wg.Done()
 			
 			// Get buffer from pool
-			buf := pool.Get().(*Buffer)
+			buf := pool.Get().(*ex.Buffer)
 			fmt.Printf("Worker %d got buffer %d\n", id, buf.ID)
 			
 			// Use buffer
@@ -300,18 +298,8 @@ func objectPool() {
 	wg.Wait()
 }
 
-type Buffer struct {
-	ID   int64
-	Data string
-}
 
-func (b *Buffer) WriteString(s string) {
-	b.Data += s
-}
 
-func (b *Buffer) Reset() {
-	b.Data = ""
-}
 
 // Example 9: Performance Comparison
 func performanceComparison() {
@@ -487,4 +475,315 @@ func showSyncInfo() {
 	fmt.Printf("Number of goroutines: %d\n", runtime.NumGoroutine())
 	fmt.Printf("Number of CPUs: %d\n", runtime.NumCPU())
 	fmt.Printf("GOMAXPROCS: %d\n", runtime.GOMAXPROCS(0))
+}
+
+
+func main() {
+	if len(os.Args) < 2 {
+		showUsage()
+		return
+	}
+
+	command := os.Args[1]
+
+	switch command {
+	case "basic":
+		runBasicExamples()
+	case "exercises":
+		RunAllExercises()
+	case "advanced":
+		RunAdvancedPatterns()
+	case "all":
+		runBasicExamples()
+		fmt.Println("\n" + "==================================================")
+		RunAllExercises()
+		fmt.Println("\n" + "==================================================")
+		RunAdvancedPatterns()
+	default:
+		fmt.Printf("Unknown command: %s\n", command)
+		showUsage()
+	}
+}
+
+func showUsage() {
+	fmt.Println("🚀 Synchronization Primitives - Usage")
+	fmt.Println("=====================================")
+	fmt.Println()
+	fmt.Println("Commands:")
+	fmt.Println("  basic     - Run basic synchronization examples")
+	fmt.Println("  exercises - Run all exercises")
+	fmt.Println("  advanced  - Run advanced patterns")
+	fmt.Println("  all       - Run everything")
+	fmt.Println()
+	fmt.Println("Examples:")
+	fmt.Println("  go run . basic")
+	fmt.Println("  go run . exercises")
+	fmt.Println("  go run . advanced")
+	fmt.Println("  go run . all")
+}
+
+func runBasicExamples() {
+	fmt.Println("🚀 Synchronization Primitives Examples")
+	fmt.Println("======================================")
+
+	// Example 1: Basic Mutex
+	basicMutex()
+
+	// Example 2: RWMutex (Read-Write Mutex)
+	rwMutex()
+
+	// Example 3: WaitGroup
+	waitGroup()
+
+	// Example 4: Once (One-Time Execution)
+	onceExample()
+
+	// Example 5: Cond (Condition Variables)
+	condExample()
+
+	// Example 6: Atomic Operations
+	atomicExample()
+
+	// Example 7: Concurrent Map
+	concurrentMap()
+
+	// Example 8: Object Pool
+	objectPool()
+
+	// Example 9: Performance Comparison
+	performanceComparison()
+
+	// Example 10: Deadlock Prevention
+	deadlockPrevention()
+
+	// Example 11: Race Condition Detection
+	raceConditionDetection()
+
+	// Example 12: Common Pitfalls
+	commonPitfalls()
+}
+
+// Run all exercises
+func RunAllExercises() {
+	fmt.Println("🧪 Running All Synchronization Exercises")
+	fmt.Println("========================================")
+	
+	ex.Exercise1()
+	ex.Exercise2()
+	ex.Exercise3()
+	ex.Exercise4()
+	ex.Exercise5()
+	ex.Exercise6()
+	ex.Exercise7()
+	ex.Exercise8()
+	ex.Exercise9()
+	ex.Exercise10()
+	
+	fmt.Println("\n✅ All exercises completed!")
+}
+
+// Demo function to run all advanced patterns
+func RunAdvancedPatterns() {
+	fmt.Println("🚀 Advanced Synchronization Patterns")
+	fmt.Println("====================================")
+	
+	// Pattern 1: Thread-Safe Counter with Metrics
+	fmt.Println("\n1. Thread-Safe Counter with Metrics:")
+	counter := pat.NewSafeCounter()
+	
+	var wg sync.WaitGroup
+	for i := 0; i < 5; i++ {
+		wg.Add(1)
+		go func(id int) {
+			defer wg.Done()
+			for j := 0; j < 10; j++ {
+				counter.Increment(fmt.Sprintf("key%d", id))
+			}
+		}(i)
+	}
+	
+	wg.Wait()
+	fmt.Printf("Counters: %v\n", counter.GetAllCounters())
+	fmt.Printf("Metrics: %v\n", counter.GetMetrics())
+	
+	// Pattern 2: Priority RWMutex
+	fmt.Println("\n2. Priority RWMutex:")
+	prw := pat.NewPriorityRWMutex()
+	
+	for i := 0; i < 3; i++ {
+		wg.Add(1)
+		go func(id int) {
+			defer wg.Done()
+			prw.RLock()
+			fmt.Printf("Reader %d: reading\n", id)
+			time.Sleep(100 * time.Millisecond)
+			prw.RUnlock()
+		}(i)
+	}
+	
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		prw.Lock()
+		fmt.Println("Writer: writing")
+		time.Sleep(100 * time.Millisecond)
+		prw.Unlock()
+	}()
+	
+	wg.Wait()
+	readers, writers, readerWait, writerWait := prw.GetStats()
+	fmt.Printf("Stats: readers=%d, writers=%d, readerWait=%d, writerWait=%d\n", readers, writers, readerWait, writerWait)
+	
+	// Pattern 3: WaitGroup with Timeout
+	fmt.Println("\n3. WaitGroup with Timeout:")
+	twg := pat.NewTimeoutWaitGroup(500 * time.Millisecond)
+	
+	for i := 0; i < 3; i++ {
+		twg.Add(1)
+		go func(id int) {
+			defer twg.Done()
+			time.Sleep(200 * time.Millisecond)
+			fmt.Printf("Worker %d completed\n", id)
+		}(i)
+	}
+	
+	if err := twg.Wait(); err != nil {
+		fmt.Printf("WaitGroup error: %v\n", err)
+	} else {
+		fmt.Println("All workers completed")
+	}
+	
+	// Pattern 4: Once with Error Handling
+	fmt.Println("\n4. Once with Error Handling:")
+	so := &pat.SafeOnce{}
+	
+	for i := 0; i < 3; i++ {
+		wg.Add(1)
+		go func(id int) {
+			defer wg.Done()
+			err := so.Do(func() error {
+				fmt.Printf("Initializing from goroutine %d\n", id)
+				if id == 1 {
+					return fmt.Errorf("initialization failed")
+				}
+				return nil
+			})
+			if err != nil {
+				fmt.Printf("Goroutine %d: error: %v\n", id, err)
+			} else {
+				fmt.Printf("Goroutine %d: success\n", id)
+			}
+		}(i)
+	}
+	
+	wg.Wait()
+	
+	// Pattern 5: Condition Variable with Timeout
+	fmt.Println("\n5. Condition Variable with Timeout:")
+	tc := pat.NewTimeoutCond()
+	
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		if tc.WaitWithTimeout(1 * time.Second) {
+			fmt.Println("Condition met within timeout")
+		} else {
+			fmt.Println("Timeout waiting for condition")
+		}
+	}()
+	
+	time.Sleep(500 * time.Millisecond)
+	tc.Signal()
+	wg.Wait()
+	
+	// Pattern 6: Atomic Counter with Statistics
+	fmt.Println("\n6. Atomic Counter with Statistics:")
+	ac := &pat.AtomicCounter{}
+	
+	for i := 0; i < 5; i++ {
+		wg.Add(1)
+		go func(id int) {
+			defer wg.Done()
+			for j := 0; j < 10; j++ {
+				ac.Increment()
+			}
+		}(i)
+	}
+	
+	wg.Wait()
+	value, increments, decrements, resets := ac.GetStats()
+	fmt.Printf("Counter stats: value=%d, increments=%d, decrements=%d, resets=%d\n", value, increments, decrements, resets)
+	
+	// Pattern 7: Concurrent Map with Statistics
+	fmt.Println("\n7. Concurrent Map with Statistics:")
+	sm := pat.NewStatsMap()
+	
+	for i := 0; i < 5; i++ {
+		wg.Add(1)
+		go func(id int) {
+			defer wg.Done()
+			key := fmt.Sprintf("key%d", id)
+			sm.Store(key, fmt.Sprintf("value%d", id))
+			sm.Load(key)
+		}(i)
+	}
+	
+	wg.Wait()
+	fmt.Printf("Map stats: %v\n", sm.GetStats())
+	
+	// Pattern 8: Object Pool with Statistics
+	fmt.Println("\n8. Object Pool with Statistics:")
+	sp := pat.NewStatsPool(func() interface{} {
+		return &ex.Buffer{ID: time.Now().UnixNano()}
+	})
+	
+	for i := 0; i < 5; i++ {
+		wg.Add(1)
+		go func(id int) {
+			defer wg.Done()
+			buf := sp.Get().(*ex.Buffer)
+			time.Sleep(10 * time.Millisecond)
+			sp.Put(buf)
+		}(i)
+	}
+	
+	wg.Wait()
+	created, reused, returned := sp.GetStats()
+	fmt.Printf("Pool stats: created=%d, reused=%d, returned=%d\n", created, reused, returned)
+	
+	// Pattern 9: Barrier Synchronization
+	fmt.Println("\n9. Barrier Synchronization:")
+	barrier := pat.NewBarrier(3)
+	
+	for i := 0; i < 3; i++ {
+		wg.Add(1)
+		go func(id int) {
+			defer wg.Done()
+			fmt.Printf("Goroutine %d: before barrier\n", id)
+			phase := barrier.Wait()
+			fmt.Printf("Goroutine %d: after barrier phase %d\n", id, phase)
+		}(i)
+	}
+	
+	wg.Wait()
+	
+	// Pattern 10: Semaphore
+	fmt.Println("\n10. Semaphore:")
+	sem := pat.NewSemaphore(2)
+	
+	for i := 0; i < 5; i++ {
+		wg.Add(1)
+		go func(id int) {
+			defer wg.Done()
+			sem.Acquire()
+			fmt.Printf("Goroutine %d: acquired semaphore\n", id)
+			time.Sleep(100 * time.Millisecond)
+			sem.Release()
+			fmt.Printf("Goroutine %d: released semaphore\n", id)
+		}(i)
+	}
+	
+	wg.Wait()
+	
+	fmt.Println("\n✅ All advanced patterns completed!")
 }
