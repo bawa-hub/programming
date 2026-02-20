@@ -8,6 +8,16 @@ import (
 	"time"
 )
 
+// Worker represents a worker in the pool
+type Worker struct {
+	ID          int
+	Input       chan WorkItem
+	Output      chan Result
+	IsActive    bool
+	StartTime   time.Time
+	LastActivity time.Time
+}
+
 // AdaptivePool manages workers dynamically based on load
 type AdaptivePool struct {
 	minWorkers     int
