@@ -13,7 +13,7 @@
 
 # binary search 😎
 # sorting ✅
-# greedy 
+# greedy 😎
 # backtracking 
 # dp 
 
