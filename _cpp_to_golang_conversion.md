@@ -1,4 +1,3 @@
-# hash table  ✅
 # two pointer 
 # sliding window 
 # priority queue 😎
@@ -12,12 +11,13 @@
 # graph 😎
 
 # binary search 😎
-# sorting ✅
 # greedy 😎
 # backtracking 
 # dp 
 
-# maths
+
+
+
 
 
 

@@ -2,23 +2,47 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"sync"
 )
-
-type TODO struct {
-	id int
-	todo string
-	created_at time.Time
-}
 
 
 func main() {
-	todos := []TODO{}
+	var wg sync.WaitGroup
 
-	todo := TODO{id: 1, todo: "Learn Golang", created_at: time.Now()}
-	todos = append(todos,todo)
+	task := 10
+	worker := 3
 
-	for i:=0;i<len(todos);i++ {
-		fmt.Println(todos[i].todo, todos[i].created_at.Format(time.DateOnly))
+	jobs := make(chan int, task)
+	results := make(chan int, task)
+
+	for i:=0;i<worker;i++ {
+		wg.Add(1)
+       go doWork(jobs, results, &wg)
+	}
+
+	for i:=1;i<=task;i++ {
+		jobs <- i
+	}
+
+	close(jobs)
+
+	go func ()  {
+		wg.Wait()
+		close(results)
+	}()
+
+	for result := range results {
+		fmt.Println("Resuls : ", result)
+	}
+
+	
+
+}
+
+func doWork(jobs <- chan int, results chan<- int, wg *sync.WaitGroup) {
+	wg.Done()
+	for job := range jobs {
+		result := job * job
+		results <- result
 	}
 }
