@@ -1,10 +1,11 @@
-# array
+# array ✅
+# hash table ✅
+# strings ✅
+# two poiner and sliding window
 # linked list  
 # stack and queue
 # tree
 # graph
-# two poiner and sliding window
-# hash table ✅
 # priority queue
 # prefix sum
 # binary search
@@ -12,4 +13,3 @@
 # backtacking
 # greedy
 # dp
-# strings
