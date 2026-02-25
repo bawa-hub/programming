@@ -4,7 +4,7 @@
 # tree
 # graph
 # two poiner and sliding window
-# hash table
+# hash table ✅
 # priority queue
 # prefix sum
 # binary search
