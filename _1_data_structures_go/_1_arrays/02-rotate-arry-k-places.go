@@ -74,7 +74,7 @@ func reverse(arr []int, start, end int) {
 		end--
 	}
 }
-
+// [1,2,3,4,5] ----> [4,5,1,2,3]   k = 2
 func rotateRightOptimal(arr []int, k int) {
 	n := len(arr)
 	if n == 0 {
@@ -92,7 +92,7 @@ func rotateRightOptimal(arr []int, k int) {
 	// Reverse whole array
 	reverse(arr, 0, n-1)
 }
-
+// [1,2,3,4,5]  --> [3,4,5,1,2]  k=2
 func rotateLeftOptimal(arr []int, k int) {
 	n := len(arr)
 	if n == 0 {
