@@ -1,8 +1,8 @@
-# linked list  
 # tree
+# graph
 # priority queue
 # two poiner and sliding window
-# graph
+
 # binary search
 # greedy
 # dp
