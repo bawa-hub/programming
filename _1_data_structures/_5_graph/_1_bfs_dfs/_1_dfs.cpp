@@ -61,13 +61,20 @@ int main()
     }
 
     Solution obj;
-    vector<int> ans = obj.dfsOfGraph(5, adj);
+    vector<int> ans = obj.dfsOfGraph(0, adj);
     printAns(ans);
 
     return 0;
 }
 
-// Output: 0 2 4 1 3
+// input
+// 5 5
+// 0 1
+// 1 2
+// 2 3
+// 3 4
+// 4 0
+// Output: 0 1 2 3 4
 
 // Time Complexity: For an undirected graph, O(N) + O(2E), For a directed graph, O(N) + O(E), 
 // Because for every node we are calling the recursive function once, the time taken is O(N) and 2E is for total degrees as we traverse for all adjacent nodes.
