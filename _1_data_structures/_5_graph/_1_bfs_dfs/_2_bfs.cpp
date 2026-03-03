@@ -1,5 +1,7 @@
 // https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <queue>
 using namespace std;
 
 class Solution {
@@ -7,7 +9,8 @@ class Solution {
     vector<int> bfsOfGraph(int V, vector<int> adj[], vector<int> &bfs) { 
 
         // visited array
-        int vis[V] = {0}; 
+        // int vis[V] = {0}; // this will not standard cpp, works in gcc environment only
+        vector<int> vis(V, 0);
         vis[0] = 1; 
 
         // queue setup

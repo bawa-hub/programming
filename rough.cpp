@@ -1,55 +1,60 @@
+// https://www.geeksforgeeks.org/problems/bfs-traversal-of-graph/1
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
 class Solution {
-    public:
-    vector<int> dfsOfGraph(int node, vector<int> adj[]) {
-       int vis[5] = {0};
-       vector<int> ans;
-       dfs(node, adj, ans, vis);
-       return ans;
-    }
+  public:
+    vector<int> bfsOfGraph(int V, vector<int> adj[], vector<int> &bfs) { 
+        int vis[V] = {0};
+        vis[0] = 1;
 
-    private:
-    void dfs(int node, vector<int> adj[], vector<int> &ans, int vis[]) {
-        vis[node] = 1;
-        ans.push_back(node);
+        queue<int> q;
+        q.push(0);
 
-        for(auto child : adj[node]) {
-            if(!vis[child]) dfs(child, adj, ans, vis);
+        while(!q.emtpy()) {
+            int node = q.front();
+            bfs.push_back(node);
+            q.pop();
+
+            for(auto child : adj[node]) {
+                if(!vis[child]) {
+                    vis[child] =  1;
+                    q.push(child);
+                }
+            }
         }
     }
 };
 
-void printAns(vector<int> ans) {
-  for (int i=0;i<ans.size();i++) cout << ans[i] << " ";
+void addEdge(vector <int> adj[], int u, int v) {
+    adj[u].push_back(v);
+    adj[v].push_back(u);
 }
 
-
-void addEdge(vector<int> adj[], int v1, int v2) {
-    adj[v1].push_back(v2);
-    adj[v2].push_back(v1);
-}
-
-
-int main()
-{
-    vector<int> adj[5];
-
-    int n, m;
-    cin >> n >> m;
-    for (int i = 0; i < m; ++i)
-    {
-        int v1, v2;
-        cin >> v1 >> v2;
-        addEdge(adj, v1, v2);
+void printAns(vector <int> &ans) {
+    for (int i = 0; i < ans.size(); i++) {
+        cout << ans[i] << " ";
     }
+}
+
+int main() 
+{
+    vector <int> adj[6];
+    
+    addEdge(adj, 0, 1);
+    addEdge(adj, 1, 2);
+    addEdge(adj, 1, 3);
+    addEdge(adj, 0, 4);
 
     Solution obj;
-    vector<int> ans = obj.dfsOfGraph(0, adj);
-    printAns(ans);
+    vector<int> bfs;
+    obj.bfsOfGraph(5, adj, bfs);
+    printAns(bfs);
 
     return 0;
 }
+
+// Time complexity: O(V+2E) -> same concept as DFS
+// Spacce complexity: O(V)

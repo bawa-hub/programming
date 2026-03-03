@@ -4,5 +4,6 @@
         "deque": "cpp",
         "vector": "cpp",
         "list": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/Users/vikramkumar/CS/_1_dsa/_0_language/_1_cpp/cursor_cpp"
 }

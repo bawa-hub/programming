@@ -61,7 +61,7 @@ int main()
     }
 
     Solution obj;
-    vector<int> ans = obj.dfsOfGraph(0, adj);
+    vector<int> ans = obj.dfsOfGraph(5, adj);
     printAns(ans);
 
     return 0;
