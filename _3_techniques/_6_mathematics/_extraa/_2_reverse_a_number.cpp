@@ -1,6 +1,8 @@
 // https://leetcode.com/problems/reverse-integer/
 
 #include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main()
 {

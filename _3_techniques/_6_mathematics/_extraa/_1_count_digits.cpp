@@ -9,6 +9,7 @@ int count_digits(int n)
     int count = 0;
     while (x != 0)
     {
+        // int lastDigit = x%10;
         x = x / 10;
         count++;
     }

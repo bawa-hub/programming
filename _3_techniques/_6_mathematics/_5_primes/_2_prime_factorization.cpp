@@ -1,9 +1,9 @@
-// C++ program to print all prime factors
+// https://www.geeksforgeeks.org/sieve-of-eratosthenes/
+// https://www.geeksforgeeks.org/prime-factorization-using-sieve-olog-n-multiple-queries/
+
 #include <bits/stdc++.h>
 using namespace std;
 
-// A function to print all prime
-// factors of a given number n
 void primeFactors(int n)
 {
     // Print the number of 2s that divide n

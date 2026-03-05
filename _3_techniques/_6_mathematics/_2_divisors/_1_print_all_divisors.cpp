@@ -33,6 +33,22 @@ void printDivisorsOptimal(int n)
 // Time Complexity: O(sqrt(n)), because everytime the loop runs only sqrt(n) times.
 // Space Complexity: O(1), we are not using any extra space
 
+// approach 3
+void printDivisorsOptimal(int n)
+{
+
+    cout << "The Divisors of " << n << " are:" << endl;
+    for (int i = 1; i * i <= n; i++)
+        if (n % i == 0)
+        {
+            cout << i << " ";
+            if (i != n / i)
+                cout << n / i << " ";
+        }
+
+    cout << "\n";
+}
+
 int main()
 {
 
