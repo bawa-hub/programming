@@ -1,6 +1,7 @@
-// finding x^n
+#include <iostream>
+using namespace std;
 
-// Basic Method
+// brute force recursive
 int recursivePower(int x, int n)
 {
     if (n == 0)
@@ -8,6 +9,7 @@ int recursivePower(int x, int n)
     return x * recursivePower(x, n - 1);
 }
 
+// brute force iterrative
 int iterativePower(int x, int n)
 {
     int result = 1;
@@ -96,3 +98,8 @@ int modularExponentiation(int x, int n, int M)
  * time complexity = O(log N)
  * memory complexity = O(1)
  * **/
+
+
+int main() {
+    cout << iterativeBinaryExponentiation(2,9) << endl;
+}

@@ -38,7 +38,7 @@ public:
     }
 
     // without ans variable
-    int minEatingSpeed(vector<int> &piles, int targetHours)
+    int minEatingSpeed1(vector<int> &piles, int targetHours)
     {
         int low = 1, high = *(max_element(piles.begin(), piles.end()));
         while (low <= high)

@@ -1,7 +1,9 @@
 // https://www.geeksforgeeks.org/sieve-of-eratosthenes/
 // https://www.geeksforgeeks.org/prime-factorization-using-sieve-olog-n-multiple-queries/
 
-#include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
 using namespace std;
 
 void primeFactors(int n)
@@ -30,6 +32,8 @@ void primeFactors(int n)
     if (n > 2)
         cout << n << " ";
 }
+// Time Complexity: O(sqrt(N), we check for every number between 1 and sqaure root of N.
+// Space Complexity: O(sqrt(N)), extra space used for storing divisors. 
 
 /* Driver code */
 int main()

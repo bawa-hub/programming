@@ -36,21 +36,24 @@ using namespace std;
 // Custom comparison function
 bool customCompare(int a, int b) {
     // Define your custom sorting criteria here
-    // For example, let's sort integers in ascending order
-    return a < b;
+    // For example, let's sort integers in descending order
+    return a > b;
 }
 
 int main() {
     vector<int> numbers = {5, 2, 8, 1, 9};
 
     // default sort in ascending order
-    // sort(numbers.begin(), numbers.end());
-
-    // Sorting using custom comparison function
-    sort(numbers.begin(), numbers.end(), customCompare);
-
-    // Display sorted numbers
+    sort(numbers.begin(), numbers.end());
     cout << "Sorted numbers in ascending order: ";
+    for (int num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    // Sorting using custom comparison function - desc
+    sort(numbers.begin(), numbers.end(), customCompare);
+    cout << "Sorted numbers in descending order: ";
     for (int num : numbers) {
         cout << num << " ";
     }
@@ -59,8 +62,8 @@ int main() {
      // Sorting using lambda expression
     sort(numbers.begin(), numbers.end(), [](int a, int b) {
         // Define your custom sorting criteria here
-        // For example, let's sort integers in descending order
-        return a > b;
+        // For example, let's sort integers in ascending order
+        return a < b;
     });
 
     cout << "Sorted numbers in descending order: ";

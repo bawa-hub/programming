@@ -1,20 +1,9 @@
+# Mon: arrays, stack & queue, linked list
+# Tue: hash table, priority queue
+# Wed: two pointer, sliding window, prefix sum, maths
+# Thu: binary search & sorting
+# Fri: backtracking, strings
+# Sat: tree and graph
+# Sun: dp and greedy
 
 
-# arrays
-# linked list
-# stack & queue
-# tree
-# graph
-# trie
-
-# hash table
-# two pointer %+& sliding window
-# priority queue
-# prefix sum
-# maths
-
-# binary search & sorting
-# backtracking
-# greedy 
-# dp
-# strings
