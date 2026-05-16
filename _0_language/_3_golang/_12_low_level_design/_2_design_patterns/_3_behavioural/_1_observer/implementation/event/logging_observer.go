@@ -1,5 +1,7 @@
 package event
 
+import "fmt"
+
 type LoggingObserver struct {
 	id string
 }

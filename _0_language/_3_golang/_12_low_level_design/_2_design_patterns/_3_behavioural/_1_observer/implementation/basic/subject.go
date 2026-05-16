@@ -1,6 +1,9 @@
 package basic
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+)
 
 type Subject interface {
 	Attach(observer Observer)

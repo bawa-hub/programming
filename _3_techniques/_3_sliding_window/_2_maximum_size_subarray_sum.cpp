@@ -14,10 +14,10 @@ int longestSubarrayWithSumK(vector<int> a, long long k) {
     while(j < a.size()) {
       sum += a[j];
 
-          while (sum > k) {
-                sum -= a[i];
-                 i++;
-            }
+        while (sum > k) {
+            sum -= a[i];
+                i++;
+        }
 
       if(sum == k) {
           maxi = max(maxi, j-i+1);
@@ -37,7 +37,7 @@ int longestSubarrayWithSumK(vector<int> a, long long k) {
     for(int i=0;i<a.size();i++) {
      sum += a[i];
 
-     if(sum == k) maxi = max(maxi, i+1);
+    //  if(sum == k) maxi = max(maxi, i+1);
 
      long long rem = sum - k;
 

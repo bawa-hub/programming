@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/minimum-window-substring/
 // https://leetcode.com/problems/minimum-window-substring/solutions/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems/
 
-       string minWindow(string s, string t) {
+    string minWindow(string s, string t) {
 
         vector<int> map(128,0);
         for(auto c: t) map[c]++;

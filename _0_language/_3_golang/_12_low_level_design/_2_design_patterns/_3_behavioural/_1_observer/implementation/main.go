@@ -2,55 +2,56 @@ package main
 
 import (
 	"fmt"
-	"observer/stocks"
+	"observer/basic"
+	// "observer/stocks"
 )
 
 
 func main() {
 
 	// // 1. BASIC OBSERVER
-	// fmt.Println("1. BASIC OBSERVER:")
-	// subject := NewConcreteSubject()
+	fmt.Println("1. BASIC OBSERVER:")
+	subject := basic.NewConcreteSubject()
 	
-	// observer1 := NewConcreteObserver("Observer1")
-	// observer2 := NewConcreteObserver("Observer2")
-	// observer3 := NewConcreteObserver("Observer3")
+	observer1 := basic.NewConcreteObserver("Observer1")
+	observer2 := basic.NewConcreteObserver("Observer2")
+	observer3 := basic.NewConcreteObserver("Observer3")
 	
-	// subject.Attach(observer1)
-	// subject.Attach(observer2)
-	// subject.SetState("Hello, World!")
+	subject.Attach(observer1)
+	subject.Attach(observer2)
+	subject.SetState("Hello, World!")
 	
-	// subject.Attach(observer3)
-	// subject.SetState("Updated state")
+	subject.Attach(observer3)
+	subject.SetState("Updated state")
 	
-	// subject.Detach(observer2)
-	// subject.SetState("Final state")
-	// fmt.Println()
+	subject.Detach(observer2)
+	subject.SetState("Final state")
+	fmt.Println()
 
 	// // 2. REAL-WORLD EXAMPLES
-	fmt.Println("2. REAL-WORLD EXAMPLES:")
+	// fmt.Println("2. REAL-WORLD EXAMPLES:")
 
-	// Stock Price Monitoring
-	fmt.Println("Stock Price Monitoring System:")
-	stockMarket := stocks.NewStockMarket()
+	// // Stock Price Monitoring
+	// fmt.Println("Stock Price Monitoring System:")
+	// stockMarket := stocks.NewStockMarket()
 	
-	trader1 := stocks.NewStockTrader("Trader1")
-	trader2 := stocks.NewStockTrader("Trader2")
-	analyst1 := stocks.NewStockAnalyst("Analyst1")
+	// trader1 := stocks.NewStockTrader("Trader1")
+	// trader2 := stocks.NewStockTrader("Trader2")
+	// analyst1 := stocks.NewStockAnalyst("Analyst1")
 	
-	stockMarket.Attach(trader1)
-	stockMarket.Attach(trader2)
-	stockMarket.Attach(analyst1)
+	// stockMarket.Attach(trader1)
+	// stockMarket.Attach(trader2)
+	// stockMarket.Attach(analyst1)
 	
-	// Update stock prices
-	stockMarket.UpdatePrice("AAPL", 150.0)
-	stockMarket.UpdatePrice("GOOGL", 2800.0)
-	stockMarket.UpdatePrice("AAPL", 155.0) // 3.33% increase
-	stockMarket.UpdatePrice("GOOGL", 2700.0) // -3.57% decrease
+	// // Update stock prices
+	// stockMarket.UpdatePrice("AAPL", 150.0)
+	// stockMarket.UpdatePrice("GOOGL", 2800.0)
+	// stockMarket.UpdatePrice("AAPL", 155.0) // 3.33% increase
+	// stockMarket.UpdatePrice("GOOGL", 2700.0) // -3.57% decrease
 	
-	stockMarket.Detach(trader2)
-	stockMarket.UpdatePrice("MSFT", 300.0)
-	fmt.Println()
+	// stockMarket.Detach(trader2)
+	// stockMarket.UpdatePrice("MSFT", 300.0)
+	// fmt.Println()
 
 	// // Weather Station
 	// fmt.Println("Weather Station System:")
